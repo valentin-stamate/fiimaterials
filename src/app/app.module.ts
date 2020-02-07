@@ -7,7 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
   MAT_FORM_FIELD_DEFAULT_OPTIONS,
   MatButton,
-  MatButtonModule, MatIconModule,
+  MatButtonModule, MatCardModule, MatGridListModule, MatIconModule,
   MatNativeDateModule,
   MatSidenavModule,
   MatToolbarModule
@@ -15,14 +15,16 @@ import {
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { WelcomePageComponent } from './welcome-page/welcome-page.component';
-
-
+import { SecondSubPageComponent } from './second-sub-page/second-sub-page.component';
+import { ThirdSubpageComponent } from './third-subpage/third-subpage.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    WelcomePageComponent
+    WelcomePageComponent,
+    SecondSubPageComponent,
+    ThirdSubpageComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +37,10 @@ import { WelcomePageComponent } from './welcome-page/welcome-page.component';
     ReactiveFormsModule,
     MatButtonModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+    MatCardModule,
+    MatGridListModule,
+    // FlexLayoutModule
   ],
   bootstrap: [AppComponent],
   providers: [

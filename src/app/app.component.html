@@ -1,7 +1,8 @@
 <div class="example-container">
 
-  <mat-toolbar  class="example-toolbar">
-    <h1 class="example-app-name">Site Title</h1>
+  <mat-toolbar class="example-toolbar mat-elevation-z4" style="z-index: 2; padding: 12px">
+    <div class="logo" style="margin-right: 16px"></div>
+    <h1 class="example-app-name">FII Materiale</h1>
     <span class="example-spacer"></span>
     <mat-icon class="example-icon" aria-hidden="false" aria-label="Example heart icon">favorite</mat-icon>
     <mat-icon class="example-icon" aria-hidden="false" aria-label="Example delete icon">delete</mat-icon>
@@ -10,8 +11,13 @@
   <mat-sidenav-container class="example-sidenav-container">
     <mat-sidenav-content>
 
-      <app-welcome-page></app-welcome-page>
+      <div class="background-image">
 
+        <app-welcome-page></app-welcome-page>
+        <app-second-sub-page></app-second-sub-page>
+        <app-third-subpage></app-third-subpage>
+
+      </div>
 
     </mat-sidenav-content>
   </mat-sidenav-container>
