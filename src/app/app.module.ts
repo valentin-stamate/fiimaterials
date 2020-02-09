@@ -17,6 +17,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { WelcomePageComponent } from './welcome-page/welcome-page.component';
 import { SecondSubPageComponent } from './second-sub-page/second-sub-page.component';
 import { ThirdSubpageComponent } from './third-subpage/third-subpage.component';
+import {FlexLayoutModule} from '@angular/flex-layout';
 
 
 @NgModule({
@@ -40,7 +41,7 @@ import { ThirdSubpageComponent } from './third-subpage/third-subpage.component';
     MatIconModule,
     MatCardModule,
     MatGridListModule,
-    // FlexLayoutModule
+    FlexLayoutModule
   ],
   bootstrap: [AppComponent],
   providers: [
