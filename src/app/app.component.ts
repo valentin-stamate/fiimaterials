@@ -1,15 +1,15 @@
 import {Component, ViewChild} from '@angular/core';
-import {MatSidenav} from '@angular/material';
+import { MatSidenav } from '@angular/material/sidenav';
+import {ThemeSwitcher} from './services/ThemeSwitcher';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  providers: [ThemeSwitcher]
 })
 export class AppComponent {
-  @ViewChild('sidenav') sidenav: MatSidenav;
 
-  close() {
-    this.sidenav.close();
+  constructor(public themeSwitcher: ThemeSwitcher) {
   }
 }
