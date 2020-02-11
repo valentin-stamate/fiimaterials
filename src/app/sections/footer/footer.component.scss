@@ -1,0 +1,24 @@
+@import "../../../../node_modules/@angular/material/theming";
+
+.footer-container {
+  padding: 24px;
+}
+
+.footer-text {
+  position: relative;
+  text-align: center;
+  font-size: 14px;
+}
+
+
+$dark-footer-color: #121212;
+$light-footer-color: #3F51B5;
+.dark-footer {
+  background-color: $dark-footer-color;
+  color: white;
+}
+
+.light-footer {
+  background-color: $light-footer-color;
+  color: white;
+}

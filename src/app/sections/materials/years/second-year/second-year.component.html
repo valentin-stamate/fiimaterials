@@ -1,0 +1,23 @@
+<mat-list>
+
+  <h3 mat-subheader>Primul Semestru</h3>
+  <mat-nav-list>
+    <mat-list-item *ngFor="let classItem of firstSemester">
+      <mat-icon mat-list-icon>{{classItem.icon}}</mat-icon>
+      <h4 mat-line>Materie</h4>
+      <p mat-line>Ultima actualizare : {{classItem.lastUpdated | date}} </p>
+    </mat-list-item>
+  </mat-nav-list>
+
+  <mat-divider></mat-divider>
+
+  <h3 mat-subheader>Al doilea semestru</h3>
+  <mat-nav-list>
+    <mat-list-item *ngFor="let classItem of secondSemester">
+      <mat-icon mat-list-icon>{{classItem.icon}}</mat-icon>
+      <h4 mat-line>Materie</h4>
+      <p mat-line>Ultima actualizare : {{classItem.lastUpdated | date}} </p>
+    </mat-list-item>
+  </mat-nav-list>
+
+</mat-list>

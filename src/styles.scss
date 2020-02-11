@@ -1,14 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
-body { margin: 1000px; font-family: Roboto, "Helvetica Neue", sans-serif; user-select: none}
+body { margin: 1000px; font-family: Roboto, "Helvetica Neue", sans-serif; user-select: none;
+  transition: all ease 1000ms;
+}
 
 .background-image {
   //background-image: url("./assets/welcomepage.svg");
   //background-size: cover;
   //height: 100%;
   //background-repeat: no-repeat;
-  background: #222831;
+  //background: #222831;
 }
 
 .logo {
@@ -45,31 +47,48 @@ body { margin: 1000px; font-family: Roboto, "Helvetica Neue", sans-serif; user-s
 
 /*  */
 
-.main-container {
-  width: 100%;
-  height: 512px;
-  color: white;
+//.main-container {
+//  width: 100%;
+//  height: 380px;
+//  //color: white;
+//
+//}
 
+$main-page-spacing: 300px;
+.main-title {
+  position: relative;
+  text-align: center;
+  margin-top: $main-page-spacing;
+  margin-bottom: 10px;
 }
 
-.main-title {
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, 0);
-  margin-top: 200px;
+.main-sub-title {
+  position: relative;
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: $main-page-spacing;
 }
 
 /*   */
 
 .fit {
-  max-width: 1300px;
+  max-width: 1024px;
   left: 50%;
   transform: translate(-50%, 0);
+  padding: 48px;
 }
 
 .content-card {
   max-width: 240px;
 }
+
+.section-title {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+
+
 
 
 

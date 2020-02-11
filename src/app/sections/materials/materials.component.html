@@ -1,0 +1,22 @@
+<div style="padding: 32px">
+  <mat-card class="mat-elevation-z2 fit" style="padding: 0">
+
+    <mat-card-header style="padding: 16px;" [class.dark-title-background]="themeSwitcher.darkTheme" [class.light-title-background]="!themeSwitcher.darkTheme">
+      <mat-card-title style="margin-bottom: 0">Materiale</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+      <mat-tab-group mat-align-tabs="center">
+        <mat-tab label="First">
+          <app-first-year></app-first-year>
+        </mat-tab>
+        <mat-tab label="Second">
+          <app-second-year></app-second-year>
+        </mat-tab>
+        <mat-tab label="Third">
+          <app-third-year></app-third-year>
+        </mat-tab>
+      </mat-tab-group>
+    </mat-card-content>
+  </mat-card>
+</div>

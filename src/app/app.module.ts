@@ -7,9 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
 import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
-import { WelcomePageComponent } from './welcome-page/welcome-page.component';
-import { SecondSubPageComponent } from './second-sub-page/second-sub-page.component';
-import { ThirdSubpageComponent } from './third-subpage/third-subpage.component';
+import { WelcomePageComponent } from './sections/welcome-page/welcome-page.component';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatGridListModule} from '@angular/material/grid-list';
@@ -17,14 +15,26 @@ import {MatIconModule} from '@angular/material/icon';
 import {MAT_FORM_FIELD_DEFAULT_OPTIONS} from '@angular/material/form-field';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
+import { FooterComponent } from './sections/footer/footer.component';
+import { MaterialsComponent } from './sections/materials/materials.component';
+import {IntroductionComponent} from './sections/introduction/introduction.component';
+import {MatTabsModule} from '@angular/material/tabs';
+import { FirstYearComponent } from './sections/materials/years/first-year/first-year.component';
+import { SecondYearComponent } from './sections/materials/years/second-year/second-year.component';
+import { ThirdYearComponent } from './sections/materials/years/third-year/third-year.component';
+import {MatListModule} from '@angular/material/list';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     WelcomePageComponent,
-    SecondSubPageComponent,
-    ThirdSubpageComponent
+    FooterComponent,
+    IntroductionComponent,
+    MaterialsComponent,
+    FirstYearComponent,
+    SecondYearComponent,
+    ThirdYearComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +48,9 @@ import {MatButtonModule} from '@angular/material/button';
     MatGridListModule,
     FlexLayoutModule,
     MatToolbarModule,
-    MatButtonModule
+    MatButtonModule,
+    MatTabsModule,
+    MatListModule
   ],
   bootstrap: [AppComponent],
   providers: [
