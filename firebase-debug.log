@@ -1,0 +1,28 @@
+[debug] [2020-02-12T18:49:14.704Z] ----------------------------------------------------------------------
+[debug] [2020-02-12T18:49:14.706Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Valentin\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2020-02-12T18:49:14.706Z] CLI Version:   7.13.0
+[debug] [2020-02-12T18:49:14.706Z] Platform:      win32
+[debug] [2020-02-12T18:49:14.706Z] Node Version:  v12.14.1
+[debug] [2020-02-12T18:49:14.707Z] Time:          Wed Feb 12 2020 20:49:14 GMT+0200 (Eastern European Standard Time)
+[debug] [2020-02-12T18:49:14.707Z] ----------------------------------------------------------------------
+[debug] [2020-02-12T18:49:14.707Z] 
+[debug] [2020-02-12T18:49:14.713Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-02-12T18:49:14.714Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\Valentin\WebstormProjects\MaterialeFacultateWeb
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 

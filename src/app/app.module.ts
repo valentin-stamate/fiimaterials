@@ -30,6 +30,10 @@ import {MatNativeDateModule} from '@angular/material/core';
 import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
 
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { environment } from '../environments/environment';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -63,7 +67,11 @@ import {MatSelectModule} from '@angular/material/select';
     MatToolbarModule,
     MatButtonModule,
     MatTabsModule,
-    MatListModule
+    MatListModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireDatabaseModule,
+    MatSnackBarModule
+
   ],
   bootstrap: [AppComponent],
   providers: [

@@ -1,5 +1,5 @@
 <div style="padding: 36px">
-  <mat-card class="mat-elevation-z2 fit" style="padding: 0px">
+  <mat-card class="mat-elevation-z2 fit" style="padding: 0">
 
     <mat-card-header style="padding: 16px;" [class.dark-title-background]="themeSwitcher.darkTheme" [class.light-title-background]="!themeSwitcher.darkTheme">
       <mat-card-title style="margin-bottom: 0">{{sectionTitle}}</mat-card-title>
@@ -13,7 +13,7 @@
 
         <mat-form-field appearance="outline" style="width: 100%;">
           <mat-label>Nume</mat-label>
-          <input matInput placeholder="Eg. Valentin Stamate">
+          <input matInput placeholder="Eg. Valentin Stamate" [(ngModel)]="feedBack.name">
           <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
           <mat-hint>Numele este optional</mat-hint>
         </mat-form-field>
@@ -24,9 +24,9 @@
         <mat-form-field appearance="fill" style="width: 100%;">
           <mat-label>Subiect</mat-label>
           <mat-select>
-            <mat-option value="option">Aspect site</mat-option>
-            <mat-option value="option">Sectie noua</mat-option>
-            <mat-option value="option">Altceva...</mat-option>
+            <mat-option value="option" (click)="siteDesign()">Aspect site</mat-option>
+            <mat-option value="option" (click)="newSelection()">Sectie noua</mat-option>
+            <mat-option value="option" (click)="somethingElse()">Altceva...</mat-option>
           </mat-select>
           <mat-hint align="end">Selecteaza subiectul</mat-hint>
         </mat-form-field>
@@ -40,12 +40,12 @@
       <div fxFlex="50">
         <mat-form-field style="width: 100%;">
           <mat-label>Detalii subiect</mat-label>
-          <textarea matInput placeholder=""></textarea>
+          <textarea matInput placeholder="" [(ngModel)]="feedBack.message"></textarea>
         </mat-form-field>
       </div>
 
       <div fxFlex="50">
-        <button mat-raised-button color="primary">Trimite</button>
+        <button mat-raised-button color="primary" (click)="sendFeedback()" >Trimite</button>
       </div>
 
     </div>
