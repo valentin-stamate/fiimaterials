@@ -10,7 +10,7 @@ export class FeedbackService {
   constructor(private firestore: AngularFirestore) { }
 
   createFeedback(feedback: FeedbackModel) {
-     return this.firestore.collection('universityclasses-ae0d2')
+     return this.firestore.collection('feedback')
        .add({name:feedback.name, option: feedback.option, message: feedback.message, solved: false});
   }
 
