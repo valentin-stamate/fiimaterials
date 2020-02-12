@@ -53,13 +53,14 @@ export class FeedbackComponent implements OnInit {
   siteDesign() {
     this.feedBack.option = 'Aspect Site';
   }
-
   newSelection() {
     this.feedBack.option = 'Selectie Noua';
   }
-
   somethingElse() {
     this.feedBack.option = 'Another';
+  }
+  contact() {
+    this.feedBack.option = 'Contact';
   }
 
 }
