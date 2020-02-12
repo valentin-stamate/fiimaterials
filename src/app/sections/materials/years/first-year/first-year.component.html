@@ -1,23 +1,29 @@
 <mat-list>
 
-  <h3 mat-subheader>First Semester</h3>
+  <mat-card-content>
+    <mat-tab-group mat-align-tabs="center">
 
-    <mat-list-item *ngFor="let classItem of firstSemester">
-      <mat-icon mat-list-icon>{{classItem.icon}}</mat-icon>
-      <h4 mat-line>{{classItem.name}}</h4>
-      <p mat-line>Ultima actualizare : {{classItem.lastUpdated | date}} </p>
-      <a mat-flat-button color="primary" target="_blank" href="{{classItem.link}}" [disabled]="classItem.link == ''">Link</a>
-    </mat-list-item>
+      <mat-tab label="PRIMUL SEMESTRU">
+        <h3 mat-subheader>Discipline Obligatorii</h3>
+        <app-list-item *ngFor="let item of firstSemester" [listItem]="item"></app-list-item>
 
-  <mat-divider></mat-divider>
+        <h3 mat-subheader>Discipline Facultative</h3>
+        <app-list-item *ngFor="let item of firstSemesterSupplementaryCourses" [listItem]="item"></app-list-item>
+      </mat-tab>
 
-  <h3 mat-subheader>Second Semester</h3>
-  <mat-nav-list>
-    <mat-list-item *ngFor="let classItem of secondSemester">
-      <mat-icon mat-list-icon>{{classItem.icon}}</mat-icon>
-      <h4 mat-line>{{classItem.name}}</h4>
-      <p mat-line>Ultima actualizare : {{classItem.lastUpdated | date}} </p>
-    </mat-list-item>
-  </mat-nav-list>
+      <mat-tab label="AL DOILEA SEMESTRU">
+        <h3 mat-subheader>Discipline Obligatorii</h3>
+        <app-list-item *ngFor="let item of secondSemester" [listItem]="item"></app-list-item>
+
+        <h3 mat-subheader>Discipline Facultative</h3>
+        <app-list-item *ngFor="let item of secondSemesterSupplementaryCourses" [listItem]="item"></app-list-item>
+      </mat-tab>
+
+    </mat-tab-group>
+  </mat-card-content>
+
+
+
+<!--  <mat-divider></mat-divider>-->
 
 </mat-list>

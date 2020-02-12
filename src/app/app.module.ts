@@ -23,6 +23,7 @@ import { FirstYearComponent } from './sections/materials/years/first-year/first-
 import { SecondYearComponent } from './sections/materials/years/second-year/second-year.component';
 import { ThirdYearComponent } from './sections/materials/years/third-year/third-year.component';
 import {MatListModule} from '@angular/material/list';
+import { ListItemComponent } from './sections/materials/years/list-item/list-item.component';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import {MatListModule} from '@angular/material/list';
     MaterialsComponent,
     FirstYearComponent,
     SecondYearComponent,
-    ThirdYearComponent
+    ThirdYearComponent,
+    ListItemComponent
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,5 @@
 export class ThemeSwitcher{
-  darkTheme = false;
+  darkTheme = true;
 
   constructor() {
   }
