@@ -1,0 +1,56 @@
+<div style="padding: 36px">
+  <mat-card class="mat-elevation-z2 fit" style="padding: 0px">
+
+    <mat-card-header style="padding: 16px;" [class.dark-title-background]="themeSwitcher.darkTheme" [class.light-title-background]="!themeSwitcher.darkTheme">
+      <mat-card-title style="margin-bottom: 0">{{sectionTitle}}</mat-card-title>
+    </mat-card-header>
+
+    <div fxLayout="row"
+         fxLayout.xs="column"
+         fxLayoutGap="24px" style="padding: 42px; padding-bottom: 0">
+
+      <div fxFlex="50">
+
+        <mat-form-field appearance="outline" style="width: 100%;">
+          <mat-label>Nume</mat-label>
+          <input matInput placeholder="Eg. Valentin Stamate">
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          <mat-hint>Numele este optional</mat-hint>
+        </mat-form-field>
+
+      </div>
+
+      <div fxFlex="50">
+        <mat-form-field appearance="fill" style="width: 100%;">
+          <mat-label>Subiect</mat-label>
+          <mat-select>
+            <mat-option value="option">Aspect site</mat-option>
+            <mat-option value="option">Sectie noua</mat-option>
+            <mat-option value="option">Altceva...</mat-option>
+          </mat-select>
+          <mat-hint align="end">Selecteaza subiectul</mat-hint>
+        </mat-form-field>
+      </div>
+
+    </div>
+
+    <div fxLayout="column"
+         style="padding: 42px; padding-top: 8px">
+
+      <div fxFlex="50">
+        <mat-form-field style="width: 100%;">
+          <mat-label>Detalii subiect</mat-label>
+          <textarea matInput placeholder=""></textarea>
+        </mat-form-field>
+      </div>
+
+      <div fxFlex="50">
+        <button mat-raised-button color="primary">Trimite</button>
+      </div>
+
+    </div>
+
+  </mat-card>
+
+
+</div>

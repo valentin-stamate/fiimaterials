@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { WelcomePageComponent } from './sections/welcome-page/welcome-page.component';
 import {FlexLayoutModule} from '@angular/flex-layout';
@@ -24,6 +24,11 @@ import { SecondYearComponent } from './sections/materials/years/second-year/seco
 import { ThirdYearComponent } from './sections/materials/years/third-year/third-year.component';
 import {MatListModule} from '@angular/material/list';
 import { ListItemComponent } from './sections/materials/years/list-item/list-item.component';
+import { FeedbackComponent } from './sections/feedback/feedback.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatNativeDateModule} from '@angular/material/core';
+import {MatInputModule} from '@angular/material/input';
+import {MatSelectModule} from '@angular/material/select';
 
 
 @NgModule({
@@ -36,15 +41,21 @@ import { ListItemComponent } from './sections/materials/years/list-item/list-ite
     FirstYearComponent,
     SecondYearComponent,
     ThirdYearComponent,
-    ListItemComponent
+    ListItemComponent,
+    FeedbackComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     BrowserAnimationsModule,
-    MatSidenavModule,
     FormsModule,
     HttpClientModule,
+    MatNativeDateModule,
+    ReactiveFormsModule,
+    AppRoutingModule,
+    MatSidenavModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule,
     MatIconModule,
     MatCardModule,
     MatGridListModule,
