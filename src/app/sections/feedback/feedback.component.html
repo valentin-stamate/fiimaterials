@@ -13,7 +13,7 @@
 
         <mat-form-field appearance="outline" style="width: 100%;">
           <mat-label>Nume</mat-label>
-          <input matInput placeholder="Eg. Valentin Stamate" [(ngModel)]="feedBack.name">
+          <input matInput placeholder="Eg. Ion Popescu" [(ngModel)]="feedBack.name">
           <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
           <mat-hint>Numele este optional</mat-hint>
         </mat-form-field>
@@ -27,6 +27,7 @@
             <mat-option value="option" (click)="siteDesign()">Aspect site</mat-option>
             <mat-option value="option" (click)="newSelection()">Sectie noua</mat-option>
             <mat-option value="option" (click)="contact()">Contact</mat-option>
+            <mat-option value="option" (click)="bugs()">Bug-uri</mat-option>
             <mat-option value="option" (click)="somethingElse()">Altceva...</mat-option>
           </mat-select>
           <mat-hint align="end">Selecteaza subiectul</mat-hint>

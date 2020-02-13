@@ -1,11 +1,11 @@
-<div class="example-container" [class.class-dark-theme]="themeSwitcher.darkTheme">
+<div class="example-container" [class.class-light-theme]="!themeSwitcher.darkTheme">
 
   <mat-toolbar color="primary" class="example-toolbar mat-elevation-z4" style="z-index: 2; padding: 12px">
     <div class="logo" style="margin-right: 16px"></div>
     <h1 class="example-app-name">FII Materiale</h1>
     <span class="example-spacer"></span>
-    <mat-icon class="example-icon" aria-hidden="false" aria-label="Example heart icon">favorite</mat-icon>
-    <mat-icon class="example-icon" aria-hidden="false" aria-label="Example delete icon">delete</mat-icon>
+    <mat-slide-toggle [checked]="!themeSwitcher.darkTheme" (click)="themeSwitcher.toggleTheme()"></mat-slide-toggle>
+
   </mat-toolbar>
 
   <mat-sidenav-container class="example-sidenav-container">

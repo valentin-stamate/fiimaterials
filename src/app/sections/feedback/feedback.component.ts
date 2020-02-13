@@ -31,6 +31,9 @@ export class FeedbackComponent implements OnInit {
       this.openToast('Introduceti minim 8 caractere');
       return false;
     }
+    if(this.feedBack.option === '') {
+      this.feedBack.option = 'Unknown';
+    }
 
     let result;
     try {
@@ -61,6 +64,9 @@ export class FeedbackComponent implements OnInit {
   }
   contact() {
     this.feedBack.option = 'Contact';
+  }
+  bugs() {
+    this.feedBack.option = 'Bugs';
   }
 
 }

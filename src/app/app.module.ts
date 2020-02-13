@@ -31,9 +31,22 @@ import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
 
 import { AngularFireModule } from '@angular/fire';
-import { AngularFireDatabaseModule } from '@angular/fire/database';
-import { environment } from '../environments/environment';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { UsefulLinksComponent } from './useful-links/useful-links.component';
+import { TodoComponent } from './todo/todo.component';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+
+const firebaseConfig = {
+  apiKey: 'AIzaSyAHdqG831zeo_Mg-VEjBuwgUIdgz000Fns',
+  authDomain: 'fiimateriale.firebaseapp.com',
+  databaseURL: 'https://fiimateriale.firebaseio.com',
+  projectId: 'fiimateriale',
+  storageBucket: 'fiimateriale.appspot.com',
+  messagingSenderId: '887119686242',
+  appId: '1:887119686242:web:5335dfee47dfec96c1bf3b',
+  measurementId: 'G-MQKMN9BCSQ'
+};
 
 @NgModule({
   declarations: [
@@ -46,7 +59,9 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     SecondYearComponent,
     ThirdYearComponent,
     ListItemComponent,
-    FeedbackComponent
+    FeedbackComponent,
+    UsefulLinksComponent,
+    TodoComponent
   ],
   imports: [
     BrowserModule,
@@ -68,9 +83,10 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     MatButtonModule,
     MatTabsModule,
     MatListModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFireDatabaseModule,
-    MatSnackBarModule
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFirestoreModule,
+    MatSnackBarModule,
+    MatSlideToggleModule
 
   ],
   bootstrap: [AppComponent],
