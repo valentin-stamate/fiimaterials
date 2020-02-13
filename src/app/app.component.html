@@ -3,6 +3,16 @@
   <mat-toolbar color="primary" class="example-toolbar mat-elevation-z4" style="z-index: 2; padding: 12px">
     <div class="logo" style="margin-right: 16px"></div>
     <h1 class="example-app-name">FII Materiale</h1>
+    <button mat-button [matMenuTriggerFor]="menu" style="margin-left: 16px">Linkuri Utile</button>
+    <mat-menu #menu="matMenu">
+      <a mat-menu-item href="https://www.info.uaic.ro/admitere-2019-studii-de-licenta/" target="_blank">Admitere</a>
+      <a mat-menu-item href="http://www.uaic.ro/studenti/cazare/" target="_blank">Cazare</a>
+      <a mat-menu-item href="http://www.uaic.ro/studenti/burse/" target="_blank">Burse</a>
+      <a mat-menu-item href="https://www.info.uaic.ro/academicyear1819/" target="_blank">Structura Anului</a>
+      <a mat-menu-item href="https://profs.info.uaic.ro/~orar/orar_studenti.html" target="_blank">Orar Studenti</a>
+      <a mat-menu-item href="https://profs.info.uaic.ro/~orar/orar_profesori.html" target="_blank">Orar Profesori</a>
+      <a mat-menu-item href="https://simsweb.uaic.ro/eSIMS/Default.aspx" target="_blank">ESims</a>
+    </mat-menu>
     <span class="example-spacer"></span>
     <mat-slide-toggle [checked]="!themeSwitcher.darkTheme" (click)="themeSwitcher.toggleTheme()"></mat-slide-toggle>
 

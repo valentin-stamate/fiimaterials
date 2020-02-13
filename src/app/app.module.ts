@@ -33,9 +33,9 @@ import {MatSelectModule} from '@angular/material/select';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
-import { UsefulLinksComponent } from './useful-links/useful-links.component';
-import { TodoComponent } from './todo/todo.component';
+import { TodoComponent } from './sections/todo/todo.component';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import {MatMenuModule} from '@angular/material/menu';
 
 const firebaseConfig = {
   apiKey: 'AIzaSyAHdqG831zeo_Mg-VEjBuwgUIdgz000Fns',
@@ -60,7 +60,6 @@ const firebaseConfig = {
     ThirdYearComponent,
     ListItemComponent,
     FeedbackComponent,
-    UsefulLinksComponent,
     TodoComponent
   ],
   imports: [
@@ -86,7 +85,8 @@ const firebaseConfig = {
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFirestoreModule,
     MatSnackBarModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    MatMenuModule
 
   ],
   bootstrap: [AppComponent],
