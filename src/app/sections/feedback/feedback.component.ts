@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {ThemeSwitcher} from '../../services/ThemeSwitcher';
+import {Themeswitcher} from '../../services/themeswitcher';
 import {FeedbackService} from '../../services/feedback.service';
 import {FeedbackModel} from '../../model/feedback.model';
 import {MatSnackBar} from '@angular/material/snack-bar';
@@ -15,7 +15,7 @@ export class FeedbackComponent implements OnInit {
   sectionTitle = 'Feedback';
   feedBack: FeedbackModel = new FeedbackModel();
 
-  constructor(public themeSwitcher: ThemeSwitcher, private feedbackService: FeedbackService, private snackBar: MatSnackBar) { }
+  constructor(public themeSwitcher: Themeswitcher, private feedbackService: FeedbackService, private snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
   }

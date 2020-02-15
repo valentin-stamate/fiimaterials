@@ -8,6 +8,7 @@ import {ListItem} from '../listItem.module';
 })
 export class ListItemComponent implements OnInit {
   @Input('listItem') listItem: ListItem;
+
   constructor() { }
 
   ngOnInit(): void {

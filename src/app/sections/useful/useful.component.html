@@ -1,0 +1,32 @@
+<div style="padding: 36px">
+  <mat-card class="mat-elevation-z4 fit" style="padding: 0">
+
+    <mat-card-header [class.section-tile-light]="!themeSwitcher.lightTheme" [class.section-tile-dark]="themeSwitcher.lightTheme">
+      <mat-card-title style="margin-bottom: 0">{{sectionTitle}}</mat-card-title>
+    </mat-card-header>
+    <mat-divider></mat-divider>
+
+    <mat-accordion displayMode="default">
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Linkuri Utile
+          </mat-panel-title>
+          <mat-panel-description>
+<!--            Type your name and age-->
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+
+        <mat-nav-list *ngFor="let item of usefulLinks">
+          <a mat-list-item target="_blank" href="{{item.link}}" >{{item.title}}</a>
+        </mat-nav-list>
+
+      </mat-expansion-panel>
+    </mat-accordion>
+
+  </mat-card>
+
+
+</div>
+
+

@@ -58,14 +58,17 @@ $main-page-spacing: 40vh;
 .main-title {
   position: relative;
   text-align: center;
+  font-size: 32px;
+  font-weight: lighter;
   margin-top: $main-page-spacing;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .main-sub-title {
   position: relative;
   text-align: center;
   font-size: 20px;
+  font-weight: revert;
   margin-bottom: $main-page-spacing;
 }
 
@@ -87,21 +90,32 @@ $main-page-spacing: 40vh;
   font-size: 19px;
   margin-bottom: 8px;
 }
-
-.dark-title-background {
-  background-color: #787878;
-}
-
-.light-title-background {
-  background-color: #EEEEEE;
-}
+//
+//.dark-title-background {
+//  background-color: #787878;
+//}
+//
+//.light-title-background {
+//  background-color: #EEEEEE;
+//}
 
 .center-div {
   left: 50%;
 }
 
+.section-tile-light {
+  background-color: rgba(0,0,0, 0.15);
+  padding: 16px;
+}
+
+.section-tile-dark {
+  background-color: rgba(255,255,255, 0.15);
+  padding: 16px;
+}
 
 
 
 
 
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

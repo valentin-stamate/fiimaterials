@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ListItem} from '../listItem.module';
 
-import {firstYearJson} from '../classes.json';
+import {DataService} from '../../../../services/data.service';
 
 @Component({
   selector: 'app-first-year',
@@ -15,12 +15,14 @@ export class FirstYearComponent implements OnInit {
   secondSemester: ListItem[] = [];
   secondSemesterSupplementaryCourses: ListItem[] = [];
 
-  constructor() {
-    this.firstSemester = firstYearJson.firstSemester.classes;
-    this.firstSemesterSupplementaryCourses = firstYearJson.firstSemester.supplementaryCourses;
+  constructor(private dataService: DataService) {
+    const firstYear = dataService.classes.firstYearJson;
 
-    this.secondSemester = firstYearJson.secondSemester.classes;
-    this.secondSemesterSupplementaryCourses = firstYearJson.secondSemester.supplementaryCourses;
+    this.firstSemester = firstYear.firstSemester.classes;
+    this.firstSemesterSupplementaryCourses = firstYear.firstSemester.supplementaryCourses;
+
+    this.secondSemester = firstYear.secondSemester.classes;
+    this.secondSemesterSupplementaryCourses = firstYear.secondSemester.supplementaryCourses;
   }
 
   ngOnInit(): void {

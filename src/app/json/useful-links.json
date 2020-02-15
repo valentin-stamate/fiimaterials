@@ -1,0 +1,36 @@
+{
+  "usefulLinks": [
+    {
+      "title": "Pagina Principala",
+      "link": "https://www.info.uaic.ro"
+    },
+    {
+      "title": "Admitere",
+      "link": "https://www.info.uaic.ro/admitere-2019-studii-de-licenta"
+    },
+    {
+      "title": "Cazare",
+      "link": "http://www.uaic.ro/studenti/cazare/"
+    },
+    {
+      "title": "Burse",
+      "link": "http://www.uaic.ro/studenti/burse"
+    },
+    {
+      "title": "Structura Anului",
+      "link": "https://www.info.uaic.ro/academicyear1819"
+    },
+    {
+      "title": "Orar Studenti",
+      "link": "https://profs.info.uaic.ro/~orar/orar_studenti.html"
+    },
+    {
+      "title": "Orar Profesori",
+      "link": "https://profs.info.uaic.ro/~orar/orar_profesori.html"
+    },
+    {
+      "title": "ESims",
+      "link": "https://simsweb.uaic.ro/eSIMS/Default.aspx"
+    }
+  ]
+}

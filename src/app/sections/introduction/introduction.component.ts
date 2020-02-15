@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {ThemeSwitcher} from '../../services/ThemeSwitcher';
+import {Themeswitcher} from '../../services/themeswitcher';
 
 @Component({
   selector: 'app-introduction',
@@ -9,13 +9,9 @@ import {ThemeSwitcher} from '../../services/ThemeSwitcher';
 export class IntroductionComponent implements OnInit {
   darkTheme = false;
 
-  constructor(private themeSwitcher: ThemeSwitcher) { }
+  constructor() { }
 
   ngOnInit() {
-  }
-
-  toggleTheme(): void {
-    this.themeSwitcher.toggleTheme();
   }
 
 }

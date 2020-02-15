@@ -2,23 +2,71 @@
 
 @include mat-core();
 
+$light-primary: mat-palette($mat-indigo);
+$light-accent: mat-palette($mat-light-blue);
+$light-warm: mat-palette($mat-deep-orange, A200);
+$light-theme: mat-light-theme(
+    $light-primary,
+    $light-accent,
+    $light-warm
+);
+
 $dark-primary: mat-palette($mat-blue-grey);
 $dark-accent:  mat-palette($mat-amber, A200, A100, A400);
 $dark-warn:    mat-palette($mat-deep-orange);
-$dark-theme:   mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
+$dark-theme:   mat-dark-theme(
+    $dark-primary,
+    $dark-accent,
+    $dark-warn
+);
+@include angular-material-theme($light-theme);
+.light-theme {
+  @include angular-material-theme($light-theme);
+}
 
-$light-primary: mat-palette($mat-indigo);
-$light-accent: mat-palette($mat-amber);
-$light-warm: mat-palette($mat-blue-gray);
-$light-theme: mat-light-theme($light-primary, $light-accent, $light-warm);
-
-@include angular-material-theme($dark-theme);
-
-.class-dark-theme {
+.dark-theme {
   @include angular-material-theme($dark-theme);
 }
 
-.class-light-theme {
-  @include angular-material-theme($light-theme);
+
+
+.dp00 {
+  background-color: #121212;
+}
+
+.dp01 {
+  background-color: #1E1E1E;
+}
+
+.dp02 {
+  background-color: #222222;
+}
+
+.dp03 {
+  background-color: #242424;
+}
+
+.dp04 {
+  background-color: #272727;
+}
+
+.dp06 {
+  background-color: #2C2C2C;
+}
+
+.dp08 {
+  background-color: #2D2D2D;
+}
+
+.dp12 {
+  background-color: #333333;
+}
+
+.dp16 {
+  background-color: #353535;
+}
+
+.dp24 {
+  background-color: #383838;
 }
 

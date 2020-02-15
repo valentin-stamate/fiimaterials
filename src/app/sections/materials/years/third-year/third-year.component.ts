@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ListItem} from '../listItem.module';
-import {thirdYearJson} from '../classes.json';
+import {DataService} from '../../../../services/data.service';
 
 @Component({
   selector: 'app-third-year',
@@ -16,14 +16,16 @@ export class ThirdYearComponent {
   secondSemesterOptionalCourses: ListItem[] = [];
   secondSemesterSupplementaryCourses: ListItem[] = [];
 
-  constructor() {
-    this.firstSemester = thirdYearJson.firstSemester.classes;
-    this.firstSemesterOptionalCourses = thirdYearJson.firstSemester.optionalCourses;
-    this.firstSemesterSupplementaryCourses = thirdYearJson.firstSemester.supplementaryCourses;
+  constructor(private dataService: DataService) {
+    const thirdYear = dataService.classes.thirdYearJson;
 
-    this.secondSemester = thirdYearJson.secondSemester.classes;
-    this.secondSemesterOptionalCourses = thirdYearJson.secondSemester.optionalCourses
-    this.secondSemesterSupplementaryCourses = thirdYearJson.secondSemester.supplementaryCourses;
+    this.firstSemester = thirdYear.firstSemester.classes;
+    this.firstSemesterOptionalCourses = thirdYear.firstSemester.optionalCourses;
+    this.firstSemesterSupplementaryCourses = thirdYear.firstSemester.supplementaryCourses;
+
+    this.secondSemester = thirdYear.secondSemester.classes;
+    this.secondSemesterOptionalCourses = thirdYear.secondSemester.optionalCourses;
+    this.secondSemesterSupplementaryCourses = thirdYear.secondSemester.supplementaryCourses;
   }
 
 }

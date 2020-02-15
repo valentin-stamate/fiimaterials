@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ListItem} from '../listItem.module';
-import {secondYearJson} from '../classes.json';
+import {DataService} from '../../../../services/data.service';
 
 @Component({
   selector: 'app-second-year',
@@ -16,14 +16,15 @@ export class SecondYearComponent implements OnInit {
   secondSemesterOptionalCourses: ListItem[] = [];
   secondSemesterSupplementaryCourses: ListItem[] = [];
 
-  constructor() {
-    this.firstSemester = secondYearJson.firstSemester.classes;
-    this.firstSemesterOptionalCourses = secondYearJson.firstSemester.optionalCourses;
-    this.firstSemesterSupplementaryCourses = secondYearJson.firstSemester.supplementaryCourses;
+  constructor(private dataService: DataService) {
+    const secondYear = dataService.classes.secondYearJson;
+    this.firstSemester = secondYear.firstSemester.classes;
+    this.firstSemesterOptionalCourses = secondYear.firstSemester.optionalCourses;
+    this.firstSemesterSupplementaryCourses = secondYear.firstSemester.supplementaryCourses;
 
-    this.secondSemester = secondYearJson.secondSemester.classes;
-    this.secondSemesterOptionalCourses = secondYearJson.secondSemester.optionalCourses
-    this.secondSemesterSupplementaryCourses = secondYearJson.secondSemester.supplementaryCourses;
+    this.secondSemester = secondYear.secondSemester.classes;
+    this.secondSemesterOptionalCourses = secondYear.secondSemester.optionalCourses;
+    this.secondSemesterSupplementaryCourses = secondYear.secondSemester.supplementaryCourses;
   }
 
   ngOnInit(): void {

@@ -1,6 +1,5 @@
-import {Component, ViewChild} from '@angular/core';
-import { MatSidenav } from '@angular/material/sidenav';
-import {ThemeSwitcher} from './services/ThemeSwitcher';
+import {Component, OnInit, ViewChild} from '@angular/core';
+import {Themeswitcher} from './services/themeswitcher';
 import {FeedbackService} from './services/feedback.service';
 import {AngularFirestore} from '@angular/fire/firestore';
 
@@ -8,10 +7,14 @@ import {AngularFirestore} from '@angular/fire/firestore';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  providers: [ThemeSwitcher, FeedbackService, AngularFirestore]
+  providers: [FeedbackService, AngularFirestore]
 })
-export class AppComponent {
-
-  constructor(public themeSwitcher: ThemeSwitcher) {
+export class AppComponent implements OnInit{
+  constructor(public themeSwitcher: Themeswitcher) {
   }
+
+  ngOnInit() {
+    this.themeSwitcher.onDarkTheme('dark-theme');
+  }
+
 }

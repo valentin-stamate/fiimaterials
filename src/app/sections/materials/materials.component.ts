@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {ThemeSwitcher} from '../../services/ThemeSwitcher';
+import {Themeswitcher} from '../../services/themeswitcher';
 
 @Component({
   selector: 'app-materials',
@@ -8,7 +8,7 @@ import {ThemeSwitcher} from '../../services/ThemeSwitcher';
 })
 export class MaterialsComponent implements OnInit {
 
-  constructor(public themeSwitcher: ThemeSwitcher) { }
+  constructor(public themeSwitcher: Themeswitcher) { }
 
   ngOnInit(): void {
   }

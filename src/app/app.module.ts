@@ -36,6 +36,11 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { TodoComponent } from './sections/todo/todo.component';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatMenuModule} from '@angular/material/menu';
+import {MatExpansionModule} from '@angular/material/expansion';
+import { UsefulComponent } from './sections/useful/useful.component';
+import {DataService} from './services/data.service';
+import {Themeswitcher} from './services/themeswitcher';
+import { SectionTitleComponent } from './section-title/section-title.component';
 
 const firebaseConfig = {
   apiKey: 'AIzaSyAHdqG831zeo_Mg-VEjBuwgUIdgz000Fns',
@@ -60,7 +65,9 @@ const firebaseConfig = {
     ThirdYearComponent,
     ListItemComponent,
     FeedbackComponent,
-    TodoComponent
+    TodoComponent,
+    UsefulComponent,
+    SectionTitleComponent
   ],
   imports: [
     BrowserModule,
@@ -86,12 +93,15 @@ const firebaseConfig = {
     AngularFirestoreModule,
     MatSnackBarModule,
     MatSlideToggleModule,
-    MatMenuModule
+    MatMenuModule,
+    MatExpansionModule
 
   ],
   bootstrap: [AppComponent],
   providers: [
     { provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'fill' } },
+    DataService,
+    Themeswitcher
   ]
 })
 export class AppModule { }
