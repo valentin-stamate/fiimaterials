@@ -59,7 +59,7 @@ $main-page-spacing: 40vh;
   position: relative;
   text-align: center;
   font-size: 32px;
-  font-weight: lighter;
+  line-height: 30px;
   margin-top: $main-page-spacing;
   margin-bottom: 15px;
 }
@@ -70,6 +70,15 @@ $main-page-spacing: 40vh;
   font-size: 20px;
   font-weight: revert;
   margin-bottom: $main-page-spacing;
+}
+
+.distraction {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  top:0;
+  margin-top: $main-page-spacing - 1;
+  width: 650px;
 }
 
 /*   */

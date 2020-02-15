@@ -7,7 +7,7 @@
 <!--    <a mat-stroked-button style="margin-left: 24px">FAQ</a>-->
 
     <span class="example-spacer"></span>
-    <button mat-stroked-button [matMenuTriggerFor]="menu" style="margin-left: 24px">TEMA</button>
+    <button mat-stroked-button [matMenuTriggerFor]="menu" style="margin-left: 24px">{{themeSwitcher.lightTheme ? 'LIGHT' : 'DARK'}}</button>
     <mat-menu #menu="matMenu">
       <button mat-menu-item (click)="themeSwitcher.onLightTheme('light-theme')">Light</button>
       <button mat-menu-item (click)="themeSwitcher.onDarkTheme('dark-theme')" >Dark</button>
