@@ -1,7 +1,7 @@
 {
   "usefulLinks": [
     {
-      "title": "Pagina Principala",
+      "title": "Anunturi",
       "link": "https://www.info.uaic.ro"
     },
     {
@@ -11,6 +11,10 @@
     {
       "title": "Cazare",
       "link": "http://www.uaic.ro/studenti/cazare/"
+    },
+    {
+      "title": "Gidul Studentului",
+      "link": "http://www.uaic.ro/studenti/ghidul-studentului-uaic/"
     },
     {
       "title": "Burse",
@@ -27,6 +31,10 @@
     {
       "title": "Orar Profesori",
       "link": "https://profs.info.uaic.ro/~orar/orar_profesori.html"
+    },
+    {
+      "title": "Regulamente",
+      "link": "https://www.info.uaic.ro/regulamente/"
     },
     {
       "title": "ESims",
