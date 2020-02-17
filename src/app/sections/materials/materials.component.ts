@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, HostListener, OnInit} from '@angular/core';
 import {Themeswitcher} from '../../services/themeswitcher';
 
 @Component({

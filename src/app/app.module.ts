@@ -41,6 +41,8 @@ import { UsefulComponent } from './sections/useful/useful.component';
 import {DataService} from './services/data.service';
 import {Themeswitcher} from './services/themeswitcher';
 import { SectionTitleComponent } from './section-title/section-title.component';
+import {Routes} from '@angular/router';
+import {LayoutSizeService} from './services/layout-size.service';
 
 const firebaseConfig = {
   apiKey: 'AIzaSyAHdqG831zeo_Mg-VEjBuwgUIdgz000Fns',
@@ -52,6 +54,10 @@ const firebaseConfig = {
   appId: '1:887119686242:web:5335dfee47dfec96c1bf3b',
   measurementId: 'G-MQKMN9BCSQ'
 };
+
+// const appRoutes: Routes = [
+//   {path: '', component}
+// ];
 
 @NgModule({
   declarations: [
@@ -101,7 +107,8 @@ const firebaseConfig = {
   providers: [
     { provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'fill' } },
     DataService,
-    Themeswitcher
+    Themeswitcher,
+    LayoutSizeService
   ]
 })
 export class AppModule { }

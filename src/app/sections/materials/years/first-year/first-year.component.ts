@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {ListItem} from '../listItem.module';
 
 import {DataService} from '../../../../services/data.service';
+import {LayoutSizeService} from '../../../../services/layout-size.service';
 
 @Component({
   selector: 'app-first-year',
