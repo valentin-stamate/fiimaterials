@@ -43,6 +43,11 @@ import {Themeswitcher} from './services/themeswitcher';
 import { SectionTitleComponent } from './section-title/section-title.component';
 import {Routes} from '@angular/router';
 import {LayoutSizeService} from './services/layout-size.service';
+import { FirstPageComponent } from './pages/first-page/first-page.component';
+import { ErrorPageComponent } from './sections/error-page/error-page.component';
+import { FaqComponent } from './sections/faq/faq.component';
+import { AboutComponent } from './sections/about/about.component';
+import {MatCheckbox, MatCheckboxModule} from '@angular/material/checkbox';
 
 const firebaseConfig = {
   apiKey: 'AIzaSyAHdqG831zeo_Mg-VEjBuwgUIdgz000Fns',
@@ -73,12 +78,17 @@ const firebaseConfig = {
     FeedbackComponent,
     TodoComponent,
     UsefulComponent,
-    SectionTitleComponent
+    SectionTitleComponent,
+    FirstPageComponent,
+    ErrorPageComponent,
+    FaqComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
+    AppRoutingModule,
     HttpClientModule,
     MatNativeDateModule,
     ReactiveFormsModule,
@@ -100,7 +110,8 @@ const firebaseConfig = {
     MatSnackBarModule,
     MatSlideToggleModule,
     MatMenuModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatCheckboxModule
 
   ],
   bootstrap: [AppComponent],

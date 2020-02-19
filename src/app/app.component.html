@@ -4,7 +4,22 @@
     <div class="logo" style="margin-right: 16px"></div>
     <h1 class="example-app-name">FII Materiale</h1>
 
-<!--    <a mat-stroked-button style="margin-left: 24px">FAQ</a>-->
+
+
+<!--    <button mat-stroked-button-->
+<!--            [matMenuTriggerFor]="appMenu"-->
+<!--            style="margin-left: 24px;"-->
+<!--    >-->
+<!--      <mat-icon>keyboard_arrow_down</mat-icon>-->
+<!--      <span>MAI MULT</span>-->
+<!--    </button>-->
+
+<!--    <mat-menu #appMenu="matMenu" style="margin-left: 24px">-->
+<!--      <button mat-menu-item routerLink="/faq">FAQ</button>-->
+<!--      <button mat-menu-item routerLink="/about">Despre</button>-->
+<!--      <button mat-menu-item routerLink="/todo">ToDo</button>-->
+<!--    </mat-menu>-->
+
 
     <span class="example-spacer"></span>
     <button mat-stroked-button [matMenuTriggerFor]="menu" style="margin-left: 24px">{{themeSwitcher.lightTheme ? 'LIGHT' : 'DARK'}}</button>
@@ -18,21 +33,12 @@
   <mat-sidenav-container class="example-sidenav-container">
     <mat-sidenav-content>
 
-        <app-welcome-page></app-welcome-page>
-        <app-introduction></app-introduction>
-        <app-useful></app-useful>
-
-        <app-materials></app-materials>
-        <app-feedback></app-feedback>
-
-        <app-footer></app-footer>
+      <router-outlet></router-outlet>
 
     </mat-sidenav-content>
   </mat-sidenav-container>
 
 </div>
-
-
 <!-- Copyright 2019 Google LLC. All Rights Reserved.
     Use of this source code is governed by an MIT-style license that
     can be found in the LICENSE file at http://angular.io/license -->

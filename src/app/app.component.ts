@@ -3,6 +3,7 @@ import {Themeswitcher} from './services/themeswitcher';
 import {FeedbackService} from './services/feedback.service';
 import {AngularFirestore} from '@angular/fire/firestore';
 import {LayoutSizeService} from './services/layout-size.service';
+import {MatMenuTrigger} from '@angular/material/menu';
 
 @Component({
   selector: 'app-root',
@@ -11,8 +12,9 @@ import {LayoutSizeService} from './services/layout-size.service';
   providers: [FeedbackService, AngularFirestore]
 })
 export class AppComponent implements OnInit{
-  screenWidth: number;
+  @ViewChild(MatMenuTrigger) trigger: MatMenuTrigger;
 
+  screenWidth: number;
   constructor(public themeSwitcher: Themeswitcher, private layoutSizeService: LayoutSizeService) {
   }
 
@@ -24,6 +26,15 @@ export class AppComponent implements OnInit{
   @HostListener('window:resize', ['$event'])
   getScreenSize(event?) {
     this.layoutSizeService.setSmallScreen(window.innerWidth);
+  }
+
+  onOpenDropdown() {
+    this.trigger.openMenu();
+  }
+
+  onCloseDropdown() {
+    this.trigger.closeMenu();
+    alert();
   }
 
 }
