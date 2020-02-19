@@ -1,8 +1,8 @@
 <mat-list-item>
   <mat-icon mat-list-icon>{{'fiber_manual_record'}}</mat-icon>
-  <h4 mat-line>{{layoutSizeService.smallScreen == false ? listItem.name : 'SD'}}</h4>
+  <h4 mat-line>{{layoutSizeService.smallScreen == false ? listItem.name : listItem.short}}</h4>
   <p mat-line>{{layoutSizeService.smallScreen == false ? 'Credite' : 'CRT'}}: {{listItem.credits}}</p>
-  <p mat-line>Ultima actualizare: {{listItem.lastUpdated}} </p>
+  <p mat-line>{{layoutSizeService.smallScreen == false ? 'Ultima actualizare: ' : ''}}{{listItem.lastUpdated}} </p>
 
   <a mat-stroked-button color="primary" target="_blank" href="{{listItem.githubLink}}" [disabled]="listItem.githubLink === ''">
     Git

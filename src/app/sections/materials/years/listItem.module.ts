@@ -1,5 +1,6 @@
 export class ListItem {
   public name:string;
+  public short: string;
   public credits: number;
   public lastUpdated: string;
   public icon: string;

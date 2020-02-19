@@ -5,6 +5,7 @@
         "classes" : [
           {
             "name": "Structuri de date",
+            "short": "SD",
             "credits": 6,
             "lastUpdated": "22/02/20",
             "icon": "all_inclusive",
@@ -12,7 +13,8 @@
             "megaLink": "http://bit.ly/38xJkry"
           },
           {
-            "name": "Arhitectura calculatoarelor şi sisteme de operare",
+            "name": "Arhitectura Calculatoarelor şi Sisteme de Operare",
+            "short": "ACSO",
             "credits": 5,
             "lastUpdated": "22/2/20",
             "icon": "all_inclusive",
@@ -20,7 +22,8 @@
             "megaLink": "http://bit.ly/31PbY5b"
           },
           {
-            "name": "Logică pentru informatică",
+            "name": "Logică Pentru Informatică",
+            "short": "Logica",
             "credits": 6,
             "lastUpdated": "22/2/20",
             "icon": "all_inclusive",
@@ -29,6 +32,7 @@
           },
           {
             "name": "Matematică",
+            "short": "Mate",
             "credits": 5,
             "lastUpdated": "22/2/20",
             "icon": "all_inclusive",
@@ -36,7 +40,8 @@
             "megaLink": "http://bit.ly/2UQg7Eq"
           },
           {
-            "name": "Practica – Introducere în programare",
+            "name": "Practica – Introducere în Programare",
+            "short": "IP",
             "credits": 4,
             "lastUpdated": "22/2/20",
             "icon": "all_inclusive",
@@ -45,6 +50,7 @@
           },
           {
             "name": "Limba engleză I",
+            "short": "Engleza",
             "credits": 4,
             "lastUpdated": "22/2/20",
             "icon": "all_inclusive",
@@ -54,7 +60,8 @@
         ],
         "supplementaryCourses": [
           {
-            "name": "Programare competitivă V",
+            "name": "Programare Competitivă V",
+            "short": "PC",
             "credits": 3,
             "lastUpdated": "22/2/20",
             "icon": "all_inclusive",
@@ -62,7 +69,8 @@
             "megaLink": ""
           },
           {
-            "name": "Educaţie fizică",
+            "name": "Educaţie Fizică",
+            "short": "Sport",
             "credits": 1,
             "lastUpdated": "22/2/20",
             "icon": "all_inclusive",
@@ -70,7 +78,8 @@
             "megaLink": ""
           },
           {
-            "name": "Psihologia educaţiei",
+            "name": "Psihologia Educaţiei",
+            "short": "Pedagogie",
             "credits": 5,
             "lastUpdated": "22/2/20",
             "icon": "all_inclusive",
@@ -84,6 +93,7 @@
         "classes": [
           {
             "name": "Programare orientată-obiect",
+            "short": "OOP",
             "credits": 6,
             "lastUpdated": "-",
             "icon": "all_inclusive",
@@ -91,7 +101,8 @@
             "megaLink": ""
           },
           {
-            "name": "Sisteme de operare",
+            "name": "Sisteme de Operare",
+            "short": "SO",
             "credits": 5,
             "lastUpdated": "-",
             "icon": "all_inclusive",
@@ -99,7 +110,8 @@
             "megaLink": ""
           },
           {
-            "name": "Fundamente algebrice ale informaticii",
+            "name": "Fundamente Algebrice ale Informaticii",
+            "short": "FAI",
             "credits": 6,
             "lastUpdated": "-",
             "icon": "all_inclusive",
@@ -107,7 +119,8 @@
             "megaLink": ""
           },
           {
-            "name": "Probabilităţi şi statistică",
+            "name": "Probabilităţi şi Statistică",
+            "short": "Statistica",
             "credits": 5,
             "lastUpdated": "-",
             "icon": "all_inclusive",
@@ -115,7 +128,8 @@
             "megaLink": ""
           },
           {
-            "name": "Proiectarea algoritmilor",
+            "name": "Proiectarea Algoritmilor",
+            "short": "PA",
             "credits": 4,
             "lastUpdated": "-",
             "icon": "all_inclusive",
@@ -123,7 +137,8 @@
             "megaLink": ""
           },
           {
-            "name": "Limba engleză II",
+            "name": "Limba Engleză II",
+            "short": "Engleza",
             "credits": 4,
             "lastUpdated": "-",
             "icon": "all_inclusive",
@@ -134,6 +149,7 @@
         "supplementaryCourses": [
           {
             "name": "Programare competitivă VI",
+            "short": "PC",
             "credits": 3,
             "lastUpdated": "-",
             "icon": "all_inclusive",
@@ -141,7 +157,8 @@
             "megaLink": ""
           },
           {
-            "name": "Educaţie fizică",
+            "name": "Educaţie Fizică",
+            "short": "Sport",
             "credits": 1,
             "lastUpdated": "-",
             "icon": "all_inclusive",
@@ -149,7 +166,8 @@
             "megaLink": ""
           },
           {
-            "name": "Etică și integritate academică",
+            "name": "Etică și Integritate Academică",
+            "short": "Etica?",
             "credits": 3,
             "lastUpdated": "-",
             "icon": "all_inclusive",
@@ -157,7 +175,8 @@
             "megaLink": ""
           },
           {
-            "name": "Pedagogie I (Fundamentele pedagogiei + Teoria şi metodologia curriculumului)",
+            "name": "Pedagogie I",
+            "short": "Pedagogie",
             "credits": 5,
             "lastUpdated": "-",
             "icon": "all_inclusive",
@@ -174,6 +193,7 @@
         "classes": [
           {
             "name": "Reţele de calculatoare",
+            "short": "SD",
             "credits": 6,
             "lastUpdated": "-",
             "icon": "all_inclusive",
@@ -182,6 +202,7 @@
           },
           {
             "name": "Baze de date",
+            "short": "SD",
             "credits": 6,
             "lastUpdated": "-",
             "icon": "all_inclusive",
@@ -190,6 +211,7 @@
           },
           {
             "name": "Limbaje formale, automate şi compilatoare",
+            "short": "SD",
             "credits": 6,
             "lastUpdated": "-",
             "icon": "all_inclusive",
@@ -198,6 +220,7 @@
           },
           {
             "name": "Algoritmica grafurilor",
+            "short": "SD",
             "credits": 5,
             "lastUpdated": "-",
             "icon": "all_inclusive",
@@ -206,6 +229,7 @@
           },
           {
             "name": "Limba engleză III",
+            "short": "SD",
             "credits": 4,
             "lastUpdated": "-",
             "icon": "all_inclusive",
@@ -216,6 +240,7 @@
         "optionalCourses": [
           {
             "name": "Calculabilitate, decidabilitate şi complexitate",
+            "short": "SD",
             "credits": 4,
             "lastUpdated": "-",
             "icon": "all_inclusive",
@@ -224,6 +249,7 @@
           },
           {
             "name": "Principii ale limbajelor de programare",
+            "short": "SD",
             "credits": 4,
             "lastUpdated": "-",
             "icon": "all_inclusive",
@@ -240,6 +266,7 @@
           },
           {
             "name": "Modele continue şi Matlab",
+            "short": "SD",
             "credits": 4,
             "lastUpdated": "-",
             "icon": "all_inclusive",
@@ -250,6 +277,7 @@
         "supplementaryCourses": [
           {
             "name": "Programare competitivă I",
+            "short": "SD",
             "credits": 3,
             "lastUpdated": "-",
             "icon": "all_inclusive",
@@ -258,6 +286,7 @@
           },
           {
             "name": "Educaţie fizică",
+            "short": "SD",
             "credits": 1,
             "lastUpdated": "-",
             "icon": "all_inclusive",
@@ -265,7 +294,8 @@
             "megaLink": ""
           },
           {
-            "name": "Practică în industrie I\n",
+            "name": "Practică în industrie I",
+            "short": "SD",
             "credits": 3,
             "lastUpdated": "-",
             "icon": "all_inclusive",
@@ -273,7 +303,8 @@
             "megaLink": ""
           },
           {
-            "name": "Pedagogie II (Teoria şi metodologia instruirii + Teoria şi metodologia evaluării)",
+            "name": "Pedagogie II",
+            "short": "SD",
             "credits": 5,
             "lastUpdated": "-",
             "icon": "all_inclusive",
@@ -286,6 +317,7 @@
         "classes": [
           {
             "name": "Tehnologii WEB",
+            "short": "SD",
             "credits": 6,
             "lastUpdated": "-",
             "icon": "all_inclusive",
@@ -294,6 +326,7 @@
           },
           {
             "name": "Programare avansată",
+            "short": "SD",
             "credits": 5,
             "lastUpdated": "-",
             "icon": "all_inclusive",
@@ -302,6 +335,7 @@
           },
           {
             "name": "Ingineria Programării",
+            "short": "SD",
             "credits": 6,
             "lastUpdated": "-",
             "icon": "all_inclusive",
@@ -310,6 +344,7 @@
           },
           {
             "name": "Practică SGBD",
+            "short": "SD",
             "credits": 4,
             "lastUpdated": "-",
             "icon": "all_inclusive",
@@ -318,6 +353,7 @@
           },
           {
             "name": "Limba engleză IV",
+            "short": "SD",
             "credits": 4,
             "lastUpdated": "-",
             "icon": "all_inclusive",
@@ -328,6 +364,7 @@
         "optionalCourses": [
           {
             "name": "Programare funcţională",
+            "short": "SD",
             "credits": 5,
             "lastUpdated": "-",
             "icon": "all_inclusive",
@@ -336,6 +373,7 @@
           },
           {
             "name": "Introducere in criptografie",
+            "short": "SD",
             "credits": 5,
             "lastUpdated": "-",
             "icon": "all_inclusive",
@@ -344,6 +382,7 @@
           },
           {
             "name": "Antreprenoriat și inovare în IT",
+            "short": "SD",
             "credits": 5,
             "lastUpdated": "-",
             "icon": "all_inclusive",
@@ -352,6 +391,7 @@
           },
           {
             "name": "Sisteme Embedded",
+            "short": "SD",
             "credits": 5,
             "lastUpdated": "-",
             "icon": "all_inclusive",
@@ -362,6 +402,7 @@
         "supplementaryCourses": [
           {
             "name": "Programare competitivă II",
+            "short": "SD",
             "credits": 3,
             "lastUpdated": "-",
             "icon": "all_inclusive",
@@ -370,6 +411,7 @@
           },
           {
             "name": "Educaţie fizică și sport",
+            "short": "SD",
             "credits": 1,
             "lastUpdated": "-",
             "icon": "all_inclusive",
@@ -378,6 +420,7 @@
           },
           {
             "name": "Didactica informaticii",
+            "short": "SD",
             "credits": 3,
             "lastUpdated": "-",
             "icon": "all_inclusive",
@@ -394,6 +437,7 @@
         "classes": [
           {
             "name": "Învățare automată",
+            "short": "SD",
             "credits": 6,
             "lastUpdated": "-",
             "icon": "all_inclusive",
@@ -402,6 +446,7 @@
           },
           {
             "name": "Securitatea informaţiei",
+            "short": "SD",
             "credits": 5,
             "lastUpdated": "-",
             "icon": "all_inclusive",
@@ -410,6 +455,7 @@
           },
           {
             "name": "Inteligenţă artificială",
+            "short": "SD",
             "credits": 6,
             "lastUpdated": "-",
             "icon": "all_inclusive",
@@ -418,6 +464,7 @@
           },
           {
             "name": "Practică – Programare în Pyton",
+            "short": "SD",
             "credits": 4,
             "lastUpdated": "-",
             "icon": "all_inclusive",
@@ -428,6 +475,7 @@
         "optionalCourses": [
           {
             "name": "Introducere în .NET",
+            "short": "SD",
             "credits": 4,
             "lastUpdated": "-",
             "icon": "all_inclusive",
@@ -436,6 +484,7 @@
           },
           {
             "name": "Dezvoltarea sistemelor fizice utilizând microprocesoare",
+            "short": "SD",
             "credits": 4,
             "lastUpdated": "-",
             "icon": "all_inclusive",
@@ -444,6 +493,7 @@
           },
           {
             "name": "Rețele neuronale",
+            "short": "SD",
             "credits": 4,
             "lastUpdated": "-",
             "icon": "all_inclusive",
@@ -452,6 +502,7 @@
           },
           {
             "name": "Animaţie 3D: algoritmi şi tehnici fundamentale",
+            "short": "SD",
             "credits": 4,
             "lastUpdated": "-",
             "icon": "all_inclusive",
@@ -461,6 +512,7 @@
 
           {
             "name": "Programare și modelare probabilistă",
+            "short": "SD",
             "credits": 5,
             "lastUpdated": "-",
             "icon": "all_inclusive",
@@ -469,6 +521,7 @@
           },
           {
             "name": "Dezvoltarea aplicaţiilor Web cu JavaScript",
+            "short": "SD",
             "credits": 5,
             "lastUpdated": "-",
             "icon": "all_inclusive",
@@ -477,6 +530,7 @@
           },
           {
             "name": "Capitole speciale de sisteme de operare",
+            "short": "SD",
             "credits": 5,
             "lastUpdated": "-",
             "icon": "all_inclusive",
@@ -485,6 +539,7 @@
           },
           {
             "name": "Inginerie software specifică automobilelor",
+            "short": "SD",
             "credits": 5,
             "lastUpdated": "-",
             "icon": "all_inclusive",
@@ -495,6 +550,7 @@
         "supplementaryCourses": [
           {
             "name": "Programare competitivă III",
+            "short": "SD",
             "credits": 5,
             "lastUpdated": "-",
             "icon": "all_inclusive",
@@ -503,6 +559,7 @@
           },
           {
             "name": "Practică în industrie II",
+            "short": "SD",
             "credits": 1,
             "lastUpdated": "-",
             "icon": "all_inclusive",
@@ -515,6 +572,7 @@
         "classes": [
           {
             "name": "Calcul numeric",
+            "short": "SD",
             "credits": 4,
             "lastUpdated": "-",
             "icon": "all_inclusive",
@@ -523,6 +581,7 @@
           },
           {
             "name": "Grafică pe calculator",
+            "short": "SD",
             "credits": 4,
             "lastUpdated": "-",
             "icon": "all_inclusive",
@@ -531,6 +590,7 @@
           },
           {
             "name": "Elaborare lucrare de licență",
+            "short": "SD",
             "credits": 5,
             "lastUpdated": "-",
             "icon": "all_inclusive",
@@ -542,6 +602,7 @@
         "optionalCourses": [
           {
             "name": "Programare bazată pe reguli",
+            "short": "SD",
             "credits": 5,
             "lastUpdated": "-",
             "icon": "all_inclusive",
@@ -550,6 +611,7 @@
           },
           {
             "name": "Tehnici de programare pe platforma Android",
+            "short": "SD",
             "credits": 5,
             "lastUpdated": "-",
             "icon": "all_inclusive",
@@ -558,6 +620,7 @@
           },
           {
             "name": "Aspecte computaţionale în teoria numerelor",
+            "short": "SD",
             "credits": 5,
             "lastUpdated": "-",
             "icon": "all_inclusive",
@@ -567,6 +630,7 @@
 
           {
             "name": "Cloud Computing",
+            "short": "SD",
             "credits": 6,
             "lastUpdated": "-",
             "icon": "all_inclusive",
@@ -575,6 +639,7 @@
           },
           {
             "name": "Tehnici de ingineria limbajului natural",
+            "short": "SD",
             "credits": 6,
             "lastUpdated": "-",
             "icon": "all_inclusive",
@@ -583,6 +648,7 @@
           },
           {
             "name": "Analiza reţelelor media sociale",
+            "short": "SD",
             "credits": 6,
             "lastUpdated": "-",
             "icon": "all_inclusive",
@@ -592,6 +658,7 @@
 
           {
             "name": "Reţele Petri şi aplicaţii",
+            "short": "SD",
             "credits": 6,
             "lastUpdated": "-",
             "icon": "all_inclusive",
@@ -600,6 +667,7 @@
           },
           {
             "name": "Smart Card-uri şi Aplicaţii",
+            "short": "SD",
             "credits": 6,
             "lastUpdated": "-",
             "icon": "all_inclusive",
@@ -608,6 +676,7 @@
           },
           {
             "name": "Topici speciale de programare .NET",
+            "short": "SD",
             "credits": 6,
             "lastUpdated": "-",
             "icon": "all_inclusive",
@@ -616,6 +685,7 @@
           },
           {
             "name": "Elaborare lucrare de licenţă",
+            "short": "SD",
             "credits": 6,
             "lastUpdated": "-",
             "icon": "all_inclusive",
@@ -627,6 +697,7 @@
         "supplementaryCourses": [
           {
             "name": "Programare competitivă IV",
+            "short": "SD",
             "credits": 3,
             "lastUpdated": "-",
             "icon": "all_inclusive",
@@ -635,6 +706,7 @@
           },
           {
             "name": "Managementul clasei de elevi",
+            "short": "SD",
             "credits": 1,
             "lastUpdated": "-",
             "icon": "all_inclusive",
@@ -643,6 +715,7 @@
           },
           {
             "name": "Practică pedagogică în învăţământul preuniversitar obligatoriu (2)",
+            "short": "SD",
             "credits": 3,
             "lastUpdated": "-",
             "icon": "all_inclusive",
