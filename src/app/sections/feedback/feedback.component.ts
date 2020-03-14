@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {Themeswitcher} from '../../services/themeswitcher';
 import {FeedbackService} from '../../services/feedback.service';
-import {FeedbackModel} from '../../model/feedback.model';
 import {MatSnackBar} from '@angular/material/snack-bar';
+import {FeedbackFromModel} from '../../model/feedback.from.model';
+import {FormControl, FormGroup} from '@angular/forms';
 
 
 @Component({
@@ -13,60 +14,57 @@ import {MatSnackBar} from '@angular/material/snack-bar';
 })
 export class FeedbackComponent implements OnInit {
   sectionTitle = 'Feedback';
-  feedBack: FeedbackModel = new FeedbackModel();
+  feedbackForm: FeedbackFromModel;
+
+  feedbackFormGroup = new FormGroup({
+    name: new FormControl(''),
+    subject: new FormControl(''),
+    message: new FormControl('')
+  });
 
   constructor(public themeSwitcher: Themeswitcher, private feedbackService: FeedbackService, private snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
+   this.feedbackForm = new FeedbackFromModel();
   }
 
-  sendFeedback() {
+  onSubmitFeedback() {
     const success = 'Feedback trimis!';
     const fail = 'Eroare la trimiterea feedback-ului';
 
-    if(this.feedBack.name === '') {
-      this.feedBack.name = 'Unknown';
+    this.getFromData();
+
+    if(this.feedbackForm.name === '') {
+      this.feedbackForm.name = 'Unknown';
     }
-    if(this.feedBack.message.length < 8) {
+    if(this.feedbackForm.message.length < 8) {
       this.openToast('Introduceti minim 8 caractere');
       return false;
     }
-    if(this.feedBack.option === '') {
-      this.feedBack.option = 'Unknown';
+    if(this.feedbackForm.subject === '') {
+      this.feedbackForm.subject = 'Unknown';
     }
 
-    let result;
     try {
-      result = this.feedbackService.createFeedback(this.feedBack);
+      this.feedbackService.onSubmitFeedback(this.feedbackForm);
     } catch (e) {
       this.openToast(fail);
       return false;
     }
 
-    this.openToast(success);
-    return result;
+    this.feedbackFormGroup.reset();
 
+    this.openToast(success);
   }
 
   openToast(message: string) {
     this.snackBar.open(message, 'Close', {duration: 2000});
   }
 
-  // fast way of doing this
-  siteDesign() {
-    this.feedBack.option = 'Aspect Site';
-  }
-  newSelection() {
-    this.feedBack.option = 'Selectie Noua';
-  }
-  somethingElse() {
-    this.feedBack.option = 'Another';
-  }
-  contact() {
-    this.feedBack.option = 'Contact';
-  }
-  bugs() {
-    this.feedBack.option = 'Bugs';
+  private getFromData() {
+    this.feedbackForm.name = this.feedbackFormGroup.value.name;
+    this.feedbackForm.subject = this.feedbackFormGroup.value.subject;
+    this.feedbackForm.message = this.feedbackFormGroup.value.message;
   }
 
 }

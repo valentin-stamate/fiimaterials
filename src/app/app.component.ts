@@ -4,6 +4,7 @@ import {FeedbackService} from './services/feedback.service';
 import {AngularFirestore} from '@angular/fire/firestore';
 import {LayoutSizeService} from './services/layout-size.service';
 import {MatMenuTrigger} from '@angular/material/menu';
+import {CookieService} from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-root',
@@ -14,13 +15,20 @@ import {MatMenuTrigger} from '@angular/material/menu';
 export class AppComponent implements OnInit{
   @ViewChild(MatMenuTrigger) trigger: MatMenuTrigger;
 
-  screenWidth: number;
-  constructor(public themeSwitcher: Themeswitcher, private layoutSizeService: LayoutSizeService) {
+  constructor(public themeSwitcher: Themeswitcher,
+              private layoutSizeService: LayoutSizeService,
+              private cookieService: CookieService) {
   }
 
   ngOnInit() {
     this.themeSwitcher.onDarkTheme('dark-theme');
     this.layoutSizeService.setSmallScreen(window.innerWidth);
+
+    const date = new Date();
+    date.setMonth(date.getMonth() + 6);
+
+    this.cookieService.set('blema', 'blea din nou', date);
+
   }
 
   @HostListener('window:resize', ['$event'])

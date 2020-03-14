@@ -40,7 +40,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import { UsefulComponent } from './sections/useful/useful.component';
 import {DataService} from './services/data.service';
 import {Themeswitcher} from './services/themeswitcher';
-import { SectionTitleComponent } from './section-title/section-title.component';
+import { SectionTitleComponent } from './sections/section-title/section-title.component';
 import {Routes} from '@angular/router';
 import {LayoutSizeService} from './services/layout-size.service';
 import { FirstPageComponent } from './pages/first-page/first-page.component';
@@ -48,6 +48,8 @@ import { ErrorPageComponent } from './sections/error-page/error-page.component';
 import { FaqComponent } from './sections/faq/faq.component';
 import { AboutComponent } from './sections/about/about.component';
 import {MatCheckbox, MatCheckboxModule} from '@angular/material/checkbox';
+import { FeedbackPageComponent } from './pages/feedback-page/feedback-page.component';
+import {CookieService} from 'ngx-cookie-service';
 
 const firebaseConfig = {
   apiKey: 'AIzaSyAHdqG831zeo_Mg-VEjBuwgUIdgz000Fns',
@@ -59,10 +61,6 @@ const firebaseConfig = {
   appId: '1:887119686242:web:5335dfee47dfec96c1bf3b',
   measurementId: 'G-MQKMN9BCSQ'
 };
-
-// const appRoutes: Routes = [
-//   {path: '', component}
-// ];
 
 @NgModule({
   declarations: [
@@ -83,6 +81,7 @@ const firebaseConfig = {
     ErrorPageComponent,
     FaqComponent,
     AboutComponent,
+    FeedbackPageComponent,
   ],
   imports: [
     BrowserModule,
@@ -119,7 +118,8 @@ const firebaseConfig = {
     { provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'fill' } },
     DataService,
     Themeswitcher,
-    LayoutSizeService
+    LayoutSizeService,
+    CookieService,
   ]
 })
 export class AppModule { }
