@@ -16,18 +16,13 @@ export class AppComponent implements OnInit{
   @ViewChild(MatMenuTrigger) trigger: MatMenuTrigger;
 
   constructor(public themeSwitcher: Themeswitcher,
-              private layoutSizeService: LayoutSizeService,
-              private cookieService: CookieService) {
+              private layoutSizeService: LayoutSizeService) {
   }
 
   ngOnInit() {
     this.themeSwitcher.onDarkTheme('dark-theme');
     this.layoutSizeService.setSmallScreen(window.innerWidth);
 
-    const date = new Date();
-    date.setMonth(date.getMonth() + 6);
-
-    this.cookieService.set('blema', 'blea din nou', date);
 
   }
 

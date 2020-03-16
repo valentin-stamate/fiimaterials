@@ -50,6 +50,7 @@ import { AboutComponent } from './sections/about/about.component';
 import {MatCheckbox, MatCheckboxModule} from '@angular/material/checkbox';
 import { FeedbackPageComponent } from './pages/feedback-page/feedback-page.component';
 import {CookieService} from 'ngx-cookie-service';
+import {AppCookieService} from './services/app.cookie.service';
 
 const firebaseConfig = {
   apiKey: 'AIzaSyAHdqG831zeo_Mg-VEjBuwgUIdgz000Fns',
@@ -120,6 +121,7 @@ const firebaseConfig = {
     Themeswitcher,
     LayoutSizeService,
     CookieService,
+    AppCookieService,
   ]
 })
 export class AppModule { }

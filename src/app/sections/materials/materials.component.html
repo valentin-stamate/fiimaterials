@@ -6,18 +6,42 @@
     </mat-card-header>
     <mat-divider></mat-divider>
 
-    <mat-card-content>
-      <mat-tab-group mat-align-tabs="center">
-        <mat-tab label="PRIMUL AN">
-          <app-first-year></app-first-year>
-        </mat-tab>
-        <mat-tab label="AL DOILEA AN">
-          <app-second-year></app-second-year>
-        </mat-tab>
-        <mat-tab label="AL TREILEA AN">
-          <app-third-year></app-third-year>
-        </mat-tab>
-      </mat-tab-group>
-    </mat-card-content>
+    <div fxLayout="row"
+         fxLayoutGap="24px" style="padding: 24px">
+
+      <div fxFlex="50">
+        <button style="width: 100%;"
+                (click)="onYearChanged()"
+                routerLink="/year/one"
+                mat-raised-button color="primary"
+        >
+          An 1
+        </button>
+      </div>
+
+      <div fxFlex="50">
+        <button style="width: 100%;" (click)="onYearChanged()" routerLink="/year/two" mat-raised-button color="primary">An 2</button>
+      </div>
+
+      <div fxFlex="50">
+        <button style="width: 100%;" (click)="onYearChanged()" routerLink="/year/three" mat-raised-button color="primary">An 3</button>
+      </div>
+
+    </div>
+
+      <router-outlet></router-outlet>
+<!--    <mat-card-content>-->
+<!--      <mat-tab-group mat-align-tabs="center">-->
+<!--        <mat-tab label="PRIMUL AN">-->
+<!--          <app-first-year></app-first-year>-->
+<!--        </mat-tab>-->
+<!--        <mat-tab label="AL DOILEA AN">-->
+<!--          <app-second-year></app-second-year>-->
+<!--        </mat-tab>-->
+<!--        <mat-tab label="AL TREILEA AN">-->
+<!--          <app-third-year></app-third-year>-->
+<!--        </mat-tab>-->
+<!--      </mat-tab-group>-->
+<!--    </mat-card-content>-->
   </mat-card>
 </div>

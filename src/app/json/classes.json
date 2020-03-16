@@ -95,52 +95,52 @@
             "name": "Programare orientată-obiect",
             "short": "OOP",
             "credits": 6,
-            "lastUpdated": "-",
+            "lastUpdated": "17.03.2020",
             "icon": "all_inclusive",
             "githubLink": "",
-            "megaLink": ""
+            "megaLink": "http://bit.ly/39Wbspf"
           },
           {
             "name": "Sisteme de Operare",
             "short": "SO",
-            "credits": 5,
-            "lastUpdated": "-",
+            "credits": 6,
+            "lastUpdated": "17.03.2020",
             "icon": "all_inclusive",
             "githubLink": "",
-            "megaLink": ""
+            "megaLink": "http://bit.ly/2ISTg3W"
           },
           {
             "name": "Fundamente Algebrice ale Informaticii",
             "short": "FAI",
-            "credits": 6,
-            "lastUpdated": "-",
+            "credits": 5,
+            "lastUpdated": "17.03.2020",
             "icon": "all_inclusive",
             "githubLink": "",
-            "megaLink": ""
+            "megaLink": "http://bit.ly/2TT0zyW"
           },
           {
             "name": "Probabilităţi şi Statistică",
             "short": "Statistica",
-            "credits": 5,
-            "lastUpdated": "-",
+            "credits": 4,
+            "lastUpdated": "17.03.2020",
             "icon": "all_inclusive",
             "githubLink": "",
-            "megaLink": ""
+            "megaLink": "http://bit.ly/2ITqL6g"
           },
           {
             "name": "Proiectarea Algoritmilor",
             "short": "PA",
-            "credits": 4,
-            "lastUpdated": "-",
+            "credits": 5,
+            "lastUpdated": "17.03.2020",
             "icon": "all_inclusive",
             "githubLink": "",
-            "megaLink": ""
+            "megaLink": "http://bit.ly/2UafO5w"
           },
           {
             "name": "Limba Engleză II",
             "short": "Engleza",
             "credits": 4,
-            "lastUpdated": "-",
+            "lastUpdated": "",
             "icon": "all_inclusive",
             "githubLink": "",
             "megaLink": ""
@@ -151,7 +151,7 @@
             "name": "Programare competitivă VI",
             "short": "PC",
             "credits": 3,
-            "lastUpdated": "-",
+            "lastUpdated": "",
             "icon": "all_inclusive",
             "githubLink": "",
             "megaLink": ""
@@ -160,7 +160,7 @@
             "name": "Educaţie Fizică",
             "short": "Sport",
             "credits": 1,
-            "lastUpdated": "-",
+            "lastUpdated": "",
             "icon": "all_inclusive",
             "githubLink": "",
             "megaLink": ""
@@ -169,7 +169,7 @@
             "name": "Etică și Integritate Academică",
             "short": "Etica?",
             "credits": 3,
-            "lastUpdated": "-",
+            "lastUpdated": "",
             "icon": "all_inclusive",
             "githubLink": "",
             "megaLink": ""
@@ -178,7 +178,7 @@
             "name": "Pedagogie I",
             "short": "Pedagogie",
             "credits": 5,
-            "lastUpdated": "-",
+            "lastUpdated": "",
             "icon": "all_inclusive",
             "githubLink": "",
             "megaLink": ""
