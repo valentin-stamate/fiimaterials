@@ -1,17 +1,17 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {FirstPageComponent} from './pages/first-page/first-page.component';
-import {ErrorPageComponent} from './sections/error-page/error-page.component';
-import {TodoComponent} from './sections/todo/todo.component';
-import {FaqComponent} from './sections/faq/faq.component';
-import {AboutComponent} from './sections/about/about.component';
-import {FirstYearComponent} from './sections/materials/years/first-year/first-year.component';
-import {SecondYearComponent} from './sections/materials/years/second-year/second-year.component';
-import {ThirdYearComponent} from './sections/materials/years/third-year/third-year.component';
+import {HomeComponent} from './pages/home/home.component';
+import {ErrorComponent} from './components/error/error.component';
+import {TodoComponent} from './pages/todo/todo.component';
+import {FaqComponent} from './pages/faq/faq.component';
+import {FirstYearComponent} from './pages/home/components/materials/years/first-year/first-year.component';
+import {SecondYearComponent} from './pages/home/components/materials/years/second-year/second-year.component';
+import {ThirdYearComponent} from './pages/home/components/materials/years/third-year/third-year.component';
+import {AboutComponent} from './pages/about/about.component';
 
 
 const routes: Routes = [
-  {path: '', component: FirstPageComponent, children: [
+  {path: '', component: HomeComponent, children: [
       {path: 'year/one', component: FirstYearComponent},
       {path: 'year/two', component: SecondYearComponent},
       {path: 'year/three', component: ThirdYearComponent},
@@ -21,7 +21,7 @@ const routes: Routes = [
   {path: 'todo', component: TodoComponent},
   {path: 'faq', component: FaqComponent},
   {path: 'todo', component: TodoComponent},
-  {path: '**', component: ErrorPageComponent}
+  {path: '**', component: ErrorComponent}
 ];
 
 @NgModule({

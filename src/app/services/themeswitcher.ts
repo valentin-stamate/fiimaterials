@@ -15,8 +15,8 @@ export class Themeswitcher{
   }
 
   onDarkTheme(newTheme: string) {
-    this.lightTheme = false;
-    this.onChangeTheme(newTheme);
+    // this.lightTheme = false;
+    // this.onChangeTheme(newTheme);
   }
   onChangeTheme(theme: string) {
     this.themeClass = theme;

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {AngularFirestore} from '@angular/fire/firestore';
-import {FeedbackFromModel} from '../model/feedback.from.model';
+import {FeedbackFromModel} from '../pages/home/components/feedback/feedback.from.model';
 
 @Injectable({
   providedIn: 'root'

@@ -58,17 +58,21 @@ $main-page-spacing: 40vh;
 .main-title {
   position: relative;
   text-align: center;
-  font-size: 32px;
-  line-height: 30px;
+  padding: 24px;
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: bold;
+  color: #13192b;
   margin-top: $main-page-spacing;
-  margin-bottom: 15px;
+  /*text-shadow:0 5px 10px black;*/
 }
 
 .main-sub-title {
   position: relative;
   text-align: center;
   font-size: 20px;
-  font-weight: revert;
+  font-weight: bold;
+  color: #2D2D2D;
   margin-bottom: $main-page-spacing;
 }
 

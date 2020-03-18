@@ -1,0 +1,32 @@
+<mat-list>
+
+  <mat-card-content>
+    <mat-tab-group mat-align-tabs="center"
+                   [selectedIndex]="cookieAppService.getSemesterFromCookie()"
+                   (selectedIndexChange)="cookieAppService.setSemesterCookie('' + $event)"
+    >
+
+      <mat-tab label="PRIMUL SEMESTRU">
+        <h3 mat-subheader>Discipline Obligatorii</h3>
+        <app-list-item *ngFor="let item of firstSemester" [listItem]="item"></app-list-item>
+
+        <h3 mat-subheader>Discipline Facultative</h3>
+        <app-list-item *ngFor="let item of firstSemesterSupplementaryCourses" [listItem]="item"></app-list-item>
+      </mat-tab>
+
+      <mat-tab label="AL DOILEA SEMESTRU">
+        <h3 mat-subheader>Discipline Obligatorii</h3>
+        <app-list-item *ngFor="let item of secondSemester" [listItem]="item"></app-list-item>
+
+        <h3 mat-subheader>Discipline Facultative</h3>
+        <app-list-item *ngFor="let item of secondSemesterSupplementaryCourses" [listItem]="item"></app-list-item>
+      </mat-tab>
+
+    </mat-tab-group>
+  </mat-card-content>
+
+
+
+<!--  <mat-divider></mat-divider>-->
+
+</mat-list>
