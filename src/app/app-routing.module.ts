@@ -8,6 +8,7 @@ import {FirstYearComponent} from './pages/home/components/materials/years/first-
 import {SecondYearComponent} from './pages/home/components/materials/years/second-year/second-year.component';
 import {ThirdYearComponent} from './pages/home/components/materials/years/third-year/third-year.component';
 import {AboutComponent} from './pages/about/about.component';
+import {CreditsComponent} from './pages/credits/credits.component';
 
 
 const routes: Routes = [
@@ -21,6 +22,7 @@ const routes: Routes = [
   {path: 'todo', component: TodoComponent},
   {path: 'faq', component: FaqComponent},
   {path: 'todo', component: TodoComponent},
+  {path: 'credits', component: CreditsComponent},
   {path: '**', component: ErrorComponent}
 ];
 

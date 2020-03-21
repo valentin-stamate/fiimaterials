@@ -8,7 +8,8 @@ import {LayoutSizeService} from '../../services/layout-size.service';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(public layoutSizeService: LayoutSizeService) { }
+  constructor(public layoutSizeService: LayoutSizeService) {
+  }
 
   ngOnInit(): void {
   }

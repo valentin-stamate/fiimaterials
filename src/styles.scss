@@ -13,10 +13,18 @@ body { margin: 1000px; font-family: Roboto, "Helvetica Neue", sans-serif; user-s
   //background: #222831;
 }
 
+.title {
+  text-align: center;
+  color: #7b7b7b;
+  font-weight: bold;
+  font-size: 36px;
+  margin-top: 24px;
+}
+
 .logo {
   background-image: url("./assets/logo.svg");
-  width: 32px;
-  height: 32px;
+  width: 40px;
+  height: 40px;
   background-repeat: no-repeat;
 }
 
@@ -35,6 +43,10 @@ body { margin: 1000px; font-family: Roboto, "Helvetica Neue", sans-serif; user-s
   position: fixed;
   /* Make sure the toolbar will stay on top of the content as it scrolls past. */
   z-index: 2;
+}
+
+.mat-list-icon {
+  color: rgba(0, 0, 0, 0.54);
 }
 
 .example-icon {
@@ -85,6 +97,11 @@ $main-page-spacing: 40vh;
   padding: 48px;
 }
 
+.center {
+  left: 50%;
+  transform: translate(-50%);
+}
+
 .content-card {
   max-width: 240px;
 }
@@ -93,6 +110,7 @@ $main-page-spacing: 40vh;
   font-weight: bold;
   font-size: 19px;
   margin-bottom: 8px;
+  color: #989898;
 }
 //
 //.dark-title-background {

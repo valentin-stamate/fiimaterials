@@ -45,9 +45,11 @@ import { FaqComponent } from './pages/faq/faq.component';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {CookieService} from 'ngx-cookie-service';
 import {AppCookieService} from './services/app.cookie.service';
-import {WelcomePageComponent} from './pages/home/components/welcome-page/welcome-page.component';
+import {WelcomePageComponent} from './pages/home/components/welcome/welcome-page.component';
 import {IntroductionComponent} from './pages/home/components/introduction/introduction.component';
 import {AboutComponent} from './pages/about/about.component';
+import { CreditsComponent } from './pages/credits/credits.component';
+import { ConsolasComponent } from './components/consolas/consolas.component';
 
 const firebaseConfig = {
   apiKey: 'AIzaSyAHdqG831zeo_Mg-VEjBuwgUIdgz000Fns',
@@ -78,6 +80,8 @@ const firebaseConfig = {
     ErrorComponent,
     FaqComponent,
     AboutComponent,
+    CreditsComponent,
+    ConsolasComponent,
   ],
   imports: [
     BrowserModule,

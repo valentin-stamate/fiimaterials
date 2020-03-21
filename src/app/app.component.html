@@ -1,41 +1,30 @@
 <div class="example-container" [class]="themeSwitcher.themeClass">
 
-  <mat-toolbar color="primary" class="example-toolbar mat-elevation-z4" style="z-index: 2; padding: 12px">
-    <div class="logo" style="margin-right: 16px"></div>
-    <h1 class="example-app-name">FII Materiale</h1>
+  <mat-sidenav-container style="height: 100%">
 
+    <mat-sidenav #sidenav mode="over">
 
+      <mat-nav-list style="width: 200px;">
+        <div mat-subheader>Pagini</div>
+        <a mat-list-item role="navigation" (click)="sidenav.toggle()" routerLink="{{folder.link}}" *ngFor="let folder of folders">
+          <mat-icon mat-list-icon>{{folder.icon}}</mat-icon>
+          <div mat-line>{{folder.name}}</div>
+        </a>
+        <mat-divider></mat-divider>
+      </mat-nav-list>
 
-<!--    <button mat-stroked-button-->
-<!--            [matMenuTriggerFor]="appMenu"-->
-<!--            style="margin-left: 24px;"-->
-<!--    >-->
-<!--      <mat-icon>keyboard_arrow_down</mat-icon>-->
-<!--      <span>MAI MULT</span>-->
-<!--    </button>-->
+    </mat-sidenav>
 
-<!--    <mat-menu #appMenu="matMenu" style="margin-left: 24px">-->
-<!--      <button mat-menu-item routerLink="/faq">FAQ</button>-->
-<!--      <button mat-menu-item routerLink="/about">Despre</button>-->
-<!--      <button mat-menu-item routerLink="/todo">ToDo</button>-->
-<!--    </mat-menu>-->
-
-
-<!--    <span class="example-spacer"></span>-->
-<!--    <button mat-stroked-button [matMenuTriggerFor]="menu" style="margin-left: 24px">{{themeSwitcher.lightTheme ? 'LIGHT' : 'DARK'}}</button>-->
-<!--    <mat-menu #menu="matMenu">-->
-<!--      <button mat-menu-item (click)="themeSwitcher.onLightTheme('light-theme')">Light</button>-->
-<!--      <button mat-menu-item (click)="themeSwitcher.onDarkTheme('dark-theme')" >Dark</button>-->
-<!--    </mat-menu>-->
-
-  </mat-toolbar>
-
-  <mat-sidenav-container class="example-sidenav-container">
     <mat-sidenav-content>
+      <mat-toolbar role="heading" color="primary" class="example-toolbar mat-elevation-z1" style="z-index: 2; padding: 12px">
+        <button mat-icon-button (click)="sidenav.toggle()"><mat-icon>menu</mat-icon></button>
+        <div class="logo" style="margin-right: 16px"></div>
+        <h1 class="example-app-name">FII Materiale</h1>
+      </mat-toolbar>
 
       <router-outlet></router-outlet>
-
     </mat-sidenav-content>
+
   </mat-sidenav-container>
 
 </div>

@@ -7,6 +7,12 @@ import {MatMenuTrigger} from '@angular/material/menu';
 import {CookieService} from 'ngx-cookie-service';
 import {ThemePalette} from '@angular/material/core';
 
+export interface SidebarLink {
+  name: string;
+  link: string;
+  icon: string;
+}
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -16,6 +22,19 @@ import {ThemePalette} from '@angular/material/core';
 export class AppComponent implements OnInit{
   @ViewChild(MatMenuTrigger) trigger: MatMenuTrigger;
   @Input() color: ThemePalette;
+
+  folders: SidebarLink[] = [
+    {
+      name: 'Acasa',
+      link: '',
+      icon: 'home'
+    },
+    {
+      name: 'Credits',
+      link: './credits',
+      icon: 'scatter_plot'
+    }
+  ];
 
   constructor(public themeSwitcher: Themeswitcher,
               private layoutSizeService: LayoutSizeService) {
