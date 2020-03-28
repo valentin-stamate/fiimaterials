@@ -35,7 +35,6 @@ import { TodoComponent } from './pages/todo/todo.component';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatExpansionModule} from '@angular/material/expansion';
-import { UsefulComponent } from './pages/home/components/useful/useful.component';
 import {DataService} from './services/data.service';
 import {Themeswitcher} from './services/themeswitcher';
 import {LayoutSizeService} from './services/layout-size.service';
@@ -50,6 +49,7 @@ import {IntroductionComponent} from './pages/home/components/introduction/introd
 import {AboutComponent} from './pages/about/about.component';
 import { CreditsComponent } from './pages/credits/credits.component';
 import { ConsolasComponent } from './components/consolas/consolas.component';
+import { UsefulLinksComponent } from './pages/useful-links/useful-links.component';
 
 const firebaseConfig = {
   apiKey: 'AIzaSyAHdqG831zeo_Mg-VEjBuwgUIdgz000Fns',
@@ -75,13 +75,13 @@ const firebaseConfig = {
     ListItemComponent,
     FeedbackComponent,
     TodoComponent,
-    UsefulComponent,
     HomeComponent,
     ErrorComponent,
     FaqComponent,
     AboutComponent,
     CreditsComponent,
     ConsolasComponent,
+    UsefulLinksComponent,
   ],
   imports: [
     BrowserModule,

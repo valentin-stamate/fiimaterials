@@ -30,10 +30,20 @@ export class AppComponent implements OnInit{
       icon: 'home'
     },
     {
+      name: 'Linkuri Utile',
+      link: './useful-links',
+      icon: 'link'
+    },
+    {
+      name: 'Feedback',
+      link: './feedback',
+      icon: 'feedback'
+    },
+    {
       name: 'Credits',
       link: './credits',
       icon: 'scatter_plot'
-    }
+    },
   ];
 
   constructor(public themeSwitcher: Themeswitcher,

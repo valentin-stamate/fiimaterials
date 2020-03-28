@@ -13,12 +13,19 @@ body { margin: 1000px; font-family: Roboto, "Helvetica Neue", sans-serif; user-s
   //background: #222831;
 }
 
+a {
+  text-decoration: none;
+  color: #2D2D2D;
+}
+
 .title {
+  position: relative;
   text-align: center;
   color: #7b7b7b;
   font-weight: bold;
   font-size: 36px;
   margin-top: 24px;
+  z-index: 10;
 }
 
 .logo {

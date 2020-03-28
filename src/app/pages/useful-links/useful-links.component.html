@@ -1,0 +1,14 @@
+<div class="title"><app-consolas text="Linkuri Utile" color="#3F51B5"></app-consolas></div>
+<div style="padding: 36px">
+  <mat-card class="fit" style="padding: 0">
+
+    <mat-nav-list *ngFor="let item of usefulLinks">
+      <a mat-list-item target="_blank" href="{{item.link}}" >{{item.title}}</a>
+    </mat-nav-list>
+
+  </mat-card>
+
+
+</div>
+
+

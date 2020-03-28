@@ -1,4 +1,4 @@
-/*@import "~@angular/material/theming";
+@import "~@angular/material/theming";
 
 @include mat-core();
 
@@ -10,6 +10,8 @@ $light-theme: mat-light-theme(
     $light-accent,
     $light-warm
 );
+
+
 
 $dark-primary: mat-palette($mat-blue-grey);
 $dark-accent:  mat-palette($mat-amber, A200, A100, A400);
@@ -23,17 +25,17 @@ $dark-theme:   mat-dark-theme(
 $mat-background-color: #303030;
 @include angular-material-theme($light-theme);
 
-.light-theme {
-  @include angular-material-theme($light-theme);
-}
-
-.dark-theme {
-  @include angular-material-theme($dark-theme);
-}
+//.light-theme {
+//  @include angular-material-theme($light-theme);
+//}
+//
+//.dark-theme {
+//  @include angular-material-theme($dark-theme);
+//}
 
 .app-background-color {
   background-color: $mat-background-color;
-}*/
+}
 
 .dp00 {
   background-color: #121212;
