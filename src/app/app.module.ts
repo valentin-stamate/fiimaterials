@@ -50,6 +50,8 @@ import {AboutComponent} from './pages/about/about.component';
 import { CreditsComponent } from './pages/credits/credits.component';
 import { ConsolasComponent } from './components/consolas/consolas.component';
 import { UsefulLinksComponent } from './pages/useful-links/useful-links.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 const firebaseConfig = {
   apiKey: 'AIzaSyAHdqG831zeo_Mg-VEjBuwgUIdgz000Fns',
@@ -110,7 +112,8 @@ const firebaseConfig = {
     MatSlideToggleModule,
     MatMenuModule,
     MatExpansionModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
 
   ],
   bootstrap: [AppComponent],
