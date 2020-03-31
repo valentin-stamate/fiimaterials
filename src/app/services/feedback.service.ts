@@ -12,6 +12,7 @@ export class FeedbackService {
   onSubmitFeedback(feedback: FeedbackFromModel) {
      return this.firestore.collection(feedback.subject)
        .add({name:feedback.name, message: feedback.message, solved: false});
+     
   }
 
 }

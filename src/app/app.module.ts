@@ -52,6 +52,7 @@ import { ConsolasComponent } from './components/consolas/consolas.component';
 import { UsefulLinksComponent } from './pages/useful-links/useful-links.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import {AngularFireDatabase, AngularFireDatabaseModule} from '@angular/fire/database';
 
 const firebaseConfig = {
   apiKey: 'AIzaSyAHdqG831zeo_Mg-VEjBuwgUIdgz000Fns',
@@ -108,6 +109,7 @@ const firebaseConfig = {
     MatListModule,
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFirestoreModule,
+    AngularFireDatabaseModule,
     MatSnackBarModule,
     MatSlideToggleModule,
     MatMenuModule,
@@ -124,6 +126,7 @@ const firebaseConfig = {
     LayoutSizeService,
     CookieService,
     AppCookieService,
+    AngularFireDatabase
   ]
 })
 export class AppModule { }
