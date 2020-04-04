@@ -10,9 +10,9 @@ export class FeedbackService {
   constructor(private firestore: AngularFirestore) { }
 
   onSubmitFeedback(feedback: FeedbackFromModel) {
-     return this.firestore.collection(feedback.subject)
-       .add({name:feedback.name, message: feedback.message, solved: false});
-     
+     return this.firestore.collection('Feedback')
+       .add({subject: feedback.subject,name:feedback.name, message: feedback.message, solved: false});
+
   }
 
 }

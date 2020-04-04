@@ -18,23 +18,16 @@ export class FirstYearComponent implements OnInit {
   secondSemester: ListItem[] = [];
   secondSemesterSupplementaryCourses: ListItem[] = [];
 
-  constructor(private dataService: DataService, public cookieAppService: AppCookieService, private db: AngularFireDatabase) {
+  constructor(private dataService: DataService,
+              public cookieAppService: AppCookieService,
+              private db: AngularFireDatabase) {
     const firstYear = dataService.classes.firstYearJson;
-
-    console.log('First Attempt');
-    const reference$ = this.db.list('/Years/First Year');
 
     this.firstSemester = firstYear.firstSemester.classes;
     this.firstSemesterSupplementaryCourses = firstYear.firstSemester.supplementaryCourses;
 
-    reference$.set('/First Semester/Compulsory Courses', this.firstSemester);
-    reference$.set('/First Semester/Supplementary Courses', this.firstSemesterSupplementaryCourses);
-
     this.secondSemester = firstYear.secondSemester.classes;
     this.secondSemesterSupplementaryCourses = firstYear.secondSemester.supplementaryCourses;
-
-    reference$.set('/Second Semester/Compulsory Courses', this.secondSemester);
-    reference$.set('/Second Semester/Supplementary Courses', this.secondSemesterSupplementaryCourses);
   }
 
   ngOnInit(): void {

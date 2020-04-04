@@ -23,23 +23,13 @@ export class ThirdYearComponent {
               private db: AngularFireDatabase) {
     const thirdYear = dataService.classes.thirdYearJson;
 
-    const reference$ = this.db.list('Years/Third Year');
-
     this.firstSemester = thirdYear.firstSemester.classes;
     this.firstSemesterOptionalCourses = thirdYear.firstSemester.optionalCourses;
     this.firstSemesterSupplementaryCourses = thirdYear.firstSemester.supplementaryCourses;
 
-    reference$.set('/First Semester/Compulsory Courses', this.firstSemester);
-    reference$.set('/First Semester/Optional Courses', this.firstSemesterOptionalCourses);
-    reference$.set('/First Semester/Supplementary Courses', this.firstSemesterSupplementaryCourses);
-
     this.secondSemester = thirdYear.secondSemester.classes;
     this.secondSemesterOptionalCourses = thirdYear.secondSemester.optionalCourses;
     this.secondSemesterSupplementaryCourses = thirdYear.secondSemester.supplementaryCourses;
-
-    reference$.set('/Second Semester/Compulsory Courses', this.secondSemester);
-    reference$.set('/Second Semester/Optional Courses', this.secondSemesterOptionalCourses);
-    reference$.set('/Second Semester/Supplementary Courses', this.secondSemesterSupplementaryCourses);
   }
 
 }
