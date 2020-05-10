@@ -53,6 +53,7 @@ import { UsefulLinksComponent } from './pages/useful-links/useful-links.componen
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import {AngularFireDatabase, AngularFireDatabaseModule} from '@angular/fire/database';
+import {MatChipsModule} from '@angular/material/chips';
 
 const firebaseConfig = {
   apiKey: 'AIzaSyAHdqG831zeo_Mg-VEjBuwgUIdgz000Fns',
@@ -115,7 +116,8 @@ const firebaseConfig = {
     MatMenuModule,
     MatExpansionModule,
     MatCheckboxModule,
-    ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
+    ServiceWorkerModule.register('/ngsw-worker.js', {enabled: environment.production}),
+    MatChipsModule
 
   ],
   bootstrap: [AppComponent],
