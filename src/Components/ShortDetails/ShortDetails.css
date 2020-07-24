@@ -1,0 +1,19 @@
+.title {
+    margin-top: 0.5rem;
+    color: #404040;
+    text-align: center;
+}
+
+.content {
+    color: #6e6e6e;
+    text-align: center;
+}
+
+.info-icon {
+    width: 5rem;
+    height: 5rem;
+    display: block;
+    margin: auto;
+    user-select: none;
+    pointer-events: none;
+}

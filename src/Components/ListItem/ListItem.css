@@ -1,0 +1,13 @@
+.list-container {
+    position: relative;
+    padding: 0.75rem;
+}
+
+.list-title {
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.inline {
+    display: inline-block;
+}
