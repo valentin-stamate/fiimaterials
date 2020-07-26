@@ -1,13 +1,37 @@
 .list-container {
     position: relative;
-    padding: 0.75rem;
+    padding: 0.6rem;
+    background-color: #2c2c2c00;
+    color: #fff
 }
 
 .list-title {
-    vertical-align: middle;
-    display: inline-block;
+    display: inline;
+    /*vertical-align: middle;*/
 }
 
-.inline {
-    display: inline-block;
+
+/*.center {*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*}*/
+
+/*.action-wrapper {*/
+/*    position: relative;*/
+/*    display: inline-block;*/
+/*    float: right;*/
+/*    width: 100%;*/
+/*}*/
+
+.mega-icon {
+    width: 1.4rem;
+    height: 1.4rem;
+    /*fill: #fff;*/
+    fill: #E53935;
+    transition: 0.25s;
+}
+
+.mega-icon:hover {
+    /*fill: #E53935;*/
+    fill: #fff;
 }
