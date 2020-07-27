@@ -8,6 +8,11 @@ body {
   user-select: none;
 }
 
+img {
+  user-select: none;
+  pointer-events: none;
+}
+
 /*code {*/
 /*  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',*/
 /*    monospace;*/

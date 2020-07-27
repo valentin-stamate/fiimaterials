@@ -1,6 +1,7 @@
 import React from "react";
 import {Container, Tabs, Tab, ButtonGroup, Button, Row, Col, ListGroup, Card} from "react-bootstrap";
 import ListItem from "../ListItem/ListItem";
+import RateStar from "../RateStar/RateStar";
 
 const Materials = () => {
     return (
@@ -14,14 +15,14 @@ const Materials = () => {
                 </ButtonGroup>
 
                 <Row>
-                    <Col>
+                    <Col lg={12} xl={6}>
 
                         <Card style={{backgroundColor: "#404040"}}>
                             <ListItem title="Matematica" action="http://google.com" />
                         </Card>
 
                     </Col>
-                    <Col>
+                    <Col lg={12} xl={6} className="mt-xs-2 mt-sm-2 mt-md-2 mt-lg-2 mt-xl-0">
 
                         <Card style={{backgroundColor: "#404040"}}>
                             <ListItem title="Programare Orientata Obiect" action="http://google.com" />

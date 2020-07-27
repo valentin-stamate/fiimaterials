@@ -5,23 +5,9 @@
     color: #fff
 }
 
-.list-title {
-    display: inline;
-    /*vertical-align: middle;*/
+.class-rate-number {
+    color: #009688;
 }
-
-
-/*.center {*/
-/*    display: flex;*/
-/*    align-items: center;*/
-/*}*/
-
-/*.action-wrapper {*/
-/*    position: relative;*/
-/*    display: inline-block;*/
-/*    float: right;*/
-/*    width: 100%;*/
-/*}*/
 
 .mega-icon {
     width: 1.4rem;
@@ -30,7 +16,6 @@
     fill: #E53935;
     transition: 0.25s;
 }
-
 .mega-icon:hover {
     /*fill: #E53935;*/
     fill: #fff;

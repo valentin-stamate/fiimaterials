@@ -14,16 +14,16 @@ const TopBar = () => {
                         <Nav.Link href="#link"></Nav.Link>
                     </Nav>
 
-                    <Button variant="warning" className="mr-2">GitHub</Button>
+                    <Button variant="warning" className="mr-2 inline">GitHub</Button>
 
-                    <Dropdown>
+                    <Dropdown className="inline">
                         <Dropdown.Toggle variant="info" id="dropdown-basic">
                             Mobile
                         </Dropdown.Toggle>
 
                         <Dropdown.Menu>
-                            <Dropdown.Item href="#/action-1">Android</Dropdown.Item>
-                            <Dropdown.Item href="#/action-2">IOS</Dropdown.Item>
+                            <Dropdown.Item href="https://play.google.com/store/apps/details?id=com.frozenbrain.fiimateriale" target="_blank">Android</Dropdown.Item>
+                            <Dropdown.Item href="#/action-2">IOS(Coming Soon)</Dropdown.Item>
                         </Dropdown.Menu>
                     </Dropdown>
 

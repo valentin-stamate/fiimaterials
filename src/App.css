@@ -6,3 +6,29 @@
     background-color: #2c2c2c;
     padding: 5rem;
 }
+
+.title-color {
+    color: #2b2b2b;
+}
+
+/**/
+.left-side {
+    float: left;
+    vertical-align: middle;
+    line-height: 2.125rem;
+}
+
+.right-side {
+    float: right;
+    vertical-align: middle;
+    line-height: 2.125rem;
+}
+
+.inline {
+    display: inline-block;
+}
+/**/
+
+.content-color {
+    color: #474747;
+}
