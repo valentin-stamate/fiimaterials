@@ -7,21 +7,25 @@ import Materials from "./Components/Materials/Materials";
 import UsefulLinks from "./Components/UsefulLinks/UsefulLinks";
 import Footer from "./Components/Footer/Footer";
 import Contact from "./Components/Contact/Contact";
+import {Provider} from "react-redux";
+import store from "./Store/store";
 
 function App() {
   return (
-    <div className="App">
-      <TopBar />
-      <Intro />
-      <ShortDetails/>
-      <Materials />
-      <UsefulLinks />
+      <Provider store={store}>
+        <div className="App">
+          <TopBar />
+          <Intro />
+          <ShortDetails/>
+          <Materials />
+          <UsefulLinks />
 
-      <hr/>
-      <Contact />
+          <hr/>
+          <Contact />
 
-      <Footer />
-    </div>
+          <Footer />
+        </div>
+      </Provider>
   );
 }
 
