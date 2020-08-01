@@ -4,7 +4,7 @@ import TopBar from "./Components/TopBar/TopBar";
 import Intro from "./Components/Intro/Intro";
 import ShortDetails from "./Components/ShortDetails/ShortDetails";
 import Materials from "./Components/Materials/Materials";
-import UsefulLinks from "./Components/UsefulLinks/UsefulLinks";
+import Links from "./Components/Links/Links";
 import Footer from "./Components/Footer/Footer";
 import Contact from "./Components/Contact/Contact";
 import {Provider} from "react-redux";
@@ -18,7 +18,7 @@ function App() {
           <Intro />
           <ShortDetails/>
           <Materials />
-          <UsefulLinks />
+          <Links />
 
           <hr/>
           <Contact />

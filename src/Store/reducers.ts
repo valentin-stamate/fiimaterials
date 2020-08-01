@@ -17,6 +17,13 @@ const initialState = {
             votes_number: "",
             updated_at: "",
         }
+    ],
+    links: [
+        {
+            name: "Link",
+            link: "",
+            type: "",
+        }
     ]
 }
 
@@ -28,7 +35,10 @@ function reducers(state = initialState, action: any) {
                 classes: action.data,
             };
         case GET_LINKS:
-            return state;
+            return {
+                ...state,
+                links: action.data,
+            };
         default:
             return state;
 
