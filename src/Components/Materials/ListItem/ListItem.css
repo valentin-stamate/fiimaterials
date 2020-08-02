@@ -12,10 +12,17 @@
 .mega-icon {
     width: 1.4rem;
     height: 1.4rem;
-    /*fill: #fff;*/
     fill: #E53935;
     transition: 0.25s;
+    cursor: pointer;
 }
+
+.mega-icon-disabled {
+    width: 1.4rem;
+    height: 1.4rem;
+    fill: #303030;
+}
+
 .mega-icon:hover {
     /*fill: #E53935;*/
     fill: #fff;

@@ -18,12 +18,21 @@ let dataFetched = false;
 
 const Materials = (props: any) => {
 
-    const fetchClasses = () => {
+    const fetchClasses = (e: any) => {
+
+        let year = 1;
+        if (e !== null) {
+            year = e.target.getAttribute('button-key');
+        }
+
         axios({
-            method: "get",
+            method: "post",
             url: BACKEND_URL + GET_CLASSES_URL,
             headers: {
                 'Content-Type': 'application/json',
+            },
+            data: {
+                'year': year,
             }
         }).then( res => {
             props.dispatch({
@@ -38,7 +47,7 @@ const Materials = (props: any) => {
 
     if (!dataFetched) {
         dataFetched = true;
-        fetchClasses();
+        fetchClasses(null);
     }
 
     let classesFirstSemesterJSX: JSX.Element[] = [];
@@ -60,9 +69,9 @@ const Materials = (props: any) => {
             <div className="mt-component container-full-dark ">
 
                 <ButtonGroup aria-label="Basic example">
-                    <Button variant="outline-info">First Year</Button>
-                    <Button variant="outline-warning">Second Year</Button>
-                    <Button variant="outline-success">Third Year</Button>
+                    <Button button-key={1} onClick={fetchClasses} variant="outline-info">First Year</Button>
+                    <Button button-key={2} onClick={fetchClasses} variant="outline-warning">Second Year</Button>
+                    <Button button-key={3} onClick={fetchClasses} variant="outline-success">Third Year</Button>
                 </ButtonGroup>
 
                 <Row>
