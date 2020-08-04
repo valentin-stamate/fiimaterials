@@ -2,12 +2,7 @@ import React from "react";
 import Title from "../Title/Title";
 import {Button, Form} from "react-bootstrap";
 import {Link} from 'react-router-dom';
-
-const inputStyle = {
-    backgroundColor: "#232629",
-    borderColor: "#3c4045",
-    color: "#DBDCDD"
-}
+import './../Enter.css';
 
 export default function Login(props: any) {
 
@@ -27,12 +22,12 @@ export default function Login(props: any) {
             <Form onSubmit={Login} id="login-form">
                 <Form.Group>
                     <Form.Label>Username or Email</Form.Label>
-                    <Form.Control style={inputStyle} type="text" name="email" />
+                    <Form.Control className="input-dark" type="text" name="user-email" />
                 </Form.Group>
 
                 <Form.Group>
                     <Form.Label>Password</Form.Label>
-                    <Form.Control style={inputStyle} type="password" name="password" />
+                    <Form.Control className="input-dark" type="password" name="password" />
                 </Form.Group>
 
                 <Button variant="light" type="submit">
@@ -44,7 +39,6 @@ export default function Login(props: any) {
                         Signup
                     </Button>
                 </Link>
-
 
             </Form>
 

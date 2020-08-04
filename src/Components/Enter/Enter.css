@@ -12,3 +12,9 @@
     padding: 0 3rem 3rem 3rem;
     color: #DBDCDD;
 }
+
+.input-dark {
+    background-color: #232629 !important;
+    border-color: #3c4045 !important;
+    color: #dbdcdd !important;
+}
