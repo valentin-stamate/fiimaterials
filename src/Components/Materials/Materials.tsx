@@ -1,10 +1,11 @@
 import React from "react";
-import { Container, Tabs, Tab, ButtonGroup, Button, Row, Col, ListGroup, Card} from "react-bootstrap";
+import { ButtonGroup, Button, Row, Col } from "react-bootstrap";
 import ListItem from "./ListItem/ListItem";
 import { connect } from 'react-redux';
 import { GET_CLASSES } from "../../Store/actions";
 import axios from 'axios'
 import { BACKEND_URL, GET_CLASSES_URL } from "../../Store/globals";
+import {getCookie, LAST_YEAR_COOKIE, setCookie} from "../../Store/Cookie";
 
 const mapStateToProps = (state: any) => {
     return {
@@ -20,10 +21,14 @@ const Materials = (props: any) => {
 
     const fetchClasses = (e: any) => {
 
-        let year = 1;
+        const yearCookie = getCookie(LAST_YEAR_COOKIE);
+
+        let year = yearCookie !== null ? yearCookie : '1';
+
         if (e !== null) {
             year = e.target.getAttribute('button-key');
         }
+        setCookie(LAST_YEAR_COOKIE, year);
 
         axios({
             method: "post",
@@ -63,15 +68,16 @@ const Materials = (props: any) => {
         }
     })
 
+    const currentYear = getCookie(LAST_YEAR_COOKIE);
 
     return (
         <React.StrictMode>
-            <div className="mt-component container-full-dark ">
+            <div id="materials" className="mt-component container-full-dark ">
 
                 <ButtonGroup aria-label="Basic example">
-                    <Button button-key={1} onClick={fetchClasses} variant="outline-info">First Year</Button>
-                    <Button button-key={2} onClick={fetchClasses} variant="outline-warning">Second Year</Button>
-                    <Button button-key={3} onClick={fetchClasses} variant="outline-success">Third Year</Button>
+                    <Button button-key="1" onClick={fetchClasses} variant={currentYear === '1' ? 'info' : 'outline-info'}>First Year</Button>
+                    <Button button-key="2" onClick={fetchClasses} variant={currentYear === '2' ? 'warning' : 'outline-warning'}>Second Year</Button>
+                    <Button button-key="3" onClick={fetchClasses} variant={currentYear === '3' ? 'success' : 'outline-success'}>Third Year</Button>
                 </ButtonGroup>
 
                 <Row>

@@ -31,8 +31,8 @@ const ShortDetails = () => {
                         <img src={GitHubIcon} className="info-icon"/>
                         <b><h5 className="title-color">It's Open Source</h5></b>
                         <b><div className="content-color">
-                            I know, it's not a very complex site because it have one purpose. But it covers the basics of those technologies.
-                            So, if you wanna see how the magic is done you have a link to this project in the topbar.
+                            I know, it's not a very complex site because it has one purpose. But it covers the basics of those technologies.
+                            So, if you wanna see how the magic is done you have a link to this project in the topbar. <code>Right now the project it's not open for contributions.</code>
                         </div></b>
                     </Col>
                 </Row>

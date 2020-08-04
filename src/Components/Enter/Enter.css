@@ -1,0 +1,14 @@
+.container-background {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #202225;
+}
+
+.enter-container {
+    max-width: 32rem;
+    margin: 20rem auto 0 auto;
+    padding: 0 3rem 3rem 3rem;
+    color: #DBDCDD;
+}

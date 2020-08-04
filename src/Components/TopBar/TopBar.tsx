@@ -2,6 +2,11 @@ import React from "react";
 import {Button, Dropdown, Nav, Navbar} from "react-bootstrap";
 
 const TopBar = () => {
+
+    const openGitProject = () => {
+        window.open('https://github.com/FIIMaterials', '_blank');
+    }
+
     return (
         <React.StrictMode>
 
@@ -9,14 +14,17 @@ const TopBar = () => {
                 <Navbar.Brand>FIIMaterials</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="mr-auto">
-                        <Nav.Link href="#home">Intro</Nav.Link>
-                        <Nav.Link href="#link">Materials</Nav.Link>
-                        <Nav.Link href="#link">Links</Nav.Link>
-                        <Nav.Link href="#link">Contact</Nav.Link>
+
+                    <Nav>
+                        <Nav.Link href="#intro">Intro</Nav.Link>
+                        <Nav.Link href="#materials">Materials</Nav.Link>
+                        <Nav.Link href="#links">Links</Nav.Link>
+                        <Nav.Link href="#contact">Contact</Nav.Link>
                     </Nav>
 
-                    <Button variant="warning" className="mr-2 inline">GitHub</Button>
+                    <div className="mr-auto"/>
+
+                    <Button variant="warning" className="mr-2 inline" onClick={openGitProject}>GitHub</Button>
 
                     <Dropdown className="inline mr-2">
                         <Dropdown.Toggle variant="info" id="dropdown-basic">

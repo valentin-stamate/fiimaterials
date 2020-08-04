@@ -51,6 +51,7 @@ const Links = (props: any) => {
 
     return (
         <React.StrictMode>
+            <div id="links"/>
             <Container style={{padding:"3rem"}}>
 
                 <img src={EarthLink} className="icon"/>

@@ -19,7 +19,7 @@ const Intro = () => {
     return (
         <React.StrictMode>
 
-            <div className="intro-container text-dark">
+            <div id="intro" className="intro-container text-dark">
 
                 <Container className="text-container">
                     <Row>

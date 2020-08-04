@@ -1,32 +1,27 @@
 import React from 'react';
 import './App.css';
-import TopBar from "./Components/TopBar/TopBar";
-import Intro from "./Components/Intro/Intro";
-import ShortDetails from "./Components/ShortDetails/ShortDetails";
-import Materials from "./Components/Materials/Materials";
-import Links from "./Components/Links/Links";
-import Footer from "./Components/Footer/Footer";
-import Contact from "./Components/Contact/Contact";
 import {Provider} from "react-redux";
 import store from "./Store/store";
+import {BrowserRouter, Switch, Route} from 'react-router-dom'
+import MainPage from "./Components/MainPage/MainPage";
+import Enter from "./Components/Enter/Enter";
+
 
 function App() {
-  return (
-      <Provider store={store}>
-        <div className="App">
-          <TopBar />
-          <Intro />
-          <ShortDetails/>
-          <Materials />
-          <Links />
+    return (
+        <Provider store={store}>
+            <div className="App">
 
-          <hr/>
-          <Contact />
+                <BrowserRouter>
+                    <Switch>
+                        <Route exact path="/" component={MainPage} />
+                        <Route path="/enter" component={Enter} />
+                    </Switch>
+                </BrowserRouter>
 
-          <Footer />
-        </div>
-      </Provider>
-  );
+            </div>
+        </Provider>
+    );
 }
 
 // TODO About Project Section
