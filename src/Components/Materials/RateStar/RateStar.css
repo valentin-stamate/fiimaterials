@@ -3,3 +3,11 @@
     height: 1rem;
     margin: 0.25rem;
 }
+
+.star-toast {
+    position: fixed;
+    bottom: 1rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 2;
+}

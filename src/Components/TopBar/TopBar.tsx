@@ -18,7 +18,7 @@ let userFetched = false;
 const TopBar = (props: any) => {
 
     const token = getCookie(USER_AUTH_TOKEN_COOKIE);
-    if (token !== undefined) {
+    if (token !== undefined && token !== null) {
 
         props.dispatch({
             type: SET_AUTH_STATUS,
