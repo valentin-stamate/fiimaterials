@@ -1,4 +1,4 @@
-import {GET_CLASSES, GET_LINKS} from "./actions";
+import {GET_CLASSES, GET_LINKS, GET_USER_ADVANCED_DATA, GET_USER_DATA, SET_AUTH_STATUS} from "./actions";
 
 
 const initialState = {
@@ -24,7 +24,17 @@ const initialState = {
             link: "",
             type: "",
         }
-    ]
+    ],
+
+    userIsAuth: false,
+
+    userData: {
+        username: "User",
+        email: "user@email.com",
+    },
+    userAdvancedData: {
+
+    },
 }
 
 function reducers(state = initialState, action: any) {
@@ -39,6 +49,21 @@ function reducers(state = initialState, action: any) {
                 ...state,
                 links: action.data,
             };
+        case SET_AUTH_STATUS:
+            return {
+                ...state,
+                userIsAuth: action.data,
+            }
+        case GET_USER_DATA:
+            return {
+                ...state,
+                userData: action.data,
+            }
+        case GET_USER_ADVANCED_DATA:
+            return {
+                ...state,
+                userAdvancedData: action.data,
+            }
         default:
             return state;
 

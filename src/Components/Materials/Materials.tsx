@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import { GET_CLASSES } from "../../Store/actions";
 import axios from 'axios'
 import { BACKEND_URL, GET_CLASSES_URL } from "../../Store/globals";
-import {getCookie, LAST_YEAR_COOKIE, setCookie} from "../../Store/Cookie";
+import {getCookie, LAST_YEAR_COOKIE, setCookie} from '../../Store/cookie';
 
 const mapStateToProps = (state: any) => {
     return {

@@ -16,13 +16,19 @@ export function deleteCookie(key: string) {
     document.cookie = key + "=" + "" + ";expires=Thu, 01 Jan 1970 00:00:01 GMT"
 }
 
-const Cookie = {
+export function deleteCookies() {
+    deleteCookie(USER_AUTH_TOKEN_COOKIE);
+    deleteCookie(LAST_YEAR_COOKIE);
+}
+
+const cookie = {
     USER_AUTH_TOKEN_COOKIE,
     LAST_YEAR_COOKIE,
 
     setCookie,
     getCookie,
     deleteCookie,
+    deleteCookies,
 }
 
-export default Cookie
+export default cookie

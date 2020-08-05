@@ -17,7 +17,7 @@ const Enter = (props: any) => {
                 <Card className="enter-container" style={{backgroundColor: "#2a2d30"}}>
 
                     <Switch>
-                        <Route exact path={props.match.url + '/'} component={Signup}/>
+                        <Route exact path={props.match.url + '/'} component={Login}/>
                         <Route exact path={props.match.url + '/login'} component={Login}/>
                         <Route exact path={props.match.url + '/signup'} component={Signup}/>
                     </Switch>

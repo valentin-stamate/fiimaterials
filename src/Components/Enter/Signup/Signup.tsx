@@ -2,15 +2,26 @@ import React from "react";
 import Title from "../Title/Title";
 import {Button, Col, Form, Row} from "react-bootstrap";
 import {Link} from "react-router-dom";
+import {BACKEND_URL, LOGIN_URL, SIGNUP_URL} from "../../../Store/globals";
+import axios from 'axios';
 
 export default function Signup() {
 
     const Signup = (e: any) => {
         e.preventDefault();
 
-        const form = document.getElementById('login-form') as HTMLFormElement;
+        const form = document.getElementById('signup-form') as HTMLFormElement;
+        const formData = Object.fromEntries(new FormData(form));
 
-        console.log( Object.fromEntries(new FormData(form)) );
+        axios({
+            method: 'post',
+            url: BACKEND_URL + SIGNUP_URL,
+            data: formData,
+        }).then( (res: any) => {
+            console.log(res.status);
+            console.log(res.data);
+        } )
+
     }
 
     return (
