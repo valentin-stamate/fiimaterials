@@ -1,16 +1,17 @@
 import React from "react";
-import {Button, Dropdown, Nav, Navbar} from "react-bootstrap";
+import {Button, Dropdown, Nav, Navbar, Spinner} from "react-bootstrap";
 import {useHistory} from 'react-router-dom'
 import {connect} from "react-redux";
 import axios from 'axios';
 import {BACKEND_URL, GET_USER_URL} from "../../Store/globals";
 import {getCookie, USER_AUTH_TOKEN_COOKIE} from "../../Store/cookie";
-import {GET_USER_DATA, SET_AUTH_STATUS} from "../../Store/actions";
+import {GET_USER_DATA, SET_AUTH_STATUS, SET_USER_DATA_LOADING} from "../../Store/actions";
 
 const mapStateToProps = (state: any) => {
     return {
         user: state.userData,
         userIsAuth: state.userIsAuth,
+        userDataLoading: state.userDataLoading,
     }
 }
 
@@ -28,6 +29,11 @@ const TopBar = (props: any) => {
 
     if (!userFetched && props.userIsAuth) {
 
+        props.dispatch({
+            type: SET_USER_DATA_LOADING,
+            data: true,
+        })
+
         userFetched = true;
 
         const userToken = getCookie(USER_AUTH_TOKEN_COOKIE);
@@ -43,6 +49,11 @@ const TopBar = (props: any) => {
             props.dispatch({
                 type: GET_USER_DATA,
                 data: res.data,
+            })
+
+            props.dispatch({
+                type: SET_USER_DATA_LOADING,
+                data: false,
             })
 
         } ).catch( e => {
@@ -96,7 +107,21 @@ const TopBar = (props: any) => {
                         </Dropdown.Menu>
                     </Dropdown>
 
-                    <Button variant="dark" className="mr-2 inline" onClick={userButton}>
+                    <Button variant="dark" className="mr-2 inline" onClick={userButton} disabled={props.userDataLoading}>
+                        {
+                            props.userDataLoading ?
+                                <Spinner
+                                    className="mr-1"
+                                    as="span"
+                                    animation="border"
+                                    size="sm"
+                                    role="status"
+                                    aria-hidden="true"
+                                />
+                                :
+                                ''
+                        }
+
                         {
                             props.userIsAuth ?
                                 props.user.username :

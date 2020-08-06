@@ -25,5 +25,6 @@ function App() {
 }
 
 // TODO About Project Section
+// TODO what if the cookie uid is different than uid in the database?
 
 export default App;

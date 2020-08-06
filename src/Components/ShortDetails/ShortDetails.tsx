@@ -9,9 +9,9 @@ const ShortDetails = () => {
     return (
         <React.StrictMode>
 
-            <Container className="mt-component">
+            <Container style={{paddingTop: "4rem", paddingBottom: "4rem"}}>
                 <Row className="text-center">
-                    <Col>
+                    <Col sm={12} md={4}>
                         <img src={AboutSvg} className="info-icon"/>
                         <b><h5 className="title-color">About The Project</h5></b>
                         <b><div className="content-color">
@@ -19,7 +19,7 @@ const ShortDetails = () => {
                             The frontend is made with <kbd>React</kbd>, the backend with <kbd>Django REST API</kbd> and the struggle happens in the summer of 2020.
                         </div></b>
                     </Col>
-                    <Col>
+                    <Col sm={12} md={4}>
                         <img src={PackageSVG} className="info-icon"/>
                         <b><h5 className="title-color">All Materials (almost) In One Package</h5></b>
                         <b><div className="content-color">
@@ -27,7 +27,7 @@ const ShortDetails = () => {
                             one package, Mega for storing the files and a mobile app. <code>Thanks for all who are helping me with these materials.</code>
                         </div></b>
                     </Col>
-                    <Col>
+                    <Col sm={12} md={4}>
                         <img src={GitHubIcon} className="info-icon"/>
                         <b><h5 className="title-color">It's Open Source</h5></b>
                         <b><div className="content-color">

@@ -6,6 +6,8 @@ import Materials from "../Materials/Materials";
 import Links from "../Links/Links";
 import Contact from "../Contact/Contact";
 import Footer from "../Footer/Footer";
+import Resources from "../Resources/Resources";
+import Hr from "../Hr/Hr";
 
 const MainPage = () => {
     return (
@@ -14,9 +16,13 @@ const MainPage = () => {
             <Intro/>
             <ShortDetails/>
             <Materials/>
+
+            <Hr/>
+            <Resources />
+
             <Links/>
 
-            <hr/>
+            <Hr/>
             <Contact/>
 
             <Footer/>

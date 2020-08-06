@@ -86,15 +86,19 @@ const Materials = (props: any) => {
 
     return (
         <React.StrictMode>
-            <div id="materials" className="mt-component container-full-dark ">
+            <div id="materials" className="container-full-dark">
 
-                <ButtonGroup aria-label="Basic example" className="year-selector">
+                <h2 className="text-white text-center mb-0">Materials</h2>
+                <h6 className="text-white text-center">So many that you can't get enough of them</h6>
+
+                <ButtonGroup aria-label="Basic example" className="mt-3 year-selector">
                     <Button button-key="1" onClick={fetchClasses} variant={currentYear === '1' ? 'info' : 'outline-info'}>First Year</Button>
                     <Button button-key="2" onClick={fetchClasses} variant={currentYear === '2' ? 'warning' : 'outline-warning'}>Second Year</Button>
                     <Button button-key="3" onClick={fetchClasses} variant={currentYear === '3' ? 'success' : 'outline-success'}>Third Year</Button>
                 </ButtonGroup>
 
-                <Row className="mt-4">
+
+                <Row className="mt-4 container-max-width ml-auto mr-auto">
                     <Col lg={12} xl={6}>
                         {props.materialsLoading ?
                             <Loading color="light" />

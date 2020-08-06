@@ -5,7 +5,7 @@ import {
     GET_USER_DATA,
     SET_AUTH_STATUS,
     SET_MATERIALS_LOADING,
-    SET_LINKS_LOADING,
+    SET_LINKS_LOADING, SET_USER_DATA_LOADING,
 } from "./actions";
 
 
@@ -34,7 +34,6 @@ const initialState = {
         }
     ],
 
-    userIsAuth: false,
 
     userData: {
         username: "User",
@@ -44,6 +43,9 @@ const initialState = {
 
     },
 
+    userIsAuth: false,
+
+    userDataLoading: false,
     materialsLoading: true,
     linksLoading: true,
 }
@@ -84,6 +86,11 @@ function reducers(state = initialState, action: any) {
             return {
                 ...state,
                 linksLoading: action.data,
+            }
+        case SET_USER_DATA_LOADING:
+            return {
+                ...state,
+                userDataLoading: action.data,
             }
         default:
             return state;

@@ -5,6 +5,7 @@ export const SET_AUTH_STATUS = 4;
 export const GET_USER_ADVANCED_DATA = 5;
 export const SET_MATERIALS_LOADING = 6;
 export const SET_LINKS_LOADING = 7;
+export const SET_USER_DATA_LOADING = 8;
 
 const ACTIONS = [
     GET_CLASSES,
@@ -14,6 +15,7 @@ const ACTIONS = [
     SET_AUTH_STATUS,
     SET_MATERIALS_LOADING,
     SET_LINKS_LOADING,
+    SET_USER_DATA_LOADING,
 ]
 
 export default ACTIONS;

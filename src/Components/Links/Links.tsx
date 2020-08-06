@@ -60,12 +60,12 @@ const Links = (props: any) => {
     return (
         <React.StrictMode>
             <div id="links"/>
-            <Container style={{padding:"3rem"}}>
+            <Container className="container-full">
 
-                <img src={EarthLink} className="icon"/>
+                {/*<img src={EarthLink} className="icon"/>*/}
 
-                <h3 className="title-color text-center"><b>Useful Links</b></h3>
-                <h4 className="content-color text-center">Here You Came When You Feel Lost</h4>
+                <h2 className="title-color text-center mb-0"><b>Useful Links</b></h2>
+                <h6 className="content-color text-center">Feeling lost? Here are some links you can use</h6>
 
                 <Row className="mt-4">
                     <Col md={12} lg={6}>
