@@ -1,4 +1,12 @@
-import {GET_CLASSES, GET_LINKS, GET_USER_ADVANCED_DATA, GET_USER_DATA, SET_AUTH_STATUS} from "./actions";
+import {
+    GET_CLASSES,
+    GET_LINKS,
+    GET_USER_ADVANCED_DATA,
+    GET_USER_DATA,
+    SET_AUTH_STATUS,
+    SET_MATERIALS_LOADING,
+    SET_LINKS_LOADING,
+} from "./actions";
 
 
 const initialState = {
@@ -35,6 +43,9 @@ const initialState = {
     userAdvancedData: {
 
     },
+
+    materialsLoading: true,
+    linksLoading: true,
 }
 
 function reducers(state = initialState, action: any) {
@@ -63,6 +74,16 @@ function reducers(state = initialState, action: any) {
             return {
                 ...state,
                 userAdvancedData: action.data,
+            }
+        case SET_MATERIALS_LOADING:
+            return {
+                ...state,
+                materialsLoading: action.data,
+            }
+        case SET_LINKS_LOADING:
+            return {
+                ...state,
+                linksLoading: action.data,
             }
         default:
             return state;

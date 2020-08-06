@@ -2,14 +2,17 @@ import React, {useState} from "react";
 import {ButtonGroup, Button, Row, Col, Toast} from "react-bootstrap";
 import ListItem from "./ListItem/ListItem";
 import { connect } from 'react-redux';
-import { GET_CLASSES } from "../../Store/actions";
+import {GET_CLASSES, SET_MATERIALS_LOADING} from "../../Store/actions";
 import axios from 'axios'
 import { BACKEND_URL, GET_CLASSES_URL } from "../../Store/globals";
 import {getCookie, LAST_YEAR_COOKIE, setCookie} from '../../Store/cookie';
+import "./Materials.css";
+import Loading from "../Loading/Loading";
 
 const mapStateToProps = (state: any) => {
     return {
         classes: state.classes,
+        materialsLoading: state.materialsLoading,
     };
 }
 
@@ -20,6 +23,11 @@ let dataFetched = false;
 const Materials = (props: any) => {
 
     const fetchClasses = (e: any) => {
+
+        props.dispatch({
+            type: SET_MATERIALS_LOADING,
+            data: true,
+        })
 
         const yearCookie = getCookie(LAST_YEAR_COOKIE);
 
@@ -40,13 +48,19 @@ const Materials = (props: any) => {
                 'year': year,
             }
         }).then( res => {
+
             props.dispatch({
                 type: GET_CLASSES,
                 data: res.data,
             })
-        //    TODO react UI
+
+            props.dispatch({
+                type: SET_MATERIALS_LOADING,
+                data: false,
+            })
+
         } ).catch(
-        //
+        // TODO show an error
         )
     }
 
@@ -74,18 +88,25 @@ const Materials = (props: any) => {
         <React.StrictMode>
             <div id="materials" className="mt-component container-full-dark ">
 
-                <ButtonGroup aria-label="Basic example">
+                <ButtonGroup aria-label="Basic example" className="year-selector">
                     <Button button-key="1" onClick={fetchClasses} variant={currentYear === '1' ? 'info' : 'outline-info'}>First Year</Button>
                     <Button button-key="2" onClick={fetchClasses} variant={currentYear === '2' ? 'warning' : 'outline-warning'}>Second Year</Button>
                     <Button button-key="3" onClick={fetchClasses} variant={currentYear === '3' ? 'success' : 'outline-success'}>Third Year</Button>
                 </ButtonGroup>
 
-                <Row>
+                <Row className="mt-4">
                     <Col lg={12} xl={6}>
-                        {classesFirstSemesterJSX}
+                        {props.materialsLoading ?
+                            <Loading color="light" />
+                            :
+                            classesFirstSemesterJSX
+                        }
                     </Col>
                     <Col lg={12} xl={6} className="mt-xs-2 mt-sm-2 mt-md-2 mt-lg-2 mt-xl-0">
-                        {classesSecondSemesterJSX}
+                        {props.materialsLoading ?
+                            <Loading color="light" />
+                            :
+                            classesSecondSemesterJSX}
                     </Col>
                 </Row>
 

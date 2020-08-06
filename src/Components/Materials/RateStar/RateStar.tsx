@@ -62,7 +62,7 @@ const RateStar = (props: any) => {
         stars.push(
             <OverlayTrigger placement="top" key={i}
                 overlay={
-                    <Tooltip id={`tooltip-top`}>
+                    <Tooltip id="tooltip-top">
                         <strong>{map.get(i)}</strong>
                     </Tooltip>
                 }

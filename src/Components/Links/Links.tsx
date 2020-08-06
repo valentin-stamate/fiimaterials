@@ -5,11 +5,13 @@ import EarthLink from "./../../Assets/earth-link.svg";
 import { connect } from 'react-redux';
 import axios from 'axios';
 import {BACKEND_URL, GET_LINKS_URL} from "../../Store/globals";
-import {GET_LINKS} from "../../Store/actions";
+import {GET_LINKS, SET_LINKS_LOADING} from "../../Store/actions";
+import Loading from "../Loading/Loading";
 
 const mapStateToProps = (state: any) => {
     return {
         links: state.links,
+        linksLoading: state.linksLoading,
     };
 }
 
@@ -29,6 +31,12 @@ const Links = (props: any) => {
                 type: GET_LINKS,
                 data: result.data,
             })
+
+            props.dispatch({
+                type: SET_LINKS_LOADING,
+                data: false,
+            })
+
         } ).catch( e => {
         //
         });
@@ -64,16 +72,24 @@ const Links = (props: any) => {
                         <h5 className="title-color text-center"><b>College Admission</b></h5>
 
                         <ListGroup>
-                            { linksJSX }
+                            {props.linksLoading ?
+                                <Loading color="dark" />
+                                :
+                                linksJSX
+                            }
                         </ListGroup>
 
                     </Col>
                     <Col md={12} lg={6}>
                         <h5 className="title-color text-center"><b>College Links</b></h5>
 
-                        {/*<ListGroup>*/}
-                        {/*    {linksJSX}*/}
-                        {/*</ListGroup>*/}
+                        <ListGroup>
+                            {props.linksLoading ?
+                                <Loading color="dark" />
+                                :
+                                linksJSX
+                            }
+                        </ListGroup>
 
                     </Col>
                 </Row>
