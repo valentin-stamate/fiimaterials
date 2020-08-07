@@ -80,6 +80,8 @@ const Materials = (props: any) => {
         } else if (cls.semester === 2) {
             classesSecondSemesterJSX.push(clsJSX)
         }
+
+        return 0;
     })
 
     const currentYear = getCookie(LAST_YEAR_COOKIE);
@@ -98,15 +100,15 @@ const Materials = (props: any) => {
                 </ButtonGroup>
 
 
-                <Row className="mt-4 container-max-width ml-auto mr-auto">
-                    <Col lg={12} xl={6}>
+                <Row className="container-max-width ml-auto mr-auto">
+                    <Col lg={12} xl={6} className="mt-4">
                         {props.materialsLoading ?
                             <Loading color="light" />
                             :
                             classesFirstSemesterJSX
                         }
                     </Col>
-                    <Col lg={12} xl={6} className="mt-xs-2 mt-sm-2 mt-md-2 mt-lg-2 mt-xl-0">
+                    <Col lg={12} xl={6} className="mt-4">
                         {props.materialsLoading ?
                             <Loading color="light" />
                             :

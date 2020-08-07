@@ -20,6 +20,12 @@ let dataFetched = false;
 const Links = (props: any) => {
 
     function getLinks() {
+
+        props.dispatch({
+            type: SET_LINKS_LOADING,
+            data: true,
+        })
+
         axios({
             method: "get",
             url: BACKEND_URL + GET_LINKS_URL,
@@ -38,7 +44,7 @@ const Links = (props: any) => {
             })
 
         } ).catch( e => {
-        //
+        // TODO links error try again
         });
     }
 

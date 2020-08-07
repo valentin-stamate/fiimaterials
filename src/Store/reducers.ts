@@ -5,7 +5,7 @@ import {
     GET_USER_DATA,
     SET_AUTH_STATUS,
     SET_MATERIALS_LOADING,
-    SET_LINKS_LOADING, SET_USER_DATA_LOADING,
+    SET_LINKS_LOADING, SET_USER_DATA_LOADING, GET_RESOURCES, SET_RESOURCE_LOADING,
 } from "./actions";
 
 
@@ -33,6 +33,15 @@ const initialState = {
             type: "",
         }
     ],
+    resources: [
+        {
+            title: "Title",
+            image_url: "https://img.youtube.com/vi/lPx0n6X0d8g/0.jpg",
+            link_url: "https://www.youtube.com/watch?v=lPx0n6X0d8g",
+            description: "Lorem ipsum dolor sit amet",
+            tag_list: "fun",
+        },
+    ],
 
 
     userData: {
@@ -43,11 +52,13 @@ const initialState = {
 
     },
 
+
     userIsAuth: false,
 
     userDataLoading: false,
-    materialsLoading: true,
-    linksLoading: true,
+    materialsLoading: false,
+    linksLoading: false,
+    resourcesLoading: false,
 }
 
 function reducers(state = initialState, action: any) {
@@ -91,6 +102,16 @@ function reducers(state = initialState, action: any) {
             return {
                 ...state,
                 userDataLoading: action.data,
+            }
+        case GET_RESOURCES:
+            return {
+                ...state,
+                resources: action.data,
+            }
+        case SET_RESOURCE_LOADING:
+            return {
+                ...state,
+                resourcesLoading: action.data,
             }
         default:
             return state;

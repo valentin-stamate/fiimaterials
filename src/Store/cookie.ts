@@ -1,5 +1,5 @@
-export const USER_AUTH_TOKEN_COOKIE = 'user_id';
-export const LAST_YEAR_COOKIE = 'last_year';
+export const USER_AUTH_TOKEN_COOKIE = '0Xa4T4C7S4wGnU6Q';
+export const LAST_YEAR_COOKIE = 'O9rrG8CUfnY4j0bj';
 
 export function setCookie(key: string, value: string) {
     let expires = new Date();
