@@ -11,6 +11,10 @@
     max-width: 110rem;
 }
 
+.list-bg-dark {
+    background-color: #404040 !important;
+}
+
 .title-color {
     color: #2b2b2b;
 }

@@ -17,7 +17,7 @@ const ListItem = (props: any) => {
     return (
         <React.StrictMode>
 
-            <Card className="list-container" style={{backgroundColor: "#404040"}}>
+            <Card className="list-container list-bg-dark">
                 <div>
                     <span className="left-side">
                         <div className="inline"><b>{props.title}</b></div>
