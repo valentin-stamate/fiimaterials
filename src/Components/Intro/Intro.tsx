@@ -21,13 +21,13 @@ const Intro = () => {
 
             <div id="intro" className="intro-container text-dark">
 
-                <Container className="text-container">
+                <Container className="text-container text-sm-center text-md-left">
                     <Row>
-                        <Col>
+                        <Col sm={12} md={6}>
                             <h1 style={{color:"#C3C3C3"}}><b>FII Materials The Web Version</b></h1>
                             <h4 style={{color:"#707070"}}>{subtitles[getRandomInt(subtitles.length)]}</h4>
                         </Col>
-                        <Col />
+                        <Col sm={12} md={6}/>
                     </Row>
                 </Container>
 

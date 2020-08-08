@@ -70,12 +70,12 @@ const Resources = (props: any) => {
 
     return (
         <React.StrictMode>
-            <div id="materials" className="container-full-dark">
+            <div id="materials" className="container-full bg-cont-dark">
 
                 <h2 className="text-white text-center mb-0">Resources</h2>
                 <h6 className="text-white text-center">Just like a girlfriend is for programmers, priceless and hard to find</h6>
 
-                <Row className="container-max-width ml-auto mr-auto">
+                <Row className="container-max-width center">
                     <Col lg={12} xl={6} className="mt-4">
 
                         {props.resourcesLoading ?

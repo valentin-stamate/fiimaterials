@@ -88,7 +88,7 @@ const Materials = (props: any) => {
 
     return (
         <React.StrictMode>
-            <div id="materials" className="container-full-dark">
+            <div id="materials" className="bg-cont-dark container-full">
 
                 <h2 className="text-white text-center mb-0">Materials</h2>
                 <h6 className="text-white text-center">So many that you can't get enough of them</h6>
@@ -100,7 +100,7 @@ const Materials = (props: any) => {
                 </ButtonGroup>
 
 
-                <Row className="container-max-width ml-auto mr-auto">
+                <Row className="container-max-width bg-cont-dark center">
                     <Col lg={12} xl={6} className="mt-4">
                         {props.materialsLoading ?
                             <Loading color="light" />

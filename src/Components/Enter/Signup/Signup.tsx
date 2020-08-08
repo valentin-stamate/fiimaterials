@@ -1,6 +1,6 @@
 import React from "react";
 import Title from "../Title/Title";
-import {Button, Col, Form, Row} from "react-bootstrap";
+import {Alert, Badge, Button, Col, Form, Row} from "react-bootstrap";
 import {Link} from "react-router-dom";
 import {BACKEND_URL, LOGIN_URL, SIGNUP_URL} from "../../../Store/globals";
 import axios from 'axios';
@@ -58,6 +58,9 @@ export default function Signup() {
                     </Col>
                 </Row>
 
+                <Alert variant="warning">
+                    It is possible that the account you create will be removed because the site is in the <Badge variant="light">Beta</Badge> version.
+                </Alert>
 
                 <Button variant="light" type="submit">
                     Signup

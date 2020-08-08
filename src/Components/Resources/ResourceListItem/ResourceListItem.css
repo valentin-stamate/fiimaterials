@@ -6,6 +6,8 @@
     align-items: center;
     cursor: pointer;
     background-color: #fff;
+    border-radius: 6px;
+    box-shadow: #212121 0 4px 6px;
 }
 
 .list-thumbnail {
