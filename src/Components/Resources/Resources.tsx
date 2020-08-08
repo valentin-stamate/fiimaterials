@@ -32,7 +32,12 @@ const Resources = (props: any) => {
 
             props.dispatch({
                 type: GET_RESOURCES,
-                data: res,
+                data: res.data,
+            })
+
+            props.dispatch({
+                type: SET_RESOURCE_LOADING,
+                data: false,
             })
 
         } ).catch( e => {
@@ -52,7 +57,9 @@ const Resources = (props: any) => {
 
     props.resources.map( (res: any, index: number) => {
         const item = <ResourceListItem key={index} title={res.title} imageURL={res.image_url} linkURL={res.link_url} description={res.description} tagList={res.tag_list} />
-        if (index < props.resources.length - 1) {
+
+        const len: number = props.resources.length / 2 as number;
+        if (index < len) {
             resourceFirstCol.push(item);
         } else {
             resourceSecondCol.push(item);

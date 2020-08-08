@@ -54,13 +54,25 @@ const Links = (props: any) => {
         getLinks();
     }
 
-    const linksJSX = props.links.map( (link: any, index: number) => {
-        return (
+    let linksFirstColJSX: JSX.Element[] = [];
+    let linksSecondColJSX: JSX.Element[] = [];
+
+    props.links.map( (link: any, index: number) => {
+        const el = (
             <ListGroup.Item key={index}>
                 <div className="left-side inline">{link.name}</div>
                 <Button variant="outline-dark" href={link.link} target="_blank" className="right-side inline">LINK</Button>
             </ListGroup.Item>
         );
+
+        const len: number = props.links.length / 2 as number;
+        if (index <= len) {
+            linksFirstColJSX.push(el);
+        } else {
+            linksSecondColJSX.push(el);
+        }
+
+        return 0;
     } );
 
     return (
@@ -75,25 +87,25 @@ const Links = (props: any) => {
 
                 <Row className="mt-4">
                     <Col md={12} lg={6}>
-                        <h5 className="title-color text-center"><b>College Admission</b></h5>
+                        {/*<h5 className="title-color text-center"><b>College Admission</b></h5>*/}
 
                         <ListGroup>
                             {props.linksLoading ?
                                 <Loading color="dark" />
                                 :
-                                linksJSX
+                                linksFirstColJSX
                             }
                         </ListGroup>
 
                     </Col>
                     <Col md={12} lg={6}>
-                        <h5 className="title-color text-center"><b>College Links</b></h5>
+                        {/*<h5 className="title-color text-center"><b>College Links</b></h5>*/}
 
                         <ListGroup>
                             {props.linksLoading ?
                                 <Loading color="dark" />
                                 :
-                                linksJSX
+                                linksSecondColJSX
                             }
                         </ListGroup>
 

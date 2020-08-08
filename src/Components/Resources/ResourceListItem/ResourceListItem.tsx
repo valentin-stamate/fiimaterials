@@ -12,9 +12,10 @@ const ResourceListItem = (props: any) => {
 
     const tagListSplit = props.tagList.split(" ");
 
-    const tagListJSX: JSX.Element[] = tagListSplit.map( (tag: any, index: number) => {
+    const tagListJSX: JSX.Element[] = tagListSplit.map( (tag: string, index: number) => {
+        const processedTag = tag.replace(/_/g, " ");
         return (
-            <Badge pill variant="primary" style={{backgroundColor: colorMap.get(tag)}} className="mr-2" key={index}>{tag}</Badge>
+            <Badge pill variant="primary" style={{backgroundColor: colorMap.get(tag)}} className="mr-2" key={index}>{processedTag}</Badge>
         );
     } );
 
@@ -33,7 +34,7 @@ const ResourceListItem = (props: any) => {
                                         }>
 
                             <div className="list-thumbnail-container">
-                                <a href={props.linkURL} target="_blank" rel="noopener noreferrer">
+                                <a href={props.linkURL} target="_blank">
                                     <img className="list-thumbnail" src={props.imageURL} alt="Thumbnail" />
                                 </a>
                             </div>
