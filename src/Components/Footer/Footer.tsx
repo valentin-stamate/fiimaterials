@@ -13,7 +13,7 @@ const Footer = () => {
             <footer className="footer">
                 <div className="footer-body">
                     <div>© 2020 Copyright: FIIMaterials.</div>
-                    <div>Created by <div className="text-highlight" onClick={openGitPage}><b>Valentin Stamate</b></div> during the boring summer holiday.</div>
+                    <div>Created by <div className="text-highlight" onClick={openGitPage}><b>Valentin Stamate</b></div> during the boring summer holiday of 2020.</div>
                 </div>
             </footer>
 

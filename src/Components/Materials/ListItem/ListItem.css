@@ -5,7 +5,7 @@
 }
 
 .class-rate-number {
-    color: #009688;
+    color: #ffffff;
 }
 
 .mega-icon {
@@ -25,4 +25,11 @@
 .mega-icon:hover {
     /*fill: #E53935;*/
     fill: #fff;
+}
+
+.rating-wrapper {
+    margin-right: 1rem;
+    background-color: #393939;
+    border-radius: 1rem;
+    padding: 0 0.75rem 0 0.75rem;
 }

@@ -3,7 +3,7 @@ import "./Intro.css";
 import {Col, Container, Row} from "react-bootstrap";
 
 const subtitles: string[] = [
-    "The place where you came for your favorites materials. Ahem.",
+    "The place where you came for your favorite materials. Ahem.",
     "Ah sh*t, here we go again.",
     "Let's do this, shall we.",
     "It's only one month.",
@@ -23,11 +23,11 @@ const Intro = () => {
 
                 <Container className="text-container text-sm-center text-md-left">
                     <Row>
-                        <Col sm={12} md={6}>
+                        <Col >
                             <h1 style={{color:"#C3C3C3"}}><b>FII Materials The Web Version</b></h1>
                             <h4 style={{color:"#707070"}}>{subtitles[getRandomInt(subtitles.length)]}</h4>
                         </Col>
-                        <Col sm={12} md={6}/>
+
                     </Row>
                 </Container>
 

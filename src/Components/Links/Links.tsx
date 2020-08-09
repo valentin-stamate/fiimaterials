@@ -60,8 +60,8 @@ const Links = (props: any) => {
     props.links.map( (link: any, index: number) => {
         const el = (
             <ListGroup.Item key={index}>
-                <div className="left-side inline">{link.name}</div>
-                <Button variant="outline-dark" href={link.link} target="_blank" className="right-side inline">LINK</Button>
+                <div className="float-left inline" style={{verticalAlign: "middle", lineHeight: "2.25rem"}}>{link.name}</div>
+                <Button className="float-right inline" variant="dark" href={link.link} target="_blank">Link</Button>
             </ListGroup.Item>
         );
 
@@ -78,7 +78,7 @@ const Links = (props: any) => {
     return (
         <React.StrictMode>
             <div id="links"/>
-            <Container className="container-full">
+            <Container style={{padding: "4rem 1rem 4rem 1rem"}}>
 
                 {/*<img src={EarthLink} className="icon"/>*/}
 

@@ -62,7 +62,7 @@ const ResourceListItem = (props: any) => {
                     <div className="resource-description-container">
                         <div className="resource-description">
                             <div>
-                                {props.description}
+                                <b>{props.description}</b>
                             </div>
                         </div>
                     </div>

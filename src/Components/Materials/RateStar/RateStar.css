@@ -1,7 +1,10 @@
 .star {
     width: 1rem;
     height: 1rem;
-    margin: 0.25rem;
+}
+
+.star-wrapper {
+    padding-right: 0.25rem;
 }
 
 .star-toast {

@@ -15,8 +15,8 @@ const ShortDetails = () => {
                         <img src={AboutSvg} className="info-icon"/>
                         <b><h5 className="title-color">About The Project</h5></b>
                         <b><div className="content-color">
-                            Because I need to have 3 rows of information, I'll make a short description about the technologies used.
-                            The frontend is made with <kbd>React</kbd>, the backend with <kbd>Django REST API</kbd> and the struggle happens in the summer of 2020.
+                            This is the new version of FII Materials project. The frontend is made with React and Bootstrap for UI. For backend I picked Django as a REST Framework.
+                            So, this is a FullStack app. <code>If you like this project you can give it a star, the GitHub link is in the TopBar.</code>
                         </div></b>
                     </Col>
                     <Col sm={12} md={4}>
@@ -31,8 +31,7 @@ const ShortDetails = () => {
                         <img src={GitHubIcon} className="info-icon"/>
                         <b><h5 className="title-color">It's Open Source</h5></b>
                         <b><div className="content-color">
-                            I know, it's not a very complex site because it has one purpose. But it covers the basics of those technologies.
-                            So, if you wanna see how the magic is done you have a link to this project in the topbar. <code>Right now the project it's not open for contributions.</code>
+                            I've decided to make the project public, so if you are curios how this project works you can check the GitHub repositories, I make one for every part of it: frontend, backend, mobile. <code>Right now the project it's not open for contributions.</code>
                         </div></b>
                     </Col>
                 </Row>

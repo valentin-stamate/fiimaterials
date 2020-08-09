@@ -41,9 +41,6 @@ const Materials = (props: any) => {
         axios({
             method: "post",
             url: BACKEND_URL + GET_CLASSES_URL,
-            headers: {
-                'Content-Type': 'application/json',
-            },
             data: {
                 'year': year,
             }
@@ -73,7 +70,7 @@ const Materials = (props: any) => {
     let classesSecondSemesterJSX: JSX.Element[] =  [];
 
     props.classes.map( (cls: any, index: Number) => {
-        const clsJSX = (<ListItem key={index} title={cls.name} site_link={cls.site_link} material_link={cls.material_link} />);
+        const clsJSX = (<ListItem key={index} classRating={cls.average_rating} classID={cls.id} classYear={cls.year} title={cls.name} site_link={cls.site_link} material_link={cls.material_link} />);
 
         if (cls.semester === 1) {
             classesFirstSemesterJSX.push(clsJSX);
