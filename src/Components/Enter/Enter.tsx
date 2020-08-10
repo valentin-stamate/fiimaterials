@@ -10,7 +10,7 @@ const Enter = (props: any) => {
     return (
         <React.StrictMode>
 
-            <div className="container-background"/>
+            <div className="container-background bg-0"/>
 
             <Container>
 

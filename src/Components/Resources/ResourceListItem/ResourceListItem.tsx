@@ -38,7 +38,7 @@ const ResourceListItem = (props: any) => {
     return (
         <React.StrictMode>
 
-            <Card className="list-container text-white list-bg-dark mt-2">
+            <Card className="list-container mt-2 bg-2">
                 <div>
 
                     <div className="float-left">

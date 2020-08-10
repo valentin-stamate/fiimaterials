@@ -16,12 +16,10 @@ const ListItem = (props: any) => {
         window.open(props.site_link, "_blank");
     }
 
-
-
     return (
         <React.StrictMode>
 
-            <Card className="list-container list-bg-dark">
+            <Card className="list-container bg-2">
                 <div>
                     <span className="left-side">
                         <div className="inline"><b>{props.title}</b></div>

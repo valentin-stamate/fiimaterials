@@ -19,7 +19,7 @@
 .mega-icon-disabled {
     width: 1.4rem;
     height: 1.4rem;
-    fill: #303030;
+    fill: #00000050;
 }
 
 .mega-icon:hover {
@@ -29,7 +29,7 @@
 
 .rating-wrapper {
     margin-right: 1rem;
-    background-color: #393939;
+    background-color: #15171860;
     border-radius: 1rem;
     padding: 0 0.75rem 0 0.75rem;
 }

@@ -70,7 +70,7 @@ const Resources = (props: any) => {
 
     return (
         <React.StrictMode>
-            <div id="materials" className="container-full bg-cont-dark">
+            <div id="materials" className="container-full bg-0">
 
                 <h2 className="text-white text-center mb-0">Resources</h2>
                 <h6 className="text-white text-center">Just like a girlfriend is for programmers, priceless and hard to find</h6>

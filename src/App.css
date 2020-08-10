@@ -2,6 +2,22 @@
     background-color: #2c2c2c;
 }
 
+.bg-0 {
+    background-color: #1E2124 !important;
+}
+.bg-1 {
+    background-color: #2a2d30 !important;
+}
+.bg-2 {
+    background-color: #2E3136 !important;
+}
+.bg-3 {
+    background-color: #36393e !important;
+}
+.bg-4 {
+    background-color: #424549 !important;
+}
+
 .container-full {
     padding: 4rem 0 4rem 0;
 }
@@ -15,10 +31,6 @@
 
 .container-max-width {
     max-width: 110rem;
-}
-
-.list-bg-dark {
-    background-color: #404040 !important;
 }
 
 .title-color {

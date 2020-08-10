@@ -80,7 +80,7 @@ const TopBar = (props: any) => {
     return (
         <React.StrictMode>
 
-            <Navbar className="navbar-dark bg-dark" fixed="top" expand="lg">
+            <Navbar className="navbar-dark bg-2" fixed="top" expand="lg">
                 <Navbar.Brand>FIIMaterials<sub><span className="badge badge-pill badge-light ml-1">Beta</span></sub></Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
