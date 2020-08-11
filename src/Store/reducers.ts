@@ -5,7 +5,7 @@ import {
     GET_USER_DATA,
     SET_AUTH_STATUS,
     SET_MATERIALS_LOADING,
-    SET_LINKS_LOADING, SET_USER_DATA_LOADING, GET_RESOURCES, SET_RESOURCE_LOADING,
+    SET_LINKS_LOADING, SET_USER_DATA_LOADING, GET_RESOURCES, SET_RESOURCE_LOADING, GET_FEEDBACK, SET_FEEDBACK_LOADING,
 } from "./actions";
 
 
@@ -52,6 +52,15 @@ const initialState = {
 
     },
 
+    feedback: [
+        {
+            name: 'Name',
+            implemented: false,
+            feedback: "Lorem ipsum dolor sit amet",
+            date_created: '28.07.2000',
+        }
+    ],
+
 
     userIsAuth: false,
 
@@ -59,6 +68,7 @@ const initialState = {
     materialsLoading: false,
     linksLoading: false,
     resourcesLoading: false,
+    feedbackLoading: false,
 }
 
 function reducers(state = initialState, action: any) {
@@ -77,41 +87,51 @@ function reducers(state = initialState, action: any) {
             return {
                 ...state,
                 userIsAuth: action.data,
-            }
+            };
         case GET_USER_DATA:
             return {
                 ...state,
                 userData: action.data,
-            }
+            };
         case GET_USER_ADVANCED_DATA:
             return {
                 ...state,
                 userAdvancedData: action.data,
-            }
+            };
         case SET_MATERIALS_LOADING:
             return {
                 ...state,
                 materialsLoading: action.data,
-            }
+            };
         case SET_LINKS_LOADING:
             return {
                 ...state,
                 linksLoading: action.data,
-            }
+            };
         case SET_USER_DATA_LOADING:
             return {
                 ...state,
                 userDataLoading: action.data,
-            }
+            };
         case GET_RESOURCES:
             return {
                 ...state,
                 resources: action.data,
-            }
+            };
         case SET_RESOURCE_LOADING:
             return {
                 ...state,
                 resourcesLoading: action.data,
+            };
+        case GET_FEEDBACK:
+            return {
+                ...state,
+                feedback: action.data,
+            };
+        case SET_FEEDBACK_LOADING:
+            return {
+                ...state,
+                feedbackLoading: action.data,
             }
         default:
             return state;

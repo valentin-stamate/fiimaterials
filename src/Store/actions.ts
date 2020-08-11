@@ -8,6 +8,9 @@ export const SET_LINKS_LOADING = 7;
 export const SET_USER_DATA_LOADING = 8;
 export const GET_RESOURCES = 9;
 export const SET_RESOURCE_LOADING = 10;
+export const GET_FEEDBACK = 11;
+export const SET_FEEDBACK_LOADING = 12;
+export const POST_FEEDBACK = 13;
 
 const ACTIONS = [
     GET_CLASSES,
@@ -20,6 +23,9 @@ const ACTIONS = [
     SET_USER_DATA_LOADING,
     GET_RESOURCES,
     SET_RESOURCE_LOADING,
+    GET_FEEDBACK,
+    SET_FEEDBACK_LOADING,
+    POST_FEEDBACK,
 ]
 
 export default ACTIONS;

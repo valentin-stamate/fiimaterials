@@ -1,6 +1,6 @@
 import React from "react";
 import {Button, Dropdown, Nav, Navbar, Spinner} from "react-bootstrap";
-import {useHistory} from 'react-router-dom'
+import {useHistory, Link} from 'react-router-dom'
 import {connect} from "react-redux";
 import axios from 'axios';
 import {BACKEND_URL, GET_USER_URL} from "../../Store/globals";
@@ -68,6 +68,12 @@ const TopBar = (props: any) => {
     const openGitProject = () => {
         window.open('https://github.com/FIIMaterials', '_blank');
     }
+    const goToFeedback = () => {
+        UseHistory.push('/feedback');
+    }
+    const goContact = () => {
+        UseHistory.push('/#contact');
+    }
 
     const userButton = () => {
         if (props.userIsAuth) {
@@ -80,7 +86,7 @@ const TopBar = (props: any) => {
     return (
         <React.StrictMode>
 
-            <Navbar className="navbar-dark bg-2" fixed="top" expand="lg">
+            <Navbar className="navbar-dark bg-dark" fixed="top" expand="lg">
                 <Navbar.Brand>FIIMaterials<sub><span className="badge badge-pill badge-light ml-1">Beta</span></sub></Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
@@ -88,8 +94,11 @@ const TopBar = (props: any) => {
                     <Nav>
                         <Nav.Link href="#intro">Intro</Nav.Link>
                         <Nav.Link href="#materials">Materials</Nav.Link>
+                        <Nav.Link href="#resources">Resources</Nav.Link>
+
                         <Nav.Link href="#links">Links</Nav.Link>
-                        <Nav.Link href="#contact">Contact</Nav.Link>
+                        <Nav.Link onClick={goContact}>Contact</Nav.Link>
+                        <Nav.Link onClick={goToFeedback}>Feedback</Nav.Link>
                     </Nav>
 
                     <div className="mr-auto"/>

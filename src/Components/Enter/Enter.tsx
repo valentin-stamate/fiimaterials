@@ -1,7 +1,7 @@
 import React from "react";
 import './Enter.css';
 import {Card, Container} from "react-bootstrap";
-import {BrowserRouter, Switch, Route} from "react-router-dom";
+import {Switch, Route} from "react-router-dom";
 import Signup from "./Signup/Signup";
 import Login from "./Login/Login";
 
@@ -10,9 +10,9 @@ const Enter = (props: any) => {
     return (
         <React.StrictMode>
 
-            <div className="container-background bg-0"/>
+            <div className="container-background"/>
 
-            <Container>
+
 
                 <Card className="enter-container" style={{backgroundColor: "#2a2d30"}}>
 
@@ -25,7 +25,6 @@ const Enter = (props: any) => {
 
                 </Card>
 
-            </Container>
 
         </React.StrictMode>
     );

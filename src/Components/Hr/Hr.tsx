@@ -5,7 +5,7 @@ const Hr = (props: any) => {
     return (
         <React.StrictMode>
 
-            <div className="hr-style" style={{borderColor: "#111215"}} />
+            <div className="hr-style" style={{borderColor: "#181818"}} />
 
         </React.StrictMode>
     )

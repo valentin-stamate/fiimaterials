@@ -71,7 +71,7 @@ const ResourceListItem = (props: any) => {
                 </div>
             </Card>
 
-            <div className="tag-list">
+            <div className="tag-list bg-1">
                 {tagListJSX}
             </div>
 

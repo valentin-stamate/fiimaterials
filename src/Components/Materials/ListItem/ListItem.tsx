@@ -30,7 +30,7 @@ const ListItem = (props: any) => {
                     <span className="right-side">
 
 
-                        <div className="rating-wrapper inline">
+                        <div className="rating-wrapper bg-1 inline">
                             <div className="inline mr-1">
                                 <RateStar classYear={props.classYear} classRating={props.classRating} classID={props.classID} />
                             </div>
