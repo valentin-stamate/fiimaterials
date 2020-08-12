@@ -13,7 +13,7 @@ export function getCookie(key: string) {
 }
 
 export function deleteCookie(key: string) {
-    document.cookie = key + "=" + "" + ";expires=Thu, 01 Jan 1970 00:00:01 GMT"
+    document.cookie = key + "=;expires=Thu, 01 Jan 1970 00:00:01 GMT"
 }
 
 export function deleteCookies() {

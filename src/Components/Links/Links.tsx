@@ -1,8 +1,7 @@
 import React from "react";
 import {Button, Col, Container, ListGroup, Row} from "react-bootstrap";
 import "./Links.css";
-import EarthLink from "./../../Assets/earth-link.svg";
-import { connect } from 'react-redux';
+import {connect} from 'react-redux';
 import axios from 'axios';
 import {BACKEND_URL, GET_LINKS_URL} from "../../Store/globals";
 import {GET_LINKS, SET_LINKS_LOADING} from "../../Store/actions";

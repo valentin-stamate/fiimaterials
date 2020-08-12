@@ -12,9 +12,10 @@ import Loading from "../Loading/Loading";
 
 const mapStateToProps = (state: any) => {
     return {
-      feedback: state.feedback,
-      feedbackLoading: state.feedbackLoading,
+        feedback: state.feedback,
+        feedbackLoading: state.feedbackLoading,
         userIsAuth: state.userIsAuth,
+        username: state.userData.username,
     };
 }
 
@@ -132,10 +133,10 @@ const Feedback = (props: any) => {
                        <Form onSubmit={submitFeedback} id="feedback-form">
                            <Form.Group controlId="formBasicEmail">
                                <Form.Label>Display Name</Form.Label>
-                               <Form.Control type="text" name="name" placeholder="Your Name" />
+                               <Form.Control type="text" name="name" placeholder="Your Name" value={props.userIsAuth && props.username !== 'User' ? props.username : ''} />
 
                                <Form.Group controlId="formBasicCheckbox">
-                                   <Form.Check type="checkbox" defaultChecked name="show_name" label="Show the name in feedback list" />
+                                   <Form.Check type="checkbox" defaultChecked name="show_name" label="Show your name in feedback list" />
                                </Form.Group>
 
                            </Form.Group>

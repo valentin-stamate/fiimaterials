@@ -1,12 +1,12 @@
 import React from "react";
-import {Card, Form} from "react-bootstrap";
+import {Form} from "react-bootstrap";
 import './FeedbackListItem.scss';
 
 const FeedbackListItem = (props: any) => {
     return (
         <React.StrictMode>
 
-            <div className="list-container text-dark">
+            <div className="feedback-list-container text-dark">
 
                 <div>
                     <div>

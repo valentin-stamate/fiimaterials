@@ -12,7 +12,6 @@ const Loading = (props: any) => {
                 </div>
             </div>
 
-
         </React.StrictMode>
     );
 }

@@ -2,7 +2,7 @@ import React from "react";
 import Title from "../Title/Title";
 import {Alert, Badge, Button, Col, Form, Row} from "react-bootstrap";
 import {Link} from "react-router-dom";
-import {BACKEND_URL, LOGIN_URL, SIGNUP_URL} from "../../../Store/globals";
+import {BACKEND_URL, SIGNUP_URL} from "../../../Store/globals";
 import axios from 'axios';
 
 export default function Signup() {
