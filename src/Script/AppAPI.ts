@@ -1,10 +1,10 @@
 import {getCookie, LAST_YEAR_COOKIE, setCookie, USER_AUTH_TOKEN_COOKIE} from "../Store/cookie";
 import {
-    GET_CLASSES,
+    GET_CLASSES, GET_LINKS, GET_RESOURCES,
     GET_USER_DATA,
     SET_AUTH_STATUS,
-    SET_LAST_YEAR,
-    SET_MATERIALS_LOADING,
+    SET_LAST_YEAR, SET_LINKS_LOADING,
+    SET_MATERIALS_LOADING, SET_RESOURCE_LOADING,
     SET_USER_DATA_LOADING
 } from "../Store/actions";
 import store from "../Store/store";
@@ -134,6 +134,55 @@ class AppAPI {
         });
 
 
+    }
+
+    getResources() {
+        store.dispatch({
+            type: SET_RESOURCE_LOADING,
+            data: true,
+        });
+
+        const request = BackendAPI.getInstance().getResources();
+
+        request.then(res => {
+
+            store.dispatch({
+                type: GET_RESOURCES,
+                data: res.data,
+            })
+
+            store.dispatch({
+                type: SET_RESOURCE_LOADING,
+                data: false,
+            })
+
+        }).catch(e => {
+            //  TODO fetching error
+        });
+
+    }
+
+    getLinks() {
+        store.dispatch({
+            type: SET_LINKS_LOADING,
+            data: true,
+        })
+
+        const request = BackendAPI.getInstance().getLinks();
+
+        request.then(result => {
+            store.dispatch({
+                type: GET_LINKS,
+                data: result.data,
+            })
+
+            store.dispatch({
+                type: SET_LINKS_LOADING,
+                data: false,
+            })
+        }).catch(e => {
+            // TODO react ui
+        });
     }
 
 }

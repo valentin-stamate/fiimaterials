@@ -1,6 +1,6 @@
 import React from "react";
 import {Badge, Card, OverlayTrigger, Tooltip} from "react-bootstrap";
-import "./ResourceListItem.css";
+import "./ResourceListItem.scss";
 
 const ResourceListItem = (props: any) => {
     // https://visme.co/blog/logo-color-schemes/
@@ -13,11 +13,11 @@ const ResourceListItem = (props: any) => {
     colorMap.set('all', "#4285F4");
     colorMap.set('article', "#4A154B");
     colorMap.set('course', "#EA5252");
-    colorMap.set('math', "#FDD835");
+    colorMap.set('math', "#00897B");
     colorMap.set('algorithm design', "#FF9800");
     colorMap.set('programming', "#3F51B5");
     colorMap.set('data structures', "#FF5722");
-    colorMap.set('afcs', "#FFD54F");
+    colorMap.set('afcs', "#3F51B5");
     colorMap.set('os', "#78517C");
 
     colorMap.set('programmer life', "#434343");
@@ -25,48 +25,36 @@ const ResourceListItem = (props: any) => {
     colorMap.set('meme', "#2D2D2D");
 
 
-
     const tagListSplit = props.tagList.split(" ");
 
-    const tagListJSX: JSX.Element[] = tagListSplit.map( (tag: string, index: number) => {
+    const tagListJSX: JSX.Element[] = tagListSplit.map((tag: string, index: number) => {
         const processedTag = tag.replace(/_/g, " ");
         return (
-            <Badge pill variant="primary" style={{backgroundColor: colorMap.get(processedTag)}} className="mr-2" key={index}>{processedTag}</Badge>
+            <Badge pill variant="primary" style={{backgroundColor: colorMap.get(processedTag)}} className="mr-2"
+                   key={index}>{processedTag}</Badge>
         );
-    } );
+    });
 
     return (
         <React.StrictMode>
 
-            <Card className="list-container mt-2 bg-2">
+            <Card className="resource-list-container mt-2 bg-2">
                 <div>
-
                     <div className="float-left">
-                        <OverlayTrigger placement="top"
-                                        overlay={
-                                            <Tooltip id="tooltip-top">
-                                                <strong>{props.title}</strong>
-                                            </Tooltip>
-                                        }>
-
+                        <OverlayTrigger placement="top" overlay={<Tooltip id="tooltip-top"><strong>{props.title}</strong></Tooltip>}>
                             <a href={props.linkURL} target="_blank" rel="noopener noreferrer">
                                 <div className="list-thumbnail-container">
                                         <img className="list-thumbnail" src={props.imageURL} alt="Thumbnail" />
                                 </div>
                             </a>
-
                         </OverlayTrigger>
-
                     </div>
 
                     <div className="resource-description-container">
                         <div className="resource-description">
-                            <div>
-                                <b>{props.description}</b>
-                            </div>
+                            <b>{props.description}</b>
                         </div>
                     </div>
-
 
                 </div>
             </Card>

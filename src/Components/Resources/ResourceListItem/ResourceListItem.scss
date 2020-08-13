@@ -1,3 +1,10 @@
+.resource-list-container {
+    position: relative;
+    padding: 0.25em 0.5em 0.25em 0.5em;
+    color: #fff;
+    border-radius: 4px 4px 0 0 !important;
+}
+
 .list-thumbnail-container {
     width: 160px;
     height: 90px;
@@ -33,5 +40,5 @@
 .tag-list {
     width: 100%;
     padding: 2px 0 4px 12px;
-    border-radius: 2px;
+    border-radius: 0 0 4px 4px !important;
 }

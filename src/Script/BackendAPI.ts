@@ -1,5 +1,5 @@
 import axios from "axios";
-import {BACKEND_URL, GET_USER_URL, SET_RATING_URL} from "../Store/globals";
+import {BACKEND_URL, GET_LINKS_URL, GET_RESOURCES_URL, GET_USER_URL, SET_RATING_URL} from "../Store/globals";
 import {getCookie, USER_AUTH_TOKEN_COOKIE} from "../Store/cookie";
 
 
@@ -50,6 +50,20 @@ class BackendAPI {
                 class_id: classID,
                 rating: rating,
             }
+        });
+    }
+
+    getResources() {
+        return axios({
+            method: 'get',
+            url: BACKEND_URL + GET_RESOURCES_URL,
+        })
+    }
+
+    getLinks() {
+        return axios({
+            method: "get",
+            url: BACKEND_URL + GET_LINKS_URL,
         });
     }
 

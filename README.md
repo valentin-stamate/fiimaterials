@@ -16,11 +16,9 @@ Future and beyond. Now it's a more complex app. I want this app to be used by st
 ## About The App
 The frontend it was originally made with Angular and Material Design as a UI library. In the summer holiday of 2020 I rebuild the app picking React and Bootstrap because React it was the most popular frontend framework at that time and Material design looked weird for me. A much wiser choice. The app send requests for fetching all the data(cuz I'm not crazy to hardcode all in there) to a backend.
 
-I am trying to keep the code and logic as clean as possible. That's why, having a spaghetti code, I decided to make some pattern on how the logic works.
+I am trying to keep the code and logic as clean as possible. That's why, having a spaghetti code, I decided to add a pattern for the app logic.
 
-<img alt="app design" src="https://i.postimg.cc/T1qQz0Z0/Web-App-Design.jpg" height="400">
-
-I hope it's a good pattern.
+<img alt="app design" src="https://i.postimg.cc/yYq8vHXs/Web-App-Design.jpg" height="400">
 
 The app is deployed on Firebase, which I strongly recommend, and it's available to this url : [Site Page](https://fiimaterials.valentinstamate.com)
 

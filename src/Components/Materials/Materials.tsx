@@ -3,7 +3,7 @@ import {Button, ButtonGroup, Col, Row} from "react-bootstrap";
 import ListItem from "./ListItem/ListItem";
 import {connect} from 'react-redux';
 import {getCookie, LAST_YEAR_COOKIE} from '../../Store/cookie';
-import "./Materials.css";
+import "./Materials.scss";
 import Loading from "../Loading/Loading";
 import AppAPI from "../../Script/AppAPI";
 
