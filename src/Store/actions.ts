@@ -11,6 +11,7 @@ export const SET_RESOURCE_LOADING = 10;
 export const GET_FEEDBACK = 11;
 export const SET_FEEDBACK_LOADING = 12;
 export const POST_FEEDBACK = 13;
+export const SET_LAST_YEAR = 14;
 
 const ACTIONS = [
     GET_CLASSES,

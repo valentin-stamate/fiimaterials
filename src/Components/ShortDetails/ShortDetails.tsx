@@ -9,7 +9,7 @@ const ShortDetails = () => {
     return (
         <React.StrictMode>
 
-            <Container style={{paddingTop: "4rem", paddingBottom: "4rem"}}>
+            <Container style={{paddingTop: "3rem", paddingBottom: "4rem"}}>
                 <Row className="text-center">
                     <Col sm={12} md={4}>
                         <img alt="icon" src={AboutSvg} className="info-icon"/>

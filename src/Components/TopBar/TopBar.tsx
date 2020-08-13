@@ -13,8 +13,6 @@ export class TopBar extends Component<any, any>{
     }
 
     componentDidMount() {
-        AppAPI.getInstance().setAuthenticationStatus();
-
         if (store.getState().userIsAuth) {
             AppAPI.getInstance().getUserData();
         }

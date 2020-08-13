@@ -1,0 +1,36 @@
+.list-container {
+    position: relative;
+    padding: 0.25em 0.5em 0.25em 0.5em;
+    color: #fff;
+}
+
+.materials-title {
+    margin-top: 6px;
+    float: left;
+}
+.materials-content {
+    float: right;
+}
+
+.mega-icon {
+    width: 1.4em;
+    height: 1.4em;
+    fill: #E53935;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+.mega-icon-disabled {
+    width: 1.4em;
+    height: 1.4em;
+    fill: #00000050;
+}
+
+.mega-icon:hover {
+    fill: #fff;
+}
+
+.rating-wrapper {
+    border-radius: 1em;
+    padding: 0 0.75em 0.25em 0.75em;
+}

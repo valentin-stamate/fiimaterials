@@ -5,7 +5,13 @@ import {
     GET_USER_DATA,
     SET_AUTH_STATUS,
     SET_MATERIALS_LOADING,
-    SET_LINKS_LOADING, SET_USER_DATA_LOADING, GET_RESOURCES, SET_RESOURCE_LOADING, GET_FEEDBACK, SET_FEEDBACK_LOADING,
+    SET_LINKS_LOADING,
+    SET_USER_DATA_LOADING,
+    GET_RESOURCES,
+    SET_RESOURCE_LOADING,
+    GET_FEEDBACK,
+    SET_FEEDBACK_LOADING,
+    SET_LAST_YEAR,
 } from "./actions";
 
 
@@ -24,6 +30,7 @@ const initialState = {
             semester: 1,
             votes_number: "",
             updated_at: "",
+            user_rating: 0.0,
         }
     ],
     links: [
@@ -63,6 +70,7 @@ const initialState = {
 
 
     userIsAuth: false,
+    lastYearSelected: 1,
 
     userDataLoading: false,
     materialsLoading: false,
@@ -88,6 +96,11 @@ function reducers(state = initialState, action: any) {
                 ...state,
                 userIsAuth: action.data,
             };
+        case SET_LAST_YEAR:
+            return {
+                ...state,
+                lastYearSelected: action.data,
+            }
         case GET_USER_DATA:
             return {
                 ...state,
