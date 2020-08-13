@@ -1,6 +1,11 @@
-/*.bg-cont-dark{*/
-/*    background-color: #2c2c2c;*/
-/*}*/
+.topbar-link {
+    text-decoration: none !important;
+    color: rgba(255,255,255,.5) !important;
+}
+.topbar-link:hover {
+    text-decoration: none !important;
+    color: #cbcdce !important;
+}
 
 /* COMPONENT */
 .bg-0 {

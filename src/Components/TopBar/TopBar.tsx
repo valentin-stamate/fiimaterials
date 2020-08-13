@@ -32,9 +32,9 @@ export class TopBar extends Component<any, any>{
                             <Nav.Link href="#materials">Materials</Nav.Link>
                             <Nav.Link href="#resources">Resources</Nav.Link>
                             <Nav.Link href="#links">Links</Nav.Link>
-                            <Link to="/feedback">
-                                <Nav.Link>Feedback</Nav.Link>
-                            </Link>
+                            <Nav.Link>
+                                <Link to="/feedback" className="topbar-link">Feedback</Link>
+                            </Nav.Link>
                             <Nav.Link href="#contact">Contact</Nav.Link>
                         </Nav>
 
