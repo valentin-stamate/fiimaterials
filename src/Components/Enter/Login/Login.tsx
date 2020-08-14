@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import Title from "../Title/Title";
 import {Alert, Button, Form} from "react-bootstrap";
 import {Link} from 'react-router-dom';
-import './../Enter.css';
+import '../Enter.scss';
 import axios from 'axios';
 import {BACKEND_URL, EMAIL_REGEX, LOGIN_URL} from "../../../Store/globals";
 import {deleteCookies, setCookie, USER_AUTH_TOKEN_COOKIE} from "../../../Store/cookie";
@@ -53,14 +53,10 @@ const Login = (props: any) => {
 
                 {
                     loginSucc ? '' :
-                        <Alert variant="dark mt-1">
-                            Error
-                        </Alert>
+                        <Alert variant="dark mt-1">Error</Alert>
                 }
 
-                <Button variant="light" type="submit">
-                    Login
-                </Button>
+                <Button variant="light" type="submit">Login</Button>
 
 
                 <Link to="/enter/signup">
