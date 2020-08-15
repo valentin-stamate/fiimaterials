@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import {Button, Dropdown, Nav, Navbar, Spinner} from "react-bootstrap";
 import {connect} from "react-redux";
-import AppAPI from "../../Script/AppAPI";
+import AppAPI from "../../API/AppAPI";
 import store from "../../Store/store";
 import {Link} from 'react-router-dom';
 
@@ -57,16 +57,7 @@ export class TopBar extends Component<any, any>{
                             <Button variant="dark" className="mr-2 inline" disabled={this.props.userDataLoading}>
                                 {
                                     this.props.userDataLoading ?
-                                        <Spinner
-                                            className="mr-1"
-                                            as="span"
-                                            animation="border"
-                                            size="sm"
-                                            role="status"
-                                            aria-hidden="true"
-                                        />
-                                        :
-                                        ''
+                                        <Spinner className="mr-1" as="span" animation="border" size="sm" role="status" aria-hidden="true"/> : ''
                                 }
 
                                 {

@@ -32,7 +32,7 @@ const ListItem = (props: any) => {
                                 <RateStar classYear={props.classYear} classRating={props.classRating} classID={props.classID}/>
                             </div>
 
-                            <div className="class-rate-number inline"><b>{props.classRating}</b></div>
+                            <div className="class-rate-number inline"><b>{(Math.round(props.classRating * 10) / 10).toFixed(1)}</b></div>
                         </div>
 
                             {

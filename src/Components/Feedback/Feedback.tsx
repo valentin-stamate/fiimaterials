@@ -1,6 +1,6 @@
 import React from 'react';
 import './Feedback.scss'
-import {Alert, Button, Col, Container, Form, ListGroup, Row} from "react-bootstrap";
+import {Alert, Button, Col, Container, Form, Row} from "react-bootstrap";
 import {useHistory} from 'react-router-dom';
 import FeedbackListItem from "./FeedbackListItem/FeedbackListItem";
 import {connect} from 'react-redux';

@@ -1,10 +1,14 @@
 import {getCookie, LAST_YEAR_COOKIE, setCookie, USER_AUTH_TOKEN_COOKIE} from "../Store/cookie";
 import {
-    GET_CLASSES, GET_LINKS, GET_RESOURCES,
+    GET_CLASSES,
+    GET_LINKS,
+    GET_RESOURCES,
     GET_USER_DATA,
     SET_AUTH_STATUS,
-    SET_LAST_YEAR, SET_LINKS_LOADING,
-    SET_MATERIALS_LOADING, SET_RESOURCE_LOADING,
+    SET_LAST_YEAR,
+    SET_LINKS_LOADING,
+    SET_MATERIALS_LOADING,
+    SET_RESOURCE_LOADING,
     SET_USER_DATA_LOADING
 } from "../Store/actions";
 import store from "../Store/store";
@@ -183,6 +187,18 @@ class AppAPI {
         }).catch(e => {
             // TODO react ui
         });
+    }
+
+    signup(formData: any) {
+        return BackendAPI.getInstance().signup(formData);
+    }
+
+    sendVerificationToken(token: string) {
+        return BackendAPI.getInstance().sentVerificationToken(token);
+    }
+
+    login(formData: any) {
+        return BackendAPI.getInstance().login(formData);
     }
 
 }

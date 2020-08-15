@@ -1,5 +1,5 @@
 import React from "react";
-import "./Hr.css";
+import "./Hr.scss";
 
 const Hr = (props: any) => {
     return (

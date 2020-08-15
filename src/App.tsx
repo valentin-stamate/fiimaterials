@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
-import './App.css';
+import './App.scss';
 import {Provider} from "react-redux";
 import store from "./Store/store";
 import {BrowserRouter, Switch, Route} from 'react-router-dom'
 import MainPage from "./Components/MainPage/MainPage";
 import Enter from "./Components/Enter/Enter";
 import Feedback from "./Components/Feedback/Feedback";
-import AppAPI from "./Script/AppAPI";
+import AppAPI from "./API/AppAPI";
 
 
 class App extends Component<any, any>{

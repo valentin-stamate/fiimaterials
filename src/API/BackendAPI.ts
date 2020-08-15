@@ -1,5 +1,12 @@
 import axios from "axios";
-import {BACKEND_URL, GET_LINKS_URL, GET_RESOURCES_URL, GET_USER_URL, SET_RATING_URL} from "../Store/globals";
+import {
+    BACKEND_URL,
+    GET_LINKS_URL,
+    GET_RESOURCES_URL,
+    GET_USER_URL, LOGIN_URL, POST_VERIFICATION_TOKEN,
+    SET_RATING_URL,
+    SIGNUP_URL
+} from "../Store/globals";
 import {getCookie, USER_AUTH_TOKEN_COOKIE} from "../Store/cookie";
 
 
@@ -64,6 +71,32 @@ class BackendAPI {
         return axios({
             method: "get",
             url: BACKEND_URL + GET_LINKS_URL,
+        });
+    }
+
+    signup(formData: any) {
+        return axios({
+            method: 'post',
+            url: BACKEND_URL + SIGNUP_URL,
+            data: formData,
+        });
+    }
+
+    sentVerificationToken(token: string) {
+        return axios({
+            method: 'post',
+            url: BACKEND_URL + POST_VERIFICATION_TOKEN,
+            data: {
+                token: token,
+            }
+        });
+    }
+
+    login(formData: any) {
+        return axios({
+            method: 'post',
+            url: BACKEND_URL + LOGIN_URL,
+            data: formData,
         });
     }
 

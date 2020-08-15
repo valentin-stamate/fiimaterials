@@ -1,36 +1,36 @@
 import React, {useState} from "react";
 import Title from "../Title/Title";
-import {Alert, Button, Form} from "react-bootstrap";
+import {Alert, Button, Form, Spinner} from "react-bootstrap";
 import {Link} from 'react-router-dom';
 import '../Enter.scss';
-import axios from 'axios';
-import {BACKEND_URL, EMAIL_REGEX, LOGIN_URL} from "../../../Store/globals";
-import {deleteCookies, setCookie, USER_AUTH_TOKEN_COOKIE} from "../../../Store/cookie";
+import {setCookie, USER_AUTH_TOKEN_COOKIE} from "../../../Store/cookie";
+import AppAPI from "../../../API/AppAPI";
 
-const Login = (props: any) => {
+const Login = () => {
 
-    const [loginSucc, setLoginSucc] = useState(true)
+    const [loginError, setLoginStatus] = useState(false);
+    const [loading, setLoading] = useState(false);
 
-    deleteCookies();
-
-    const Login = (e: any) => {
+    const Login = (e: React.FormEvent<HTMLElement>) => {
         e.preventDefault();
 
-        const form = document.getElementById('login-form') as HTMLFormElement;
+        const form = e.currentTarget as HTMLFormElement;
         const formData = Object.fromEntries(new FormData(form));
 
-        axios({
-            method: 'post',
-            url: BACKEND_URL + LOGIN_URL,
-            data: formData,
-        }).then( (res: any) => {
+        const request = AppAPI.getInstance().login(formData)
+
+        setLoading(true);
+        setLoginStatus(false);
+
+        request.then( (res: any) => {
 
             setCookie(USER_AUTH_TOKEN_COOKIE, res.data.token);
 
             window.location.href = '/';
-            return ;
+
         }).catch( e => {
-            setLoginSucc(false)
+            setLoading(false);
+            setLoginStatus(true);
         } )
 
     }
@@ -51,12 +51,12 @@ const Login = (props: any) => {
                     <Form.Control className="input-dark" type="password" name="password" />
                 </Form.Group>
 
-                {
-                    loginSucc ? '' :
-                        <Alert variant="dark mt-1">Error</Alert>
-                }
+                {loginError ? <Alert variant="dark mt-1">Error</Alert> : ''}
 
-                <Button variant="light" type="submit">Login</Button>
+                <Button variant="light" type="submit" disabled={loading}>
+                    {loading ? <Spinner className="mr-1" as="span" animation="border" size="sm" role="status" aria-hidden="true"/> : ''}
+                    Login
+                </Button>
 
 
                 <Link to="/enter/signup">
@@ -64,7 +64,6 @@ const Login = (props: any) => {
                         Signup
                     </Button>
                 </Link>
-
 
             </Form>
 

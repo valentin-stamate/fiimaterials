@@ -5,7 +5,7 @@ import {connect} from 'react-redux';
 import {getCookie, LAST_YEAR_COOKIE} from '../../Store/cookie';
 import "./Materials.scss";
 import Loading from "../Loading/Loading";
-import AppAPI from "../../Script/AppAPI";
+import AppAPI from "../../API/AppAPI";
 
 class Materials extends Component<any, any> {
 

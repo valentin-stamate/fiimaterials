@@ -1,5 +1,5 @@
 import React from "react";
-import './Title.css';
+import './Title.scss';
 
 const hrStyle = {
     margin:"0 0 1rem 0",

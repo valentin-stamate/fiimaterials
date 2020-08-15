@@ -3,7 +3,7 @@ import {Button, Col, Container, ListGroup, Row} from "react-bootstrap";
 import "./Links.scss";
 import {connect} from 'react-redux';
 import Loading from "../Loading/Loading";
-import AppAPI from "../../Script/AppAPI";
+import AppAPI from "../../API/AppAPI";
 
 class Links extends Component<any, any> {
 

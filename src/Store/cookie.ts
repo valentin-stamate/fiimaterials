@@ -4,7 +4,7 @@ export const LAST_YEAR_COOKIE = 'O9rrG8CUfnY4j0bj';
 export function setCookie(key: string, value: string) {
     let expires = new Date();
     expires.setTime(expires.getTime() + (7 * 24 * 60 * 60 * 1000));
-    document.cookie = key + '=' + value + ';expires=' + expires.toUTCString();
+    document.cookie = key + '=' + value + '; expires=' + expires.toUTCString() + '; path=/;';
 }
 
 export function getCookie(key: string) {
@@ -13,7 +13,7 @@ export function getCookie(key: string) {
 }
 
 export function deleteCookie(key: string) {
-    document.cookie = key + "=;expires=Thu, 01 Jan 1970 00:00:01 GMT"
+    document.cookie = key + "=; expires=Thu, 01 Jan 1970 00:00:01 GMT; path=/;";
 }
 
 export function deleteCookies() {

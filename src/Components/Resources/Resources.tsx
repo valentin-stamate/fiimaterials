@@ -3,7 +3,7 @@ import {connect} from "react-redux";
 import ResourceListItem from "./ResourceListItem/ResourceListItem";
 import {Col, Row} from "react-bootstrap";
 import Loading from "../Loading/Loading";
-import AppAPI from "../../Script/AppAPI";
+import AppAPI from "../../API/AppAPI";
 
 class Resources extends Component<any, any> {
 

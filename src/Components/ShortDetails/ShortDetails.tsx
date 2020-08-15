@@ -1,6 +1,6 @@
 import React from "react";
 import {Col, Container, Row} from "react-bootstrap";
-import "./ShortDetails.css";
+import "./ShortDetails.scss";
 import AboutSvg from "./../../Assets/about-icon.svg";
 import PackageSVG from "./../../Assets/package-icon.svg";
 import GitHubIcon from "./../../Assets/github-icon.svg";

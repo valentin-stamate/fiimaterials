@@ -1,5 +1,5 @@
 import React from "react";
-import "./Intro.css";
+import "./Intro.scss";
 import {Col, Container, Row} from "react-bootstrap";
 
 const subtitles: string[] = [

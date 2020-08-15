@@ -1,9 +1,9 @@
 import React, {Component} from "react";
-import "./RateStar.css";
+import "./RateStar.scss";
 import {Badge, OverlayTrigger, Toast, Tooltip} from "react-bootstrap";
 import {Link} from "react-router-dom"
 import {connect} from "react-redux";
-import AppAPI from "../../../Script/AppAPI";
+import AppAPI from "../../../API/AppAPI";
 
 class RateStar extends Component<any, any> {
 

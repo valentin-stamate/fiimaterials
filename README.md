@@ -33,5 +33,5 @@ The app is deployed on Firebase, which I strongly recommend, and it's available 
  - [ ] About
  - [X] Contact
  - [ ] Recover password
- - [ ] Verify Email
+ - [X] Verify Email
  - [ ] Change user info
