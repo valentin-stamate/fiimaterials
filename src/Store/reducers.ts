@@ -1,7 +1,6 @@
 import {
     GET_CLASSES,
     GET_LINKS,
-    GET_USER_ADVANCED_DATA,
     GET_USER_DATA,
     SET_AUTH_STATUS,
     SET_MATERIALS_LOADING,
@@ -54,9 +53,12 @@ const initialState = {
     userData: {
         username: "User",
         email: "user@email.com",
-    },
-    userAdvancedData: {
-
+        date_joined: "28.07.2000",
+        last_login: "16.08.2020",
+        is_superuser: false,
+        favorite_courses: [
+            'data structures',
+        ]
     },
 
     feedback: [
@@ -105,11 +107,6 @@ function reducers(state = initialState, action: any) {
             return {
                 ...state,
                 userData: action.data,
-            };
-        case GET_USER_ADVANCED_DATA:
-            return {
-                ...state,
-                userAdvancedData: action.data,
             };
         case SET_MATERIALS_LOADING:
             return {

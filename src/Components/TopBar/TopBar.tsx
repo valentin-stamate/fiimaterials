@@ -3,22 +3,24 @@ import {Button, Dropdown, Nav, Navbar, Spinner} from "react-bootstrap";
 import {connect} from "react-redux";
 import AppAPI from "../../API/AppAPI";
 import store from "../../Store/store";
-import {Link} from 'react-router-dom';
+import {Link, withRouter} from 'react-router-dom';
 
 export class TopBar extends Component<any, any>{
 
     constructor(props: any) {
         super(props);
-        this.state = {};
     }
 
     componentDidMount() {
+        AppAPI.getInstance().setUserAuthStatus();
+
         if (store.getState().userIsAuth) {
             AppAPI.getInstance().getUserData();
         }
     }
 
     render() {
+
         return (
             <React.StrictMode>
 
@@ -26,17 +28,22 @@ export class TopBar extends Component<any, any>{
                     <Navbar.Brand>FIIMaterials<sub><span className="badge badge-pill badge-light ml-1">Beta</span></sub></Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
-
-                        <Nav>
-                            <Nav.Link href="#intro">Intro</Nav.Link>
-                            <Nav.Link href="#materials">Materials</Nav.Link>
-                            <Nav.Link href="#resources">Resources</Nav.Link>
-                            <Nav.Link href="#links">Links</Nav.Link>
-                            <Nav.Link>
-                                <Link to="/feedback" className="topbar-link">Feedback</Link>
-                            </Nav.Link>
-                            <Nav.Link href="#contact">Contact</Nav.Link>
-                        </Nav>
+                        {
+                            window.location.pathname === '/' ?
+                                <Nav>
+                                    <Nav.Link href="#intro">Intro</Nav.Link>
+                                    <Nav.Link href="#materials">Materials</Nav.Link>
+                                    <Nav.Link href="#resources">Resources</Nav.Link>
+                                    <Nav.Link href="#links">Links</Nav.Link>
+                                    <Nav.Link onClick={() => this.props.history.push('/feedback')}>Feedback</Nav.Link>
+                                    <Nav.Link href="#contact">Contact</Nav.Link>
+                                </Nav>
+                                :
+                                <Nav>
+                                    <Nav.Link onClick={() => this.props.history.push('/')}>Home</Nav.Link>
+                                    <Nav.Link onClick={() => this.props.history.push('/feedback')}>Feedback</Nav.Link>
+                                </Nav>
+                        }
 
                         <div className="mr-auto"/>
 
@@ -86,4 +93,4 @@ const mapStateToProps = (state: any) => {
     }
 }
 
-export default connect(mapStateToProps)(TopBar);
+export default withRouter(connect(mapStateToProps)(TopBar));

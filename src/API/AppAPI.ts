@@ -31,23 +31,28 @@ class AppAPI {
     }
 
     initializeApp() {
-        const userToken = getCookie(USER_AUTH_TOKEN_COOKIE);
-        const lastYearSelected = getCookie(LAST_YEAR_COOKIE);
+        this.setUserAuthStatus();
+        this.setLastYear();
+    }
 
+    setUserAuthStatus() {
+        const userToken = getCookie(USER_AUTH_TOKEN_COOKIE);
         if (userToken !== undefined && userToken !== null) {
             store.dispatch({
                 type: SET_AUTH_STATUS,
                 data: true,
             });
         }
+    }
 
+    setLastYear() {
+        const lastYearSelected = getCookie(LAST_YEAR_COOKIE);
         if (lastYearSelected !== undefined && lastYearSelected !== null) {
             store.dispatch({
                 type: SET_LAST_YEAR,
                 data: parseInt(lastYearSelected),
             });
         }
-
     }
 
     getUserData() {
@@ -70,7 +75,6 @@ class AppAPI {
                 type: SET_USER_DATA_LOADING,
                 data: false,
             });
-
 
         })
 
