@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import {Button, ButtonGroup, Col, Row} from "react-bootstrap";
 import ListItem from "./ListItem/ListItem";
 import {connect} from 'react-redux';
-import {getCookie, LAST_YEAR_COOKIE} from '../../Store/cookie';
+import {getCookie, LAST_YEAR_COOKIE} from '../../Global/cookie';
 import "./Materials.scss";
 import Loading from "../Loading/Loading";
 import AppAPI from "../../API/AppAPI";
@@ -10,7 +10,7 @@ import AppAPI from "../../API/AppAPI";
 class Materials extends Component<any, any> {
 
     componentDidMount() {
-        this.fetchClasses(this.props.lastYearSelected);
+        this.fetchClasses(AppAPI.getInstance().lastYear);
     }
 
     fetchClasses(year: number) {
@@ -23,7 +23,7 @@ class Materials extends Component<any, any> {
         let classesSecondSemesterJSX: JSX.Element[] = [];
 
         this.props.classes.map( (cls: any, index: Number) => {
-            const clsJSX = (<ListItem userIsAuth={this.props.userIsAuth} userRating={cls.user_rating} classRating={cls.average_rating} classID={cls.id} classYear={cls.year} title={cls.name} site_link={cls.site_link} material_link={cls.material_link} key={index} />);
+            const clsJSX = (<ListItem userIsAuth={AppAPI.getInstance().userAuth} userRating={cls.user_rating} classRating={cls.average_rating} classID={cls.id} classYear={cls.year} title={cls.name} site_link={cls.site_link} material_link={cls.material_link} key={index} />);
 
             cls.semester === 1 ? classesFirstSemesterJSX.push(clsJSX) : classesSecondSemesterJSX.push(clsJSX)
             return 0;
@@ -67,10 +67,8 @@ class Materials extends Component<any, any> {
 
 const mapStateToProps = (state: any) => {
     return {
-        classes: state.classes,
-        materialsLoading: state.materialsLoading,
-        userIsAuth: state.userIsAuth,
-        lastYearSelected: state.lastYearSelected,
+        classes: state.classesReducer.payload,
+        materialsLoading: state.classesReducer.isLoading,
     };
 }
 

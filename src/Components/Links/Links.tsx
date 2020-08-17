@@ -63,8 +63,8 @@ class Links extends Component<any, any> {
 
 const mapStateToProps = (state: any) => {
     return {
-        links: state.links,
-        linksLoading: state.linksLoading,
+        links: state.linkReducer.payload,
+        linksLoading: state.linkReducer.isLoading,
     };
 }
 

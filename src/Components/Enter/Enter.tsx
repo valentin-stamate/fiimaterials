@@ -5,7 +5,7 @@ import {Switch, Route} from "react-router-dom";
 import Signup from "./Signup/Signup";
 import Login from "./Login/Login";
 import VerifyEmail from "./VerifyEmail/VerifyEmail";
-import {deleteCookies} from "../../Store/cookie";
+import {deleteCookies} from "../../Global/cookie";
 
 const Enter = (props: any) => {
 

@@ -1,13 +1,13 @@
 import axios from "axios";
 import {
-    BACKEND_URL,
+    BACKEND_URL, GET_FEEDBACK_URL,
     GET_LINKS_URL,
     GET_RESOURCES_URL,
-    GET_USER_URL, LOGIN_URL, POST_VERIFICATION_TOKEN,
+    GET_USER_URL, LOGIN_URL, POST_FEEDBACK_URL, POST_VERIFICATION_TOKEN,
     SET_RATING_URL,
     SIGNUP_URL
-} from "../Store/globals";
-import {getCookie, USER_AUTH_TOKEN_COOKIE} from "../Store/cookie";
+} from "../Global/globals";
+import {getCookie, USER_AUTH_TOKEN_COOKIE} from "../Global/cookie";
 
 
 /**
@@ -17,7 +17,6 @@ import {getCookie, USER_AUTH_TOKEN_COOKIE} from "../Store/cookie";
  * Hope that is a good pattern
  */
 
-// TODO make a diagram with app flow and put it into about section
 class BackendAPI {
     public static instance: BackendAPI
 
@@ -100,6 +99,23 @@ class BackendAPI {
         });
     }
 
+    getFeedback() {
+        return axios({
+            method: 'get',
+            url: BACKEND_URL + GET_FEEDBACK_URL,
+        });
+    }
+
+    submitFeedback(formData: any) {
+        return axios({
+            method: 'post',
+            url: BACKEND_URL + POST_FEEDBACK_URL,
+            headers: {
+                'Authorization': 'Token ' + getCookie(USER_AUTH_TOKEN_COOKIE),
+            },
+            data: formData,
+        });
+    }
 }
 
 export default BackendAPI;

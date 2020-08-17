@@ -13,16 +13,14 @@ class UserAccount extends Component<any, any> {
         };
     }
 
-    // i'll refactor tomorrow
-
     activateSubmit() {
         this.setState({formChanged: true});
     }
 
     render() {
 
-        const favoriteCoursesJSX = this.props.userData.favorite_courses.map( (course: string) => {
-            return (<Badge pill variant="dark">{course}</Badge>);
+        const favoriteCoursesJSX = this.props.userData.favorite_courses.map( (course: string, index: number) => {
+            return (<Badge key={index} pill variant="dark">{course}</Badge>);
         } );
 
         return (
@@ -31,7 +29,6 @@ class UserAccount extends Component<any, any> {
                 <TopBar/>
 
                 <Container style={{marginTop: "5rem", maxWidth: "40rem"}}>
-
 
                     <h4>User Details</h4>
                     <hr/>
@@ -90,8 +87,8 @@ class UserAccount extends Component<any, any> {
 
 const mapStateToProps = (state: any) => {
     return {
-        userData: state.userData,
-        loading: state.userDataLoading,
+        userData: state.userDataReducer.payload,
+        loading: state.userDataReducer.isLoading,
     };
 }
 

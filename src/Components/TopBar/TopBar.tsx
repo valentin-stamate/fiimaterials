@@ -2,19 +2,13 @@ import React, {Component} from "react";
 import {Button, Dropdown, Nav, Navbar, Spinner} from "react-bootstrap";
 import {connect} from "react-redux";
 import AppAPI from "../../API/AppAPI";
-import store from "../../Store/store";
 import {Link, withRouter} from 'react-router-dom';
 
 export class TopBar extends Component<any, any>{
 
-    constructor(props: any) {
-        super(props);
-    }
-
     componentDidMount() {
-        AppAPI.getInstance().setUserAuthStatus();
-
-        if (store.getState().userIsAuth) {
+            console.log(AppAPI.getInstance().userAuth)
+        if (AppAPI.getInstance().userAuth) {
             AppAPI.getInstance().getUserData();
         }
     }
@@ -60,17 +54,15 @@ export class TopBar extends Component<any, any>{
                             </Dropdown.Menu>
                         </Dropdown>
 
-                        <Link to={this.props.userIsAuth ? '/user-account' : '/enter'}>
+                        <Link to={AppAPI.getInstance().userAuth ? '/user-account' : '/enter'}>
                             <Button variant="dark" className="mr-2 inline" disabled={this.props.userDataLoading}>
                                 {
                                     this.props.userDataLoading ?
                                         <Spinner className="mr-1" as="span" animation="border" size="sm" role="status" aria-hidden="true"/> : ''
                                 }
-
                                 {
-                                    this.props.userIsAuth ?
-                                        this.props.user.username :
-                                        'Register'
+                                    AppAPI.getInstance().userAuth ?
+                                        this.props.user.username : 'Register'
                                 }
                             </Button>
                         </Link>
@@ -87,9 +79,8 @@ export class TopBar extends Component<any, any>{
 
 const mapStateToProps = (state: any) => {
     return {
-        user: state.userData,
-        userIsAuth: state.userIsAuth,
-        userDataLoading: state.userDataLoading,
+        user: state.userDataReducer.payload,
+        userDataLoading: state.userDataReducer.isLoading,
     }
 }
 

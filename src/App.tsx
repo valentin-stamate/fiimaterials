@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import './App.scss';
 import {Provider} from "react-redux";
-import store from "./Store/store";
+import store from "./Redux/store";
 import {BrowserRouter, Switch, Route} from 'react-router-dom'
 import MainPage from "./Components/MainPage/MainPage";
 import Enter from "./Components/Enter/Enter";
@@ -13,11 +13,11 @@ import AppAPI from "./API/AppAPI";
 class App extends Component<any, any>{
 
     componentDidMount() {
+        AppAPI.getInstance().initializeApp();
     }
 
     render() {
-        AppAPI.getInstance().initializeApp();
-        // TODO figure out why is not working in componentDidMount method
+
         return (
             <Provider store={store}>
                 <div className="App">

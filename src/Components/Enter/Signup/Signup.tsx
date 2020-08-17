@@ -1,9 +1,9 @@
-import React, {Component, useState} from "react";
+import React, {useState} from "react";
 import Title from "../Title/Title";
 import {Button, Col, Form, Row, Spinner} from "react-bootstrap";
 import AppAPI from "../../../API/AppAPI";
 import {Link, useHistory} from 'react-router-dom';
-import {EMAIL_REGEX} from "../../../Store/globals";
+import {EMAIL_REGEX} from "../../../Global/globals";
 
 const Signup = () => {
 
@@ -37,7 +37,6 @@ const Signup = () => {
         if (!checkFormValidation(formData)) {
             return;
         }
-
 
         const request = AppAPI.getInstance().signup(formData);
 

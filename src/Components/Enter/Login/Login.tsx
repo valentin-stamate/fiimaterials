@@ -3,7 +3,7 @@ import Title from "../Title/Title";
 import {Alert, Button, Form, Spinner} from "react-bootstrap";
 import {Link} from 'react-router-dom';
 import '../Enter.scss';
-import {setCookie, USER_AUTH_TOKEN_COOKIE} from "../../../Store/cookie";
+import {setCookie, USER_AUTH_TOKEN_COOKIE} from "../../../Global/cookie";
 import AppAPI from "../../../API/AppAPI";
 
 const Login = () => {

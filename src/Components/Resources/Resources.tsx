@@ -49,8 +49,8 @@ class Resources extends Component<any, any> {
 
 const mapStateToProps = (state: any) => {
     return {
-        resources: state.resources,
-        resourcesLoading: state.resourcesLoading,
+        resources: state.resourceReducer.payload,
+        resourcesLoading: state.resourceReducer.isLoading,
     };
 };
 
