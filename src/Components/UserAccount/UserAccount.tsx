@@ -3,6 +3,7 @@ import TopBar from "../TopBar/TopBar";
 import {connect} from "react-redux";
 import {Badge, Button, Card, Container, Form} from "react-bootstrap";
 import Loading from "../Loading/Loading";
+import AppAPI from "../../API/AppAPI";
 
 class UserAccount extends Component<any, any> {
 
@@ -20,6 +21,11 @@ class UserAccount extends Component<any, any> {
     sendUpdatedUser(e: React.FormEvent<HTMLElement>) {
         e.preventDefault();
 
+    }
+
+    logout() {
+        AppAPI.getInstance().deleteCookies();
+        window.location.href = '/';
     }
 
     render() {
@@ -73,9 +79,14 @@ class UserAccount extends Component<any, any> {
                                     {favoriteCoursesJSX}
                                 <p/>
 
-                                {/*<Button variant="info" type="submit" disabled={!this.state.formChanged}>*/}
-                                {/*    Submit*/}
-                                {/*</Button>*/}
+                                <Button variant="info" type="submit" disabled={!this.state.formChanged}>
+                                    Update
+                                </Button>
+
+                                <Button variant="warning" onClick={this.logout} className="float-right">
+                                    LogOut
+                                </Button>
+
                             </Form>
                     }
 

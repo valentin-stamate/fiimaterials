@@ -1,4 +1,4 @@
-import {getCookie, LAST_YEAR_COOKIE, setCookie, USER_AUTH_TOKEN_COOKIE} from "../Global/cookie";
+import {deleteCookies, getCookie, LAST_YEAR_COOKIE, setCookie, USER_AUTH_TOKEN_COOKIE} from "../Global/cookie";
 import store from "../Redux/store";
 import BackendAPI from "./BackendAPI";
 import {BACKEND_URL, GET_CLASSES_URL} from "../Global/globals";
@@ -6,7 +6,7 @@ import {fetchUserData, fetchUserDataSuccess} from "../Redux/Actions/userData";
 import {fetchClasses, fetchClassesSuccess} from "../Redux/Actions/class";
 import {fetchResources, fetchResourcesSuccess} from "../Redux/Actions/resource";
 import {fetchLinks, fetchLinksSuccess} from "../Redux/Actions/link";
-import {fetchFeedback, fetchFeedbackSuccess} from "../Redux/Actions/feedback";
+import {fetchFeedback, fetchFeedbackSuccess, submitFeedback} from "../Redux/Actions/feedback";
 import {setLastSelectedYear, setUserAuthStatus} from "../Redux/Actions/app";
 
 
@@ -35,6 +35,16 @@ class AppAPI {
             const lastYear = parseInt(lastYearSelected);
             store.dispatch(setLastSelectedYear(lastYear));
         }
+
+        // API CALLS
+        if (store.getState().appReducer.userIsAuth) {
+            AppAPI.getInstance().getUserData();
+        }
+        AppAPI.getInstance().getFeedback();
+    }
+
+    deleteCookies() {
+        deleteCookies();
     }
 
     getUserData() {
@@ -116,6 +126,7 @@ class AppAPI {
 
     submitFeedback(formData: any) {
         const request = BackendAPI.getInstance().submitFeedback(formData);
+        store.dispatch(submitFeedback());
 
         request.then(result => {
             store.dispatch(fetchFeedbackSuccess(result.data));

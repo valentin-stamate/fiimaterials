@@ -7,9 +7,7 @@ import {Link, withRouter} from 'react-router-dom';
 export class TopBar extends Component<any, any>{
 
     componentDidMount() {
-        if (this.props.userIsAuth) {
-            AppAPI.getInstance().getUserData();
-        }
+
     }
 
     render() {

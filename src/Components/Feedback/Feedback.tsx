@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './Feedback.scss'
-import {Alert, Button, Col, Container, Form, Row} from "react-bootstrap";
+import {Alert, Button, Card, Col, Container, Form, Row, Spinner} from "react-bootstrap";
 import FeedbackListItem from "./FeedbackListItem/FeedbackListItem";
 import {connect} from 'react-redux';
 import Loading from "../Loading/Loading";
@@ -9,12 +9,20 @@ import AppAPI from "../../API/AppAPI";
 
 class Feedback extends Component<any, any> {
 
-    componentDidMount() {
-        AppAPI.getInstance().getFeedback();
+    constructor(props: any) {
+        super(props);
+        this.state = {
+            submitErrorMessage: '',
+        };
+    }
+
+    submitError(message: string) {
+        this.setState({submitErrorMessage: message});
     }
 
     submitFeedback = (e: React.FormEvent<HTMLElement>) => {
         e.preventDefault();
+        this.submitError('');
 
         const form = e.currentTarget as HTMLFormElement
         let formData: any = Object.fromEntries(new FormData(form))
@@ -23,7 +31,8 @@ class Feedback extends Component<any, any> {
             show_name: formData.show_name === 'on',
         }
 
-        if (formData.message === undefined || formData.message.length < 10) {
+        if (formData.feedback === undefined || formData.feedback.length < 10) {
+            this.submitError('The length of your feedback message should be at least 10.')
             return;
         }
 
@@ -57,20 +66,19 @@ class Feedback extends Component<any, any> {
 
                 <Container className="mt-4">
                     <Row>
-                        <Col sm={12} md={6} className="mb-2">
+                        <Col sm={12} md={8} className="mb-2">
                             {
                                 this.props.userIsAuth ?
-                                    ''
-                                    :
+                                    '' :
                                     <Alert variant="warning">
                                         You have to be logged in first in order to submit a feedback.
                                     </Alert>
                             }
-                            <Form onSubmit={() => this.submitFeedback} id="feedback-form">
+                            <Form onSubmit={(e) => this.submitFeedback(e)} id="feedback-form" style={{maxWidth: "34rem"}}>
                                 <Form.Group controlId="formBasicEmail">
                                     <Form.Label>Display Name</Form.Label>
                                     <Form.Control type="text" name="name" placeholder="Your Name"
-                                                  value={this.props.userIsAuth && this.props.username !== 'User' ? this.props.username : ''}/>
+                                                  defaultValue={this.props.userIsAuth && this.props.username !== 'User' ? this.props.username : ''}/>
 
                                     <Form.Group controlId="formBasicCheckbox">
                                         <Form.Check type="checkbox" defaultChecked name="show_name"
@@ -85,42 +93,43 @@ class Feedback extends Component<any, any> {
                                                   placeholder="Message..."/>
                                 </Form.Group>
 
-                                <Button variant="outline-dark" type="submit">
+                                <Button variant="outline-dark" type="submit" disabled={this.props.submitLoading}>
+                                    {
+                                        this.props.submitLoading ? <Spinner className="mr-1" as="span" animation="border" size="sm" role="status" aria-hidden="true"/> : ''
+                                    }
                                     Submit
                                 </Button>
 
+                                { this.state.submitErrorMessage !== '' ? <Alert variant="danger" className="mt-3">{this.state.submitErrorMessage}</Alert> : ''}
 
                             </Form>
                         </Col>
-                        <Col sm={12} md={6}>
+                        <Col sm={12} md={4}>
 
-                            <div className="text-center center-absolute">
-
-                                Feel free to let a feedback.
-                                As you can see you can choose to hide your name from the outside world.
-                                Below is a list with all the feedback I received from the beginning of this project
-                                and any good idea will be implemented. Btw, I don't know french and I know this page is
-                                ugly.
-
-                            </div>
+                            <Card bg="light">
+                                <Card.Body>
+                                <Card.Text>
+                                    Feel free to let a feedback.
+                                    As you can see you can choose to hide your name from the outside world.
+                                    Below is a list with all the feedback I received from the beginning of this project
+                                    and any good idea will be implemented. Btw, I don't know french and I know this page is
+                                    ugly.
+                                </Card.Text>
+                                </Card.Body>
+                            </Card>
 
                         </Col>
                     </Row>
 
                     <Row className="mt-4">
                         <Col sm={12} md={6}>
-
                             {
                                 this.props.feedbackLoading ?
-                                    <Loading/>
-                                    :
-                                    feedbackListJSX
+                                    <Loading/> : feedbackListJSX
                             }
-
                         </Col>
 
                         <Col/>
-
 
                     </Row>
                 </Container>
@@ -134,6 +143,7 @@ const mapStateToProps = (state: any) => {
     return {
         feedback: state.feedbackReducer.payload,
         feedbackLoading: state.feedbackReducer.isLoading,
+        submitLoading: state.feedbackReducer.submitLoading,
         username: state.userDataReducer.payload.username,
         userIsAuth: state.appReducer.userIsAuth,
     };
