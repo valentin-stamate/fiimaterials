@@ -30,6 +30,7 @@ class RateStar extends Component<any, any> {
 
     initializeStarColor() {
         // https://coolors.co/gradient-palette
+        this.starColor.set(0, "#282828");
         this.starColor.set(1, "#EC603C");
         this.starColor.set(2, "#F07E3A");
         this.starColor.set(3, "#F59C39");
@@ -60,7 +61,6 @@ class RateStar extends Component<any, any> {
 
     }
 
-
     resetStars() {
         const initialStarActivatedState = [...this.nullStarActivated];
         for (let i = 0; i < parseInt(this.props.classRating); i++) {
@@ -69,10 +69,22 @@ class RateStar extends Component<any, any> {
         this.setState({starActivated: initialStarActivatedState})
     }
 
-    render() {
+    deleteRating = (classID: number, userRating: number) => {
+        if (userRating === 0) {
+            return;
+        }
+        AppAPI.getInstance().deleteRating(classID);
+    }
 
+    componentDidUpdate(prevProps: any, prevState: any) {
+        if (this.props.userRating !== prevProps.userRating) {
+            this.resetStars();
+        }
+    }
+
+    render() {
         const starsJSX: JSX.Element[] = [];
-        // TODO color star progress eg 1 star = red 5 star = yellow
+
         for (let i = 0; i < 5; i++) {
             starsJSX.push(
                 <OverlayTrigger placement="top" key={i} overlay={<Tooltip id="tooltip-top"><strong>{this.starText.get(i)}</strong></Tooltip>}>
@@ -82,7 +94,6 @@ class RateStar extends Component<any, any> {
                          onClick={() => this.setRating(i + 1)}
                          onMouseEnter={() => this.updateStars(i)}>
                         <svg className="star" style={{fill: this.state.starActivated[i] ? this.starColor.get(i+1) : "#282828"}} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 497.9 475.78">
-                            <title>star</title>
                             <path d="M276.51,30.86l59.21,120a22.86,22.86,0,0,0,17.22,12.51l132.4,19.24c18.76,2.72,26.26,25.78,12.68,39L402.21,315a22.83,22.83,0,0,0-6.57,20.24L418.25,467.1c3.21,18.68-16.4,32.93-33.18,24.11L266.64,429a22.88,22.88,0,0,0-21.28,0L126.93,491.21c-16.78,8.82-36.39-5.43-33.18-24.11l22.61-131.87A22.83,22.83,0,0,0,109.79,315L14,221.6c-13.58-13.23-6.08-36.29,12.68-39l132.4-19.24a22.86,22.86,0,0,0,17.22-12.51l59.21-120C243.88,13.86,268.12,13.86,276.51,30.86Z" transform="translate(-7.05 -18.11)"/>
                         </svg>
                     </div>
@@ -94,9 +105,6 @@ class RateStar extends Component<any, any> {
 
         return (
             <React.StrictMode>
-                <div>
-                    {starsJSX}
-                </div>
 
                 <Toast show={this.state.showToast} onClose={() => this.setState({showToast: !this.state.showToast})} className="star-toast bg-dark">
                     <Toast.Header>
@@ -104,6 +112,33 @@ class RateStar extends Component<any, any> {
                     </Toast.Header>
                     <Toast.Body>Before rating a class you need to <Link to="/enter"><Badge variant="light">Register</Badge></Link> first.</Toast.Body>
                 </Toast>
+
+                <div className="rating-wrapper mr-2 bg-1 inline">
+
+                    {/* The actual stars */}
+                    <div className="inline">
+                        {starsJSX}
+                    </div>
+                    {/* Class Rating Number */}
+                    <div className="inline"><b>{(Math.round(this.props.classRating * 10) / 10).toFixed(1)}</b></div>
+                </div>
+
+                {/* User Class Rating */}
+                {
+                    this.props.userIsAuth ?
+                        <div className="rating-wrapper inline bg-1 mr-2" onMouseLeave={() => this.resetStars()}>
+                            <svg className="star" onClick={() => this.deleteRating(this.props.classID, this.props.userRating)} style={{fill: this.starColor.get(this.props.userRating)}} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 497.9 475.78">
+                                <title>delete rating</title>
+                                <path d="M276.51,30.86l59.21,120a22.86,22.86,0,0,0,17.22,12.51l132.4,19.24c18.76,2.72,26.26,25.78,12.68,39L402.21,315a22.83,22.83,0,0,0-6.57,20.24L418.25,467.1c3.21,18.68-16.4,32.93-33.18,24.11L266.64,429a22.88,22.88,0,0,0-21.28,0L126.93,491.21c-16.78,8.82-36.39-5.43-33.18-24.11l22.61-131.87A22.83,22.83,0,0,0,109.79,315L14,221.6c-13.58-13.23-6.08-36.29,12.68-39l132.4-19.24a22.86,22.86,0,0,0,17.22-12.51l59.21-120C243.88,13.86,268.12,13.86,276.51,30.86Z" transform="translate(-7.05 -18.11)"/>
+                            </svg>
+
+                            <div className="inline ml-2">
+                                <b>{this.props.userRating}</b>
+                            </div>
+                        </div>
+                        :
+                        ''
+                }
 
             </React.StrictMode>
         );

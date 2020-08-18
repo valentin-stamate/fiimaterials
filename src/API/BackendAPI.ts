@@ -1,6 +1,6 @@
 import axios from "axios";
 import {
-    BACKEND_URL, GET_FEEDBACK_URL,
+    BACKEND_URL, DELETE_RATING, GET_FEEDBACK_URL,
     GET_LINKS_URL,
     GET_RESOURCES_URL,
     GET_USER_URL, LOGIN_URL, POST_FEEDBACK_URL, POST_VERIFICATION_TOKEN,
@@ -114,6 +114,19 @@ class BackendAPI {
                 'Authorization': 'Token ' + getCookie(USER_AUTH_TOKEN_COOKIE),
             },
             data: formData,
+        });
+    }
+
+    deleteRating(classId: number) {
+        return axios({
+            method: "post",
+            url: BACKEND_URL + DELETE_RATING,
+            headers: {
+                'Authorization': 'Token ' + getCookie(USER_AUTH_TOKEN_COOKIE),
+            },
+            data: {
+                class_id: classId,
+            }
         });
     }
 }

@@ -145,6 +145,14 @@ class AppAPI {
         return BackendAPI.getInstance().login(formData);
     }
 
+    deleteRating(classId: number) {
+        const request = BackendAPI.getInstance().deleteRating(classId);
+
+        request.then(response => {
+            store.dispatch(fetchClassesSuccess(response.data));
+        });
+    }
+
 }
 
 
