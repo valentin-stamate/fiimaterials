@@ -10,7 +10,7 @@ import AppAPI from "../../API/AppAPI";
 class Materials extends Component<any, any> {
 
     componentDidMount() {
-        this.fetchClasses(AppAPI.getInstance().lastYear);
+        this.fetchClasses(this.props.lastYearSelected);
     }
 
     fetchClasses(year: number) {
@@ -23,7 +23,7 @@ class Materials extends Component<any, any> {
         let classesSecondSemesterJSX: JSX.Element[] = [];
 
         this.props.classes.map( (cls: any, index: Number) => {
-            const clsJSX = (<ListItem userIsAuth={AppAPI.getInstance().userAuth} userRating={cls.user_rating} classRating={cls.average_rating} classID={cls.id} classYear={cls.year} title={cls.name} site_link={cls.site_link} material_link={cls.material_link} key={index} />);
+            const clsJSX = (<ListItem userIsAuth={this.props.userIsAuth} userRating={cls.user_rating} classRating={cls.average_rating} classID={cls.id} classYear={cls.year} title={cls.name} site_link={cls.site_link} material_link={cls.material_link} key={index} />);
 
             cls.semester === 1 ? classesFirstSemesterJSX.push(clsJSX) : classesSecondSemesterJSX.push(clsJSX)
             return 0;
@@ -69,6 +69,8 @@ const mapStateToProps = (state: any) => {
     return {
         classes: state.classesReducer.payload,
         materialsLoading: state.classesReducer.isLoading,
+        userIsAuth: state.appReducer.userIsAuth,
+        lastYearSelected: state.appReducer.lastYearSelected,
     };
 }
 

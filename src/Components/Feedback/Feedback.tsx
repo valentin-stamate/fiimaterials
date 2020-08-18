@@ -59,7 +59,7 @@ class Feedback extends Component<any, any> {
                     <Row>
                         <Col sm={12} md={6} className="mb-2">
                             {
-                                AppAPI.getInstance().userAuth ?
+                                this.props.userIsAuth ?
                                     ''
                                     :
                                     <Alert variant="warning">
@@ -70,7 +70,7 @@ class Feedback extends Component<any, any> {
                                 <Form.Group controlId="formBasicEmail">
                                     <Form.Label>Display Name</Form.Label>
                                     <Form.Control type="text" name="name" placeholder="Your Name"
-                                                  value={AppAPI.getInstance().userAuth && this.props.username !== 'User' ? this.props.username : ''}/>
+                                                  value={this.props.userIsAuth && this.props.username !== 'User' ? this.props.username : ''}/>
 
                                     <Form.Group controlId="formBasicCheckbox">
                                         <Form.Check type="checkbox" defaultChecked name="show_name"
@@ -135,6 +135,7 @@ const mapStateToProps = (state: any) => {
         feedback: state.feedbackReducer.payload,
         feedbackLoading: state.feedbackReducer.isLoading,
         username: state.userDataReducer.payload.username,
+        userIsAuth: state.appReducer.userIsAuth,
     };
 }
 

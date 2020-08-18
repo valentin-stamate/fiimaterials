@@ -7,14 +7,12 @@ import {Link, withRouter} from 'react-router-dom';
 export class TopBar extends Component<any, any>{
 
     componentDidMount() {
-            console.log(AppAPI.getInstance().userAuth)
-        if (AppAPI.getInstance().userAuth) {
+        if (this.props.userIsAuth) {
             AppAPI.getInstance().getUserData();
         }
     }
 
     render() {
-
         return (
             <React.StrictMode>
 
@@ -54,15 +52,14 @@ export class TopBar extends Component<any, any>{
                             </Dropdown.Menu>
                         </Dropdown>
 
-                        <Link to={AppAPI.getInstance().userAuth ? '/user-account' : '/enter'}>
+                        <Link to={this.props.userIsAuth ? '/user-account' : '/enter'}>
                             <Button variant="dark" className="mr-2 inline" disabled={this.props.userDataLoading}>
                                 {
-                                    this.props.userDataLoading ?
-                                        <Spinner className="mr-1" as="span" animation="border" size="sm" role="status" aria-hidden="true"/> : ''
+                                    this.props.loading ?
+                                        <Spinner as="span" animation="border" size="sm" role="status" aria-hidden="true"/> : ''
                                 }
                                 {
-                                    AppAPI.getInstance().userAuth ?
-                                        this.props.user.username : 'Register'
+                                    this.props.userIsAuth ? this.props.user.username : 'Register'
                                 }
                             </Button>
                         </Link>
@@ -80,7 +77,8 @@ export class TopBar extends Component<any, any>{
 const mapStateToProps = (state: any) => {
     return {
         user: state.userDataReducer.payload,
-        userDataLoading: state.userDataReducer.isLoading,
+        loading: state.userDataReducer.isLoading,
+        userIsAuth: state.appReducer.userIsAuth,
     }
 }
 

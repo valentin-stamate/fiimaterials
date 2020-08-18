@@ -3,6 +3,7 @@ import "./RateStar.scss";
 import {Badge, OverlayTrigger, Toast, Tooltip} from "react-bootstrap";
 import {Link} from "react-router-dom";
 import AppAPI from "../../../API/AppAPI";
+import {connect} from "react-redux";
 
 class RateStar extends Component<any, any> {
 
@@ -43,7 +44,7 @@ class RateStar extends Component<any, any> {
     }
 
     setRating(rating: number) {
-        if (AppAPI.getInstance().userAuth) {
+        if (this.props.userIsAuth) {
             AppAPI.getInstance().setRating(this.props.classID, rating);
         } else {
             this.setState({showToast: !this.state.showToast});
@@ -109,4 +110,10 @@ class RateStar extends Component<any, any> {
     }
 }
 
-export default RateStar;
+const mapStateToProps = (state: any) => {
+    return {
+        userIsAuth: state.appReducer.userIsAuth,
+    };
+}
+
+export default connect(mapStateToProps)(RateStar);

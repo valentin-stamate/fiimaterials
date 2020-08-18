@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import TopBar from "../TopBar/TopBar";
 import {connect} from "react-redux";
-import {Badge, Button, Container, Form} from "react-bootstrap";
+import {Badge, Button, Card, Container, Form} from "react-bootstrap";
 import Loading from "../Loading/Loading";
 
 class UserAccount extends Component<any, any> {
@@ -17,10 +17,15 @@ class UserAccount extends Component<any, any> {
         this.setState({formChanged: true});
     }
 
+    sendUpdatedUser(e: React.FormEvent<HTMLElement>) {
+        e.preventDefault();
+
+    }
+
     render() {
 
         const favoriteCoursesJSX = this.props.userData.favorite_courses.map( (course: string, index: number) => {
-            return (<Badge key={index} pill variant="dark">{course}</Badge>);
+            return (<Badge key={index} pill variant="dark" className="mr-2">{course}</Badge>);
         } );
 
         return (
@@ -37,7 +42,7 @@ class UserAccount extends Component<any, any> {
                         this.props.loading ?
                             <Loading />
                             :
-                            <Form>
+                            <Form onSubmit={this.sendUpdatedUser}>
                                 <Form.Group onChange={() => this.activateSubmit()}>
                                     <Form.Label><h6>Username</h6></Form.Label>
                                     <Form.Control type="text" defaultValue={this.props.userData.username}/>
@@ -65,13 +70,12 @@ class UserAccount extends Component<any, any> {
 
 
                                 <h6>Favorite Courses</h6>
-                                {favoriteCoursesJSX}
-
+                                    {favoriteCoursesJSX}
                                 <p/>
 
-                                <Button variant="info" type="submit" disabled={!this.state.formChanged}>
-                                    Submit
-                                </Button>
+                                {/*<Button variant="info" type="submit" disabled={!this.state.formChanged}>*/}
+                                {/*    Submit*/}
+                                {/*</Button>*/}
                             </Form>
                     }
 

@@ -12,7 +12,8 @@ import AppAPI from "./API/AppAPI";
 
 class App extends Component<any, any>{
 
-    componentDidMount() {
+    constructor(props: any) {
+        super(props);
         AppAPI.getInstance().initializeApp();
     }
 

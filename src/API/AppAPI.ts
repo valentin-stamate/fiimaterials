@@ -7,12 +7,11 @@ import {fetchClasses, fetchClassesSuccess} from "../Redux/Actions/class";
 import {fetchResources, fetchResourcesSuccess} from "../Redux/Actions/resource";
 import {fetchLinks, fetchLinksSuccess} from "../Redux/Actions/link";
 import {fetchFeedback, fetchFeedbackSuccess} from "../Redux/Actions/feedback";
+import {setLastSelectedYear, setUserAuthStatus} from "../Redux/Actions/app";
 
 
 class AppAPI {
     public static instance: AppAPI
-    public userAuth = false;
-    public lastYear = 1;
 
     private constructor() {
     }
@@ -27,10 +26,14 @@ class AppAPI {
 
     initializeApp() {
         const userToken = getCookie(USER_AUTH_TOKEN_COOKIE);
-        this.userAuth = userToken !== undefined && userToken !== null
+        const userAuth = userToken !== undefined && userToken !== null;
+
+        store.dispatch(setUserAuthStatus(userAuth));
+
         const lastYearSelected = getCookie(LAST_YEAR_COOKIE);
         if (lastYearSelected !== undefined && lastYearSelected !== null) {
-            this.lastYear = parseInt(lastYearSelected);
+            const lastYear = parseInt(lastYearSelected);
+            store.dispatch(setLastSelectedYear(lastYear));
         }
     }
 
@@ -47,7 +50,7 @@ class AppAPI {
 
     getClasses(year: number) {
         setCookie(LAST_YEAR_COOKIE, year.toString())
-        this.lastYear = year;
+        store.dispatch(setLastSelectedYear(year));
 
         store.dispatch(fetchClasses());
 
@@ -60,7 +63,7 @@ class AppAPI {
             }
         }
 
-        if (this.userAuth) {
+        if (store.getState().appReducer.userIsAuth) {
             sendRequestObject.headers = {
                 'Authorization': 'Token ' + getCookie(USER_AUTH_TOKEN_COOKIE)
             }
