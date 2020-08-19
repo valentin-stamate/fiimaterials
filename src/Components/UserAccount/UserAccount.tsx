@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import TopBar from "../TopBar/TopBar";
 import {connect} from "react-redux";
-import {Badge, Button, Card, Container, Form} from "react-bootstrap";
+import {Badge, Button, Container, Form} from "react-bootstrap";
 import Loading from "../Loading/Loading";
 import AppAPI from "../../API/AppAPI";
 
@@ -12,6 +12,12 @@ class UserAccount extends Component<any, any> {
         this.state = {
             formChanged: false,
         };
+    }
+
+    componentDidMount() {
+        if (!this.props.userIsAuth) {
+            window.location.href = '/enter';
+        }
     }
 
     activateSubmit() {
@@ -79,9 +85,9 @@ class UserAccount extends Component<any, any> {
                                     {favoriteCoursesJSX}
                                 <p/>
 
-                                <Button variant="info" type="submit" disabled={!this.state.formChanged}>
-                                    Update
-                                </Button>
+                                {/*<Button variant="info" type="submit" disabled={!this.state.formChanged}>*/}
+                                {/*    Update*/}
+                                {/*</Button>*/}
 
                                 <Button variant="warning" onClick={this.logout} className="float-right">
                                     LogOut
@@ -89,8 +95,6 @@ class UserAccount extends Component<any, any> {
 
                             </Form>
                     }
-
-
 
                 </Container>
 
@@ -104,6 +108,7 @@ const mapStateToProps = (state: any) => {
     return {
         userData: state.userDataReducer.payload,
         loading: state.userDataReducer.isLoading,
+        userIsAuth: state.appReducer.userIsAuth,
     };
 }
 

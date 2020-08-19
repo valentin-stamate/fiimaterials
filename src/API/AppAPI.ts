@@ -35,12 +35,6 @@ class AppAPI {
             const lastYear = parseInt(lastYearSelected);
             store.dispatch(setLastSelectedYear(lastYear));
         }
-
-        // API CALLS
-        if (store.getState().appReducer.userIsAuth) {
-            AppAPI.getInstance().getUserData();
-        }
-        AppAPI.getInstance().getFeedback();
     }
 
     deleteCookies() {

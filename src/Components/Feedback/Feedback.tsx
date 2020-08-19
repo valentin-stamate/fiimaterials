@@ -16,6 +16,10 @@ class Feedback extends Component<any, any> {
         };
     }
 
+    componentDidMount() {
+        AppAPI.getInstance().getFeedback();
+    }
+
     submitError(message: string) {
         this.setState({submitErrorMessage: message});
     }

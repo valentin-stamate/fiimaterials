@@ -3,11 +3,14 @@ import {Button, Dropdown, Nav, Navbar, Spinner} from "react-bootstrap";
 import {connect} from "react-redux";
 import AppAPI from "../../API/AppAPI";
 import {Link, withRouter} from 'react-router-dom';
+import store from "../../Redux/store";
 
 export class TopBar extends Component<any, any>{
 
     componentDidMount() {
-
+        if (store.getState().appReducer.userIsAuth) {
+            AppAPI.getInstance().getUserData();
+        }
     }
 
     render() {

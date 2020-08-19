@@ -8,7 +8,7 @@ const initialState = {
         last_login: '',
         is_superuser: false,
         favorite_courses: [
-            'data structures',
+            '',
         ],
     },
     isLoading: false,
