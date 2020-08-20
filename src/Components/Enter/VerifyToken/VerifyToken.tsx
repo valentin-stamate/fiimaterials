@@ -4,7 +4,7 @@ import {Alert, Badge, Button, Form, Spinner} from "react-bootstrap";
 import AppAPI from "../../../API/AppAPI";
 import {useHistory} from 'react-router-dom'
 
-const VerifyEmail = (props: any) => {
+const VerifyToken = (props: any) => {
 
     const [error, setErrorStatus] = useState(false);
     const [loading, setLoading] = useState(false);
@@ -33,7 +33,7 @@ const VerifyEmail = (props: any) => {
 
     return (
         <React.StrictMode>
-            <Title name="Verify Email"/>
+            <Title name="Verify Token"/>
 
             <Form onSubmit={SentVerificationToken}>
                 <Form.Group>
@@ -58,4 +58,4 @@ const VerifyEmail = (props: any) => {
     );
 }
 
-export default VerifyEmail;
+export default VerifyToken;

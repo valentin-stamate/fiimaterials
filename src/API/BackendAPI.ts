@@ -5,7 +5,7 @@ import {
     GET_RESOURCES_URL,
     GET_USER_URL, LOGIN_URL, POST_FEEDBACK_URL, POST_VERIFICATION_TOKEN,
     SET_RATING_URL,
-    SIGNUP_URL
+    SIGNUP_URL, UPDATE_PROFILE_URL
 } from "../Global/globals";
 import {getCookie, USER_AUTH_TOKEN_COOKIE} from "../Global/cookie";
 
@@ -127,6 +127,17 @@ class BackendAPI {
             data: {
                 class_id: classId,
             }
+        });
+    }
+
+    updateProfile(newUserData: any) {
+        return axios({
+            method: 'post',
+            url: BACKEND_URL + UPDATE_PROFILE_URL,
+            headers: {
+                'Authorization': 'Token ' + getCookie(USER_AUTH_TOKEN_COOKIE),
+            },
+            data: newUserData,
         });
     }
 }

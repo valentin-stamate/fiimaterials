@@ -44,7 +44,7 @@ const Signup = () => {
 
         request.then(result => {
             form.reset();
-            UseHistory.push('/enter/verify-email');
+            UseHistory.push('/enter/verify-token');
         }).catch(e => {
             // TODO react ui
         })

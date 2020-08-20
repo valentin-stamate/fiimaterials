@@ -147,6 +147,10 @@ class AppAPI {
         });
     }
 
+    updateProfile(newUserData: any) {
+        return BackendAPI.getInstance().updateProfile(newUserData);
+    }
+
 }
 
 

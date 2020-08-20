@@ -4,7 +4,7 @@ import {Card} from "react-bootstrap";
 import {Switch, Route} from "react-router-dom";
 import Signup from "./Signup/Signup";
 import Login from "./Login/Login";
-import VerifyEmail from "./VerifyEmail/VerifyEmail";
+import VerifyToken from "./VerifyToken/VerifyToken";
 import {deleteCookies} from "../../Global/cookie";
 
 const Enter = (props: any) => {
@@ -21,7 +21,7 @@ const Enter = (props: any) => {
                         <Route exact path={props.match.url + '/'} component={Login}/>
                         <Route exact path={props.match.url + '/login'} component={Login}/>
                         <Route exact path={props.match.url + '/signup'} component={Signup}/>
-                        <Route exact path={props.match.url + '/verify-email'} component={VerifyEmail}/>
+                        <Route path={props.match.url + '/verify-token'} component={VerifyToken}/>
                     </Switch>
 
                 </Card>
