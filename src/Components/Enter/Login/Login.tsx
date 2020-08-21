@@ -65,6 +65,11 @@ const Login = () => {
                     </Button>
                 </Link>
 
+                <Link to="/enter/recover-password">
+                    <Button variant="outline-dark text-white" className="ml-2">
+                        Recover Password
+                    </Button>
+                </Link>
             </Form>
 
         </React.StrictMode>

@@ -131,8 +131,8 @@ class AppAPI {
         return BackendAPI.getInstance().signup(formData);
     }
 
-    sendVerificationToken(token: string) {
-        return BackendAPI.getInstance().sentVerificationToken(token);
+    sendVerificationToken(formData: any) {
+        return BackendAPI.getInstance().sentVerificationToken(formData);
     }
 
     login(formData: any) {
@@ -149,6 +149,10 @@ class AppAPI {
 
     updateProfile(newUserData: any) {
         return BackendAPI.getInstance().updateProfile(newUserData);
+    }
+
+    sendToRecover(formData: any) {
+        return BackendAPI.getInstance().sendToRecover(formData);
     }
 
 }

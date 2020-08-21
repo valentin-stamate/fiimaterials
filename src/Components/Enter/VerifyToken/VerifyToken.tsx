@@ -17,7 +17,25 @@ const VerifyToken = (props: any) => {
         const formData = Object.fromEntries(new FormData(form));
         form.reset();
 
-        const request = AppAPI.getInstance().sendVerificationToken(formData.token as string);
+        let jsonData: any;
+        if (window.location.pathname === '/enter/verify-token/recover') {
+            if (formData.new_password !== formData.confirm_new_password && (formData.new_password as string).length < 8) {
+                setErrorStatus(true);
+                return;
+            }
+
+            jsonData = {
+                'token': formData.token,
+                'password': formData.new_password,
+            }
+
+        } else {
+            jsonData = {
+                'token': formData.token,
+            }
+        }
+
+        const request = AppAPI.getInstance().sendVerificationToken(jsonData);
 
         setLoading(true);
         setErrorStatus(false);
@@ -28,7 +46,6 @@ const VerifyToken = (props: any) => {
             setLoading(false);
             setErrorStatus(true);
         })
-
     }
 
     return (
@@ -36,13 +53,30 @@ const VerifyToken = (props: any) => {
             <Title name="Verify Token"/>
 
             <Form onSubmit={SentVerificationToken}>
+
+                {
+                    window.location.pathname === '/enter/verify-token/recover' ?
+                        <>
+                        <Form.Group>
+                            <Form.Label>New Password</Form.Label>
+                            <Form.Control className="input-dark" type="password" name="new_password"/>
+                        </Form.Group>
+
+                        <Form.Group>
+                            <Form.Label>Confirm Password</Form.Label>
+                            <Form.Control className="input-dark" type="password" name="confirm_new_password"/>
+                        </Form.Group>
+                        </>
+                    : ''
+                }
+
+
                 <Form.Group>
                     <Form.Label>Code</Form.Label>
                     <Form.Control className="input-dark" type="text" name="token"/>
                     <Form.Text className="text-muted">
                         The code is sent to your email address. If you see nothing verify the <Badge variant="danger">Spam</Badge> folder.
                     </Form.Text>
-
                 </Form.Group>
 
                 { error ? <Alert variant="danger">Error</Alert> : '' }

@@ -3,7 +3,7 @@ import {
     BACKEND_URL, DELETE_RATING, GET_FEEDBACK_URL,
     GET_LINKS_URL,
     GET_RESOURCES_URL,
-    GET_USER_URL, LOGIN_URL, POST_FEEDBACK_URL, POST_VERIFICATION_TOKEN,
+    GET_USER_URL, LOGIN_URL, POST_FEEDBACK_URL, POST_VERIFICATION_TOKEN, SEND_TO_RECOVER,
     SET_RATING_URL,
     SIGNUP_URL, UPDATE_PROFILE_URL
 } from "../Global/globals";
@@ -81,13 +81,11 @@ class BackendAPI {
         });
     }
 
-    sentVerificationToken(token: string) {
+    sentVerificationToken(formData: any) {
         return axios({
             method: 'post',
             url: BACKEND_URL + POST_VERIFICATION_TOKEN,
-            data: {
-                token: token,
-            }
+            data: formData,
         });
     }
 
@@ -138,6 +136,14 @@ class BackendAPI {
                 'Authorization': 'Token ' + getCookie(USER_AUTH_TOKEN_COOKIE),
             },
             data: newUserData,
+        });
+    }
+
+    sendToRecover(formData: any) {
+        return axios({
+            method: 'post',
+            url: BACKEND_URL + SEND_TO_RECOVER,
+            data: formData,
         });
     }
 }

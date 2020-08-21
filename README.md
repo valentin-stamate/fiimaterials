@@ -34,6 +34,6 @@ The app it's deployed on Firebase, which I strongly recommend, and it's availabl
  - [X] Useful links
  - [ ] About
  - [X] Contact
- - [ ] Recover password
+ - [X] Recover password
  - [X] Verify Email
- - [ ] Change user info
+ - [X] Change user info

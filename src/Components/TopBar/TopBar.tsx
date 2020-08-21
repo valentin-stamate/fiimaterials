@@ -18,7 +18,9 @@ export class TopBar extends Component<any, any>{
             <React.StrictMode>
 
                 <Navbar className="navbar-dark bg-dark" fixed="top" expand="lg">
-                    <Navbar.Brand>FIIMaterials<sub><span className="badge badge-pill badge-light ml-1">Beta</span></sub></Navbar.Brand>
+                    <Navbar.Brand>FIIMaterials
+                        {/*<sub><span className="badge badge-pill badge-light ml-1">New</span></sub>*/}
+                    </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         {
