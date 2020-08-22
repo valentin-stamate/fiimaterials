@@ -8,6 +8,7 @@ import Enter from "./Components/Enter/Enter";
 import Feedback from "./Components/Feedback/Feedback";
 import UserAccount from "./Components/UserAccount/UserAccount";
 import AppAPI from "./API/AppAPI";
+import About from "./Components/About/About";
 
 
 class App extends Component<any, any>{
@@ -28,6 +29,7 @@ class App extends Component<any, any>{
                             <Route exact path="/" component={MainPage} />
                             <Route path="/enter" component={Enter} />
                             <Route path="/feedback" component={Feedback} />
+                            <Route path="/about" component={About} />
                             <Route exact path="/user-account" component={UserAccount} />
                         </Switch>
                     </BrowserRouter>

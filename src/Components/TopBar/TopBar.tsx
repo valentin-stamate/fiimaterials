@@ -13,6 +13,10 @@ export class TopBar extends Component<any, any>{
         }
     }
 
+    goto (path: string) {
+        this.props.history.push(path);
+    }
+
     render() {
         return (
             <React.StrictMode>
@@ -30,19 +34,21 @@ export class TopBar extends Component<any, any>{
                                     <Nav.Link href="#materials">Materials</Nav.Link>
                                     <Nav.Link href="#resources">Resources</Nav.Link>
                                     <Nav.Link href="#links">Links</Nav.Link>
-                                    <Nav.Link onClick={() => this.props.history.push('/feedback')}>Feedback</Nav.Link>
+                                    <Nav.Link onClick={() => this.goto('/feedback')}>Feedback</Nav.Link>
+                                    <Nav.Link onClick={() => this.goto('/about')}>About</Nav.Link>
                                     <Nav.Link href="#contact">Contact</Nav.Link>
                                 </Nav>
                                 :
                                 <Nav>
-                                    <Nav.Link onClick={() => this.props.history.push('/')}>Home</Nav.Link>
-                                    <Nav.Link onClick={() => this.props.history.push('/feedback')}>Feedback</Nav.Link>
+                                    <Nav.Link onClick={() => this.goto('/')} active={window.location.pathname === '/'}>Home</Nav.Link>
+                                    <Nav.Link onClick={() => this.goto('/feedback')} active={window.location.pathname === '/feedback'}>Feedback</Nav.Link>
+                                    <Nav.Link onClick={() => this.goto('/about')} active={window.location.pathname === '/about'}>About</Nav.Link>
                                 </Nav>
                         }
 
                         <div className="mr-auto"/>
 
-                        <Button variant="dark" className="mr-2 inline" onClick={() => window.open('https://github.com/FIIMaterials', '_blank')}>GitHub</Button>
+                        <Button variant="warning" className="mr-2 inline" onClick={() => window.open('https://github.com/FIIMaterials', '_blank')}>GitHub</Button>
 
                         <Dropdown className="inline mr-2">
                             <Dropdown.Toggle variant="dark" id="dropdown-basic">

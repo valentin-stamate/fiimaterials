@@ -5,6 +5,7 @@ import linkReducer from "./Reduces/link";
 import resourceReducer from "./Reduces/resource";
 import feedbackReducer from "./Reduces/feedback";
 import appReducer from "./Reduces/app";
+import aboutReducer from "./Reduces/about";
 
 const reducer = combineReducers({
     userDataReducer,
@@ -13,6 +14,7 @@ const reducer = combineReducers({
     resourceReducer,
     feedbackReducer,
     appReducer,
+    aboutReducer,
 });
 
 export default reducer;

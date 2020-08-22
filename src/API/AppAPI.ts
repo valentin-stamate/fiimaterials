@@ -8,6 +8,7 @@ import {fetchResources, fetchResourcesSuccess} from "../Redux/Actions/resource";
 import {fetchLinks, fetchLinksSuccess} from "../Redux/Actions/link";
 import {fetchFeedback, fetchFeedbackSuccess, submitFeedback} from "../Redux/Actions/feedback";
 import {setLastSelectedYear, setUserAuthStatus} from "../Redux/Actions/app";
+import {fetchAbout, fetchAboutSuccess} from "../Redux/Actions/about";
 
 
 class AppAPI {
@@ -153,6 +154,16 @@ class AppAPI {
 
     sendToRecover(formData: any) {
         return BackendAPI.getInstance().sendToRecover(formData);
+    }
+
+    getAbout() {
+        store.dispatch(fetchAbout())
+
+        const request = BackendAPI.getInstance().getAbout();
+
+        request.then(response => {
+           store.dispatch(fetchAboutSuccess(response.data));
+        });
     }
 
 }
