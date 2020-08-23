@@ -1,6 +1,6 @@
 import axios from "axios";
 import {
-    BACKEND_URL, DELETE_RATING, GET_ABOUT, GET_FEEDBACK_URL,
+    BACKEND_URL, DELETE_RATING, GET_ABOUT, GET_CREDITS, GET_FEEDBACK_URL,
     GET_LINKS_URL,
     GET_RESOURCES_URL,
     GET_USER_URL, LOGIN_URL, POST_FEEDBACK_URL, POST_VERIFICATION_TOKEN, SEND_TO_RECOVER,
@@ -151,6 +151,13 @@ class BackendAPI {
         return axios({
             method: 'get',
             url: BACKEND_URL + GET_ABOUT,
+        });
+    }
+
+    getCredits() {
+        return axios({
+            method: 'get',
+            url: BACKEND_URL + GET_CREDITS,
         });
     }
 }

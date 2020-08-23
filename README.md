@@ -33,4 +33,4 @@ Messy? Probably. It could've been worse? Definitely.
  - [X] Recover password
  - [X] Verify Email
  - [X] Change user info
- - [ ] More materials
+ - [X] More materials

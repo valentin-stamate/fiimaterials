@@ -36,6 +36,7 @@ export class TopBar extends Component<any, any>{
                                     <Nav.Link href="#links">Links</Nav.Link>
                                     <Nav.Link onClick={() => this.goto('/feedback')}>Feedback</Nav.Link>
                                     <Nav.Link onClick={() => this.goto('/about')}>About</Nav.Link>
+                                    <Nav.Link onClick={() => this.goto('/more-materials')} className="text-info">More Materials</Nav.Link>
                                     <Nav.Link href="#contact">Contact</Nav.Link>
                                 </Nav>
                                 :
@@ -43,9 +44,9 @@ export class TopBar extends Component<any, any>{
                                     <Nav.Link onClick={() => this.goto('/')} active={window.location.pathname === '/'}>Home</Nav.Link>
                                     <Nav.Link onClick={() => this.goto('/feedback')} active={window.location.pathname === '/feedback'}>Feedback</Nav.Link>
                                     <Nav.Link onClick={() => this.goto('/about')} active={window.location.pathname === '/about'}>About</Nav.Link>
+                                    <Nav.Link onClick={() => this.goto('/more-materials')} className="text-info">More Materials</Nav.Link>
                                 </Nav>
                         }
-
                         <div className="mr-auto"/>
 
                         <Button variant="warning" className="mr-2 inline" onClick={() => window.open('https://github.com/FIIMaterials', '_blank')}>GitHub</Button>

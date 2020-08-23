@@ -9,6 +9,7 @@ import {fetchLinks, fetchLinksSuccess} from "../Redux/Actions/link";
 import {fetchFeedback, fetchFeedbackSuccess, submitFeedback} from "../Redux/Actions/feedback";
 import {setLastSelectedYear, setUserAuthStatus} from "../Redux/Actions/app";
 import {fetchAbout, fetchAboutSuccess} from "../Redux/Actions/about";
+import {fetchCredits, fetchCreditsSuccess} from "../Redux/Actions/credits";
 
 
 class AppAPI {
@@ -164,6 +165,16 @@ class AppAPI {
         request.then(response => {
            store.dispatch(fetchAboutSuccess(response.data));
         });
+    }
+
+    getCredits() {
+        store.dispatch(fetchCredits());
+
+        const request = BackendAPI.getInstance().getCredits();
+
+        request.then(result => {
+            store.dispatch(fetchCreditsSuccess(result.data));
+        })
     }
 
 }
