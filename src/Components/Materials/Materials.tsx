@@ -6,6 +6,7 @@ import {getCookie, LAST_YEAR_COOKIE} from '../../Global/cookie';
 import "./Materials.scss";
 import Loading from "../Loading/Loading";
 import AppAPI from "../../API/AppAPI";
+import {Link} from "react-router-dom";
 
 class Materials extends Component<any, any> {
 
@@ -15,6 +16,10 @@ class Materials extends Component<any, any> {
 
     fetchClasses(year: number) {
         AppAPI.getInstance().getClasses(year);
+    }
+
+    goto(path: string) {
+        this.props.history.push(path);
     }
 
     render() {
@@ -40,6 +45,7 @@ class Materials extends Component<any, any> {
                         <Button onClick={() => this.fetchClasses(1)} variant={getCookie(LAST_YEAR_COOKIE) === '1' ? 'info' : 'outline-info'}>First Year</Button>
                         <Button onClick={() => this.fetchClasses(2)} variant={getCookie(LAST_YEAR_COOKIE) === '2' ? 'warning' : 'outline-warning'}>Second Year</Button>
                         <Button onClick={() => this.fetchClasses(3)} variant={getCookie(LAST_YEAR_COOKIE) === '3' ? 'success' : 'outline-success'}>Third Year</Button>
+                        <Link to="/more-materials"><Button variant="outline-light">More...</Button></Link>
                     </ButtonGroup>
 
 

@@ -12,9 +12,9 @@ const Contact = () => {
 
                 <div className="content-color">
                     <b>
-                        <div>If you want to contact me for reason like suggestions, marriage proposal, bugs, date invite or anything else, you can sent an email to <kbd>stamatevalentin125@gmail.com</kbd> and I will respond as quickly as possible.</div>
+                        <p>If you want to contact us(well me) for reason like suggestions, marriage proposal, bugs, date invite, questions or anything else, you can sent an email to <code>stamatevalentin125@gmail.com</code> and you'll get a response as quickly as possible.</p>
 
-                        <div className="mt-2 text-danger">If you are a professor and you own a course that appears on this site, for any problem, contact me with the email subject <div className="inline"><kbd>[Course Copyright]</kbd></div>.</div>
+                        <p className="mt-2 text-info">If you are a professor and you own a course that appears on this site, for any problem, contact me with the email subject <div className="inline"><code>[Course Copyright]</code></div>.</p>
                     </b>
                 </div>
 

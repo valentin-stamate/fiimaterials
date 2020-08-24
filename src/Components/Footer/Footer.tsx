@@ -12,7 +12,7 @@ const Footer = () => {
 
             <footer className="footer bg-0">
                 <div className="footer-body">
-                    <div>© 2020 Copyright: FIIMaterials.</div>
+                    <div>FIIMaterials © 2020</div>
                     <div>Created by <div className="text-highlight" onClick={openGitPage}><b>Valentin Stamate</b></div> during the boring summer holiday of 2020.</div>
                 </div>
             </footer>

@@ -25,7 +25,7 @@ class MoreMaterials extends Component<any, any> {
                 <Col md={12} lg={4} key={i} className="mt-4">
                     <Card border="light" className="more-materials-card">
                         <div className="more-materials-card-header">
-                            <img className="more-materials-card-image" src={e.image_link}/>
+                            <img className="more-materials-card-image" alt="img" src={e.image_link}/>
                             <div className="more-materials-card-title">
                                 <div><b>{e.name}</b></div>
                                 <div>{rolesJSX}</div>

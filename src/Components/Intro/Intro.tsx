@@ -6,9 +6,12 @@ import IntroFlatCover from "../../Assets/intro-flat-cover.svg";
 const subtitles: string[] = [
     "The place where you came for your favorite materials. Ahem.",
     "Ah sh*t, here we go again.",
+    "Elon Musk invited his college crush out for ice cream, she refuses, then he sowed up to her with two melting ice creams.",
     "Let's do this, shall we.",
-    "It's only one month.",
+    "The exams last only one month.",
     "You can do it!",
+    'cout>>"Characters can be tricky";',
+    "The Milky Way can be seen when the moon is not on the sky.",
 ];
 
 // This is not copied from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random ... ahem
@@ -31,7 +34,7 @@ const Intro = () => {
                     </Row>
                 </Container>
 
-                <img className="intro-flat-cover" src={IntroFlatCover}/>
+                <img alt="" className="intro-flat-cover" src={IntroFlatCover}/>
             </div>
 
         </React.StrictMode>
