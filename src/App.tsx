@@ -10,6 +10,7 @@ import UserAccount from "./Components/UserAccount/UserAccount";
 import AppAPI from "./API/AppAPI";
 import About from "./Components/About/About";
 import MoreMaterials from "./Components/MoreMaterials/MoreMaterials";
+import Privacy from "./Components/Privacy/Privacy";
 
 
 class App extends Component<any, any>{
@@ -33,6 +34,7 @@ class App extends Component<any, any>{
                             <Route path="/about" component={About} />
                             <Route exact path="/more-materials" component={MoreMaterials} />
                             <Route exact path="/user-account" component={UserAccount} />
+                            <Route exact path="/privacy" component={Privacy} />
                         </Switch>
                     </BrowserRouter>
 
