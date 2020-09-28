@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import {Button, Dropdown, Nav, Navbar, Spinner} from "react-bootstrap";
+import {Button, Dropdown, Nav, Navbar, Spinner, OverlayTrigger, Tooltip} from "react-bootstrap";
 import {connect} from "react-redux";
 import AppAPI from "../../API/AppAPI";
 import {Link, withRouter} from 'react-router-dom';
@@ -48,8 +48,10 @@ export class TopBar extends Component<any, any>{
                                 </Nav>
                         }
                         <div className="mr-auto"/>
-
-                        <Button variant="warning" className="mr-2 inline" onClick={() => window.open('https://github.com/FIIMaterials', '_blank')}>GitHub</Button>
+                        
+                        <OverlayTrigger placement="bottom" overlay={<Tooltip id="tooltip-top" placement="bottom"><strong>Give a star to which part you like</strong></Tooltip>}>
+                            <Button variant="warning" className="mr-2 inline" onClick={() => window.open('https://github.com/FIIMaterials', '_blank')}>GitHub</Button>
+                        </OverlayTrigger>
 
                         <Dropdown className="inline mr-2">
                             <Dropdown.Toggle variant="dark" id="dropdown-basic">
@@ -57,7 +59,7 @@ export class TopBar extends Component<any, any>{
                             </Dropdown.Toggle>
 
                             <Dropdown.Menu>
-                                <Dropdown.Item href="https://play.google.com/store/apps/details?id=com.frozenbrain.fiimateriale" target="_blank">Android</Dropdown.Item>
+                                <Dropdown.Item href="https://play.google.com/store/apps/details?id=com.frozenbrain.fiimateriale" target="_blank">Android(New Version Soon)</Dropdown.Item>
                                 <Dropdown.Item href="#/action-2">IOS(Coming Soon)</Dropdown.Item>
                             </Dropdown.Menu>
                         </Dropdown>

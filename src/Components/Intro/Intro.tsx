@@ -4,12 +4,11 @@ import {Col, Container, Row} from "react-bootstrap";
 import IntroFlatCover from "../../Assets/intro-flat-cover.svg";
 
 const subtitles: string[] = [
-    "The place where you came for your favorite materials. Ahem.",
+    "The place where you came for your favorite materials.",
     "Ah sh*t, here we go again.",
     "Elon Musk invited his college crush out for ice cream, she refuses, then he sowed up to her with two melting ice creams.",
     "Let's do this, shall we.",
-    "The exams last only one month.",
-    "You can do it!",
+    "Somebody told me that the site texts are weird.",
     'cout>>"Characters can be tricky";',
     "The Milky Way can be seen when the moon is not on the sky.",
 ];

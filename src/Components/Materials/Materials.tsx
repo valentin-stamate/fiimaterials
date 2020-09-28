@@ -39,7 +39,7 @@ class Materials extends Component<any, any> {
                 <div id="materials" className="container-full bg-0">
 
                     <h2 className="text-white text-center mb-0">Materials</h2>
-                    <h6 className="text-white text-center">So many that you can't get enough of them</h6>
+                    <h6 className="text-white text-center"><span className="text-success">Rate them if you want.</span></h6>
 
                     <ButtonGroup className="mt-3 year-selector">
                         <Button onClick={() => this.fetchClasses(1)} variant={getCookie(LAST_YEAR_COOKIE) === '1' ? 'info' : 'outline-info'}>First Year</Button>

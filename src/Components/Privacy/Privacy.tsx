@@ -28,9 +28,8 @@ const Privacy = () => {
                         <p>So... I will not sell any data. The user data is kept into a database which I can access easily. I can see all the users with their data, except the password because is encrypted, cuz I'm not stupid to store it as plain text.
                         Even tho I can see the data mentioned earlier, I will not reveal it to anybody. The only things revealed are 'statistics' such as rating and number of users. So not user specific data.</p>
 
-                        <p>Do I get any money from this project? No. I thought about that because this project was not easy to make, especially the new version. But this project wouldn't be possible without those materials, which are not mine and wouldn't be faire for those who made their own materials version that completes mine.
+                        <p>Do I get any money from this project? No. I thought about that because this project was not easy to make, especially the new version. But this project wouldn't be possible without those materials, which are not mine and wouldn't be fair for those who made their own materials version that completes mine.
                             And I also learned new things doing it, so it's a win-win. </p>
-                            {/*If you really, really thought I deserve something, like a hug, contact me, and I'll find a solution for all things. I will also make it public adding a new section or something.*/}
                         <p>If you got here, thanks for your patience and hope you like the project.</p>
                     </Card.Body>
                 </Card>
