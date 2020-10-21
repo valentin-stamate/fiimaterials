@@ -30,7 +30,7 @@ class Resources extends Component<any, any> {
                 <div id="resources" className="container-full bg-0">
 
                     <h2 className="text-white text-center mb-0">Resources</h2>
-                    <h6 className="text-white text-center">Just like a girlfriend is for programmers, priceless and hard to find</h6>
+                    <h6 className="text-white text-center">Like gold in the sea.</h6>
 
                     <Row className="container-max-width center">
                         <Col lg={12} xl={6} className="mt-4">
