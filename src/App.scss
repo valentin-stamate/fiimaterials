@@ -31,10 +31,6 @@
     height: 1rem;
 }
 
-.container-full {
-    padding: 4rem 0 4rem 0;
-}
-
 .center {
     position: relative !important;
     margin-left: auto !important;
@@ -75,3 +71,37 @@
     height: 2em;
 
 }
+
+// global padding
+$component-margin : 4rem;
+.component-margin {
+    margin-top: $component-margin !important;
+}
+$component-padding : 2rem;
+.component-padding {
+    padding: $component-padding + 3rem $component-padding $component-padding + 3rem $component-padding;
+}
+
+.component-padding-horizontal {
+    padding-left: $component-padding !important;
+    padding-right: $component-padding !important;
+}
+
+.component-style {
+
+}
+
+// radius
+$radius : 4rem;
+.component-top-radius {
+    border-radius: $radius $radius 0 0;
+}
+.component-bottom-radius {
+    border-radius: 0 0 $radius $radius;
+}
+
+
+
+
+
+

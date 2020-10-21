@@ -28,8 +28,8 @@ const ShortDetails = () => {
 
     const shortDetailsJSX: JSX.Element[] = shortDetails.map( (e, i) => {
         return (
-            <Col sm={12} md={4} className="mt-4" key={i}>
-                <Card>
+            <Col sm={12} lg={4} key={i}>
+                <Card className="short-details-card component-margin">
                     <img src={e.icon} alt="icon" className="info-icon ml-4"/>
                     <Card.Body>
                         <Card.Title><h5>{e.title}</h5></Card.Title>
@@ -43,7 +43,7 @@ const ShortDetails = () => {
     return (
         <React.StrictMode>
 
-            <Container style={{paddingTop: "2rem", paddingBottom: "3rem"}}>
+            <Container fluid className="component-padding-horizontal">
                 <Row>
                     {shortDetailsJSX}
                 </Row>

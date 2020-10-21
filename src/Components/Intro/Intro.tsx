@@ -22,7 +22,7 @@ const Intro = () => {
     return (
         <React.StrictMode>
 
-            <div id="intro" className="intro-container bg-0 text-dark">
+            <div id="intro" className="intro-container bg-0 text-dark component-bottom-radius">
 
                 <Container className="text-container text-sm-center text-md-left">
                     <Row>

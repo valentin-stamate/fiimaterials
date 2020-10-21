@@ -1,7 +1,7 @@
 // "http://localhost:8000/"
 // "https://fiimaterialsbackend.herokuapp.com/"
 
-export const BACKEND_URL = "https://fiimaterialsbackend.herokuapp.com/";
+export const BACKEND_URL = "http://localhost:8000/";
 export const GET_CLASSES_URL = "api/get/classes/";
 export const GET_LINKS_URL = "api/get/links/";
 export const LOGIN_URL = "api/login/";
