@@ -32,8 +32,8 @@ const ShortDetails = () => {
                 <Card className="short-details-card component-margin">
                     <img src={e.icon} alt="icon" className="info-icon ml-4"/>
                     <Card.Body>
-                        <Card.Title><h5>{e.title}</h5></Card.Title>
-                        <Card.Text>{e.body}</Card.Text>
+                        <Card.Title><h5 className="high-emphasis-light">{e.title}</h5></Card.Title>
+                        <Card.Text className="helper-text-light">{e.body}</Card.Text>
                     </Card.Body>
                 </Card>
             </Col>

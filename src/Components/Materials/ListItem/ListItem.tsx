@@ -17,6 +17,7 @@ const ListItem = (props: any) => {
                     </div>
 
                     <div className="materials-content">
+                        <b className="mr-2">{props.credits}C</b>
 
                         <RateStar classYear={props.classYear} classRating={props.classRating} classID={props.classID} userRating={props.userRating}/>
 
