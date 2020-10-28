@@ -113,7 +113,7 @@ class RateStar extends Component<any, any> {
                     <Toast.Body>Before rating a class you need to <Link to="/enter"><Badge variant="light">Register</Badge></Link> first.</Toast.Body>
                 </Toast>
 
-                <div className="rating-wrapper mr-2 bg-1 inline">
+                <div className="rating-wrapper mr-2 inline">
 
                     {/* The actual stars */}
                     <div className="inline">

@@ -4,14 +4,15 @@
     margin-top: 0.75rem;
 }
 
+$transition : 0.25s;
 .short-details-card {
-    border: 0 !important;
     border-radius: 1rem !important;
     padding: 0.5rem !important;
-    transition: all 0.3s;
+    transition: all $transition;
 }
 
 .short-details-card:hover {
+    border-color: #F0F2F5 !important;
     background-color: #F0F2F5 !important;
-    transition: all 0.3s;
+    transition: all $transition;
 }

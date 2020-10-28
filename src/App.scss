@@ -48,13 +48,6 @@
     max-width: 110rem;
 }
 
-/**/
-
-.inline {
-    display: inline-block;
-}
-/**/
-
 .back-icon {
     position: absolute;
     top: 0;
@@ -65,7 +58,20 @@
 
 }
 
-// text
+
+/* Position */
+.inline {
+    display: inline-block;
+}
+
+.grid {
+    display: grid;
+}
+.flex {
+    display: flex;
+}
+
+/* Text */
 
 .high-emphasis-light {
     color: #00000099;
@@ -95,17 +101,29 @@ $component-padding : 2rem;
     padding-right: $component-padding !important;
 }
 
-.component-style {
-
-}
-
-// radius
+/* RADIUS */
 $radius : 1rem;
 .component-top-radius {
     border-radius: $radius $radius 0 0;
 }
 .component-bottom-radius {
     border-radius: 0 0 $radius $radius;
+}
+
+/* COLOR */
+.dark-component {
+    background-color: #18191A;
+}
+
+/* CONDITIONALS */
+@media (max-width: 900px) {
+    .hide-sm {
+        display: none;
+    }
+
+    .component-padding {
+        padding: $component-padding + 3rem 0.5rem $component-padding + 3rem 0.5rem;
+    }
 }
 
 

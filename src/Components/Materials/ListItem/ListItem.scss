@@ -1,16 +1,16 @@
-.materials-list-container {
+.list-container {
     position: relative;
-    padding: 0.25em 0.5em 0.25em 0.5em;
+    padding: 0.75rem;
     color: #fff;
-    border-radius: 4px 4px 0 0 !important;
+    margin: 1px;
+    background-color: #2d2d2d !important;
+    border-radius: 8px !important;
+    transition: all 0.1s;
 }
 
-.materials-title {
-    margin-top: 6px;
-    float: left;
-}
-.materials-content {
-    float: right;
+.list-container:hover {
+    transition: all 0.1s;
+    background-color: #3b3b3b !important;
 }
 
 .mega-icon {
@@ -29,4 +29,31 @@
 
 .mega-icon:hover {
     fill: #fff;
+}
+
+/* POSITION */
+.mat-flex {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.mat-container {
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+
+.mat-item-left {
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.mat-item-right {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    justify-self: right;
+}
+
+@media (max-width: 900px) {
+    
 }

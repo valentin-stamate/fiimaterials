@@ -28,7 +28,7 @@ class Materials extends Component<any, any> {
         let classesSecondSemesterJSX: JSX.Element[] = [];
 
         this.props.classes.map( (cls: any, index: Number) => {
-            const clsJSX = (<ListItem userIsAuth={this.props.userIsAuth} credits={cls.credits} userRating={cls.user_rating} classRating={cls.average_rating} classID={cls.id} classYear={cls.year} title={cls.name} site_link={cls.site_link} material_link={cls.material_link} key={index} />);
+            const clsJSX = (<ListItem sitePassword={cls.site_password} userIsAuth={this.props.userIsAuth} credits={cls.credits} userRating={cls.user_rating} classRating={cls.average_rating} classID={cls.id} classYear={cls.year} title={cls.name} site_link={cls.site_link} material_link={cls.material_link} key={index} />);
 
             cls.semester === 1 ? classesFirstSemesterJSX.push(clsJSX) : classesSecondSemesterJSX.push(clsJSX)
             return 0;
@@ -36,10 +36,10 @@ class Materials extends Component<any, any> {
 
         return (
             <React.StrictMode>
-                <div id="materials" className="container-full bg-0 component-margin component-padding component-top-radius">
+                <div id="materials" className="component-margin component-padding component-top-radius dark-component">
 
                     <h2 className="text-white text-center mb-0">Materials</h2>
-                    <h6 className="text-white text-center"><>The heart and the soul of this website.</></h6>
+                    <h6 className="text-white text-center">The heart and the soul of this website.</h6>
 
                     <ButtonGroup className="mt-3 year-selector">
                         <Button onClick={() => this.fetchClasses(1)} variant={getCookie(LAST_YEAR_COOKIE) === '1' ? 'info' : 'outline-light'}>First Year</Button>

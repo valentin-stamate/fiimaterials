@@ -27,7 +27,7 @@ class Resources extends Component<any, any> {
 
         return (
             <React.StrictMode>
-                <div id="resources" className="container-full bg-0 component-padding component-bottom-radius">
+                <div id="resources" className="container-full dark-component component-padding component-bottom-radius">
 
                     <h2 className="text-white text-center mb-0">Resources</h2>
                     <h6 className="text-white text-center">Like gold in the sea.</h6>
