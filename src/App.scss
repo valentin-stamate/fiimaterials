@@ -126,6 +126,24 @@ $radius : 1rem;
     }
 }
 
+/* UI */
+
+.list-container {
+    position: relative;
+    padding: 0.75rem;
+    color: #fff;
+    margin: 1px;
+    overflow: hidden;
+    background-color: #2d2d2d !important;
+    border-radius: 8px !important;
+    transition: all 0.1s;
+}
+
+.list-container:hover {
+    transition: all 0.1s;
+    background-color: #3b3b3b !important;
+}
+
 
 
 

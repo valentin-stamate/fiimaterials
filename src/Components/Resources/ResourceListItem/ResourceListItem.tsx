@@ -29,38 +29,45 @@ const ResourceListItem = (props: any) => {
 
     const tagListJSX: JSX.Element[] = tagListSplit.map((tag: string, index: number) => {
         const processedTag = tag.replace(/_/g, " ");
-        return (
-            <Badge pill variant="primary" style={{backgroundColor: colorMap.get(processedTag)}} className="mr-2"
-                   key={index}>{processedTag}</Badge>
-        );
+        return (<Badge pill variant="primary" style={{backgroundColor: colorMap.get(processedTag)}} className="mr-2" key={index}>{processedTag}</Badge>);
     });
+
+    const tooltip = <Tooltip id="tooltip-top"><strong>{props.title}</strong></Tooltip>;
 
     return (
         <React.StrictMode>
 
-            <Card className="resource-list-container mt-2 bg-2">
-                <div>
-                    <div className="float-left">
-                        <OverlayTrigger placement="top" overlay={<Tooltip id="tooltip-top"><strong>{props.title}</strong></Tooltip>}>
-                            <a href={props.linkURL} target="_blank" rel="noopener noreferrer">
-                                <div className="list-thumbnail-container">
+            <div className="list-container mt-2" style={{paddingBottom: "3rem"}}>
+
+                <div className="grid res-container">
+                    <div className="res-item-left">
+                        <div className="center-on-small">
+                            <OverlayTrigger placement="top" overlay={tooltip}>
+                                <a href={props.linkURL} target="_blank" rel="noopener noreferrer">
+                                    <div className="list-thumbnail-container">
                                         <img className="list-thumbnail" src={props.imageURL} alt="Thumbnail" />
-                                </div>
-                            </a>
-                        </OverlayTrigger>
+                                    </div>
+                                </a>
+                            </OverlayTrigger>
+                        </div>
                     </div>
 
-                    <div className="resource-description-container">
+                    <div className="resource-description-container res-item-right">
                         <div className="resource-description">
                             <b>{props.description}</b>
                         </div>
                     </div>
-
                 </div>
-            </Card>
 
-            <div className="tag-list bg-1">
-                {tagListJSX}
+
+                <div className="tag-wrapper">
+                    <div className="tag-list">
+                        {tagListJSX}
+                    </div>
+                </div>
+
+
+
             </div>
 
         </React.StrictMode>
