@@ -34,6 +34,7 @@ export class TopBar extends Component<any, any>{
                                     <Nav.Link href="#materials">Materials</Nav.Link>
                                     <Nav.Link href="#resources">Resources</Nav.Link>
                                     <Nav.Link href="#links">Links</Nav.Link>
+                                    <Nav.Link href="#make_sense">Make Sense?</Nav.Link>
                                     <Nav.Link onClick={() => this.goto('/feedback')}>Feedback</Nav.Link>
                                     <Nav.Link onClick={() => this.goto('/about')}>About</Nav.Link>
                                     <Nav.Link onClick={() => this.goto('/more-materials')} className="text-info">More Materials</Nav.Link>

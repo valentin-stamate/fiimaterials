@@ -28,7 +28,7 @@ class Materials extends Component<any, any> {
         let classesSecondSemesterJSX: JSX.Element[] = [];
 
         this.props.classes.map( (cls: any, index: Number) => {
-            const clsJSX = (<ListItem sitePassword={cls.site_password} userIsAuth={this.props.userIsAuth} credits={cls.credits} userRating={cls.user_rating} classRating={cls.average_rating} classID={cls.id} classYear={cls.year} title={cls.name} site_link={cls.site_link} material_link={cls.material_link} key={index} />);
+            const clsJSX = (<ListItem classAbout={cls.about} sitePassword={cls.site_password} userIsAuth={this.props.userIsAuth} credits={cls.credits} userRating={cls.user_rating} classRating={cls.average_rating} classID={cls.id} classYear={cls.year} title={cls.name} site_link={cls.site_link} material_link={cls.material_link} key={index} />);
 
             cls.semester === 1 ? classesFirstSemesterJSX.push(clsJSX) : classesSecondSemesterJSX.push(clsJSX)
             return 0;

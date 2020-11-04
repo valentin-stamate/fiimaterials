@@ -70,6 +70,9 @@
 .flex {
     display: flex;
 }
+.center-items {
+    justify-content: center;
+}
 
 /* Text */
 
@@ -108,6 +111,9 @@ $radius : 1rem;
 }
 .component-bottom-radius {
     border-radius: 0 0 $radius $radius;
+}
+.component-radius {
+    border-radius: $radius;
 }
 
 /* COLOR */

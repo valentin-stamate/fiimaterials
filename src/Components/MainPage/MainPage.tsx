@@ -8,6 +8,7 @@ import Contact from "../Contact/Contact";
 import Footer from "../Footer/Footer";
 import Resources from "../Resources/Resources";
 import Hr from "../Hr/Hr";
+import MakeSense from "../MakeSense/MakeSense";
 
 const MainPage = () => {
     return (
@@ -17,12 +18,12 @@ const MainPage = () => {
             <ShortDetails/>
             <Materials/>
 
-            <Hr/>
             <Resources />
 
             <Links/>
 
-            <Hr/>
+            <MakeSense/>
+
             <Contact/>
 
             <Footer/>

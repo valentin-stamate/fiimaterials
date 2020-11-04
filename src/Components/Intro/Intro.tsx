@@ -9,6 +9,7 @@ const subtitles: string[] = [
     "Elon Musk invited his college crush out for ice cream, she refuses, then he sowed up to her with two melting ice creams.",
     "Let's do this, shall we.",
     "Somebody told me that the site texts are weird.",
+    "Rejection is only part of the process. 'Stay calm, you'll be fine'.",
     'cout>>"Characters can be tricky";',
     "The Milky Way can be seen when the moon is not on the sky.",
 ];

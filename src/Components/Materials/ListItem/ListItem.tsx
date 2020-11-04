@@ -65,7 +65,7 @@ const ListItem = (props: any) => {
                     </div>
 
                     <Accordion.Collapse eventKey="1">
-                        <Card.Body>Comming Soon.</Card.Body>
+                        <Card.Body>{props.classAbout}</Card.Body>
                     </Accordion.Collapse>
 
                 </div>

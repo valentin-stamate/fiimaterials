@@ -10,6 +10,7 @@ import {fetchFeedback, fetchFeedbackSuccess, submitFeedback} from "../Redux/Acti
 import {setLastSelectedYear, setUserAuthStatus} from "../Redux/Actions/app";
 import {fetchAbout, fetchAboutSuccess} from "../Redux/Actions/about";
 import {fetchCredits, fetchCreditsSuccess} from "../Redux/Actions/credits";
+import {fetchDiagram, fetchDiagramSuccess} from "../Redux/Actions/diagram";
 
 
 class AppAPI {
@@ -52,6 +53,18 @@ class AppAPI {
             store.dispatch(fetchUserDataSuccess(result.data));
         })
         // TODO error
+    }
+
+    getDiagram() {
+        store.dispatch(fetchDiagram());
+
+        const request = BackendAPI.getInstance().getDiagram();
+
+        request.then(result => {
+            store.dispatch(fetchDiagramSuccess(result.data));
+            console.log(result.data);
+        });
+
     }
 
     getClasses(year: number) {

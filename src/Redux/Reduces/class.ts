@@ -12,6 +12,7 @@ const initialState = {
         site_link: '',
         site_password: '',
         year: 1,
+        about: '',
         semester: 1,
         votes_number: '',
         updated_at: '',
