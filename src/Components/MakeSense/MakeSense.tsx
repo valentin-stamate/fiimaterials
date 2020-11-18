@@ -30,7 +30,7 @@ class MakeSense extends Component<any, any> {
                         this.props.diagramLoading ?
                             <Loading color="dark"/> :
                             <div className="flex center-items">
-                                <Image className="mt-4" src={this.props.diagram.content} rounded />
+                                <Image className="mt-4" src={this.props.diagram.content} rounded fluid/>
                             </div>
                     }
 
