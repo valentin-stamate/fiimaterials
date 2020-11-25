@@ -49,20 +49,25 @@ class Materials extends Component<any, any> {
                     </ButtonGroup>
 
 
-                    <Row className="container-max-width center">
-                        <Col lg={12} xl={6} className="mt-4">
-                            {this.props.materialsLoading ?
-                                <Loading color="light"/>
-                                :
-                                classesFirstSemesterJSX
-                            }
-                        </Col>
-                        <Col lg={12} xl={6} className="mt-4">
-                            {this.props.materialsLoading ?
-                                <Loading color="light"/>
-                                :
-                                classesSecondSemesterJSX}
-                        </Col>
+                    <Row className="container-max-width center mt-4">
+                        <div className="materials-grid">
+
+                            <div className="first-semester">
+                                {this.props.materialsLoading ?
+                                    <Loading color="light"/>
+                                    :
+                                    classesFirstSemesterJSX
+                                }
+                            </div>
+
+                            <div className="second-semester">
+                                {this.props.materialsLoading ?
+                                    <Loading color="light"/>
+                                    :
+                                    classesSecondSemesterJSX}
+                            </div>
+
+                        </div>
                     </Row>
 
                 </div>
