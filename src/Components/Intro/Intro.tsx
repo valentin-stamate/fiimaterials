@@ -2,6 +2,7 @@ import React from "react";
 import "./Intro.scss";
 import {Col, Container, Row} from "react-bootstrap";
 import IntroFlatCover from "../../Assets/intro-flat-cover.svg";
+import IntroFlatSnow from "../../Assets/intro-cover_snow.svg";
 
 const subtitles: string[] = [
     "The place where you came for your favorite materials.",
@@ -34,7 +35,11 @@ const Intro = () => {
                     </Row>
                 </Container>
 
-                <img alt="" className="intro-flat-cover" src={IntroFlatCover}/>
+                <div className="display-images">
+                    <img alt="" className="intro-flat-cover" src={IntroFlatCover}/>
+                    <img alt="" className="intro-flat-snow" src={IntroFlatSnow}/>
+                </div>
+
             </div>
 
         </React.StrictMode>
