@@ -1,5 +1,5 @@
 import React from "react";
-import {Container} from "react-bootstrap";
+import {Button, Container} from "react-bootstrap";
 
 const Contact = () => {
     return (
@@ -12,9 +12,12 @@ const Contact = () => {
 
                 <div className="content-color">
                     <b>
-                        <p>If you want to contact me you can sent an email to <code>stamatevalentin125@gmail.com</code> and you'll get a response as quickly as possible.</p>
+                        <p className="text-justify">For contact, you can sent an email and you'll get a response as quickly as possible. Also if you want to contribute
+                        specify the resource(a link or attachment) and if you want somehow to appear in the <i>More Materials</i> section, not necessary with your real information.</p>
 
-                        <p className="mt-2 text-info">If you are the owner of a course that appears on this site, for any problem, contact me with the email subject <div className="inline"><code>[Course Copyright]</code></div>.</p>
+                        <p className="text-justify">For whatever reason, don't hesitate to contact me.</p>
+
+                        <Button variant="success" href="mailto:stamatevalentin125@gmail.com?subject=FIIMaterials Contact" target="_blank">Contact Me</Button>
                     </b>
                 </div>
 

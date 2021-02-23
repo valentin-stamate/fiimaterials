@@ -13,7 +13,7 @@ const Footer = () => {
 
             <footer className="footer bg-0">
                 <div className="footer-body">
-                    <div>FIIMaterials © 2020 | <b><a href="/privacy" className="text-highlight" style={{textDecoration: "none"}}>Privacy Policy</a></b></div>
+                    <div>FIIMaterials © 2021 | <b><a href="/privacy" className="text-highlight" style={{textDecoration: "none"}}>Privacy Policy</a></b></div>
                     <div>Created by <div className="text-highlight" onClick={openGitPage}><b>Valentin Stamate</b></div> during the boring summer holiday of 2020.</div>
                 </div>
             </footer>
