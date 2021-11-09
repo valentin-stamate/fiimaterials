@@ -9,6 +9,7 @@ import Footer from "../Footer/Footer";
 import Resources from "../Resources/Resources";
 import Hr from "../Hr/Hr";
 import MakeSense from "../MakeSense/MakeSense";
+import FreshMaterials from "../FreshMaterials/FreshMaterials";
 
 const MainPage = () => {
     return (
@@ -16,6 +17,9 @@ const MainPage = () => {
             <TopBar/>
             <Intro/>
             <ShortDetails/>
+
+            <FreshMaterials/>
+
             <Materials/>
 
             <Resources />

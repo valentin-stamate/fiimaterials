@@ -36,7 +36,7 @@ class Materials extends Component<any, any> {
 
         return (
             <React.StrictMode>
-                <div id="materials" className="component-margin component-padding component-top-radius dark-component">
+                <div id="materials" className="component-padding component-top-radius dark-component">
 
                     <h2 className="text-white text-center mb-0">Materials</h2>
                     <h6 className="text-white text-center">The heart and the soul of this website.</h6>
