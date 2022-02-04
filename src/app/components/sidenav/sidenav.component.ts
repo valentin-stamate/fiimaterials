@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {SidenavListItem} from "../../../script/models";
+import {UtilService} from "../../../script/util";
 
 const sidenavList: SidenavListItem[] = [
   {
@@ -14,18 +15,18 @@ const sidenavList: SidenavListItem[] = [
     icon: 'icon',
     active: false,
   },
-  {
-    name: 'Contributors',
-    route: '/contributors',
-    icon: 'icon',
-    active: false,
-  },
-  {
-    name: 'About',
-    route: '/about',
-    icon: 'icon',
-    active: false,
-  },
+  // {
+  //   name: 'Contributors',
+  //   route: '/contributors',
+  //   icon: 'icon',
+  //   active: false,
+  // },
+  // {
+  //   name: 'About',
+  //   route: '/about',
+  //   icon: 'icon',
+  //   active: false,
+  // },
 ]
 
 @Component({
@@ -36,7 +37,11 @@ const sidenavList: SidenavListItem[] = [
 export class SidenavComponent implements OnInit {
   list = sidenavList;
 
-  constructor() { }
+  constructor() {
+    for (const item of this.list) {
+      item.active = UtilService.getPath() === item.route;
+    }
+  }
 
   ngOnInit(): void {
   }

@@ -6,18 +6,22 @@
   </div>
 
   <div class="sidenav-list">
-    <div class="sidenav-list-item {{item.active ? 'sidenav-list-item-active' : ''}}"
-         *ngFor="let item of list">{{item.name}}</div>
+    <a class="sidenav-list-item {{item.active ? 'sidenav-list-item-active' : ''}}"
+         *ngFor="let item of list" href="{{item.route}}">
+      {{item.name}}
+    </a>
   </div>
 
   <div class="flex-spacer"></div>
 
   <div class="sidenav-footer">
     <div>FIIMaterials © 2022</div>
-    <div>Created by <b>Stamate Valentin</b> during his boring time at faculty</div>
+    <div>Created by <b>Stamate Valentin</b> during his boring time</div>
 
     <div class="sidenav-footer-icons">
-      <a href="https://github.com/FIIMaterials/FIIMaterials-Frontend" target="_blank"><i class="fab fa-github-square"></i></a>
+      <a href="https://github.com/FIIMaterials/FIIMaterials-Frontend" target="_blank">
+        <i class="fab fa-github-square i i-md"></i>
+      </a>
     </div>
   </div>
 
