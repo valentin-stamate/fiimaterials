@@ -122,7 +122,7 @@ export class Data {
       credits: 6,
       about: 'It is also an important course. You will learn about object oriented programming in c++. It is very complex but pretty fun. If you think "I already know oop, It\'s gonna be easy" like I did, you may be wrong.',
       materials: 'https://bit.ly/39Wbspf',
-      site: 'https://sites.google.com/site/fiicoursepoo',
+      site: 'https://sites.google.com/view/fii-poo',
       password: '',
       year: 1,
       semester: 2,

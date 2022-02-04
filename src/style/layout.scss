@@ -1,0 +1,124 @@
+@import "variables";
+
+/* -----===== Main =====----- */
+.main-component {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 320px auto;
+  width: 100%;
+  height: 100vh;
+}
+
+.main-sidenav {
+
+}
+
+.main-content {
+
+}
+
+@media only screen and (max-width: 1280px) {
+  .main-component {
+    grid-template-columns: 1fr;
+  }
+
+  .main-sidenav {
+    display: none;
+  }
+}
+
+/* -----===== Container =====----- */
+.layout-container {
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+}
+
+/* -----===== Sidenav Container =====----- */
+.sidenav-layout {
+  display: flex;
+  gap: 32px;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.sidenav-logo-container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+$logo-size: 48px;
+.sidenav-logo {
+  border-radius: 16px;
+  width: $logo-size;
+  height: $logo-size;
+}
+
+.sidenav-logo-text {
+  font-size: $font-h6;
+  font-weight: bold;
+}
+
+.sidenav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: $font-h7;
+}
+
+.sidenav-list-item {
+  display: flex;
+  padding:16px;
+  color: $font-color-light;
+  font-weight: bold;
+  background-color: $container-color;
+  border-radius: $border-radius-md;
+  transition: all $transition-time $transition-type;
+}
+
+.sidenav-list-item-active {
+  background-color: $negative-container-color;
+  color: $negative-font-color;
+}
+
+.sidenav-list-item:hover {
+  background-color: $negative-container-color;
+  color: $negative-font-color;
+  transition: all $transition-time $transition-type;
+}
+
+.sidenav-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  text-align: center;
+}
+
+.sidenav-footer div:nth-child(1n) {
+  font-size: $font-h7;
+  font-weight: bold;
+}
+
+.sidenav-footer div:nth-child(2n) {
+  font-size: $font-h7;
+  color: $font-color-light;
+  font-weight: normal;
+}
+
+.sidenav-footer-icons {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+}
+
+.sidenav-footer-icons > a {
+  font-size: 32px;
+  color: $font-color;
+}
+
+/* -----===== Sidenav Container =====----- */
+.flex-spacer {
+  flex-grow: 1;
+}

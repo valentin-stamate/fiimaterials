@@ -1,3 +1,10 @@
+export interface SidenavListItem {
+  name: string;
+  icon: string;
+  route: string;
+  active: boolean;
+}
+
 export interface Class {
   name: string;
   short: string;

@@ -1,0 +1,35 @@
+/* -----===== Colors =====----- */
+$font-color: #000000;
+$negative-font-color: #ffffff;
+
+$font-color-light: #696969;
+
+$container-color: #ffffff;
+$negative-container-color: #000000;
+
+$background-color: #ffffff;
+
+$primary: #232D3D;
+$secondary: #333333;
+
+/* -----===== Font Size =====----- */
+/* https://type-scale.com/ */
+$font-h1: 6rem;      // 96px
+$font-h2: 4.5rem;    // 56px
+$font-h3: 3rem;      // 48px
+$font-h4: 2.5rem;    // 40px
+$font-h5: 2rem;      // 32px
+$font-h6: 1.25rem;   // 20px
+$font-h7: 1rem;      // 16px
+$font-h8: 0.8rem;    // 12.8px
+$font-h9: 0.64rem;   // 10.24px
+$font-h10: 0.512rem; // 8.192px
+
+/* -----===== Variables =====----- */
+$transition-time: 300ms;
+$transition-type: ease-in-out;
+
+$border-radius-sm: 8px; // for small component such as buttons
+$border-radius-md: 12px; // for bigger components such as container
+$border-radius-lg: 16px; // for big containers such as idk
+
