@@ -1,8 +1,8 @@
-import {Class, Contributor, Feedback} from "./models";
+import {Class, ClassType, Contributor, Feedback} from "./models";
 
 /* I give up on using a backend, "Keep it simple stupid". */
 export class Data {
-  classes: Class[] = [
+  static classes: Class[] = [
     /** ----------========== 1.1 =========----------*/
 
     {
@@ -15,6 +15,7 @@ export class Data {
       password: 'sd SD202021',
       year: 1,
       semester: 1,
+      type: ClassType.NORMAL,
       updated: new Date('February 23, 2021 00:00:00'),
     },
     {
@@ -27,6 +28,7 @@ export class Data {
       password: '',
       year: 1,
       semester: 1,
+      type: ClassType.NORMAL,
       updated: new Date('January 4, 2021 00:00:00'),
     },
     {
@@ -39,6 +41,7 @@ export class Data {
       password: '',
       year: 1,
       semester: 1,
+      type: ClassType.NORMAL,
       updated: new Date('January 4, 2021 00:00:00'),
     },
     {
@@ -51,6 +54,7 @@ export class Data {
       password: '',
       year: 1,
       semester: 1,
+      type: ClassType.NORMAL,
       updated: new Date('January 4, 2021 00:00:00'),
     },
     {
@@ -63,6 +67,7 @@ export class Data {
       password: '',
       year: 1,
       semester: 1,
+      type: ClassType.NORMAL,
       updated: new Date('January 4, 2021 00:00:00'),
     },
     {
@@ -75,6 +80,7 @@ export class Data {
       password: '',
       year: 1,
       semester: 1,
+      type: ClassType.NORMAL,
       updated: new Date('January 4, 2021 00:00:00'),
     },
     {
@@ -87,10 +93,11 @@ export class Data {
       password: '',
       year: 1,
       semester: 1,
+      type: ClassType.FACULTY,
       updated: new Date('January 4, 2021 00:00:00'),
     },
     {
-      name: 'Physical Education I',
+      name: 'Physical Education',
       short: 'PE',
       credits: 1,
       about: '',
@@ -99,18 +106,7 @@ export class Data {
       password: '',
       year: 1,
       semester: 1,
-      updated: new Date('January 4, 2021 00:00:00'),
-    },
-    {
-      name: 'Educational Psychology',
-      short: 'Sport',
-      credits: 5,
-      about: '',
-      materials: '',
-      site: '',
-      password: '',
-      year: 1,
-      semester: 1,
+      type: ClassType.FACULTY,
       updated: new Date('January 4, 2021 00:00:00'),
     },
 
@@ -126,6 +122,7 @@ export class Data {
       password: '',
       year: 1,
       semester: 2,
+      type: ClassType.NORMAL,
       updated: new Date('January 4, 2021 00:00:00'),
     },
     {
@@ -138,6 +135,7 @@ export class Data {
       password: 'so2020 1+2=3',
       year: 1,
       semester: 2,
+      type: ClassType.NORMAL,
       updated: new Date('January 4, 2021 00:00:00'),
     },
     {
@@ -150,6 +148,7 @@ export class Data {
       password: '',
       year: 1,
       semester: 2,
+      type: ClassType.NORMAL,
       updated: new Date('January 4, 2021 00:00:00'),
     },
     {
@@ -162,6 +161,7 @@ export class Data {
       password: '',
       year: 1,
       semester: 2,
+      type: ClassType.NORMAL,
       updated: new Date('January 4, 2021 00:00:00'),
     },
     {
@@ -174,6 +174,7 @@ export class Data {
       password: '',
       year: 1,
       semester: 2,
+      type: ClassType.NORMAL,
       updated: new Date('January 4, 2021 00:00:00'),
     },
     {
@@ -186,6 +187,7 @@ export class Data {
       password: '',
       year: 1,
       semester: 2,
+      type: ClassType.NORMAL,
       updated: new Date('January 4, 2021 00:00:00'),
     },
     {
@@ -198,6 +200,7 @@ export class Data {
       password: '',
       year: 1,
       semester: 2,
+      type: ClassType.FACULTY,
       updated: new Date('January 4, 2021 00:00:00'),
     },
     {
@@ -210,6 +213,7 @@ export class Data {
       password: '',
       year: 1,
       semester: 2,
+      type: ClassType.FACULTY,
       updated: new Date('January 4, 2021 00:00:00'),
     },
     {
@@ -222,18 +226,7 @@ export class Data {
       password: '',
       year: 1,
       semester: 2,
-      updated: new Date('January 4, 2021 00:00:00'),
-    },
-    {
-      name: 'Pedagogy I',
-      short: 'Pedagogy',
-      credits: 1,
-      about: '',
-      materials: '',
-      site: '',
-      password: '',
-      year: 1,
-      semester: 2,
+      type: ClassType.FACULTY,
       updated: new Date('January 4, 2021 00:00:00'),
     },
 
@@ -248,6 +241,7 @@ export class Data {
       password: '',
       year: 2,
       semester: 1,
+      type: ClassType.NORMAL,
       updated: new Date('January 4, 2021 00:00:00'),
     },
     {
@@ -260,6 +254,7 @@ export class Data {
       password: 'student student@bd',
       year: 2,
       semester: 1,
+      type: ClassType.NORMAL,
       updated: new Date('January 4, 2021 00:00:00'),
     },
     {
@@ -272,6 +267,7 @@ export class Data {
       password: '',
       year: 2,
       semester: 1,
+      type: ClassType.NORMAL,
       updated: new Date('January 4, 2021 00:00:00'),
     },
     {
@@ -284,6 +280,7 @@ export class Data {
       password: '',
       year: 2,
       semester: 1,
+      type: ClassType.NORMAL,
       updated: new Date('January 4, 2021 00:00:00'),
     },
     {
@@ -296,6 +293,7 @@ export class Data {
       password: '',
       year: 2,
       semester: 1,
+      type: ClassType.NORMAL,
       updated: new Date('January 4, 2021 00:00:00'),
     },
     {
@@ -308,6 +306,7 @@ export class Data {
       password: '',
       year: 2,
       semester: 1,
+      type: ClassType.OPTIONAL_1,
       updated: new Date('January 4, 2021 00:00:00'),
     },
     {
@@ -320,6 +319,7 @@ export class Data {
       password: '',
       year: 2,
       semester: 1,
+      type: ClassType.OPTIONAL_1,
       updated: new Date('January 4, 2021 00:00:00'),
     },
     {
@@ -332,6 +332,7 @@ export class Data {
       password: '',
       year: 2,
       semester: 1,
+      type: ClassType.OPTIONAL_1,
       updated: new Date('January 4, 2021 00:00:00'),
     },
     {
@@ -344,6 +345,7 @@ export class Data {
       password: '',
       year: 2,
       semester: 1,
+      type: ClassType.OPTIONAL_1,
       updated: new Date('January 4, 2021 00:00:00'),
     },
     {
@@ -356,6 +358,7 @@ export class Data {
       password: '',
       year: 2,
       semester: 1,
+      type: ClassType.FACULTY,
       updated: new Date('January 4, 2021 00:00:00'),
     },
     {
@@ -368,6 +371,7 @@ export class Data {
       password: '',
       year: 2,
       semester: 1,
+      type: ClassType.FACULTY,
       updated: new Date('January 4, 2021 00:00:00'),
     },
     {
@@ -380,6 +384,7 @@ export class Data {
       password: '',
       year: 2,
       semester: 1,
+      type: ClassType.FACULTY,
       updated: new Date('January 4, 2021 00:00:00'),
     },
 
@@ -394,6 +399,7 @@ export class Data {
       password: '',
       year: 2,
       semester: 2,
+      type: ClassType.NORMAL,
       updated: new Date('January 4, 2021 00:00:00'),
     },
     {
@@ -406,6 +412,7 @@ export class Data {
       password: '',
       year: 2,
       semester: 2,
+      type: ClassType.NORMAL,
       updated: new Date('January 4, 2021 00:00:00'),
     },
     {
@@ -418,6 +425,7 @@ export class Data {
       password: '',
       year: 2,
       semester: 2,
+      type: ClassType.NORMAL,
       updated: new Date('January 4, 2021 00:00:00'),
     },
     {
@@ -430,6 +438,7 @@ export class Data {
       password: '',
       year: 2,
       semester: 2,
+      type: ClassType.NORMAL,
       updated: new Date('January 4, 2021 00:00:00'),
     },
     {
@@ -442,6 +451,7 @@ export class Data {
       password: '',
       year: 2,
       semester: 2,
+      type: ClassType.NORMAL,
       updated: new Date('January 4, 2021 00:00:00'),
     },
     {
@@ -454,6 +464,7 @@ export class Data {
       password: '',
       year: 2,
       semester: 2,
+      type: ClassType.OPTIONAL_1,
       updated: new Date('January 4, 2021 00:00:00'),
     },
     {
@@ -466,6 +477,7 @@ export class Data {
       password: '',
       year: 2,
       semester: 2,
+      type: ClassType.OPTIONAL_1,
       updated: new Date('January 4, 2021 00:00:00'),
     },
     {
@@ -478,6 +490,7 @@ export class Data {
       password: '',
       year: 2,
       semester: 2,
+      type: ClassType.OPTIONAL_1,
       updated: new Date('January 4, 2021 00:00:00'),
     },
     {
@@ -490,6 +503,7 @@ export class Data {
       password: '',
       year: 2,
       semester: 2,
+      type: ClassType.OPTIONAL_1,
       updated: new Date('January 4, 2021 00:00:00'),
     },
     {
@@ -502,6 +516,7 @@ export class Data {
       password: '',
       year: 2,
       semester: 2,
+      type: ClassType.FACULTY,
       updated: new Date('January 4, 2021 00:00:00'),
     },
     {
@@ -514,6 +529,7 @@ export class Data {
       password: '',
       year: 2,
       semester: 2,
+      type: ClassType.FACULTY,
       updated: new Date('January 4, 2021 00:00:00'),
     },
 
@@ -528,6 +544,7 @@ export class Data {
       password: '',
       year: 3,
       semester: 1,
+      type: ClassType.NORMAL,
       updated: new Date('January 4, 2021 00:00:00'),
     },
     {
@@ -540,6 +557,7 @@ export class Data {
       password: '',
       year: 3,
       semester: 1,
+      type: ClassType.NORMAL,
       updated: new Date('January 4, 2021 00:00:00'),
     },
     {
@@ -552,6 +570,7 @@ export class Data {
       password: '',
       year: 3,
       semester: 1,
+      type: ClassType.NORMAL,
       updated: new Date('January 4, 2021 00:00:00'),
     },
     {
@@ -564,10 +583,11 @@ export class Data {
       password: '',
       year: 3,
       semester: 1,
+      type: ClassType.NORMAL,
       updated: new Date('January 4, 2021 00:00:00'),
     },
     {
-      name: '.NET Introduction',
+      name: 'Introduction to .NET',
       short: '.NET',
       credits: 4,
       about: '',
@@ -576,10 +596,11 @@ export class Data {
       password: '',
       year: 3,
       semester: 1,
+      type: ClassType.OPTIONAL_1,
       updated: new Date('January 4, 2021 00:00:00'),
     },
     {
-      name: 'Physical Systems Development using Microcontrollers',
+      name: 'Physical Systems Development Using Microprocessors',
       short: 'DSFUM',
       credits: 4,
       about: '',
@@ -588,6 +609,7 @@ export class Data {
       password: '',
       year: 3,
       semester: 1,
+      type: ClassType.OPTIONAL_1,
       updated: new Date('January 4, 2021 00:00:00'),
     },
     {
@@ -600,10 +622,11 @@ export class Data {
       password: '',
       year: 3,
       semester: 1,
+      type: ClassType.OPTIONAL_1,
       updated: new Date('January 4, 2021 00:00:00'),
     },
     {
-      name: '3D Animations',
+      name: '3D Computer Animation',
       short: 'Animations',
       credits: 4,
       about: '',
@@ -612,10 +635,11 @@ export class Data {
       password: '',
       year: 3,
       semester: 1,
+      type: ClassType.OPTIONAL_1,
       updated: new Date('January 4, 2021 00:00:00'),
     },
     {
-      name: 'Programming and Probabilistic Modeling',
+      name: 'Probabilistic Programming and Modeling',
       short: 'PMP',
       credits: 5,
       about: '',
@@ -624,6 +648,7 @@ export class Data {
       password: '',
       year: 3,
       semester: 1,
+      type: ClassType.OPTIONAL_2,
       updated: new Date('January 4, 2021 00:00:00'),
     },
     {
@@ -636,10 +661,11 @@ export class Data {
       password: '',
       year: 3,
       semester: 1,
+      type: ClassType.OPTIONAL_2,
       updated: new Date('January 4, 2021 00:00:00'),
     },
     {
-      name: 'Special Chapters in OS',
+      name: 'Special Chapters in Operating Systems',
       short: 'CSSO',
       credits: 5,
       about: '',
@@ -648,10 +674,11 @@ export class Data {
       password: '',
       year: 3,
       semester: 1,
+      type: ClassType.OPTIONAL_2,
       updated: new Date('January 4, 2021 00:00:00'),
     },
     {
-      name: 'Automotive Software Engineering',
+      name: 'Automotive Specific Software Engineering',
       short: 'ISA',
       credits: 5,
       about: '',
@@ -660,6 +687,7 @@ export class Data {
       password: '',
       year: 3,
       semester: 1,
+      type: ClassType.OPTIONAL_2,
       updated: new Date('January 4, 2021 00:00:00'),
     },
     {
@@ -672,6 +700,7 @@ export class Data {
       password: '',
       year: 3,
       semester: 1,
+      type: ClassType.FACULTY,
       updated: new Date('January 4, 2021 00:00:00'),
     },
     {
@@ -684,12 +713,13 @@ export class Data {
       password: '',
       year: 3,
       semester: 1,
+      type: ClassType.FACULTY,
       updated: new Date('January 4, 2021 00:00:00'),
     },
 
     /** ----------========== 3.2 =========----------*/
     {
-      name: 'Numeric Calculus?',
+      name: 'Numeric Calculus',
       short: 'CN',
       credits: 4,
       about: '',
@@ -698,6 +728,7 @@ export class Data {
       password: '',
       year: 3,
       semester: 2,
+      type: ClassType.NORMAL,
       updated: new Date('January 4, 2021 00:00:00'),
     },
     {
@@ -710,10 +741,11 @@ export class Data {
       password: '',
       year: 3,
       semester: 2,
+      type: ClassType.NORMAL,
       updated: new Date('January 4, 2021 00:00:00'),
     },
     {
-      name: 'Thesis',
+      name: 'Diploma Project Development ',
       short: 'Thesis',
       credits: 5,
       about: '',
@@ -722,6 +754,7 @@ export class Data {
       password: '',
       year: 3,
       semester: 2,
+      type: ClassType.NORMAL,
       updated: new Date('January 4, 2021 00:00:00'),
     },
     {
@@ -734,6 +767,7 @@ export class Data {
       password: '',
       year: 3,
       semester: 2,
+      type: ClassType.OPTIONAL_1,
       updated: new Date('January 4, 2021 00:00:00'),
     },
     {
@@ -746,10 +780,11 @@ export class Data {
       password: '',
       year: 3,
       semester: 2,
+      type: ClassType.OPTIONAL_1,
       updated: new Date('January 4, 2021 00:00:00'),
     },
     {
-      name: 'Aspecte computaţionale în teoria numerelor---??',
+      name: 'Computational Aspects on the Number Theory',
       short: 'ACTN',
       credits: 5,
       about: '',
@@ -758,11 +793,12 @@ export class Data {
       password: '',
       year: 3,
       semester: 2,
+      type: ClassType.OPTIONAL_1,
       updated: new Date('January 4, 2021 00:00:00'),
     },
     {
-      name: 'Proiectarea jocurilor---??',
-      short: 'Gaming??',
+      name: 'Game Design',
+      short: 'Game Design',
       credits: 5,
       about: '',
       materials: '',
@@ -770,10 +806,11 @@ export class Data {
       password: '',
       year: 3,
       semester: 2,
+      type: ClassType.OPTIONAL_1,
       updated: new Date('January 4, 2021 00:00:00'),
     },
     {
-      name: 'Psihologia comunicării profesionale în domeniul IT-lui---??',
+      name: 'Psychology of the Professional Communication in IT Industry',
       short: 'PCPID',
       credits: 6,
       about: '',
@@ -782,6 +819,7 @@ export class Data {
       password: '',
       year: 3,
       semester: 2,
+      type: ClassType.OPTIONAL_2,
       updated: new Date('January 4, 2021 00:00:00'),
     },
     {
@@ -794,10 +832,11 @@ export class Data {
       password: '',
       year: 3,
       semester: 2,
+      type: ClassType.OPTIONAL_2,
       updated: new Date('January 4, 2021 00:00:00'),
     },
     {
-      name: 'Natural Language Processing',
+      name: 'Techniques of nNatural Language Engineering',
       short: 'PLN',
       credits: 6,
       about: '',
@@ -806,10 +845,11 @@ export class Data {
       password: '',
       year: 3,
       semester: 2,
+      type: ClassType.OPTIONAL_2,
       updated: new Date('January 4, 2021 00:00:00'),
     },
     {
-      name: 'Social Networks Analysis',
+      name: 'Social Media Networks Analysis',
       short: 'ARMS',
       credits: 6,
       about: '',
@@ -818,10 +858,11 @@ export class Data {
       password: '',
       year: 3,
       semester: 2,
+      type: ClassType.OPTIONAL_2,
       updated: new Date('January 4, 2021 00:00:00'),
     },
     {
-      name: 'Reţele Petri şi aplicaţii---==??',
+      name: 'Petri Nets and Applications',
       short: 'LFAC 2',
       credits: 6,
       about: '',
@@ -830,10 +871,11 @@ export class Data {
       password: '',
       year: 3,
       semester: 2,
+      type: ClassType.OPTIONAL_3,
       updated: new Date('January 4, 2021 00:00:00'),
     },
     {
-      name: 'Smart Cards And Applications',
+      name: 'Smart Cards and Their Applications',
       short: 'SCA',
       credits: 6,
       about: '',
@@ -842,10 +884,11 @@ export class Data {
       password: '',
       year: 3,
       semester: 2,
+      type: ClassType.OPTIONAL_3,
       updated: new Date('January 4, 2021 00:00:00'),
     },
     {
-      name: 'Advanced Topics in .NET ----???',
+      name: 'Special Topics on .NET Programming',
       short: '.NET',
       credits: 6,
       about: '',
@@ -854,6 +897,7 @@ export class Data {
       password: '',
       year: 3,
       semester: 2,
+      type: ClassType.OPTIONAL_3,
       updated: new Date('January 4, 2021 00:00:00'),
     },
     {
@@ -866,6 +910,7 @@ export class Data {
       password: '',
       year: 3,
       semester: 2,
+      type: ClassType.FACULTY,
       updated: new Date('January 4, 2021 00:00:00'),
     },
   ];

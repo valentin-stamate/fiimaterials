@@ -5,6 +5,15 @@ export interface SidenavListItem {
   active: boolean;
 }
 
+export enum ClassType {
+  NORMAL,
+  OPTIONAL_1,
+  OPTIONAL_2,
+  OPTIONAL_3,
+  OPTIONAL_4,
+  FACULTY,
+}
+
 export interface Class {
   name: string;
   short: string;
@@ -17,6 +26,8 @@ export interface Class {
 
   year: number;
   semester: number;
+
+  type: number;
 
   updated: Date;
 }

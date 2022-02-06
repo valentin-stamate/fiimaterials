@@ -5,6 +5,10 @@
 @import "style/theme";
 @import "style/layout";
 
+@import "style/utility";
+
+@import "style/media"; // should be the last import
+
 html {
   font-family: 'Rubik', sans-serif;
   color: $font-color;
@@ -17,4 +21,9 @@ html {
 body {
   padding: 0;
   margin: 0;
+}
+
+a {
+  color: $font-color;
+  text-decoration: none;
 }

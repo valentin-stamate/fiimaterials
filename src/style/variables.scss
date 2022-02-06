@@ -5,6 +5,7 @@ $negative-font-color: #ffffff;
 $font-color-light: #696969;
 
 $container-color: #ffffff;
+$container-color-up: #f3f3f3;
 $negative-container-color: #000000;
 
 $background-color: #ffffff;
@@ -27,10 +28,14 @@ $font-h9: 0.64rem;   // 10.24px
 $font-h10: 0.512rem; // 8.192px
 
 /* -----===== Variables =====----- */
-$transition-time: 300ms;
+$transition-time: 200ms;
 $transition-type: ease-in-out;
 
 $border-radius-sm: 8px; // for small component such as buttons
 $border-radius-md: 12px; // for bigger components such as container
 $border-radius-lg: 16px; // for big containers such as idk
+
+$screen-limit-lg: 1440px;
+$screen-limit-md: 1280px;
+$screen-limit-sm: 920px;
 

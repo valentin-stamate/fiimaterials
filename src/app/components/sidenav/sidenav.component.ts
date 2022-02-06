@@ -5,7 +5,7 @@ import {UtilService} from "../../../script/util";
 const sidenavList: SidenavListItem[] = [
   {
     name: 'Home',
-    route: '/home',
+    route: '/',
     icon: 'icon',
     active: true,
   },
@@ -15,18 +15,6 @@ const sidenavList: SidenavListItem[] = [
     icon: 'icon',
     active: false,
   },
-  // {
-  //   name: 'Contributors',
-  //   route: '/contributors',
-  //   icon: 'icon',
-  //   active: false,
-  // },
-  // {
-  //   name: 'About',
-  //   route: '/about',
-  //   icon: 'icon',
-  //   active: false,
-  // },
 ]
 
 @Component({
@@ -39,7 +27,8 @@ export class SidenavComponent implements OnInit {
 
   constructor() {
     for (const item of this.list) {
-      item.active = UtilService.getPath() === item.route;
+      const path = UtilService.getPath();
+      item.active = path === item.route;
     }
   }
 

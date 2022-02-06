@@ -1,0 +1,39 @@
+@import "variables";
+
+@media only screen and (max-width: $screen-limit-md) {
+  .main-component {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+  }
+
+  .layout-container[class*="sidenav-layout"] {
+    display: none;
+  }
+
+  .layout-container[class*="secondary-sidenav-layout"] {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    box-sizing: border-box;
+  }
+
+}
+
+@media only screen and (max-width: $screen-limit-sm) {
+  .flex-auto {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-h-md {
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  .materials-container {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr;
+    gap: 64px;
+  }
+}

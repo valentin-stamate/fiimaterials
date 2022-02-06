@@ -1,8 +1,71 @@
 <div class="layout-container">
 
-  <div class="content-title-container">
+  <div class="layout-content">
     <div class="content-title">Materials</div>
-    <div class="content-subtitle">Something new every year</div>
+    <div class="content-subtitle font-light">Something new every year</div>
+  </div>
+
+  <div class="flex-row gap-16 flex-center">
+    <button class="btn {{selectedYear === years.FIRST ? 'active' : ''}}" (click)="onFirstYear()">First Year</button>
+    <button class="btn {{selectedYear === years.SECOND ? 'active' : ''}}" (click)="onSecondYear()">Second Year</button>
+    <button class="btn {{selectedYear === years.THIRD ? 'active' : ''}}" (click)="onThirdYear()">Third Year</button>
+  </div>
+
+  <div class="layout-content">
+    <div class="materials-container">
+
+      <div class="flex-column gap-16">
+        <div class="content-subtitle">First Semester</div>
+        <div class="list">
+          <div class="list-item
+          {{item.type === classType.NORMAL ? 'bck-container' : ''}}
+          {{item.type === classType.FACULTY ? 'bck-deep-orange' : '' }}
+          {{item.type === classType.OPTIONAL_1 ? 'bck-indigo' : ''}}
+          {{item.type === classType.OPTIONAL_2 ? 'bck-purple' : ''}}
+          {{item.type === classType.OPTIONAL_3 ? 'bck-blue' : ''}}
+          " *ngFor="let item of firstSemester">
+            <div>{{item.name}}</div>
+            <div class="flex-spacer"></div>
+
+            <div>{{item.credits}}C</div>
+
+            <div *ngIf="item.site !== ''"><a target="_blank" href="{{item.site}}">
+              <i class="fas fa-globe i i-md"></i>
+            </a></div>
+
+            <div *ngIf="item.materials !== ''"><a target="_blank" href="{{item.materials}}">
+              <i class="fas fa-folder i i-md"></i>
+            </a></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex-column gap-16">
+        <div class="content-subtitle">Second Semester</div>
+        <div class="list">
+          <div class="list-item
+          {{item.type === classType.NORMAL ? 'bck-container' : ''}}
+          {{item.type === classType.FACULTY ? 'bck-deep-orange' : '' }}
+          {{item.type === classType.OPTIONAL_1 ? 'bck-indigo' : ''}}
+          {{item.type === classType.OPTIONAL_2 ? 'bck-purple' : ''}}
+          {{item.type === classType.OPTIONAL_3 ? 'bck-blue' : ''}}
+          " *ngFor="let item of secondSemester">
+            <div>{{item.name}}</div>
+            <div class="flex-spacer"></div>
+
+            <div>{{item.credits}}C</div>
+
+            <div *ngIf="item.site !== ''"><a target="_blank" href="{{item.site}}">
+              <i class="fas fa-globe i i-md"></i>
+            </a></div>
+
+            <div *ngIf="item.materials !== ''"><a target="_blank" href="{{item.materials}}">
+              <i class="fas fa-folder i i-md"></i>
+            </a></div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
 </div>

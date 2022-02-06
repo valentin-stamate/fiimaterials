@@ -1,0 +1,118 @@
+@import "variables";
+
+/* -----===== Scroll =====----- */
+.overflow-auto {
+  overflow: auto;
+}
+
+.scroll-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+/* -----===== Font =====----- */
+.text-justify {
+  text-align: justify;
+}
+
+.font-normal {
+  color: $font-color;
+}
+
+.font-light {
+  color: $font-color-light;
+}
+
+/* -----===== Colors =====----- */
+.bck-container {
+  background-color: $container-color-up;
+}
+
+.bck-orange {
+  background-color: #fff3e0;
+}
+
+.bck-deep-orange {
+  background-color: #fbe9e7;
+}
+
+.bck-blue {
+  background-color: #e3f2fd;
+}
+
+.bck-green {
+  background-color: #e8f5e9;
+}
+
+.bck-red {
+  background-color: #ffebee;
+}
+
+.bck-purple {
+  background-color: #f3e5f5;
+}
+
+.bck-indigo {
+  background-color: #e8eaf6;
+}
+
+/* -----===== Flex =====----- */
+.flex-spacer {
+  flex-grow: 1;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-auto {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.gap-16 {
+  gap: 16px !important;
+}
+
+.gap-24 {
+  gap: 24px !important;
+}
+
+.gap-32 {
+  gap: 32px !important;
+}
+
+.flex-space-between {
+  justify-content: space-between;
+}
+
+.flex-space-evenly {
+  justify-content: space-evenly;
+}
+
+.flex-center {
+  justify-content: center;
+}
+
+/* -----===== Icons =====----- */
+.i {
+  font-size: $font-h6;
+  color: $font-color;
+}
+
+.i-sm {
+  font-size: $font-h7;
+}
+
+.i-md {
+  font-size: 1.3rem;
+}
+
+.i-lg {
+  font-size: 1.75rem;
+}

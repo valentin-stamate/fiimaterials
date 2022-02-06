@@ -1,34 +1,17 @@
 @import "variables";
 
-/* -----===== Font =====----- */
-.text-justify {
-  text-align: justify;
-}
 /* -----===== Main =====----- */
 .main-component {
   display: grid;
   grid-template-rows: 1fr;
-  grid-template-columns: 320px auto;
-  width: 100%;
+  grid-template-columns: 320px 1fr;
+  width: 100vw;
   height: 100vh;
 }
 
-.main-sidenav {
-
-}
-
 .main-content {
-
-}
-
-@media only screen and (max-width: 1280px) {
-  .main-component {
-    grid-template-columns: 1fr;
-  }
-
-  .main-sidenav {
-    display: none;
-  }
+  overflow: auto;
+  align-items: start;
 }
 
 /* -----===== Container =====----- */
@@ -47,6 +30,10 @@
   box-sizing: border-box;
 }
 
+.layout-container[class*="secondary-sidenav-layout"] {
+  display: none;
+}
+
 .sidenav-logo-container {
   display: flex;
   align-items: center;
@@ -63,35 +50,6 @@ $logo-size: 48px;
 .sidenav-logo-text {
   font-size: $font-h6;
   font-weight: bold;
-}
-
-.sidenav-list {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  font-size: $font-h7;
-}
-
-.sidenav-list-item {
-  display: flex;
-  padding:16px;
-  color: $font-color-light;
-  font-weight: bold;
-  text-decoration: none;
-  background-color: $container-color;
-  border-radius: $border-radius-md;
-  transition: all $transition-time $transition-type;
-}
-
-.sidenav-list-item-active {
-  background-color: $negative-container-color;
-  color: $negative-font-color;
-}
-
-.sidenav-list-item:hover {
-  background-color: $negative-container-color;
-  color: $negative-font-color;
-  transition: all $transition-time $transition-type;
 }
 
 .sidenav-footer {
@@ -119,53 +77,56 @@ $logo-size: 48px;
   gap: 12px;
 }
 
-.i {
-  font-size: $font-h6;
-  color: $font-color;
-}
-
-.i-sm {
+/* -----===== List =====----- */
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
   font-size: $font-h7;
 }
 
-.i-md {
-  font-size: $font-h6;
-}
-
-.i-md {
-  font-size: $font-h5;
-}
-
-
-/* -----===== Flex =====----- */
-.flex-spacer {
-  flex-grow: 1;
-}
-
-.flex-row {
+.list-row {
   display: flex;
   flex-direction: row;
+  gap: 6px;
+  font-size: $font-h7;
 }
 
-.flex-column {
+.list-item {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  gap:24px;
+  padding:16px;
+  color: $font-color-light;
+  font-weight: bold;
+  text-decoration: none;
+  background-color: $container-color;
+  border-radius: $border-radius-md;
+  transition: all $transition-time $transition-type;
+  align-items: center;
 }
 
-.flex-gap-16 {
-  gap: 16px
+.list-item i {
+  color: $font-color-light;
 }
 
-.flex-space-between {
-  justify-content: space-between;
+.list-item[class*="active"] {
+  background-color: $negative-container-color;
+  color: $negative-font-color;
 }
 
-.flex-space-evenly {
-  justify-content: space-evenly;
+
+.list-item:hover {
+  background-color: $negative-container-color;
+  color: $negative-font-color;
+}
+
+.list-item:hover i {
+  color: $negative-font-color;
 }
 
 /* -----===== Content Layout =====----- */
-.content-title-container {
+.layout-content {
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -177,9 +138,15 @@ $logo-size: 48px;
   font-weight: bold;
 }
 
+.content-title-sm {
+  color: $font-color;
+  font-size: $font-h6;
+  font-weight: bold;
+}
+
 .content-subtitle {
-  color: $font-color-light;
   font-size: $font-h7;
+  font-weight: bold;
 }
 
 /* -----===== Cards =====----- */
@@ -189,6 +156,14 @@ $logo-size: 48px;
   gap: 12px;
   border-radius: $border-radius-md;
   padding: 32px;
+}
+
+.card-xsm {
+  width: min(128px, 100%);
+}
+
+.card-h-xsm {
+  min-height: 64px;
 }
 
 .card-sm {
@@ -220,24 +195,33 @@ $logo-size: 48px;
   font-size: $font-h65;
 }
 
-/* -----===== Colors =====----- */
-.bck-orange {
-  background-color: #fff3e0;
+/* -----===== Buttons =====----- */
+.btn {
+  background-color: $container-color-up;
+  color: $font-color;
+  font-weight: bold;
+  font-size: $font-h8;
+  border: none;
+  border-radius: $border-radius-sm;
+  padding: 15px 32px;
+  text-align: center;
+  transition: all $transition-time $transition-type;
 }
 
-.bck-deep-orange {
-  background-color: #fbe9e7;
+.btn:hover {
+  background-color: $negative-container-color;
+  color: $negative-font-color;
 }
 
-.bck-blue {
-  background-color: #e3f2fd;
+.btn[class*="active"] {
+  background-color: $negative-container-color;
+  color: $negative-font-color;
 }
 
-.bck-green {
-  background-color: #e8f5e9;
-}
-
-/* -----===== Font =====----- */
-.font-light {
-  color: $font-color-light;
+/* -----===== Materials =====----- */
+.materials-container {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
 }
