@@ -102,7 +102,7 @@ $logo-size: 48px;
   text-decoration: none;
   background-color: $container-color;
   border-radius: $border-radius-md;
-  transition: all $transition-time $transition-type;
+  transition: color $transition-time $transition-type, background-color $transition-time $transition-type;
   align-items: center;
 }
 
@@ -209,7 +209,7 @@ $logo-size: 48px;
   border-radius: $border-radius-sm;
   padding: 15px 32px;
   text-align: center;
-  transition: all $transition-time $transition-type;
+  transition: color $transition-time $transition-type, background-color $transition-time $transition-type;
 }
 
 .btn:hover {
