@@ -5,6 +5,7 @@ import { AppComponent } from './main/app.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { HomeComponent } from './components/home/home.component';
 import { MaterialsComponent } from './components/materials/materials.component';
+import { FeedbackComponent } from './components/feedback/feedback.component';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { MaterialsComponent } from './components/materials/materials.component';
     HomeComponent,
     SidenavComponent,
     HomeComponent,
-    MaterialsComponent
+    MaterialsComponent,
+    FeedbackComponent
   ],
   imports: [
     BrowserModule,

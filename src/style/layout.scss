@@ -115,6 +115,10 @@ $logo-size: 48px;
   color: $negative-font-color;
 }
 
+.list-item[class*="active"] i {
+  color: $negative-font-color;
+}
+
 
 .list-item:hover {
   background-color: $negative-container-color;

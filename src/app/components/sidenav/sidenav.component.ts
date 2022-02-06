@@ -6,15 +6,21 @@ const sidenavList: SidenavListItem[] = [
   {
     name: 'Home',
     route: '/',
-    icon: 'icon',
+    icon: 'fas fa-home',
     active: true,
   },
   {
     name: 'Materials',
     route: '/materials',
-    icon: 'icon',
+    icon: 'fas fa-folder',
     active: false,
   },
+  {
+    name: 'Feedback',
+    route: '/feedback',
+    icon: 'fas fa-comment',
+    active: false,
+  }
 ]
 
 @Component({

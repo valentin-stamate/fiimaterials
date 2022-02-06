@@ -9,7 +9,8 @@
   <div class="list">
     <a class="list-item {{item.active ? 'active' : ''}}"
          *ngFor="let item of list" href="{{item.route}}">
-      {{item.name}}
+      <div><i class="{{item.icon}} i i-sm"></i></div>
+      <div>{{item.name}}</div>
     </a>
   </div>
 
