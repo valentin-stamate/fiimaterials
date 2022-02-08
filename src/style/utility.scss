@@ -1,5 +1,9 @@
 @import "variables";
 
+.user-select {
+  user-select: text;
+}
+
 /* -----===== Scroll =====----- */
 .overflow-auto {
   overflow: auto;
@@ -7,6 +11,28 @@
 
 .scroll-hidden::-webkit-scrollbar {
   display: none;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 16px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 16px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 /* -----===== Font =====----- */
@@ -75,6 +101,10 @@
   flex-direction: column;
 }
 
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
 .gap-16 {
   gap: 16px !important;
 }
@@ -97,6 +127,17 @@
 
 .flex-center {
   justify-content: center;
+}
+
+.flex-start {
+  justify-content: start;
+}
+
+/* -----===== Grid =====----- */
+.grid-auto {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr;
 }
 
 /* -----===== Icons =====----- */

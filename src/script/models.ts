@@ -2,7 +2,6 @@ export interface SidenavListItem {
   name: string;
   icon: string;
   route: string;
-  active: boolean;
 }
 
 export enum ClassType {
@@ -12,6 +11,12 @@ export enum ClassType {
   OPTIONAL_3,
   OPTIONAL_4,
   FACULTY,
+}
+
+export enum Roles {
+  DEVELOPER = 'developer',
+  MATERIAL_KEEPER = 'material keeper',
+  CONTRIBUTOR = 'contributor',
 }
 
 export interface Class {
@@ -36,14 +41,12 @@ export interface Contributor {
   name: string;
   image: string;
   about: string;
-  roles: string; // comma separated values
+  roles: string[]; // comma separated values
   action: string // action on click
 }
 
-export interface Feedback {
-  name: string;
-  feedback: string;
-  response: string; // the response given to feedback
-  implemented: boolean;
-  date: Date;
+export interface Material {
+  owner: string;
+  link: string;
+  about: string;
 }

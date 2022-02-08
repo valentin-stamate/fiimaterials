@@ -25,6 +25,11 @@
     flex-direction: column;
   }
 
+  .grid-auto {
+    grid-template-rows: auto;
+    grid-template-columns: 1fr;
+  }
+
   .card-h-md {
     box-sizing: border-box;
     width: 100%;

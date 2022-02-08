@@ -16,7 +16,7 @@
 
       <div class="flex-column gap-16">
         <div class="content-subtitle">First Semester</div>
-        <div class="list">
+        <div class="list semester-side">
           <div class="list-item
           {{item.type === classType.NORMAL ? 'bck-container' : ''}}
           {{item.type === classType.FACULTY ? 'bck-deep-orange' : '' }}
@@ -42,7 +42,7 @@
 
       <div class="flex-column gap-16">
         <div class="content-subtitle">Second Semester</div>
-        <div class="list">
+        <div class="list semester-side">
           <div class="list-item
           {{item.type === classType.NORMAL ? 'bck-container' : ''}}
           {{item.type === classType.FACULTY ? 'bck-deep-orange' : '' }}
@@ -66,6 +66,27 @@
         </div>
       </div>
     </div>
+  </div>
+
+  <div class="layout-content">
+    <div class="content-title">More Materials</div>
+    <div class="content-subtitle font-light">Never forget the past</div>
+
+    <div class="grid-auto gap-32">
+      <a *ngFor="let item of moreMaterials" href="{{item.link}}" target="_blank">
+        <div class="list-item flex-column flex-start">
+          <div class="title">
+            <div>{{item.owner}}</div>
+          </div>
+
+          <div class="content text-justify">
+            {{item.about}}
+          </div>
+        </div>
+      </a>
+
+    </div>
+
   </div>
 
 </div>

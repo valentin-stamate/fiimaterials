@@ -6,6 +6,8 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { HomeComponent } from './components/home/home.component';
 import { MaterialsComponent } from './components/materials/materials.component';
 import { FeedbackComponent } from './components/feedback/feedback.component';
+import { DonateComponent } from './components/donate/donate.component';
+import { ContributorsComponent } from './components/contributors/contributors.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { FeedbackComponent } from './components/feedback/feedback.component';
     SidenavComponent,
     HomeComponent,
     MaterialsComponent,
-    FeedbackComponent
+    FeedbackComponent,
+    DonateComponent,
+    ContributorsComponent
   ],
   imports: [
     BrowserModule,

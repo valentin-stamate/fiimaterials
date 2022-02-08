@@ -229,3 +229,61 @@ $logo-size: 48px;
   grid-template-columns: 1fr 1fr;
   gap: 64px;
 }
+
+.semester-side {
+  height: 460px;
+  overflow: auto;
+}
+
+/* -----===== Contributors =====----- */
+img {
+  user-select: none;
+}
+
+.image-card {
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+  width: 150px;
+}
+
+.image-card img {
+  border-radius: $border-radius-sm;
+  width: 150px;
+  height: 150px;
+}
+
+.image-card > .text {
+  color: $font-color-light;
+  text-align: center;
+}
+
+/* -----===== Contributors =====----- */
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 100%;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: $border-radius-sm;
+  padding: 4px;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  left: 0;
+  margin-left: auto;
+  box-sizing: border-box;
+
+  font-size: $font-h8;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}

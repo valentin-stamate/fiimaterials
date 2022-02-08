@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Data} from "../../../script/data";
-import {Class, ClassType} from "../../../script/models";
+import {Class, ClassType, Material} from "../../../script/models";
 import {Cookies, CookieService} from "../../../script/cookie";
 
 enum Years {
@@ -23,6 +23,9 @@ export class MaterialsComponent implements OnInit {
   secondSemester: Class[] = [];
 
   classType = ClassType;
+
+  moreMaterials: Material[] = Data.moreMaterials;
+
   constructor() {
     if (!CookieService.readCookie(Cookies.SELECTED_YEAR)) {
       CookieService.setCookie(Cookies.SELECTED_YEAR, this.selectedYear);
