@@ -97,17 +97,21 @@ $logo-size: 48px;
   flex-direction: row;
   gap:24px;
   padding:16px;
-  color: $font-color-light;
+  color: $font-color;
   font-weight: bold;
   text-decoration: none;
-  background-color: $container-color;
+  background-color: $container-color-up;
   border-radius: $border-radius-md;
   transition: color $transition-time $transition-type, background-color $transition-time $transition-type;
   align-items: center;
+
+  &.no-bck {
+    background-color: transparent;
+  }
 }
 
 .list-item i {
-  color: $font-color-light;
+  color: $font-color;
 }
 
 .list-item[class*="active"] {
@@ -190,7 +194,7 @@ $logo-size: 48px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: $font-color-light;
+  color: $font-color;
   font-size: $font-h7;
 }
 
@@ -254,7 +258,7 @@ img {
 }
 
 .image-card > .text {
-  color: $font-color-light;
+  color: $font-color;
   text-align: center;
 }
 

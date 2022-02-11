@@ -7,3 +7,4 @@
 * https://fontawesome.com/
 * https://colorhunt.co/palettes
 * https://material.io/resources/color/
+* https://uxplanet.org/8-tips-for-dark-theme-design-8dfc2f8f7ab6

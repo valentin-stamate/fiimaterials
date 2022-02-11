@@ -7,7 +7,7 @@
   </div>
 
   <div class="list">
-    <a class="list-item"
+    <a class="list-item no-bck"
          *ngFor="let item of list" routerLink="{{item.route}}" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
       <div><i class="{{item.icon}} i i-sm"></i></div>
       <div>{{item.name}}</div>
