@@ -8,6 +8,7 @@ import { MaterialsComponent } from './components/materials/materials.component';
 import { FeedbackComponent } from './components/feedback/feedback.component';
 import { DonateComponent } from './components/donate/donate.component';
 import { ContributorsComponent } from './components/contributors/contributors.component';
+import { ClassesComponent } from './components/classes/classes.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ContributorsComponent } from './components/contributors/contributors.co
     MaterialsComponent,
     FeedbackComponent,
     DonateComponent,
-    ContributorsComponent
+    ContributorsComponent,
+    ClassesComponent
   ],
   imports: [
     BrowserModule,

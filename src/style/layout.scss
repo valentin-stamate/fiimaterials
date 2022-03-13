@@ -140,6 +140,10 @@ $logo-size: 48px;
   gap: 12px;
 }
 
+.fill {
+  width: 100%;
+}
+
 .content-title {
   color: $font-color;
   font-size: $font-h4;
@@ -224,6 +228,10 @@ $logo-size: 48px;
 .btn[class*="active"] {
   background-color: $negative-container-color;
   color: $negative-font-color;
+}
+
+.round-corner {
+  border-radius: $border-radius-md;
 }
 
 /* -----===== Materials =====----- */

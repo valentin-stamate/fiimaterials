@@ -13,6 +13,11 @@ const sidenavList: SidenavListItem[] = [
     icon: 'fas fa-folder',
   },
   {
+    name: 'Classes',
+    route: '/classes',
+    icon: 'fa-solid fa-graduation-cap',
+  },
+  {
     name: 'Feedback',
     route: '/feedback',
     icon: 'fas fa-comment',

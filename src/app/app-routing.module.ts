@@ -5,6 +5,7 @@ import {MaterialsComponent} from "./components/materials/materials.component";
 import {FeedbackComponent} from "./components/feedback/feedback.component";
 import {DonateComponent} from "./components/donate/donate.component";
 import {ContributorsComponent} from "./components/contributors/contributors.component";
+import {ClassesComponent} from "./components/classes/classes.component";
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -13,6 +14,7 @@ const routes: Routes = [
   {path: 'feedback', component: FeedbackComponent},
   {path: 'donate', component: DonateComponent},
   {path: 'contributors', component: ContributorsComponent},
+  {path: 'classes', component: ClassesComponent},
 ];
 
 @NgModule({
