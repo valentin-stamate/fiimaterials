@@ -1,26 +1,12 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './main/app.component';
-import { SidenavComponent } from './components/sidenav/sidenav.component';
-import { HomeComponent } from './components/home/home.component';
-import { MaterialsComponent } from './components/materials/materials.component';
-import { FeedbackComponent } from './components/feedback/feedback.component';
-import { DonateComponent } from './components/donate/donate.component';
-import { ContributorsComponent } from './components/contributors/contributors.component';
-import { ClassesComponent } from './components/classes/classes.component';
+import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HomeComponent,
-    SidenavComponent,
-    HomeComponent,
-    MaterialsComponent,
-    FeedbackComponent,
-    DonateComponent,
-    ContributorsComponent,
-    ClassesComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,

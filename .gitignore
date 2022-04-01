@@ -41,11 +41,6 @@ testem.log
 .DS_Store
 Thumbs.db
 
-.idea
 .vscode
-dist
-public
-.firebase
-.angular
-.firebaserc
-firebase.json
+package-lock.json
+
