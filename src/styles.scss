@@ -1,1 +1,35 @@
-/* You can add global styles to this file, and also import other style files */
+// design inspired from https://www.algoexpert.io
+
+@import "style/variables";
+
+//h1, h2, h3 {
+//  font-family: "Ubuntu","Helvetica","Arial",sans-serif;
+//}
+
+html {
+  font-family: "Open Sans","Helvetica","Arial",sans-serif;
+  background-color: $background-color;
+  color: $font-color;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  gap: $gap;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  gap: $gap;
+}
+
+.no-gap {
+  gap: 0;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
