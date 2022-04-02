@@ -1,4 +1,6 @@
 // design inspired from https://www.algoexpert.io
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&display=swap');
 
 @import "style/variables";
 
@@ -28,8 +30,42 @@ html {
   gap: 0;
 }
 
+.gap-16 {
+  gap: 16px;
+}
+
+.gap-24 {
+  gap: 24px;
+}
+
+.gap-32 {
+  gap: 32px;
+}
+
 .flex-center {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.welcome {
+  width: 100%;
+  min-height: 540px;
+  background: linear-gradient(-90deg, $blue-dark, $blue-light);
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 128px 32px 32px 32px;
+  color: white;
+
+  .welcome-title {
+    font-size: 2.125rem;
+    font-weight: 400;
+    font-family: "Ubuntu","Helvetica","Arial",sans-serif;
+  }
+
+  .welcome-description {
+    font-size: 1.125rem;
+  }
+
 }

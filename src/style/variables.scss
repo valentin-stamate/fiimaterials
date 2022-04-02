@@ -5,4 +5,15 @@ $font-color: #02203c;
 $font-color-invert: #ffffff;
 $font-color-light: #6B7C93;
 
+/* Colors */
+$blue-dark: #001528;
+$blue-light: #02203c;
+
+$navbar-background: #3b4d56;
+
 $primary-text-color: #f69a4b;
+
+/* Styles Associated With Colors */
+.bg-yellow {
+  background-color: $primary-text-color !important;
+}
