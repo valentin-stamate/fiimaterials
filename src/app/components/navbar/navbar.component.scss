@@ -1,14 +1,19 @@
 @import "src/style/variables";
 
 .navbar {
-  position: absolute;
   width: 100%;
+  box-sizing: border-box;
+  position: absolute;
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: repeat(3, 1fr);
   color: $font-color-invert;
   padding: 24px;
   background-color: transparent;
+
+  a {
+    color: white;
+  }
 
   .logo-name {
     font-size: 2.25rem;
@@ -17,7 +22,6 @@
 
   .subtitle-logo {
     margin-top: 8px;
-    color: $primary-text-color;
     font-size: 1.125rem;
     font-family: "Jura","Helvetica","Arial",sans-serif;
     font-weight: 600;
