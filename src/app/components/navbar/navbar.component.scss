@@ -85,7 +85,8 @@
     min-width: 240px;
     min-height: 20px;
     background-color: white;
-    border-radius: 8px;
+    color: $font-color;
+    border-radius: 4px;
     margin-top: 36px;
     display: none;
     animation: popup-animation 100ms ease-in-out;

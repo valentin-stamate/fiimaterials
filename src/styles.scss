@@ -34,7 +34,7 @@ body {
 // I know !important is not recommended, but bulma is giving me no choice
 .yellow-style {
   & .subtitle-logo {
-    color: $font-yellow;
+    color: $font-yellow !important;
   }
 
   & .button {
@@ -45,7 +45,7 @@ body {
 
 .blue-style {
   & .subtitle-logo {
-    color: $font-blue;
+    color: $font-blue !important;
   }
 
   & .button {
@@ -127,6 +127,10 @@ i.icon {
   gap: 32px;
 }
 
+.p-8 {
+  padding: 8px;
+}
+
 .p-16 {
   padding: 16px;
 }
@@ -148,9 +152,6 @@ i.icon {
 .welcome {
   min-height: 540px;
   background: linear-gradient(-90deg, $blue-dark, $blue-light);
-  display: grid;
-  grid-template-rows: 1fr;
-  grid-template-columns: repeat(2, 1fr);
   padding: 128px 32px 32px 32px;
   color: white;
 
@@ -164,6 +165,20 @@ i.icon {
     font-size: 1.125rem;
   }
 
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.max-width-512 {
+  max-width: min(100%, 512px);
+}
+
+.max-width-720 {
+  max-width: min(100%, 720px);
 }
 
 .page-layout {

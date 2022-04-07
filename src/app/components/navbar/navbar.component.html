@@ -1,4 +1,4 @@
-<div class="navbar blue-style">
+<div class="navbar {{mainStyle}}">
   <!-- Logo -->
   <div class="flex-center">
     <div class="flex-column flex-center no-gap">
@@ -11,48 +11,51 @@
   </div>
 
   <!-- Nav -->
-  <div>
+  <div class="flex-row flex-justify">
     <div class="navigation">
-      <div class="nav-item active">
-        <div>Home</div>
+      <div class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+        <a routerLink="/"><div>Home</div></a>
+        <div class="line"></div>
+      </div>
+
+      <div class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+        <a routerLink="/materials"><div>Materials</div></a>
         <div class="line"></div>
         <div class="nav-item-popup"></div>
       </div>
 
-      <div class="nav-item">
-        <div>Materials</div>
-        <div class="line"></div>
-        <div class="nav-item-popup"></div>
-      </div>
+<!--      <div class="nav-item">-->
+<!--        <div>Classes</div>-->
+<!--        <div class="line"></div>-->
+<!--        <div class="nav-item-popup"></div>-->
+<!--      </div>-->
 
-      <div class="nav-item">
-        <div>Classes</div>
-        <div class="line"></div>
-        <div class="nav-item-popup"></div>
-      </div>
+<!--      <div class="nav-item">-->
+<!--        <div>Feedback</div>-->
+<!--        <div class="line"></div>-->
+<!--        <div class="nav-item-popup"></div>-->
+<!--      </div>-->
 
-      <div class="nav-item">
-        <div>Feedback</div>
-        <div class="line"></div>
-        <div class="nav-item-popup"></div>
-      </div>
+<!--      <div class="nav-item">-->
+<!--        <div>Donate</div>-->
+<!--        <div class="line"></div>-->
+<!--        <div class="nav-item-popup"></div>-->
+<!--      </div>-->
 
-      <div class="nav-item">
-        <div>Donate</div>
-        <div class="line"></div>
-        <div class="nav-item-popup"></div>
-      </div>
-
-      <div class="nav-item">
-        <div>Contributors</div>
-        <div class="line"></div>
-        <div class="nav-item-popup"></div>
-      </div>
+<!--      <div class="nav-item">-->
+<!--        <div>Contributors</div>-->
+<!--        <div class="line"></div>-->
+<!--        <div class="nav-item-popup"></div>-->
+<!--      </div>-->
 
       <div class="nav-item">
         <a href="https://github.com/FIIMaterials" target="_blank"><div>GitHub</div></a>
         <div class="line"></div>
-        <div class="nav-item-popup"></div>
+        <div class="nav-item-popup">
+          <div class="flex-column flex-center p-8">
+            <div>The source code is right here</div>
+          </div>
+        </div>
       </div>
 
     </div>
