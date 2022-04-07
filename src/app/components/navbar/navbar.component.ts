@@ -9,12 +9,16 @@ export class NavbarComponent implements OnInit {
   @Input('style')
   mainStyle: string = 'blue-style';
 
+  quote: string;
+
   logoSubtitles: string[] = [
     'If it Looks Like Some Website... You\'re Right',
     'The Project Birthday is on 6th February 2020'
   ];
 
-  constructor() { }
+  constructor() {
+    this.quote = this.pickRandomSubtitle();
+  }
 
   ngOnInit(): void {
   }

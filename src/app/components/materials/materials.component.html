@@ -7,18 +7,188 @@
   <div class="welcome-title">Materials</div>
   <div class="welcome-description font-center max-width-720">
     All of those materials are hosted on Mega for free. Those are pretty recent starting from the first year
-    to the end of faculty. Being in his last year the developer would not be able to bring new materials,
+    to the end of faculty. Being in his last year, the developer would not be able to bring new materials,
     but he's gonna solve this issue (not by repeating years).
   </div>
 
 </div>
 
-<!-- Page Content -->
-<div class="page-layout">
-  <div class="content container">
-    <div class="container">
+<!-- Spinner -->
+<div class="flex-column flex-center p-64" *ngIf="loading">
+  <div class="lds-dual-ring"></div>
+</div>
 
-      <div class="title">Materials</div>
+<div class="flex-column flex-center p-64" *ngIf="errorMessage !== ''">
+  <div>{{errorMessage}}</div>
+</div>
+
+<!-- Page Content -->
+<div class="page-layout" *ngIf="!loading && errorMessage === ''">
+  <div class="content container">
+    <div class="materials-layout fill">
+
+      <div>
+        <div class="box has-shadow sticky-box">
+          <div class="font-20"><b>First Year</b></div>
+          <div class="font-16 font-light">
+            The year when you discover what student life is. Try to have as much fun as you can
+            because it will pass one day.
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="box has-shadow materials-year-layout">
+
+          <!-- First Semester -->
+          <div class="col">
+
+            <div class="material-item" *ngFor="let item of firstYear[0]">
+              <div class="flex-column no-gap line-height-13">
+                {{item.name}}<br>
+                <small>{{item.short}}</small>
+              </div>
+
+              <div class="flex-grow"></div>
+
+              <div><b>{{item.credits}}C</b></div>
+              <div class="material-icon"><a href="{{item.site}}" target="_blank"><i class="fa-solid fa-globe"></i></a></div>
+              <div class="material-icon"><a href="{{item.materials}}" target="_blank"><i class="fa-solid fa-book"></i></a></div>
+            </div>
+
+          </div>
+
+          <!-- Second Semester -->
+          <div class="col">
+
+            <div class="material-item" *ngFor="let item of firstYear[1]">
+              <div class="flex-column no-gap line-height-13">
+                {{item.name}}<br>
+                <small>{{item.short}}</small>
+              </div>
+
+              <div class="flex-grow"></div>
+
+              <div><b>{{item.credits}}C</b></div>
+              <div class="material-icon"><a href="{{item.site}}" target="_blank"><i class="fa-solid fa-globe"></i></a></div>
+              <div class="material-icon"><a href="{{item.materials}}" target="_blank"><i class="fa-solid fa-book"></i></a></div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+      <div class="grid-between-2 hr"></div>
+
+      <div>
+        <div class="box has-shadow sticky-box">
+          <div class="font-20"><b>Second Year</b></div>
+          <div class="font-16 font-light">
+            The true programming begins here, especially in the second semester. If you don't like
+            coding, the existential crises are on the daily basis, if not, it's your year.
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="materials-year-layout box has-shadow">
+
+          <!-- First Semester -->
+          <div class="col">
+
+            <div class="material-item" *ngFor="let item of secondYear[0]">
+              <div class="flex-column no-gap line-height-13">
+                {{item.name}}<br>
+                <small>{{item.short}}</small>
+              </div>
+
+              <div class="flex-grow"></div>
+
+              <div><b>{{item.credits}}C</b></div>
+              <div class="material-icon"><a href="{{item.site}}" target="_blank"><i class="fa-solid fa-globe"></i></a></div>
+              <div class="material-icon"><a href="{{item.materials}}" target="_blank"><i class="fa-solid fa-book"></i></a></div>
+            </div>
+
+          </div>
+
+          <!-- Second Semester -->
+          <div class="col">
+
+            <div class="material-item" *ngFor="let item of secondYear[1]">
+              <div class="flex-column no-gap line-height-13">
+                {{item.name}}<br>
+                <small>{{item.short}}</small>
+              </div>
+
+              <div class="flex-grow"></div>
+
+              <div><b>{{item.credits}}C</b></div>
+              <div class="material-icon"><a href="{{item.site}}" target="_blank"><i class="fa-solid fa-globe"></i></a></div>
+              <div class="material-icon"><a href="{{item.materials}}" target="_blank"><i class="fa-solid fa-book"></i></a></div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+      <div class="grid-between-2 hr"></div>
+
+      <div>
+        <div class="box has-shadow sticky-box">
+          <div class="font-20"><b>Third Year</b></div>
+          <div class="font-16 font-light">
+            Like a sunset, this is the last year. The moment when you become technically an adult even if you don't feel
+            like one. Maybe you feel lost because of it, maybe software engineer isn't what you want anymore and you feel
+            like travelling a lot instead of doing boring homework, life is too short. You may feel the 'success'
+            pressure caused by the people who seem like they can handle everything and have a direction. It's ok to feel
+            lost, everyone does, take your time please.
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="materials-year-layout box has-shadow">
+
+          <!-- First Semester -->
+          <div class="col">
+
+            <div class="material-item" *ngFor="let item of thirdYear[0]">
+              <div class="flex-column no-gap line-height-13">
+                {{item.name}}<br>
+                <small>{{item.short}}</small>
+              </div>
+
+              <div class="flex-grow"></div>
+
+              <div><b>{{item.credits}}C</b></div>
+              <div class="material-icon"><a href="{{item.site}}" target="_blank"><i class="fa-solid fa-globe"></i></a></div>
+              <div class="material-icon"><a href="{{item.materials}}" target="_blank"><i class="fa-solid fa-book"></i></a></div>
+            </div>
+
+          </div>
+
+          <!-- Second Semester -->
+          <div class="col">
+
+            <div class="material-item" *ngFor="let item of thirdYear[1]">
+              <div class="flex-column no-gap line-height-13">
+                {{item.name}}<br>
+                <small>{{item.short}}</small>
+              </div>
+
+              <div class="flex-grow"></div>
+
+              <div><b>{{item.credits}}C</b></div>
+              <div class="material-icon"><a href="{{item.site}}" target="_blank"><i class="fa-solid fa-globe"></i></a></div>
+              <div class="material-icon"><a href="{{item.materials}}" target="_blank"><i class="fa-solid fa-book"></i></a></div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
 
     </div>
   </div>
