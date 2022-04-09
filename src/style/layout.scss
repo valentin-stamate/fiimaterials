@@ -32,18 +32,24 @@
   padding: 16px;
   border-radius: 4px;
 
-  &.has-shadow-animated {
-    box-shadow: rgba(149, 157, 165, 0.2) 0 0 0;
-    transition: box-shadow 250ms ease-in-out;
-  }
+}
 
-  &.has-shadow-animated:hover {
-    box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
-  }
+.has-shadow-animated {
+  box-shadow: rgba(149, 157, 165, 0.2) 0 0 0;
+  transition: box-shadow 250ms ease-in-out;
+}
 
-  &.has-shadow {
-    box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
-  }
+.has-shadow-animated:hover {
+  box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
+}
+
+.has-shadow {
+  box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
+}
+
+.img {
+  width: 100%;
+  border-radius: 4px;
 }
 
 .welcome {
@@ -97,7 +103,7 @@
   grid-template-rows: auto;
   grid-template-columns: 1fr 2fr;
   gap: 32px;
-  padding: 32px;
+  padding: 0 32px;
 }
 
 .materials-year-layout {
@@ -152,9 +158,18 @@
 
 .nav-list {
 
+  .is-red:hover {
+    background-color: $bg-red;
+    color: white !important;
+
+    small {
+      color: white;
+    }
+  }
+
   .is-yellow:hover {
     background-color: $bg-yellow;
-    color: white;
+    color: white !important;
 
     small {
       color: white;
@@ -163,7 +178,7 @@
 
   .is-blue:hover {
     background-color: $bg-blue;
-    color: white;
+    color: white !important;
 
     small {
       color: white;
@@ -175,9 +190,10 @@
     flex-direction: column;
     justify-items: center;
     gap: 0;
-    padding: 32px;
+    padding: 24px;
     font-weight: bold;
     transition: all 100ms ease-in-out;
+    color: $font-color !important;
 
     small {
       color: $font-color-light;
@@ -196,6 +212,17 @@ i.icon {
 }
 
 /* Font */
+.font-title {
+  font-size: 2rem;
+  line-height: 1.25;
+
+  .subtitle {
+    font-size: 0.75em;
+    color: $font-color-light;
+  }
+}
+
+
 .font-16 {
   font-size: 1rem;
 }

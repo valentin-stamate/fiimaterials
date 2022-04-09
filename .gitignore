@@ -44,4 +44,7 @@ Thumbs.db
 .vscode
 package-lock.json
 desktop.ini
-
+.firebase
+.angular
+.firebaserc
+firebase.json
