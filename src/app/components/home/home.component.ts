@@ -10,6 +10,12 @@ export class HomeComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    const nav = document.getElementById('nav');
+
+    if (nav) {
+      nav.className = 'navbar';
+      nav.classList.add('blue-style');
+    }
   }
 
 }

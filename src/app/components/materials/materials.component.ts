@@ -20,6 +20,14 @@ export class MaterialsComponent implements OnInit {
 
   ngOnInit(): void {
     this.onRefreshMaterials();
+
+    const nav = document.getElementById('nav');
+
+    if (nav) {
+      nav.className = 'navbar';
+      nav.classList.add('yellow-style');
+    }
+
   }
 
   onRefreshMaterials() {

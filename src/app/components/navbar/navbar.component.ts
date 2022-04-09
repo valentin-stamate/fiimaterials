@@ -6,9 +6,6 @@ import {Component, Input, OnInit} from '@angular/core';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-  @Input('style')
-  mainStyle: string = 'blue-style';
-
   quote: string;
 
   logoSubtitles: string[] = [
@@ -17,12 +14,15 @@ export class NavbarComponent implements OnInit {
   ];
 
   sidenavClosed = true;
+  overflowHiddenClass = 'overflow-hidden'
 
   constructor() {
     this.quote = this.pickRandomSubtitle();
   }
 
   ngOnInit(): void {
+    this.sidenavClosed = true;
+    document.body.classList.remove(this.overflowHiddenClass);
   }
 
   pickRandomSubtitle() {
@@ -33,11 +33,10 @@ export class NavbarComponent implements OnInit {
   onToggleSidenav() {
     this.sidenavClosed = !this.sidenavClosed;
 
-    const overflowHiddenClass = 'overflow-hidden';
     if (this.sidenavClosed) {
-      document.body.classList.remove(overflowHiddenClass);
+      document.body.classList.remove(this.overflowHiddenClass);
     } else {
-      document.body.classList.add(overflowHiddenClass);
+      document.body.classList.add(this.overflowHiddenClass);
     }
 
   }
