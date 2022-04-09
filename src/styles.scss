@@ -70,6 +70,10 @@ body {
   padding: 0;
 }
 
+.overflow-hidden {
+  overflow: hidden;
+}
+
 // I know !important is not recommended, but bulma is giving me no choice
 .yellow-style {
   & .subtitle-logo {
@@ -256,7 +260,7 @@ i.icon {
   align-items: center;
   color: $font-color;
   animation: fadein 300ms ease-in-out;
-
+  padding: 0 32px 0 32px;
   .content {
     width: min(100%, 1280px);
     padding: 32px;
@@ -346,8 +350,48 @@ i.icon {
 
 }
 
+.cursor-pointer {
+  cursor: pointer;
+}
+
 .flex-grow {
   flex-grow: 1;
+}
+
+.nav-list {
+
+  .is-yellow:hover {
+    background-color: $bg-yellow;
+    color: white;
+
+    small {
+      color: white;
+    }
+  }
+
+  .is-blue:hover {
+    background-color: $bg-blue;
+    color: white;
+
+    small {
+      color: white;
+    }
+  }
+
+  .item {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    gap: 0;
+    padding: 32px;
+    font-weight: bold;
+    transition: all 100ms ease-in-out;
+
+    small {
+      color: $font-color-light;
+    }
+  }
+
 }
 
 

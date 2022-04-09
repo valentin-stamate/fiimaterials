@@ -1,17 +1,25 @@
+<!-- Nav -->
 <div class="navbar {{mainStyle}}">
+  <!-- Icon displayed only in mobile screens -->
+  <div class="nav-icon">
+    <div>
+      <i class="fa-solid fa-bars cursor-pointer" (click)="onToggleSidenav()"></i>
+    </div>
+  </div>
+
   <!-- Logo -->
-  <div class="flex-center">
+  <div class="nav-logo flex-center">
     <div class="flex-column flex-center no-gap">
       <div class="flex-row">
         <img src="assets/logo_outlined.svg" class="logo" alt="">
         <div class="logo-name">FIIMaterials</div>
       </div>
-      <div class="subtitle-logo">{{quote}}</div>
+      <div class="subtitle-logo font-center">{{quote}}</div>
     </div>
   </div>
 
   <!-- Nav -->
-  <div class="flex-row flex-justify">
+  <div class="nav flex-row flex-justify">
     <div class="navigation">
       <div class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
         <a routerLink="/"><div>Home</div></a>
@@ -21,7 +29,6 @@
       <div class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
         <a routerLink="/materials"><div>Materials</div></a>
         <div class="line"></div>
-        <div class="nav-item-popup"></div>
       </div>
 
 <!--      <div class="nav-item">-->
@@ -36,17 +43,41 @@
 <!--        <div class="nav-item-popup"></div>-->
 <!--      </div>-->
 
-<!--      <div class="nav-item">-->
-<!--        <div>Donate</div>-->
-<!--        <div class="line"></div>-->
-<!--        <div class="nav-item-popup"></div>-->
-<!--      </div>-->
+      <div class="nav-item">
+        <div>Donate</div>
+        <div class="line"></div>
+        <div class="nav-item-popup">
+          <div class="flex-center p-16">Only if you feel I deserve it</div>
+          <div class="nav-list">
+            <div class="item is-yellow">
+              <div>ING</div>
+              <div><small>RO25INGB0000999908438976</small></div>
+            </div>
+          </div>
+          <div class="nav-list">
+            <div class="item is-blue">
+              <div>Revolut</div>
+              <div><small>revolut.me/valentinst</small></div>
+            </div>
+          </div>
+        </div>
+      </div>
 
 <!--      <div class="nav-item">-->
 <!--        <div>Contributors</div>-->
 <!--        <div class="line"></div>-->
 <!--        <div class="nav-item-popup"></div>-->
 <!--      </div>-->
+
+      <div class="nav-item">
+        <a href="https://blog.valentinstamate.com/fiimaterials/" target="_blank"><div>How it started?</div></a>
+        <div class="line"></div>
+        <div class="nav-item-popup">
+          <div class="flex-column flex-center p-8">
+            <div>Everything has a beginning</div>
+          </div>
+        </div>
+      </div>
 
       <div class="nav-item">
         <a href="https://github.com/FIIMaterials" target="_blank"><div>GitHub</div></a>
@@ -61,6 +92,50 @@
     </div>
   </div>
 
-  <!-- ? -->
-  <div></div>
 </div>
+
+<!-- Sidenav -->
+<div class="sidenav" [class.sidenav-closed]="sidenavClosed">
+  <!-- Logo -->
+  <div class="sidenav-logo flex-center">
+    <div class="flex-column flex-center no-gap">
+      <div class="flex-row">
+        <img src="assets/logo_outlined.svg" class="logo" alt="">
+        <div class="logo-name">FIIMaterials</div>
+      </div>
+      <div class="subtitle-logo font-center">{{quote}}</div>
+    </div>
+  </div>
+
+  <!-- Sidenav List -->
+  <div class="sidenav-list">
+
+    <div class="item" routerLink="" routerLinkActive="item-active" [routerLinkActiveOptions]="{exact: true}">
+      <div><i class="fa-solid fa-house"></i></div>
+      <div class="flex-center">Home</div>
+    </div>
+
+    <div class="item" routerLink="/materials" routerLinkActive="item-active" [routerLinkActiveOptions]="{exact: true}">
+      <div><i class="fa-solid fa-book"></i></div>
+      <div class="flex-center">Materials</div>
+    </div>
+
+    <a href="https://blog.valentinstamate.com/fiimaterials/" target="_blank">
+    <div class="item">
+      <div><i class="fa-solid fa-circle-play"></i></div>
+      <div class="flex-center">How it started?</div>
+    </div>
+    </a>
+
+    <a href="https://github.com/FIIMaterials" target="_blank">
+    <div class="item">
+      <div><i class="fa-brands fa-github-square"></i></div>
+      <div class="flex-center">GitHub</div>
+    </div>
+    </a>
+
+  </div>
+
+</div>
+
+<div class="sidenav-cover" *ngIf="!sidenavClosed" (click)="onToggleSidenav()"></div>

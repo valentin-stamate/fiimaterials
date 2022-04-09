@@ -16,6 +16,8 @@ export class NavbarComponent implements OnInit {
     'The Project Birthday is on 6th February 2020'
   ];
 
+  sidenavClosed = true;
+
   constructor() {
     this.quote = this.pickRandomSubtitle();
   }
@@ -26,6 +28,18 @@ export class NavbarComponent implements OnInit {
   pickRandomSubtitle() {
     const len = this.logoSubtitles.length;
     return this.logoSubtitles[Math.floor(Math.random() * len)];
+  }
+
+  onToggleSidenav() {
+    this.sidenavClosed = !this.sidenavClosed;
+
+    const overflowHiddenClass = 'overflow-hidden';
+    if (this.sidenavClosed) {
+      document.body.classList.remove(overflowHiddenClass);
+    } else {
+      document.body.classList.add(overflowHiddenClass);
+    }
+
   }
 
 }
