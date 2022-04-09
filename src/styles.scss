@@ -97,7 +97,7 @@ body {
   }
 }
 
-.grid-three {
+.grid-3 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto;
@@ -394,5 +394,20 @@ i.icon {
 
 }
 
+@media (max-width: 1020px), (orientation: portrait) {
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .materials-layout {
+    display: flex;
+    flex-direction: column;
+  }
+
+}
 
 
