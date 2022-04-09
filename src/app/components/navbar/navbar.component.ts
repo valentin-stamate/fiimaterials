@@ -13,16 +13,19 @@ export class NavbarComponent implements OnInit {
     'The Project Birthday is on 6th February 2020'
   ];
 
-  sidenavClosed = true;
-  overflowHiddenClass = 'overflow-hidden'
+  sidenavOpened: boolean;
+
+  overflowHiddenClass = 'overflow-hidden';
+  sidenavOpenedClass = 'sidenav-opened';
 
   constructor() {
     this.quote = this.pickRandomSubtitle();
+    this.sidenavOpened = false;
   }
 
   ngOnInit(): void {
-    this.sidenavClosed = true;
-    document.body.classList.remove(this.overflowHiddenClass);
+    this.sidenavOpened = false;
+    this.refreshSidenav();
   }
 
   pickRandomSubtitle() {
@@ -31,14 +34,29 @@ export class NavbarComponent implements OnInit {
   }
 
   onToggleSidenav() {
-    this.sidenavClosed = !this.sidenavClosed;
+    this.sidenavOpened = !this.sidenavOpened;
+    this.refreshSidenav();
+  }
 
-    if (this.sidenavClosed) {
-      document.body.classList.remove(this.overflowHiddenClass);
-    } else {
-      document.body.classList.add(this.overflowHiddenClass);
+  refreshSidenav() {
+    const sidenav = document.getElementById('sidenav');
+    const sidenavCover = document.getElementById('sidenav-cover');
+
+    if (sidenav && sidenavCover) {
+      if (this.sidenavOpened) {
+        sidenav.classList.add(this.sidenavOpenedClass);
+        sidenavCover.hidden = false;
+      } else {
+        sidenav.classList.remove(this.sidenavOpenedClass);
+        sidenavCover.hidden = true;
+      }
     }
 
+    if (this.sidenavOpened) {
+      document.body.classList.add(this.overflowHiddenClass);
+    } else {
+      document.body.classList.remove(this.overflowHiddenClass);
+    }
   }
 
 }

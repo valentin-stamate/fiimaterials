@@ -107,7 +107,7 @@
 </div>
 
 <!-- Sidenav -->
-<div class="sidenav" [class.sidenav-closed]="sidenavClosed">
+<div class="sidenav" id="sidenav">
   <!-- Logo -->
   <div class="sidenav-logo flex-center">
     <div class="flex-column flex-center no-gap">
@@ -150,4 +150,4 @@
 
 </div>
 
-<div class="sidenav-cover" *ngIf="!sidenavClosed" (click)="onToggleSidenav()"></div>
+<div class="sidenav-cover" id="sidenav-cover" (click)="onToggleSidenav()" hidden></div>
