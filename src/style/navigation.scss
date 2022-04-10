@@ -8,7 +8,7 @@
   display: grid;
   gap: 32px;
   grid-template-rows: 1fr;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr 2fr 1fr;
   color: $font-color-invert;
   padding: 24px;
   background-color: transparent;
@@ -103,7 +103,7 @@
     border-radius: 4px;
     margin-top: 36px;
     display: none;
-    animation: popup-animation 100ms ease-in-out;
+    animation: popup-animation 125ms ease-in-out;
   }
 
 }

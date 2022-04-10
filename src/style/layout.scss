@@ -24,6 +24,17 @@
   }
 }
 
+.green-style {
+  & .logo-subtitle {
+    color: $font-green !important;
+  }
+
+  & .button {
+    background-color: $bg-green !important;
+    color: white !important;
+  }
+}
+
 /* Components */
 .box {
   display: flex;

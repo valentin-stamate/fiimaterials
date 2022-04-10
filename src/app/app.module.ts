@@ -12,7 +12,7 @@ import { MaterialsComponent } from './components/materials/materials.component';
     AppComponent,
     HomeComponent,
     NavbarComponent,
-    MaterialsComponent
+    MaterialsComponent,
   ],
   imports: [
     BrowserModule,
