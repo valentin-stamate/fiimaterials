@@ -16,7 +16,7 @@
   }
 }
 
-@media (max-width: 1020px), (orientation: portrait) {
+@media (max-width: 1020px) {
   .grid-3 {
     grid-template-columns: 1fr;
   }
@@ -30,4 +30,11 @@
     flex-direction: column;
   }
 
+}
+
+@media (max-width: 720px) {
+  .materials-year-layout {
+    display: flex;
+    flex-direction: column;
+  }
 }
