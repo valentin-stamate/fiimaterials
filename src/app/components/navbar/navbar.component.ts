@@ -10,7 +10,7 @@ export class NavbarComponent implements OnInit {
 
   logoSubtitles: string[] = [
     'If it Looks Like Some Website... You\'re Right',
-    'The Project Birthday is on 6th February 2020'
+    'The Project Started on 6th February 2020',
   ];
 
   sidenavOpened: boolean;
