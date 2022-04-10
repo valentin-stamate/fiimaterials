@@ -23,9 +23,9 @@
 <div class="page-layout" *ngIf="!loading && errorMessage === ''">
   <div class="content container">
 
-    <div class="font-center font-title" id="materials">
-      <div>Materials</div>
-    </div>
+<!--    <div class="font-center font-title" id="materials">-->
+<!--      <div>Materials</div>-->
+<!--    </div>-->
 
     <div class="materials-layout fill">
 
@@ -39,13 +39,40 @@
         </div>
       </div>
 
+      <!-- Materialele sunt clasificate astfel:
+           1 - Obligatorii
+           2 - Packet optionale 1
+           3 - Packet optionale 2
+           4 - Packet optionale 3
+           5 - Facultative
+
+           Codificare abc: anul a, semestrul b, materie de tip c
+       -->
+
       <div>
         <div class="box has-shadow materials-year-layout">
 
           <!-- First Semester -->
           <div class="col">
 
-            <div class="material-item" *ngFor="let item of firstYear[0]">
+            <!-- Obligatorii -->
+            <div class="material-item" *ngFor="let item of classes['111']">
+              <div class="flex-column no-gap line-height-13">
+                {{item.name}}<br>
+                <small>{{item.short}}</small>
+              </div>
+
+              <div class="flex-grow"></div>
+
+              <div><b>{{item.credits}}C</b></div>
+              <div class="material-icon"><a href="{{item.site}}" target="_blank"><i class="fa-solid fa-globe"></i></a></div>
+              <div class="material-icon"><a href="{{item.materials}}" target="_blank"><i class="fa-solid fa-book"></i></a></div>
+            </div>
+
+            <div class="hr mtb-8"></div>
+
+            <!-- Facultative -->
+            <div class="material-item" *ngFor="let item of classes['115']">
               <div class="flex-column no-gap line-height-13">
                 {{item.name}}<br>
                 <small>{{item.short}}</small>
@@ -63,7 +90,24 @@
           <!-- Second Semester -->
           <div class="col">
 
-            <div class="material-item" *ngFor="let item of firstYear[1]">
+            <!-- Obligatorii -->
+            <div class="material-item" *ngFor="let item of classes['121']">
+              <div class="flex-column no-gap line-height-13">
+                {{item.name}}<br>
+                <small>{{item.short}}</small>
+              </div>
+
+              <div class="flex-grow"></div>
+
+              <div><b>{{item.credits}}C</b></div>
+              <div class="material-icon"><a href="{{item.site}}" target="_blank"><i class="fa-solid fa-globe"></i></a></div>
+              <div class="material-icon"><a href="{{item.materials}}" target="_blank"><i class="fa-solid fa-book"></i></a></div>
+            </div>
+
+            <div class="hr mtb-8"></div>
+
+            <!-- Facultative -->
+            <div class="material-item" *ngFor="let item of classes['125']">
               <div class="flex-column no-gap line-height-13">
                 {{item.name}}<br>
                 <small>{{item.short}}</small>
@@ -99,7 +143,40 @@
           <!-- First Semester -->
           <div class="col">
 
-            <div class="material-item" *ngFor="let item of secondYear[0]">
+            <!-- Obligatorii -->
+            <div class="material-item" *ngFor="let item of classes['211']">
+              <div class="flex-column no-gap line-height-13">
+                {{item.name}}<br>
+                <small>{{item.short}}</small>
+              </div>
+
+              <div class="flex-grow"></div>
+
+              <div><b>{{item.credits}}C</b></div>
+              <div class="material-icon"><a href="{{item.site}}" target="_blank"><i class="fa-solid fa-globe"></i></a></div>
+              <div class="material-icon"><a href="{{item.materials}}" target="_blank"><i class="fa-solid fa-book"></i></a></div>
+            </div>
+
+            <div class="hr mtb-8"></div>
+
+            <!-- Optional 1 -->
+            <div class="material-item" *ngFor="let item of classes['212']">
+              <div class="flex-column no-gap line-height-13">
+                {{item.name}}<br>
+                <small>{{item.short}}</small>
+              </div>
+
+              <div class="flex-grow"></div>
+
+              <div><b>{{item.credits}}C</b></div>
+              <div class="material-icon"><a href="{{item.site}}" target="_blank"><i class="fa-solid fa-globe"></i></a></div>
+              <div class="material-icon"><a href="{{item.materials}}" target="_blank"><i class="fa-solid fa-book"></i></a></div>
+            </div>
+
+            <div class="hr mtb-8"></div>
+
+            <!-- Facultative -->
+            <div class="material-item" *ngFor="let item of classes['215']">
               <div class="flex-column no-gap line-height-13">
                 {{item.name}}<br>
                 <small>{{item.short}}</small>
@@ -117,7 +194,40 @@
           <!-- Second Semester -->
           <div class="col">
 
-            <div class="material-item" *ngFor="let item of secondYear[1]">
+            <!-- Obligatorii -->
+            <div class="material-item" *ngFor="let item of classes['221']">
+              <div class="flex-column no-gap line-height-13">
+                {{item.name}}<br>
+                <small>{{item.short}}</small>
+              </div>
+
+              <div class="flex-grow"></div>
+
+              <div><b>{{item.credits}}C</b></div>
+              <div class="material-icon"><a href="{{item.site}}" target="_blank"><i class="fa-solid fa-globe"></i></a></div>
+              <div class="material-icon"><a href="{{item.materials}}" target="_blank"><i class="fa-solid fa-book"></i></a></div>
+            </div>
+
+            <div class="hr mtb-8"></div>
+
+            <!-- Optional 1 -->
+            <div class="material-item" *ngFor="let item of classes['222']">
+              <div class="flex-column no-gap line-height-13">
+                {{item.name}}<br>
+                <small>{{item.short}}</small>
+              </div>
+
+              <div class="flex-grow"></div>
+
+              <div><b>{{item.credits}}C</b></div>
+              <div class="material-icon"><a href="{{item.site}}" target="_blank"><i class="fa-solid fa-globe"></i></a></div>
+              <div class="material-icon"><a href="{{item.materials}}" target="_blank"><i class="fa-solid fa-book"></i></a></div>
+            </div>
+
+            <div class="hr"></div>
+
+            <!-- Facultative -->
+            <div class="material-item" *ngFor="let item of classes['225']">
               <div class="flex-column no-gap line-height-13">
                 {{item.name}}<br>
                 <small>{{item.short}}</small>
@@ -156,7 +266,56 @@
           <!-- First Semester -->
           <div class="col">
 
-            <div class="material-item" *ngFor="let item of thirdYear[0]">
+            <!-- Obligatorii -->
+            <div class="material-item" *ngFor="let item of classes['311']">
+              <div class="flex-column no-gap line-height-13">
+                {{item.name}}<br>
+                <small>{{item.short}}</small>
+              </div>
+
+              <div class="flex-grow"></div>
+
+              <div><b>{{item.credits}}C</b></div>
+              <div class="material-icon"><a href="{{item.site}}" target="_blank"><i class="fa-solid fa-globe"></i></a></div>
+              <div class="material-icon"><a href="{{item.materials}}" target="_blank"><i class="fa-solid fa-book"></i></a></div>
+            </div>
+
+            <div class="hr mtb-8"></div>
+
+            <!-- Optionale 1 -->
+            <div class="material-item" *ngFor="let item of classes['312']">
+              <div class="flex-column no-gap line-height-13">
+                {{item.name}}<br>
+                <small>{{item.short}}</small>
+              </div>
+
+              <div class="flex-grow"></div>
+
+              <div><b>{{item.credits}}C</b></div>
+              <div class="material-icon"><a href="{{item.site}}" target="_blank"><i class="fa-solid fa-globe"></i></a></div>
+              <div class="material-icon"><a href="{{item.materials}}" target="_blank"><i class="fa-solid fa-book"></i></a></div>
+            </div>
+
+            <div class="hr mtb-8"></div>
+
+            <!-- Optionale 2 -->
+            <div class="material-item" *ngFor="let item of classes['313']">
+              <div class="flex-column no-gap line-height-13">
+                {{item.name}}<br>
+                <small>{{item.short}}</small>
+              </div>
+
+              <div class="flex-grow"></div>
+
+              <div><b>{{item.credits}}C</b></div>
+              <div class="material-icon"><a href="{{item.site}}" target="_blank"><i class="fa-solid fa-globe"></i></a></div>
+              <div class="material-icon"><a href="{{item.materials}}" target="_blank"><i class="fa-solid fa-book"></i></a></div>
+            </div>
+
+            <div class="hr mtb-8"></div>
+
+            <!-- Facultative -->
+            <div class="material-item" *ngFor="let item of classes['315']">
               <div class="flex-column no-gap line-height-13">
                 {{item.name}}<br>
                 <small>{{item.short}}</small>
@@ -174,7 +333,72 @@
           <!-- Second Semester -->
           <div class="col">
 
-            <div class="material-item" *ngFor="let item of thirdYear[1]">
+            <!-- Obligatorii -->
+            <div class="material-item" *ngFor="let item of classes['321']">
+              <div class="flex-column no-gap line-height-13">
+                {{item.name}}<br>
+                <small>{{item.short}}</small>
+              </div>
+
+              <div class="flex-grow"></div>
+
+              <div><b>{{item.credits}}C</b></div>
+              <div class="material-icon"><a href="{{item.site}}" target="_blank"><i class="fa-solid fa-globe"></i></a></div>
+              <div class="material-icon"><a href="{{item.materials}}" target="_blank"><i class="fa-solid fa-book"></i></a></div>
+            </div>
+
+            <div class="hr mtb-8"></div>
+
+            <!-- Optionale 1 -->
+            <div class="material-item" *ngFor="let item of classes['322']">
+              <div class="flex-column no-gap line-height-13">
+                {{item.name}}<br>
+                <small>{{item.short}}</small>
+              </div>
+
+              <div class="flex-grow"></div>
+
+              <div><b>{{item.credits}}C</b></div>
+              <div class="material-icon"><a href="{{item.site}}" target="_blank"><i class="fa-solid fa-globe"></i></a></div>
+              <div class="material-icon"><a href="{{item.materials}}" target="_blank"><i class="fa-solid fa-book"></i></a></div>
+            </div>
+
+            <div class="hr mtb-8"></div>
+
+            <!-- Optionale 2 -->
+            <div class="material-item" *ngFor="let item of classes['323']">
+              <div class="flex-column no-gap line-height-13">
+                {{item.name}}<br>
+                <small>{{item.short}}</small>
+              </div>
+
+              <div class="flex-grow"></div>
+
+              <div><b>{{item.credits}}C</b></div>
+              <div class="material-icon"><a href="{{item.site}}" target="_blank"><i class="fa-solid fa-globe"></i></a></div>
+              <div class="material-icon"><a href="{{item.materials}}" target="_blank"><i class="fa-solid fa-book"></i></a></div>
+            </div>
+
+            <div class="hr mtb-8"></div>
+
+            <!-- Optionale 3 -->
+            <div class="material-item" *ngFor="let item of classes['324']">
+              <div class="flex-column no-gap line-height-13">
+                {{item.name}}<br>
+                <small>{{item.short}}</small>
+              </div>
+
+              <div class="flex-grow"></div>
+
+              <div><b>{{item.credits}}C</b></div>
+              <div class="material-icon"><a href="{{item.site}}" target="_blank"><i class="fa-solid fa-globe"></i></a></div>
+              <div class="material-icon"><a href="{{item.materials}}" target="_blank"><i class="fa-solid fa-book"></i></a></div>
+            </div>
+
+            <div class="hr mtb-8"></div>
+
+            <!-- Facultative -->
+            <div class="material-item" *ngFor="let item of classes['325']">
               <div class="flex-column no-gap line-height-13">
                 {{item.name}}<br>
                 <small>{{item.short}}</small>

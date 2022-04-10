@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {Class} from "../../service/models";
 import axios from "axios";
 import {RestEndpoints} from "../../service/rest.endpoints";
 
@@ -12,9 +11,7 @@ export class MaterialsComponent implements OnInit {
   loading = false;
   errorMessage = '';
 
-  firstYear: [Class[], Class[]] = [[], []];
-  secondYear: [Class[], Class[]] = [[], []];
-  thirdYear: [Class[], Class[]] = [[], []];
+  classes = [];
 
   constructor() { }
 
@@ -36,18 +33,9 @@ export class MaterialsComponent implements OnInit {
 
     axios.get(RestEndpoints.MATERIALS)
       .then(res => {
-        const list = res.data as Class[];
-
-        this.firstYear[0] = list.filter(item => item.year === 1 && item.semester === 1);
-        this.firstYear[1] = list.filter(item => item.year === 1 && item.semester === 2);
-
-        this.secondYear[0] = list.filter(item => item.year === 2 && item.semester === 1);
-        this.secondYear[1] = list.filter(item => item.year === 2 && item.semester === 2);
-
-        this.thirdYear[0] = list.filter(item => item.year === 3 && item.semester === 1);
-        this.thirdYear[1] = list.filter(item => item.year === 3 && item.semester === 2);
+        this.classes = res.data as any;
       }).catch(err => {
-        this.errorMessage = err.response.data;
+        this.errorMessage = 'Error';
       }).finally(() => {
         this.loading = false;
       });
