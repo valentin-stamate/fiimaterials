@@ -196,6 +196,15 @@
     }
   }
 
+  .is-green:hover {
+    background-color: $bg-green;
+    color: white !important;
+
+    small {
+      color: white;
+    }
+  }
+
   .item {
     display: flex;
     flex-direction: column;
