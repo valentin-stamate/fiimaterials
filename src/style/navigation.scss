@@ -125,6 +125,7 @@ $sidenav-transition-time: 250ms;
 
 .sidenav {
   position: absolute;
+  left: -$sidenav-width;
   top:0;
   height: 100vh;
   width: $sidenav-width;
@@ -134,9 +135,9 @@ $sidenav-transition-time: 250ms;
   color: $font-blue;
   opacity: 0;
   flex-direction: column;
-  transform: translateX(-$sidenav-width);
   box-shadow: rgba(20, 20, 20, 0.4) 0 0 0 0;
-  transition: all $sidenav-transition-time ease-in-out;
+  transition: left $sidenav-transition-time ease-in-out, opacity $sidenav-transition-time ease-in-out,
+              box-shadow $sidenav-transition-time ease-in-out;
 
   .sidenav-logo {
     padding: 32px;
@@ -202,5 +203,5 @@ $sidenav-transition-time: 250ms;
 .sidenav-opened {
   opacity: 1;
   box-shadow: rgba(20, 20, 20, 0.4) 0 7px 29px 0;
-  transform: translateX(0);
+  left: 0;
 }
