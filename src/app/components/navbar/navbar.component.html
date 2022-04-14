@@ -60,14 +60,24 @@
               <div class="flex-center p-16">Only if you feel I deserve it</div>
               <div class="nav-list">
                 <div class="item is-yellow">
-                  <div>ING</div>
-                  <div><small>RO25INGB0000999908438976</small></div>
+                  <div>
+                    <div>ING</div>
+                    <div><small>{{ingCode}}</small></div>
+                  </div>
+                  <div class="flex-grow"></div>
+                  <div *ngIf="listItemCopied !== 1"><i class="fa-solid fa-clipboard item-icon" (click)="copyCode(1)"></i></div>
+                  <div *ngIf="listItemCopied === 1"><i class="fa-solid fa-clipboard-check item-icon"></i></div>
                 </div>
               </div>
               <div class="nav-list">
                 <div class="item is-blue">
-                  <div>Revolut</div>
-                  <div><small>revolut.me/valentinst</small></div>
+                  <div>
+                    <div>Revolut</div>
+                    <div><small>{{revolutCode}}</small></div>
+                  </div>
+                  <div class="flex-grow"></div>
+                  <div *ngIf="listItemCopied !== 2"><i class="fa-solid fa-clipboard item-icon" (click)="copyCode(2)"></i></div>
+                  <div *ngIf="listItemCopied === 2"><i class="fa-solid fa-clipboard-check item-icon"></i></div>
                 </div>
               </div>
             </div>

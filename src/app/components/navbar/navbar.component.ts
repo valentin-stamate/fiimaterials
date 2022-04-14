@@ -18,6 +18,12 @@ export class NavbarComponent implements OnInit {
   overflowHiddenClass = 'overflow-hidden';
   sidenavOpenedClass = 'sidenav-opened';
 
+  /* Donate section */
+  listItemCopied = 0;
+
+  ingCode = 'RO25INGB0000999908438976';
+  revolutCode = 'revolut.me/valentinst';
+
   constructor() {
     this.quote = this.pickRandomSubtitle();
     this.sidenavOpened = false;
@@ -56,6 +62,20 @@ export class NavbarComponent implements OnInit {
       document.body.classList.add(this.overflowHiddenClass);
     } else {
       document.body.classList.remove(this.overflowHiddenClass);
+    }
+  }
+
+  copyCode(type: number) {
+    if (type === 1) {
+      this.listItemCopied = 1;
+      navigator.clipboard.writeText(this.ingCode);
+      return;
+    }
+
+    if (type === 2) {
+      this.listItemCopied = 2;
+      navigator.clipboard.writeText(this.revolutCode);
+      return;
     }
   }
 

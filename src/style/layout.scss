@@ -207,9 +207,10 @@
 
   .item {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-items: center;
-    gap: 0;
+    align-items: center;
+    gap: 24px;
     padding: 24px;
     font-weight: bold;
     transition: all 100ms ease-in-out;
@@ -218,6 +219,18 @@
     small {
       color: $font-color-light;
     }
+
+    .item-icon {
+      background-color: #00000000;
+      padding: 8px;
+      border-radius: 4px;
+      transition: background-color 200ms ease-in-out;
+    }
+
+    .item-icon:hover {
+      background-color: #00000020;
+    }
+
   }
 
 }
