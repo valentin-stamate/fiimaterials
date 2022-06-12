@@ -1,0 +1,93 @@
+{
+	"info": {
+		"_postman_id": "1e7be457-d6f6-4b40-b717-69591085c8a9",
+		"name": "FIIMaterials",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Materials",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/materials",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"materials"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Refresh Materials",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{admin}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/Valentin/Desktop/FIIMaterials/FIIMaterials-Backend/materials/materials.json"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/api/refresh-materials",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"refresh-materials"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "admin",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
