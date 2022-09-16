@@ -1,0 +1,27 @@
+<div class="card widget">
+
+  <form class="d-flex" role="search">
+    <input class="form-control me-2" type="search" placeholder="Search after name or short" aria-label="Search">
+  </form>
+
+  <div class="semesters-container">
+
+    <div class="semester" *ngFor="let semester of semesters">
+      <div class="card semester-title fw-bold fs-5">
+        <div>{{semester.year}}</div>
+        <div>{{semester.title}}</div>
+      </div>
+
+      <div class="classes-container">
+        <div class="class" *ngFor="let cls of semester.classes">
+          <div><img src="{{cls.coverUrl}}" class="rounded img-fluid" alt="{{cls.title}}"></div>
+          
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+
+</div>
