@@ -3,6 +3,29 @@
 
     <div class="font-bold text-ms">Contributors</div>
 
+    <div class="flex flex-col gap-4 max-h-[32rem] overflow-auto">
+      <div *ngFor="let contributor of contributors" class="flex flex-col gap-4 border p-4 rounded-md">
+
+        <div class="flex gap-4 justify-between">
+          <img class="h-14 rounded-md" src="{{contributor.image}}" alt="">
+
+          <div>
+            <button class="bg-gray-800 text-white px-3 py-2 rounded-md text-sm font-medium" type="button">
+              Link
+            </button>
+          </div>
+        </div>
+
+        <div class="font-medium text-sm text-justify">{{contributor.about}}</div>
+
+        <div class="flex gap-2 flex-wrap">
+          <span *ngFor="let role of contributor.roles" class="text-xs font-semibold mr-2 px-2.5 py-0.5 rounded"
+            [ngClass]="{'bg-yellow-100 text-yellow-800': role === roles.MATERIAL_KEEPER, 'bg-gray-100 text-gray-800': role === roles.CONTRIBUTOR, 'bg-indigo-100 text-indigo-800': role === roles.DEVELOPER}"
+          >{{role}}</span>
+        </div>
+
+      </div>
+    </div>
 
   </div>
 </app-widget-card>

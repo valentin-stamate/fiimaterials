@@ -1,6 +1,6 @@
 import {AdditionalMaterials, Contributor} from "../interfaces/interfaces";
 
-enum Roles {
+export enum Roles {
   MATERIAL_KEEPER = 'Materials Keeper',
   DEVELOPER = 'Developer',
   CONTRIBUTOR = 'Contributor',
@@ -10,7 +10,7 @@ export const CONTRIBUTORS: Contributor[] = [
   {
     name: 'logalex96',
     image: 'https://i.postimg.cc/L4gQdBJt/6248839.jpg',
-    about: 'He is the one who started collecting these materials, so as an inspiration he deserves the credits. He has all materials so I strongly recommend going to his repository.',
+    about: 'He is the one who started collecting these materials, so as an inspiration he deserves the credits. He has all materials so I strongly recommend going to his repository and give him a star.',
     roles: [Roles.MATERIAL_KEEPER],
     action: 'https://bit.ly/2S8h9cO',
   },

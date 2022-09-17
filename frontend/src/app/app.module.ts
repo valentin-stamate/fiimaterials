@@ -10,6 +10,7 @@ import {FormsModule} from "@angular/forms";
 import { WMaterialsComponent } from './widgets/w-materials/w-materials.component';
 import { WContributorsComponent } from './widgets/w-contributors/w-contributors.component';
 import { WMoreMaterialsComponent } from './widgets/w-more-materials/w-more-materials.component';
+import { WAboutComponent } from './widgets/w-about/w-about.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { WMoreMaterialsComponent } from './widgets/w-more-materials/w-more-mater
     WMaterialsComponent,
     WContributorsComponent,
     WMoreMaterialsComponent,
+    WAboutComponent,
   ],
   imports: [
     BrowserModule,

@@ -4,21 +4,19 @@
     <div class="font-bold text-ms">More Materials</div>
 
     <div class="flex flex-col gap-4">
-      <div *ngFor="let _additional_materials of moreMaterials" class="flex flex-col gap-4 border p-4 rounded-md">
+      <div *ngFor="let materials of moreMaterials" class="flex flex-col gap-4 border p-4 rounded-md">
 
         <div class="flex flex-row gap-4 justify-between align-center">
-          <div>{{_additional_materials.contributor}}</div>
+          <div class="font-bold">{{materials.contributor}}</div>
 
           <button class="bg-gray-800 text-white px-3 py-2 rounded-md text-sm font-medium" type="button">
-            <i class="fa-solid fa-download mr-1"></i>
-            Download
+            Open
           </button>
 
         </div>
 
-        <div class="text-sm font-medium">{{_additional_materials.about}}</div>
+        <div class="text-sm font-medium">{{materials.about}}</div>
       </div>
-
     </div>
 
   </div>
