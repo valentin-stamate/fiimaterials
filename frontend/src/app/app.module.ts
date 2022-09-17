@@ -6,17 +6,27 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './pages/navbar/navbar.component';
 import { LandingPageComponent } from './pages/landing-page/landing-page.component';
 import { MaterialsComponent } from './pages/materials/materials.component';
+import { WidgetCardComponent } from './components/widget-card/widget-card.component';
+import {FormsModule} from "@angular/forms";
+import { WMaterialsComponent } from './widgets/w-materials/w-materials.component';
+import { WMoreMateirialsComponent } from './widgets/w-more-mateirials/w-more-mateirials.component';
+import { WContributorsComponent } from './widgets/w-contributors/w-contributors.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     LandingPageComponent,
-    MaterialsComponent
+    MaterialsComponent,
+    WidgetCardComponent,
+    WMaterialsComponent,
+    WMoreMateirialsComponent,
+    WContributorsComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

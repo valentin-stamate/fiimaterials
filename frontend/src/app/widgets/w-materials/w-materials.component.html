@@ -1,0 +1,64 @@
+<app-widget-card>
+  <div class="flex flex-col gap-4">
+
+    <div class="font-bold text-ms">Materials</div>
+
+    <form class="block">
+      <input type="text" name="searchQuery" [(ngModel)]="searchQuery" (ngModelChange)="onSearchChange()" id="first_name" class="bg-gray-200 text-black border border-gray-200 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+             placeholder="Search by name and credits" required>
+    </form>
+
+    <div class="flex flex-row gap-4">
+      <button class="basis-1/2 bg-gray-800 hover:bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" (click)="onCycleChange(cycleType.BACHELORS)"
+              [ngClass]="selectedCycle === cycleType.BACHELORS ? 'bg-gray-200 text-black hover:bg-gray-300' : ''">Bachelors</button>
+      <button class="basis-1/2 bg-gray-500 text-gray-300 px-3 py-2 rounded-md text-sm font-medium" (click)="onCycleChange(cycleType.MASTERS)"
+              [ngClass]="selectedCycle === cycleType.MASTERS ? 'bg-gray-200 text-black hover:bg-gray-300' : ''" disabled>Masters</button>
+    </div>
+
+    <div class="flex flex-row gap-4 justify-between">
+      <button *ngFor="let semesterCount of semesters" class="bg-gray-800 hover:bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" (click)="onSemesterChange(semesterCount)"
+              [ngClass]="selectedSemester === '' + semesterCount ? 'bg-gray-200 text-black hover:bg-gray-300' : ''">Semester {{semesterCount}}</button>
+    </div>
+
+    <div class="overflow-auto m-h-[46rem]">
+      <div class="flex flex-col gap-4 overflow-auto">
+
+        <div *ngFor="let _class of filteredClasses" class="flex flex-row justify-between bg-white rounded-lg shadow overflow-hidden">
+
+          <div class="w-2"
+               [class.bg-gray-400]="_class.type === classTypes.NORMAL"
+               [class.bg-sky-400]="_class.type === classTypes.OPTIONAL_1"
+               [class.bg-emerald-400]="_class.type === classTypes.OPTIONAL_2"
+               [class.bg-orange-400]="_class.type === classTypes.OPTIONAL_3"
+               [class.bg-indigo-400]="_class.type === classTypes.FACULTY"
+          ></div>
+
+          <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/b5277873948669.5c1ed6583b53f.jpg" class="rounded-r-lg h-[12rem] w-auto" alt="FII Materials {{_class.name}}">
+
+          <div class="flex flex-col basis-full gap-4 p-4">
+            <div class="text-xl font-bold">{{_class.name}}</div>
+
+            <div class="basis-full text-gray-600 text-sm">
+              <!-- TODO: About? -->
+              <div>Credits: {{_class.credits}}</div>
+              <div>Type: {{_class.type}}</div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4">
+              <button class="bg-gray-800 text-white px-3 py-2 rounded-md text-sm font-medium"
+                      [disabled]="_class.materials === ''"
+                      [ngClass]="_class.materials === '' ? 'bg-gray-500 text-gray-300' : 'hover:bg-gray-900'">Download</button>
+              <button class="bg-gray-800 text-white px-3 py-2 rounded-md text-sm font-medium"
+                      [disabled]="_class.materials === ''"
+                      [ngClass]="_class.materials === '' ? 'bg-gray-500 text-gray-300' : 'hover:bg-gray-900'">Site</button>
+            </div>
+          </div>
+
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</app-widget-card>
