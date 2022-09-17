@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './pages/navbar/navbar.component';
-import { LandingPageComponent } from './pages/landing-page/landing-page.component';
 import { MaterialsComponent } from './pages/materials/materials.component';
 import { WidgetCardComponent } from './components/widget-card/widget-card.component';
 import {FormsModule} from "@angular/forms";
@@ -16,7 +15,6 @@ import { WAboutComponent } from './widgets/w-about/w-about.component';
   declarations: [
     AppComponent,
     NavbarComponent,
-    LandingPageComponent,
     MaterialsComponent,
     WidgetCardComponent,
     WMaterialsComponent,

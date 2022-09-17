@@ -25,7 +25,6 @@ export interface AdditionalMaterials {
   contributor: string;
   link: string;
   about: string;
-
 }
 
 export interface Contributor {
@@ -34,4 +33,11 @@ export interface Contributor {
   about:  string,
   roles: string[],
   action: string,
+}
+
+export interface SocialLink {
+  name: string;
+  link: string;
+  icon: string;
+  color: string;
 }

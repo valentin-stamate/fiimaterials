@@ -1,0 +1,36 @@
+.popup {
+  opacity: 0;
+  scale: 95%;
+}
+
+.popup.open {
+  animation: popup-in 200ms ease-out forwards;
+}
+
+.popup.close {
+  animation: popup-out 200ms ease-in forwards;
+}
+
+@keyframes popup-in {
+  from {
+    opacity: 0;
+    scale: 95%;
+  }
+
+  to {
+    opacity: 1;
+    scale: 100%;
+  }
+}
+
+@keyframes popup-out {
+  from {
+    opacity: 1;
+    scale: 100%;
+  }
+
+  to {
+    opacity: 0;
+    scale: 95%;
+  }
+}

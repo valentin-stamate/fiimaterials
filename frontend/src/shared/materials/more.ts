@@ -22,7 +22,7 @@ export const CONTRIBUTORS: Contributor[] = [
     action: 'https://bit.ly/2VAGbTW',
   },
   {
-    name: 'Malina Cusutura',
+    name: 'Malina Andrei',
     image: 'https://i.postimg.cc/rmk1vW3J/IMG-2489.jpg',
     about: 'She is a student at Faculty of computer science in the second year. I never met her in person but I’m sure she’s a nice person. Her materials contain exams, which are very useful.',
     roles: [Roles.MATERIAL_KEEPER],
@@ -46,7 +46,7 @@ export const CONTRIBUTORS: Contributor[] = [
     name: 'Laurul Balaurul',
     image: 'https://i.postimg.cc/3xdvkjcY/drakon-plamya-ogon.jpg',
     about: 'The contribution of this creature was some exam models. He was often seen in C2 sometimes with the guitar guy "la o tigara si-un energizant".',
-    roles: [Roles.MATERIAL_KEEPER],
+    roles: [Roles.CONTRIBUTOR],
     action: '',
   },
   {
