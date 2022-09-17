@@ -29,6 +29,7 @@ export class WMaterialsComponent implements OnInit {
 
   selectedCycle: string = this.cycleType.BACHELORS;
   selectedSemester: string = '1';
+  selectedYear = 1;
 
   selectedClasses: Class[] = [];
   filteredClasses: Class[] = [];
@@ -76,6 +77,8 @@ export class WMaterialsComponent implements OnInit {
         }
       });
     });
+
+    this.selectedYear = Math.floor((parseInt(this.selectedSemester) + 1) / 2);
 
     const searchString = search.toLowerCase();
 

@@ -10,7 +10,7 @@
 
     <div class="flex flex-row gap-4">
       <button class="basis-1/2 bg-gray-800 hover:bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" (click)="onCycleChange(cycleType.BACHELORS)"
-              [ngClass]="selectedCycle === cycleType.BACHELORS ? 'bg-gray-200 text-black hover:bg-gray-300' : ''">Bachelors</button>
+              [ngClass]="selectedCycle === cycleType.BACHELORS ? 'bg-gray-200 text-black hover:bg-gray-300' : ''">Bachelors. Year: {{selectedYear}}</button>
       <button class="basis-1/2 bg-gray-500 text-gray-300 px-3 py-2 rounded-md text-sm font-medium" (click)="onCycleChange(cycleType.MASTERS)"
               [ngClass]="selectedCycle === cycleType.MASTERS ? 'bg-gray-200 text-black hover:bg-gray-300' : ''" disabled>Masters</button>
     </div>
@@ -20,7 +20,7 @@
               [ngClass]="selectedSemester === '' + semesterCount ? 'bg-gray-200 text-black hover:bg-gray-300' : ''">Semester {{semesterCount}}</button>
     </div>
 
-    <div class="overflow-auto m-h-[46rem]">
+    <div class="overflow-auto max-h-[46rem]">
       <div class="flex flex-col gap-4 overflow-auto">
 
         <div *ngFor="let _class of filteredClasses" class="flex flex-row justify-between bg-white rounded-lg shadow overflow-hidden">
@@ -47,10 +47,12 @@
             <div class="grid grid-cols-2 gap-4">
               <button class="bg-gray-800 text-white px-3 py-2 rounded-md text-sm font-medium"
                       [disabled]="_class.materials === ''"
-                      [ngClass]="_class.materials === '' ? 'bg-gray-500 text-gray-300' : 'hover:bg-gray-900'">Download</button>
+                      [ngClass]="_class.materials === '' ? 'bg-gray-500 text-gray-300' : 'hover:bg-gray-900'">
+                <i class="fa-solid fa-download mr-1"></i>Download</button>
               <button class="bg-gray-800 text-white px-3 py-2 rounded-md text-sm font-medium"
                       [disabled]="_class.materials === ''"
-                      [ngClass]="_class.materials === '' ? 'bg-gray-500 text-gray-300' : 'hover:bg-gray-900'">Site</button>
+                      [ngClass]="_class.materials === '' ? 'bg-gray-500 text-gray-300' : 'hover:bg-gray-900'">
+                <i class="fa-solid fa-arrow-up-right-from-square mr-1"></i>Site</button>
             </div>
           </div>
 

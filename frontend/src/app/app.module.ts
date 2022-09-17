@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './pages/navbar/navbar.component';
@@ -9,8 +8,8 @@ import { MaterialsComponent } from './pages/materials/materials.component';
 import { WidgetCardComponent } from './components/widget-card/widget-card.component';
 import {FormsModule} from "@angular/forms";
 import { WMaterialsComponent } from './widgets/w-materials/w-materials.component';
-import { WMoreMateirialsComponent } from './widgets/w-more-mateirials/w-more-mateirials.component';
 import { WContributorsComponent } from './widgets/w-contributors/w-contributors.component';
+import { WMoreMaterialsComponent } from './widgets/w-more-materials/w-more-materials.component';
 
 @NgModule({
   declarations: [
@@ -20,8 +19,8 @@ import { WContributorsComponent } from './widgets/w-contributors/w-contributors.
     MaterialsComponent,
     WidgetCardComponent,
     WMaterialsComponent,
-    WMoreMateirialsComponent,
     WContributorsComponent,
+    WMoreMaterialsComponent,
   ],
   imports: [
     BrowserModule,
