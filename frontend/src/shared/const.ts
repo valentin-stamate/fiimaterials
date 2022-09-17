@@ -1,4 +1,4 @@
-import {SocialLink} from "./interfaces/interfaces";
+import {Donation, SocialLink} from "./interfaces/interfaces";
 
 export enum ClassType {
   NORMAL= 'Compulsory',
@@ -45,4 +45,17 @@ export const SOCIAL_LINKS: SocialLink[] = [
     icon: 'fa-brands fa-youtube',
     color: 'text-red-500',
   },
+];
+
+export const DONATIONS: Donation[] = [
+  {
+    name: 'ING',
+    icon: 'fa-solid fa-building-columns',
+    info: 'RO25INGB0000999908438976',
+  },
+  {
+    name: 'Revolut',
+    icon: 'fa-solid fa-registered',
+    info: 'revolut.me/valentinst',
+  }
 ];

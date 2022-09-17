@@ -35,9 +35,28 @@
         <div class="hidden sm:ml-6 sm:block">
           <div class="flex space-x-4">
             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-            <a href="#" class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Materials</a>
+            <button class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Materials</button>
 
-            <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Donate</a>
+            <div>
+              <button (click)="toggleDonateDropdown()" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Donate</button>
+
+              <div id="donate-dropdown" class="popup absolute left-[10.4rem] z-10 mt-2 origin-top-left rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu">
+                <div *ngFor="let donation of donations; let i = index" class="flex gap-4 items-center px-4 py-2 text-sm text-gray-700">
+                  <i class="{{donation.icon}} text-[1.5rem]"></i>
+
+                  <div class="flex flex-col gap-0">
+                    <div class="font-medium">{{donation.name}}</div>
+                    <div class="font-medium text-[0.75rem]">{{donation.info}}</div>
+                  </div>
+
+                  <div class="grow"></div>
+
+                  <button [ngClass]="currentDonationCopy === i ? 'fa-solid fa-clipboard-check' : 'fa-solid fa-clipboard'" class="text-[1.5rem]" (click)="onCopyToClipboard(donation.info, i)"></button>
+                </div>
+              </div>
+            </div>
+
+
           </div>
         </div>
       </div>

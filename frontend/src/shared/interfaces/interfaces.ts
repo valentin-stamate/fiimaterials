@@ -41,3 +41,9 @@ export interface SocialLink {
   icon: string;
   color: string;
 }
+
+export interface Donation {
+  name: string;
+  icon: string;
+  info: string;
+}
