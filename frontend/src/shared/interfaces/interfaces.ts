@@ -32,7 +32,7 @@ export interface Contributor {
   image: string,
   about:  string,
   roles: string[],
-  action: string,
+  link: string,
 }
 
 export interface SocialLink {

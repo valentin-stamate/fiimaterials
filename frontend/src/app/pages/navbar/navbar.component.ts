@@ -13,6 +13,7 @@ export class NavbarComponent implements OnInit {
 
   isDonationDropdownOpened = false;
   isProfileDropdownOpened = false;
+  isContactDropdownOpened = false;
   currentDonationCopy = -1;
 
   constructor() { }
@@ -39,6 +40,19 @@ export class NavbarComponent implements OnInit {
     this.isDonationDropdownOpened = !this.isDonationDropdownOpened;
 
     if (this.isDonationDropdownOpened) {
+      element.classList.remove('close');
+      element.classList.add('open');
+    } else {
+      element.classList.remove('open');
+      element.classList.add('close');
+    }
+  }
+
+  toggleContactDropdown() {
+    const element = document.getElementById('contact-dropdown') as HTMLElement;
+    this.isContactDropdownOpened = !this.isContactDropdownOpened;
+
+    if (this.isContactDropdownOpened) {
       element.classList.remove('close');
       element.classList.add('open');
     } else {

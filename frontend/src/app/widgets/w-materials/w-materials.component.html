@@ -15,7 +15,7 @@
               [ngClass]="selectedCycle === cycleType.MASTERS ? 'bg-gray-200 text-black hover:bg-gray-300' : ''" disabled>Masters</button>
     </div>
 
-    <div class="flex flex-row gap-4 justify-between">
+    <div class="flex flex-row gap-4 justify-between flex-wrap">
       <button *ngFor="let semesterCount of semesters" class="bg-gray-800 hover:bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" (click)="onSemesterChange(semesterCount)"
               [ngClass]="selectedSemester === '' + semesterCount ? 'bg-gray-200 text-black hover:bg-gray-300' : ''">Semester {{semesterCount}}</button>
     </div>

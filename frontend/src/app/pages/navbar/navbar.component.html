@@ -37,10 +37,11 @@
             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
             <button class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Materials</button>
 
+            <!-- Donate -->
             <div>
               <button (click)="toggleDonateDropdown()" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Donate</button>
 
-              <div id="donate-dropdown" class="popup absolute left-[10.4rem] z-10 mt-2 origin-top-left rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu">
+              <div id="donate-dropdown" class="popup absolute left-[9.5rem] z-10 mt-2 origin-top-left rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu">
                 <div *ngFor="let donation of donations; let i = index" class="flex gap-4 items-center px-4 py-2 text-sm text-gray-700">
                   <i class="{{donation.icon}} text-[1.5rem]"></i>
 
@@ -56,6 +57,17 @@
               </div>
             </div>
 
+            <!-- Contact -->
+            <div>
+              <button (click)="toggleContactDropdown()" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Feedback & Contact</button>
+
+              <div id="contact-dropdown" class="popup absolute left-[15rem] w-[24rem] z-10 mt-2 origin-top-left rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu">
+                <div class="font-medium text-sm p-4 text-justify">
+                  For contact and feedback you can send a message to one of the social platforms listed on the profile dropdown (the round icon with my picture)
+                  or by email at <b>stamatevalentin125@gmail.com</b> .
+                </div>
+              </div>
+            </div>
 
           </div>
         </div>
