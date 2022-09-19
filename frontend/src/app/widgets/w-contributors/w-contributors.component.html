@@ -9,11 +9,19 @@
         <div class="flex gap-4 justify-between">
           <img class="h-14 rounded-md" src="{{contributor.image}}" alt="">
 
+          <div class="flex flex-col gap-1 items-center">
+            <div class="font-medium text-sm">{{contributor.name}}</div>
+
+            <div class="flex gap-2 flex-wrap">
+              <div class="font-medium text-[0.75rem]">{{contributor.contributionDates.join(' - ')}}</div>
+            </div>
+          </div>
+
           <div>
             <a href="{{contributor.link}}" target="_blank">
-              <button class="bg-gray-800 text-white px-3 py-2 rounded-md text-sm font-medium" type="button"
-                [disabled]="contributor.link === ''" [ngClass]="contributor.link === '' ? 'bg-gray-500 text-gray-300' : 'hover:bg-gray-900'">
-                Link
+              <button class="px-3 py-2 rounded-md text-sm font-medium" type="button"
+                [disabled]="contributor.link === ''" [ngClass]="contributor.link === '' ? 'bg-white text-white' : 'bg-gray-200 text-gray-800 hover:bg-gray-300'">
+                <i class="fa-sharp fa-solid fa-arrow-up-right-from-square"></i>
               </button>
             </a>
           </div>

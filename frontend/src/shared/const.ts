@@ -59,3 +59,8 @@ export const DONATIONS: Donation[] = [
     info: 'revolut.me/valentinst',
   }
 ];
+
+export enum AdditionalResources {
+  GRADUATION = 'https://drive.google.com/drive/folders/1jN3UOMbLdk0mTJiERwbcQz5_OX-xyL_c?usp=sharing',
+  DOCS = 'https://drive.google.com/drive/folders/1wXnauHlZn43EbzEK3S1gjRP4hbQ_VruA?usp=sharing',
+}

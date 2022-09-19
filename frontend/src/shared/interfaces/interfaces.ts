@@ -1,6 +1,8 @@
 export interface Class {
   count: number;
   name: string;
+  nameRo: string;
+  photo: string;
   short: string;
   credits: number;
   materials: string;
@@ -28,11 +30,12 @@ export interface AdditionalMaterials {
 }
 
 export interface Contributor {
-  name: string,
-  image: string,
-  about:  string,
-  roles: string[],
-  link: string,
+  name: string;
+  image: string;
+  about:  string;
+  roles: string[];
+  link: string;
+  contributionDates: string[];
 }
 
 export interface SocialLink {

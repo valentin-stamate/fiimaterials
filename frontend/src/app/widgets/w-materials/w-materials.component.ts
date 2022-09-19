@@ -3,7 +3,7 @@ import {Class, Year} from "../../../shared/interfaces/interfaces";
 import {B_FIRST_YEAR} from "../../../shared/materials/b-first-year";
 import {B_SECOND_YEAR} from "../../../shared/materials/b-second-year";
 import {B_THIRD_YEAR} from "../../../shared/materials/b-third-year";
-import {ClassType, CycleType} from "../../../shared/const";
+import {AdditionalResources, ClassType, CycleType} from "../../../shared/const";
 
 enum MaterialsKeys {
   SELECTED_CYCLE = 'selected-cycle',
@@ -18,6 +18,9 @@ enum MaterialsKeys {
 export class WMaterialsComponent implements OnInit {
   classTypes = ClassType;
   cycleType = CycleType;
+
+  additionalResources = AdditionalResources;
+  defaultClassPhoto = 'https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/b5277873948669.5c1ed6583b53f.jpg';
 
   years: Year[] = [
     B_FIRST_YEAR,
@@ -88,11 +91,14 @@ export class WMaterialsComponent implements OnInit {
       }
 
       const className = item.name.toLowerCase();
-      const short = item.name.toLowerCase();
+      const classNameRo = item.nameRo.toLowerCase();
+      const short = item.short.toLowerCase();
+      const credits = `${item.credits}`;
 
       return className.includes(searchString) ||
+        classNameRo.includes(searchString) ||
         short.includes(searchString) ||
-        `${item.credits}` === searchString;
+        credits === searchString;
     });
   }
 

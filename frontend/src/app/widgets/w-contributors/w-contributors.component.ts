@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {CONTRIBUTORS, Roles} from "../../../shared/materials/more";
+import {Contributor} from "../../../shared/interfaces/interfaces";
 
 @Component({
   selector: 'app-w-contributors',
@@ -9,9 +10,20 @@ import {CONTRIBUTORS, Roles} from "../../../shared/materials/more";
 export class WContributorsComponent implements OnInit {
 
   roles = Roles;
-  contributors = CONTRIBUTORS;
+  contributors: Contributor[] = [];
 
-  constructor() { }
+  constructor() {
+    this.contributors = CONTRIBUTORS.map(item => {
+      return {
+        ...item,
+        ...{
+          contributionDates: item.contributionDates.map(date => {
+            return date.split('T')[0].split('-').reverse().join('.');
+          }),
+        },
+      }
+    });
+  }
 
   ngOnInit(): void {
   }
