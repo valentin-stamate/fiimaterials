@@ -5,7 +5,7 @@ export const FIRST_SEMESTER_CLASSES: Class[] = [
   {
     "count": 1,
     "name": "Computer Networks",
-    "nameRo": "",
+    "nameRo": "Retele de Calculatoare",
     "short": "RC",
     "credits": 6,
     "materials": "https://drive.google.com/drive/folders/1iPF-mpepjSmJ15pblopIpPl0mQWdtp1F?usp=sharing",
@@ -17,7 +17,7 @@ export const FIRST_SEMESTER_CLASSES: Class[] = [
   {
     "count": 2,
     "name": "Databases",
-    "nameRo": "",
+    "nameRo": "Baze de Date",
     "short": "BD",
     "credits": 6,
     "materials": "https://drive.google.com/drive/folders/1rSWdn-ctlKGOF-T9s92Dzu-9Wh7-tixb?usp=sharing",
@@ -29,7 +29,7 @@ export const FIRST_SEMESTER_CLASSES: Class[] = [
   {
     "count": 3,
     "name": "Formal Languages, Automata and Compilers",
-    "nameRo": "",
+    "nameRo": "Limbaje Formale, Automate si Compilatoare",
     "short": "LFAC",
     "credits": 5,
     "materials": "https://drive.google.com/drive/folders/15ntNZw4OCMu4LKHGCKxIbWRBObzU8p26?usp=sharing",
@@ -41,7 +41,7 @@ export const FIRST_SEMESTER_CLASSES: Class[] = [
   {
     "count": 4,
     "name": "Graph Algorithms",
-    "nameRo": "",
+    "nameRo": "Algoritmica Grafurilor",
     "short": "AGhe",
     "credits": 5,
     "materials": "https://drive.google.com/drive/folders/1-xAN-QuBSrsPRRLRQ2tvI5UlZjYphLSC?usp=sharing",
@@ -53,8 +53,8 @@ export const FIRST_SEMESTER_CLASSES: Class[] = [
   {
     "count": 5,
     "name": "English Language III",
-    "nameRo": "",
-    "short": "English",
+    "nameRo": "Engleza",
+    "short": "Engleza",
     "credits": 4,
     "materials": "https://drive.google.com/drive/folders/1_FvFwTZqvYcQoyblnaSTFRkJ6252Ghz7?usp=sharing",
     "photo": "https://i.postimg.cc/90kWJHHn/The-Bennu-Bird-Ancient-Egyptian-Symbols-Egypt-Tours-Portal.jpg",
@@ -65,7 +65,7 @@ export const FIRST_SEMESTER_CLASSES: Class[] = [
   {
     "count": 6,
     "name": "Computability, Decidability and Complexity",
-    "nameRo": "",
+    "nameRo": "Calculabilitate, Decidabilitate si Complexitate",
     "short": "CDC",
     "credits": 4,
     "materials": "",
@@ -77,7 +77,7 @@ export const FIRST_SEMESTER_CLASSES: Class[] = [
   {
     "count": 7,
     "name": "Principles of Programming Languages",
-    "nameRo": "",
+    "nameRo": "Principii ale Limbajelor de Programare",
     "short": "PLP",
     "credits": 4,
     "materials": "https://drive.google.com/drive/folders/13acftGiJRp_eA2YLJYxHynsAEb_WWhbe?usp=sharing",
@@ -89,7 +89,7 @@ export const FIRST_SEMESTER_CLASSES: Class[] = [
   {
     "count": 8,
     "name": "Genetic Algorithms",
-    "nameRo": "",
+    "nameRo": "Algoritmi Genetici",
     "short": "AG",
     "credits": 4,
     "materials": "https://drive.google.com/drive/folders/1wp2JXtFvSRuPk87jPA4vmpKjRhMSwELI?usp=sharing",
@@ -101,7 +101,7 @@ export const FIRST_SEMESTER_CLASSES: Class[] = [
   {
     "count": 9,
     "name": "Quantum Computing",
-    "nameRo": "",
+    "nameRo": "Quantum Computing",
     "short": "QC",
     "credits": 4,
     "materials": "",
@@ -113,7 +113,7 @@ export const FIRST_SEMESTER_CLASSES: Class[] = [
   {
     "count": 10,
     "name": "Competitive Programming",
-    "nameRo": "",
+    "nameRo": "Programare Competitiva",
     "short": "PC",
     "credits": 3,
     "materials": "",
@@ -125,7 +125,7 @@ export const FIRST_SEMESTER_CLASSES: Class[] = [
   {
     "count": 11,
     "name": "Physical Education",
-    "nameRo": "",
+    "nameRo": "Educatie Fizica",
     "short": "Sport",
     "credits": 1,
     "materials": "",
@@ -137,8 +137,8 @@ export const FIRST_SEMESTER_CLASSES: Class[] = [
   {
     "count": 12,
     "name": "Industry Training I",
-    "nameRo": "",
-    "short": "Practice",
+    "nameRo": "Practica in Industrie",
+    "short": "Practica",
     "credits": 3,
     "materials": "",
     "photo": "",
@@ -152,8 +152,8 @@ const SECOND_SEMESTER_CLASSES: Class[] = [
   {
     "count": 1,
     "name": "WEB Technologies",
-    "nameRo": "",
-    "short": "WEB",
+    "nameRo": "Tehnologii WEB",
+    "short": "TW",
     "credits": 6,
     "materials": "https://drive.google.com/drive/folders/1HLmcbViVHlMkZYTLHf_NlZrakzxi7vQV?usp=sharing",
     "photo": "",
@@ -164,7 +164,7 @@ const SECOND_SEMESTER_CLASSES: Class[] = [
   {
     "count": 2,
     "name": "Advanced Programming",
-    "nameRo": "",
+    "nameRo": "Programare Avansata",
     "short": "PA",
     "credits": 5,
     "materials": "https://drive.google.com/drive/folders/1vRIzxB35MMVepnDV0hVcCp4j-EkOn44e?usp=sharing",
@@ -176,7 +176,7 @@ const SECOND_SEMESTER_CLASSES: Class[] = [
   {
     "count": 3,
     "name": "Software Engineering",
-    "nameRo": "",
+    "nameRo": "Inginerie Software",
     "short": "IS",
     "credits": 6,
     "materials": "https://drive.google.com/drive/folders/160DCciXtVZu4pJgKCMEhhRPL8szqiwvr?usp=sharing",
@@ -188,8 +188,8 @@ const SECOND_SEMESTER_CLASSES: Class[] = [
   {
     "count": 4,
     "name": "DBMS Practice",
-    "nameRo": "",
-    "short": "DBMS",
+    "nameRo": "Practica SGBD",
+    "short": "SGBD",
     "credits": 4,
     "materials": "https://drive.google.com/drive/folders/1lqiN0Teu9J4kNeO6vFo3SAJ7oVzDDXSB?usp=sharing",
     "photo": "",
@@ -200,8 +200,8 @@ const SECOND_SEMESTER_CLASSES: Class[] = [
   {
     "count": 5,
     "name": "English Language IV",
-    "nameRo": "",
-    "short": "English",
+    "nameRo": "Engleza",
+    "short": "Engleza",
     "credits": 4,
     "materials": "",
     "photo": "https://i.postimg.cc/90kWJHHn/The-Bennu-Bird-Ancient-Egyptian-Symbols-Egypt-Tours-Portal.jpg",
@@ -212,7 +212,7 @@ const SECOND_SEMESTER_CLASSES: Class[] = [
   {
     "count": 6,
     "name": "Functional Programming",
-    "nameRo": "",
+    "nameRo": "Programare Functionala",
     "short": "PF",
     "credits": 5,
     "materials": "",
@@ -224,8 +224,8 @@ const SECOND_SEMESTER_CLASSES: Class[] = [
   {
     "count": 7,
     "name": "Introduction to Cryptography",
-    "nameRo": "",
-    "short": "IC",
+    "nameRo": "Introducere in Criptografie",
+    "short": "Crypto",
     "credits": 5,
     "materials": "",
     "photo": "",
@@ -236,7 +236,7 @@ const SECOND_SEMESTER_CLASSES: Class[] = [
   {
     "count": 8,
     "name": "Entrepreneurship and Innovation in IT",
-    "nameRo": "",
+    "nameRo": "Antreprenoriat si Inovare in IT",
     "short": "AIIT",
     "credits": 5,
     "materials": "https://drive.google.com/drive/folders/1jIbum7CMCuhx8h-ms6ePcGASOmc-PwXI?usp=sharing",
@@ -248,7 +248,7 @@ const SECOND_SEMESTER_CLASSES: Class[] = [
   {
     "count": 9,
     "name": "Embedded Systems",
-    "nameRo": "",
+    "nameRo": "Sisteme Embedded",
     "short": "SE",
     "credits": 5,
     "materials": "https://drive.google.com/drive/folders/1ZLyvKKJJpC2iNK_JX9-JohaZ2ylSN9b5?usp=sharing",
@@ -260,7 +260,7 @@ const SECOND_SEMESTER_CLASSES: Class[] = [
   {
     "count": 10,
     "name": "Competitive Programming",
-    "nameRo": "",
+    "nameRo": "Programare Competitiva",
     "short": "PC",
     "credits": 3,
     "materials": "",
@@ -272,7 +272,7 @@ const SECOND_SEMESTER_CLASSES: Class[] = [
   {
     "count": 11,
     "name": "Physical Education",
-    "nameRo": "",
+    "nameRo": "Educatie Fizica",
     "short": "Sport",
     "credits": 1,
     "materials": "",

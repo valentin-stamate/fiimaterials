@@ -42,3 +42,7 @@ testem.log
 Thumbs.db
 .angular
 package-lock.json
+firebase-debug.log
+.firebase
+.firebaserc
+firebase.json

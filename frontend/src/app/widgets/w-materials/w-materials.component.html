@@ -46,13 +46,12 @@
                [class.bg-indigo-400]="_class.type === classTypes.FACULTY"
           ></div>
 
-          <img src="{{_class.photo || defaultClassPhoto}}" class="h-[12rem] aspect-square rounded-r-lg" alt="">
+          <img src="{{_class.photo || defaultClassPhoto}}" class="hidden sm:h-[12rem] sm:inline aspect-square rounded-r-lg" alt="">
 
           <div class="flex flex-col basis-full gap-4 p-4">
             <div class="text-xl font-bold">{{_class.name}}</div>
 
             <div class="basis-full text-gray-600 text-sm">
-              <!-- TODO: About? -->
               <div>Credits: {{_class.credits}}</div>
               <div>Type: {{_class.type}}</div>
             </div>
@@ -61,12 +60,14 @@
               <a href="{{_class.materials}}" target="_blank">
                 <button class="w-full bg-gray-800 text-white px-3 py-2 rounded-md text-sm font-medium"
                         [disabled]="_class.materials === ''" [ngClass]="_class.materials === '' ? 'bg-gray-500 text-gray-300' : 'hover:bg-gray-900'">
-                  <i class="fa-solid fa-download mr-1"></i>Download</button>
+                  <i class="fa-solid fa-download mr-1"></i>
+                  <span class="hidden sm:inline">Download</span></button>
               </a>
               <a href="{{_class.site}}" target="_blank">
                 <button class="w-full bg-gray-800 text-white px-3 py-2 rounded-md text-sm font-medium"
-                        [disabled]="_class.materials === ''" [ngClass]="_class.materials === '' ? 'bg-gray-500 text-gray-300' : 'hover:bg-gray-900'">
-                  <i class="fa-solid fa-arrow-up-right-from-square mr-1"></i>Site</button>
+                        [disabled]="_class.site === ''" [ngClass]="_class.site === '' ? 'bg-gray-500 text-gray-300' : 'hover:bg-gray-900'">
+                  <i class="fa-solid fa-arrow-up-right-from-square mr-1"></i>
+                  <span class="hidden sm:inline">Site</span></button>
               </a>
             </div>
           </div>

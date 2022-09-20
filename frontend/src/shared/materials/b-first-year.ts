@@ -17,7 +17,7 @@ const FIRST_SEMESTER_CLASSES: Class[] = [
   {
     "count": 2,
     "name": "Computer Architecture and Operating Systems",
-    "nameRo": "Arhitectura Calculatoarelor și Sisteme de Operare",
+    "nameRo": "Arhitectura Calculatoarelor si Sisteme de Operare",
     "short": "ACSO",
     "credits": 5,
     "photo": "https://i.postimg.cc/yYf7dvCQ/1435061-609.jpg",
@@ -29,8 +29,8 @@ const FIRST_SEMESTER_CLASSES: Class[] = [
   {
     "count": 3,
     "name": "Logics for Computer Science",
-    "nameRo": "Logică pentru Informatică",
-    "short": "Logică",
+    "nameRo": "Logica pentru Informatica",
+    "short": "Logica",
     "credits": 6,
     "materials": "https://drive.google.com/drive/folders/1oJ3ZUi6U8vO8u8CtVEDeAiPxH01ft2JV?usp=sharing",
     "photo": "https://i.postimg.cc/G3yM920Z/birmingham-museums-trust-e0w-BK0x-JXYQ-unsplash.jpg",
@@ -41,8 +41,8 @@ const FIRST_SEMESTER_CLASSES: Class[] = [
   {
     "count": 4,
     "name": "Mathematics",
-    "nameRo": "",
-    "short": "Math",
+    "nameRo": "Matematica",
+    "short": "Mate",
     "credits": 5,
     "materials": "https://drive.google.com/drive/folders/1Wd7hRxnQvgHZd2-MZmX7_pdsfB-DjSpf?usp=sharing",
     "photo": "https://i.postimg.cc/TYSwcgR3/istockphoto-536754333-612x612.jpg",
@@ -53,7 +53,7 @@ const FIRST_SEMESTER_CLASSES: Class[] = [
   {
     "count": 5,
     "name": "Introduction to Programming",
-    "nameRo": "",
+    "nameRo": "Introducere in Programare",
     "short": "IP",
     "credits": 4,
     "materials": "https://drive.google.com/drive/folders/16--eviquuiV7dSIhYxKdu096SSpzBrG9?usp=sharing",
@@ -65,8 +65,8 @@ const FIRST_SEMESTER_CLASSES: Class[] = [
   {
     "count": 6,
     "name": "English Language I",
-    "nameRo": "",
-    "short": "English",
+    "nameRo": "Engleza",
+    "short": "Engleza",
     "credits": 4,
     "materials": "https://drive.google.com/drive/folders/1_rIjqlUQefGNzR-KXYu0f0rik_YHNtTb?usp=sharing",
     "photo": "https://i.postimg.cc/90kWJHHn/The-Bennu-Bird-Ancient-Egyptian-Symbols-Egypt-Tours-Portal.jpg",
@@ -77,7 +77,7 @@ const FIRST_SEMESTER_CLASSES: Class[] = [
   {
     "count": 7,
     "name": "Competitive Programming",
-    "nameRo": "",
+    "nameRo": "Programare Competitiva",
     "short": "PC",
     "credits": 3,
     "materials": "",
@@ -88,9 +88,9 @@ const FIRST_SEMESTER_CLASSES: Class[] = [
   },
   {
     "count": 8,
-    "name": "",
+    "name": "Pedagogy",
     "nameRo": "Pedagogie",
-    "short": "PE",
+    "short": "Pedagogie",
     "credits": 1,
     "materials": "https://drive.google.com/drive/folders/1rPZsDCcoPzi1aYBpvq1HgfBu-LYxLrLK?usp=sharing",
     "photo": "https://i.postimg.cc/LXCR8F58/the-art-teacher-ingrid-hyde.jpg",
@@ -101,8 +101,8 @@ const FIRST_SEMESTER_CLASSES: Class[] = [
   {
     "count": 9,
     "name": "Physical Education",
-    "nameRo": "",
-    "short": "PE",
+    "nameRo": "Educatie Fizica",
+    "short": "Sport",
     "credits": 1,
     "materials": "",
     "photo": "https://i.postimg.cc/C5R0ZrnH/2014-muhammad-ali-sonny-liston-demaryius-thomas-richesson-sports-art-1200x900.jpg",
@@ -116,7 +116,7 @@ const SECOND_SEMESTER_CLASSES: Class[] = [
   {
     "count": 1,
     "name": "Object Oriented Programming",
-    "nameRo": "",
+    "nameRo": "Programare Orientata Obiect",
     "short": "OOP",
     "credits": 6,
     "materials": "https://drive.google.com/drive/folders/18PGvvs_iXxleo34OisrIyOz6xDMoKENO?usp=sharing",
@@ -128,7 +128,7 @@ const SECOND_SEMESTER_CLASSES: Class[] = [
   {
     "count": 2,
     "name": "Operating Systems",
-    "nameRo": "",
+    "nameRo": "Sisteme de Operare",
     "short": "SO",
     "credits": 6,
     "materials": "https://drive.google.com/drive/folders/1V6bgZXlf8pgVSt8qGdjuD65MYneqrbcy?usp=sharing",
@@ -140,7 +140,7 @@ const SECOND_SEMESTER_CLASSES: Class[] = [
   {
     "count": 3,
     "name": "Algebraic Foundations of Computer Science",
-    "nameRo": "",
+    "nameRo": "Fundamente Algebrice ale Informaticii",
     "short": "FAI",
     "credits": 5,
     "materials": "https://drive.google.com/drive/folders/1kNCBPjuDhf1xqkyYr8U786xSDRpnlmRR?usp=sharing",
@@ -152,7 +152,7 @@ const SECOND_SEMESTER_CLASSES: Class[] = [
   {
     "count": 4,
     "name": "Probabilities and Statistics",
-    "nameRo": "",
+    "nameRo": "Probabilitati si Statistica",
     "short": "PS",
     "credits": 4,
     "materials": "https://drive.google.com/drive/folders/1qBU8OfQcdEyxAQJx1oLZKVE-HtiSWEWL?usp=sharing",
@@ -164,7 +164,7 @@ const SECOND_SEMESTER_CLASSES: Class[] = [
   {
     "count": 5,
     "name": "Algorithms Design",
-    "nameRo": "",
+    "nameRo": "Proiectarea Algoritmilor",
     "short": "PA",
     "credits": 5,
     "materials": "https://drive.google.com/drive/folders/1eCysOHOyXOlNwjPsOrnTH-1UHftD3ZMK?usp=sharing",
@@ -176,8 +176,8 @@ const SECOND_SEMESTER_CLASSES: Class[] = [
   {
     "count": 6,
     "name": "English Language II",
-    "nameRo": "",
-    "short": "English",
+    "nameRo": "Engleza",
+    "short": "Engleza",
     "credits": 5,
     "materials": "https://drive.google.com/drive/folders/15bJzxNOgMBbCAj8dMdTgknG9wKPiKtw5?usp=sharing",
     "photo": "https://i.postimg.cc/90kWJHHn/The-Bennu-Bird-Ancient-Egyptian-Symbols-Egypt-Tours-Portal.jpg",
@@ -188,7 +188,7 @@ const SECOND_SEMESTER_CLASSES: Class[] = [
   {
     "count": 7,
     "name": "Competitive Programming",
-    "nameRo": "",
+    "nameRo": "Programare Competitiva",
     "short": "PC",
     "credits": 3,
     "materials": "",
@@ -197,12 +197,22 @@ const SECOND_SEMESTER_CLASSES: Class[] = [
     "password": "",
     "type": ClassType.FACULTY,
   },
-
-  /* TODO */
   {
     "count": 8,
+    "name": "Pedagogy",
+    "nameRo": "Pedagogie",
+    "short": "Pedagogie",
+    "credits": 1,
+    "materials": "",
+    "photo": "",
+    "site": "",
+    "password": "",
+    "type": ClassType.FACULTY,
+  },
+  {
+    "count": 9,
     "name": "Ethics and Academic Integrity",
-    "nameRo": "",
+    "nameRo": "Etica si Integritate Academica",
     "short": "EIA",
     "credits": 1,
     "materials": "https://drive.google.com/drive/folders/1xILmYT21HPUWfQM4PRIdf6nezPCG8LlO?usp=sharing",
@@ -212,9 +222,9 @@ const SECOND_SEMESTER_CLASSES: Class[] = [
     "type": ClassType.FACULTY,
   },
   {
-    "count": 9,
+    "count": 10,
     "name": "Physical Education II",
-    "nameRo": "",
+    "nameRo": "Educatie Fizica",
     "short": "Sport",
     "credits": 1,
     "materials": "",
