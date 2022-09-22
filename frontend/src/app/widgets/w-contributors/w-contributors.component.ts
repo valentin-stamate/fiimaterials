@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {CONTRIBUTORS, Roles} from "../../../shared/materials/more";
+import {CONTRIBUTORS, Roles} from "../../../shared/const";
 import {Contributor} from "../../../shared/interfaces/interfaces";
 
 @Component({

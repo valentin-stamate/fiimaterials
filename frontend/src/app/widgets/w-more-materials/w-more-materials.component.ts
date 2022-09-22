@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {MORE_MATERIALS} from "../../../shared/materials/more";
+import {MORE_MATERIALS} from "../../../shared/const";
 
 @Component({
   selector: 'app-w-more-materials',
