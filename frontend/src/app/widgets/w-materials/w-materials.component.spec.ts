@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { WMaterialsComponent } from './w-materials.component';
+import {FormsModule} from "@angular/forms";
 
 describe('WMaterialsComponent', () => {
   let component: WMaterialsComponent;
@@ -8,6 +9,9 @@ describe('WMaterialsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      imports: [
+        FormsModule,
+      ],
       declarations: [ WMaterialsComponent ]
     })
     .compileComponents();
