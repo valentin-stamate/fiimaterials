@@ -42,3 +42,22 @@
     z-index: -1;
   }
 }
+
+.float-right {
+  position: relative;
+  animation: right-animation 2s ease-in-out infinite;
+}
+
+@keyframes right-animation {
+  0% {
+    left: 0;
+  }
+
+  50% {
+    left: 12px;
+  }
+
+  100% {
+    left: 0;
+  }
+}
