@@ -40,7 +40,7 @@
             <!-- Donate -->
             <div>
               <button (click)="toggleDonateDropdown()" class="hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium"
-                [ngClass]="isDonationDropdownOpened ? 'bg-gray-900' : 'bg-gray-800'">Donate</button>
+                [ngClass]="config.isDonationDropdownOpened ? 'bg-gray-900' : 'bg-gray-800'">Donate</button>
 
               <div id="donate-dropdown" class="popup absolute overflow-hidden left-[9.5rem] z-10 mt-2 origin-top-left rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu">
                 <div *ngFor="let donation of donations; let i = index" class="hover:bg-gray-100 flex gap-4 items-center px-4 py-2 text-sm text-gray-700">
@@ -61,7 +61,7 @@
             <!-- Contact -->
             <div>
               <button (click)="toggleContactDropdown()" class="hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium"
-                      [ngClass]="isContactDropdownOpened ? 'bg-gray-900' : 'bg-gray-800'">Feedback & Contact</button>
+                      [ngClass]="config.isContactDropdownOpened ? 'bg-gray-900' : 'bg-gray-800'">Feedback & Contact</button>
 
               <div id="contact-dropdown" class="popup absolute overflow-hidden left-[15rem] w-[24rem] z-10 mt-2 origin-top-left rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu">
                 <div class="font-medium text-sm p-4 text-justify">

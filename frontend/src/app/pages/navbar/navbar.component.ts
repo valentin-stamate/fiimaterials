@@ -1,5 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import {DONATIONS, SOCIAL_LINKS} from "../../../shared/const";
+import {NavBarConfig} from "../../interfaces/interfaces";
+
+const enum DropdownId {
+  DONATE = 'donate-dropdown',
+  CONTACT = 'contact-dropdown',
+  PROFILE = 'profile-dropdown',
+}
 
 @Component({
   selector: 'app-navbar',
@@ -11,9 +18,11 @@ export class NavbarComponent implements OnInit {
   socialLinks = SOCIAL_LINKS;
   donations = DONATIONS;
 
-  isDonationDropdownOpened = false;
-  isProfileDropdownOpened = false;
-  isContactDropdownOpened = false;
+  config: NavBarConfig = {
+    isDonationDropdownOpened: false,
+    isProfileDropdownOpened: false,
+    isContactDropdownOpened: false,
+  }
   currentDonationCopy = -1;
 
   constructor() { }
@@ -22,24 +31,34 @@ export class NavbarComponent implements OnInit {
   }
 
   toggleProfileDropdown() {
-    const element = document.getElementById('profile-dropdown') as HTMLElement;
-    this.isProfileDropdownOpened = !this.isProfileDropdownOpened;
+    const state = !this.config.isProfileDropdownOpened;
+    this.closeAllDropdowns();
+    this.config.isProfileDropdownOpened = state;
     this.currentDonationCopy = -1;
 
-    if (this.isProfileDropdownOpened) {
-      element.classList.remove('close');
-      element.classList.add('open');
-    } else {
-      element.classList.remove('open');
-      element.classList.add('close');
-    }
+    this.changeDropdownState(DropdownId.PROFILE, state)
   }
 
   toggleDonateDropdown() {
-    const element = document.getElementById('donate-dropdown') as HTMLElement;
-    this.isDonationDropdownOpened = !this.isDonationDropdownOpened;
+    const state = !this.config.isDonationDropdownOpened;
+    this.closeAllDropdowns();
+    this.config.isDonationDropdownOpened = state;
 
-    if (this.isDonationDropdownOpened) {
+    this.changeDropdownState(DropdownId.DONATE, state)
+  }
+
+  toggleContactDropdown() {
+    const state = !this.config.isContactDropdownOpened;
+    this.closeAllDropdowns();
+    this.config.isContactDropdownOpened = state;
+
+    this.changeDropdownState(DropdownId.CONTACT, state);
+  }
+
+  changeDropdownState(elementId: string, state: boolean) {
+    const element = document.getElementById(elementId) as HTMLElement;
+
+    if (state) {
       element.classList.remove('close');
       element.classList.add('open');
     } else {
@@ -48,16 +67,20 @@ export class NavbarComponent implements OnInit {
     }
   }
 
-  toggleContactDropdown() {
-    const element = document.getElementById('contact-dropdown') as HTMLElement;
-    this.isContactDropdownOpened = !this.isContactDropdownOpened;
+  closeAllDropdowns() {
+    if (this.config.isContactDropdownOpened) {
+      this.changeDropdownState(DropdownId.CONTACT, false);
+      this.config.isContactDropdownOpened = false;
+    }
 
-    if (this.isContactDropdownOpened) {
-      element.classList.remove('close');
-      element.classList.add('open');
-    } else {
-      element.classList.remove('open');
-      element.classList.add('close');
+    if (this.config.isDonationDropdownOpened) {
+      this.changeDropdownState(DropdownId.DONATE, false);
+      this.config.isDonationDropdownOpened = false;
+    }
+
+    if (this.config.isProfileDropdownOpened) {
+      this.changeDropdownState(DropdownId.PROFILE, false);
+      this.config.isProfileDropdownOpened = false;
     }
   }
 
