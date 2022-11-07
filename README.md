@@ -1,6 +1,8 @@
 # FIIMaterials
 
-The history of the project: https://blog.valentinstamate.com/fiimaterials
+## About
+
+The project started on 06.02.2020 as a random idea.
 
 ## Old Repos
 
