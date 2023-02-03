@@ -61,3 +61,19 @@
     left: 0;
   }
 }
+
+.donation-button {
+  animation: wiggle 4s infinite;
+}
+
+@keyframes wiggle {
+  0% { transform: rotate(0deg) scale(100%); }
+  20% { transform: rotate(0deg) scale(100%); }
+
+  80% { transform: rotate(0deg) scale(100%); }
+  85% { transform: rotate(-8deg) scale(125%); }
+  90% { transform: rotate(8deg) scale(125%); }
+  95% { transform: rotate(-8deg) scale(125%); }
+
+  100% { transform: rotate(-0deg) scale(100%); }
+}

@@ -276,7 +276,7 @@ const SECOND_SEMESTER_CLASSES: Class[] = [
     "short": "Cloud",
     "credits": 6,
     "materials": "https://drive.google.com/drive/folders/1Pj3PuXaA75SZPv0j-3_Ltm_bPu6wepvu?usp=sharing",
-    "photo": "https://i.postimg.cc/pdbwg57F/cloud-computing.jpg",
+    "photo": "https://i.postimg.cc/50KWbtYJ/cloud-computing.jpg",
     "site": "https://profs.info.uaic.ro/~adria/teach/courses/CloudComputing/",
     "password": "",
     "type": ClassType.OPTIONAL_2,
