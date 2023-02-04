@@ -14,7 +14,7 @@
                 [ngClass]="selectedCycle === cycleType.BACHELORS ? 'bg-gray-200 text-black hover:bg-gray-300' : 'bg-gray-800 hover:bg-gray-900'">Bachelor. Year: {{selectedYear}}</button>
         <a class="sm:basis-1/3" href="https://drive.google.com/drive/folders/1aRdLkrZmiv9x0CewuFKiJHZJZZgzw2ye?usp=sharing" target="_blank">
           <button class="w-full bg-gray-800 text-white px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-900">
-            <span class="hidden sm:inline">Master</span></button>
+            <span class="sm:inline">Master</span></button>
         </a>
       </div>
       <div class="sm:basis-1/2 basis-full flex gap-4">
@@ -25,7 +25,7 @@
           </button>
         </a>
         <a href="{{additionalResources.GRADUATION}}" target="_blank" class="basis-2/3">
-          <button class=" w-full bg-gray-800 hover:bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium">
+          <button class="w-full bg-gray-800 hover:bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium">
             <i class="fa-solid fa-graduation-cap"></i>
             Graduation</button>
         </a>
@@ -33,8 +33,12 @@
     </div>
 
     <div class="flex flex-row gap-4 justify-between flex-wrap">
-      <button *ngFor="let semesterCount of semesters" class="text-white px-3 py-2 rounded-md text-sm font-medium" (click)="onSemesterChange(semesterCount)"
-              [ngClass]="selectedSemester === '' + semesterCount ? 'bg-gray-200 text-black hover:bg-gray-300' : 'bg-gray-800 hover:bg-gray-900'">Semester {{semesterCount}}</button>
+      <ul class="grid grid-cols-2 xl:grid-cols-6 lg:grid-cols-3 md:grid-cols-3 text-sm font-medium text-center text-gray-500 gap-2 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400 w-full">
+        <li *ngFor="let semesterCount of semesters" (click)="onSemesterChange(semesterCount)"
+            [ngClass]="selectedSemester === '' + semesterCount ? 'text-gray-600 bg-gray-100' : 'hover:text-gray-600 hover:bg-gray-50'">
+          <span class="inline-block p-4 rounded-t-lg">Semester {{semesterCount}}</span>
+        </li>
+      </ul>
     </div>
 
     <div class="overflow-auto max-h-[49.5rem]">
@@ -60,16 +64,16 @@
               <div>Type: {{_class.type}}</div>
             </div>
 
-            <div class="grid grid-cols-2 gap-4">
+            <div class="flex gap-4">
               <a href="{{_class.materials}}" target="_blank">
-                <button class="w-full bg-gray-800 text-white px-3 py-2 rounded-md text-sm font-medium"
-                        [disabled]="_class.materials === ''" [ngClass]="_class.materials === '' ? 'bg-gray-500 text-gray-300' : 'hover:bg-gray-900'">
+                <button class="bg-gray-100 text-gray-800 px-3 py-2 rounded-md text-sm font-medium"
+                        [disabled]="_class.materials === ''" [ngClass]="_class.materials === '' ? 'text-gray-500' : 'hover:bg-gray-200'">
                   <i class="fa-solid fa-download mr-1"></i>
                   <span class="hidden sm:inline">Download</span></button>
               </a>
               <a href="{{_class.site}}" target="_blank">
-                <button class="w-full bg-gray-800 text-white px-3 py-2 rounded-md text-sm font-medium"
-                        [disabled]="_class.site === ''" [ngClass]="_class.site === '' ? 'bg-gray-500 text-gray-300' : 'hover:bg-gray-900'">
+                <button class="bg-gray-100 text-gray-800 px-3 py-2 rounded-md text-sm font-medium"
+                        [disabled]="_class.site === ''" [ngClass]="_class.site === '' ? 'text-gray-500' : 'hover:bg-gray-200'">
                   <i class="fa-solid fa-arrow-up-right-from-square mr-1"></i>
                   <span class="hidden sm:inline">Site</span></button>
               </a>
