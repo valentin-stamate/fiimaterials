@@ -11,6 +11,7 @@ import { WContributorsComponent } from './widgets/w-contributors/w-contributors.
 import { WMoreMaterialsComponent } from './widgets/w-more-materials/w-more-materials.component';
 import { WAboutComponent } from './widgets/w-about/w-about.component';
 import { WUsefulLinksComponent } from './widgets/w-useful-links/w-useful-links.component';
+import { WClassesComponent } from './widgets/w-classes/w-classes.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { WUsefulLinksComponent } from './widgets/w-useful-links/w-useful-links.c
     WMoreMaterialsComponent,
     WAboutComponent,
     WUsefulLinksComponent,
+    WClassesComponent,
   ],
   imports: [
     BrowserModule,
