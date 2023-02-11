@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { WArticlesComponent } from './w-articles.component';
+import { WUsefulLinksComponent } from './w-useful-links.component';
 
 describe('WArticlesComponent', () => {
-  let component: WArticlesComponent;
-  let fixture: ComponentFixture<WArticlesComponent>;
+  let component: WUsefulLinksComponent;
+  let fixture: ComponentFixture<WUsefulLinksComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ WArticlesComponent ]
+      declarations: [ WUsefulLinksComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(WArticlesComponent);
+    fixture = TestBed.createComponent(WUsefulLinksComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

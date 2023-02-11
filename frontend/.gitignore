@@ -44,5 +44,3 @@ Thumbs.db
 package-lock.json
 firebase-debug.log
 .firebase
-.firebaserc
-firebase.json
