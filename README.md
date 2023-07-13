@@ -2,7 +2,7 @@
 
 ## About
 
-The project started on 06.02.2020 as a random idea.
+The project started on 06.02.2020 as a random idea by Stamate Valentin.
 
 ## Old Repos
 
