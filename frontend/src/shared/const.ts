@@ -17,7 +17,7 @@ export enum CycleType {
 export const SOCIAL_LINKS: SocialLink[] = [
   {
     name: 'Facebook',
-    link: 'https://www.facebook.com/valstam20/',
+    link: 'https://www.facebook.com/valentin.stamate.125/',
     icon: 'fa-brands fa-facebook',
     color: 'text-blue-600',
   },
@@ -29,7 +29,7 @@ export const SOCIAL_LINKS: SocialLink[] = [
   },
   {
     name: 'Github',
-    link: 'https://github.com/valstam/',
+    link: 'https://github.com/valentin-stamate/',
     icon: 'fa-brands fa-square-github',
     color: 'text-gray-700',
   },
@@ -74,20 +74,21 @@ export enum Roles {
 
 export const CONTRIBUTORS: Contributor[] = [
   {
+    name: 'Stamate Valentin',
+    image: 'https://i.postimg.cc/jq4kpLvj/profile-old.jpg',
+    about: 'It was a random personal project that I never thought it would became something. I made it with passion ' +
+      'and I learned a lot from it.',
+    roles: [Roles.FOUNDER, Roles.DEVELOPER, Roles.MATERIAL_KEEPER],
+    link: '',
+    contributionDates: ['2020-02-06T00:00:00.000Z', '2023-12-06T00:00:00.000Z'],
+  },
+  {
     name: 'logalex96',
     image: 'https://i.postimg.cc/L4gQdBJt/6248839.jpg',
     about: 'He is the one who started collecting these materials, so as an inspiration he deserves the credits. He has all materials so I strongly recommend going to his repository and give him a star.',
     roles: [Roles.MATERIAL_KEEPER],
     link: 'https://github.com/logalex96/UAIC-Informatica-Iasi',
     contributionDates: ['2017-06-30T00:00:00.000Z', '2020-02-06T00:00:00.000Z'],
-  },
-  {
-    name: 'Stamate Valentin',
-    image: 'https://i.postimg.cc/8CpyFScg/me.jpg',
-    about: 'I never met this guy before.',
-    roles: [Roles.FOUNDER, Roles.DEVELOPER, Roles.MATERIAL_KEEPER],
-    link: '',
-    contributionDates: ['2020-02-06T00:00:00.000Z', 'present'],
   },
   {
     name: 'Andrei',
@@ -143,4 +144,3 @@ export const MORE_MATERIALS: AdditionalMaterials[] = [
     about: 'Legacy archive',
   },
 ];
-

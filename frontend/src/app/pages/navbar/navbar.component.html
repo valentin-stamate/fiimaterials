@@ -39,25 +39,25 @@
             <a href="#classes" class="hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Classes</a>
 
             <!-- Donate -->
-            <div>
-              <button (click)="toggleDonateDropdown()" class="hover:bg-gray-700 text-white px-3 py-2 pr-7 rounded-md text-sm font-medium"
-                      [ngClass]="config.isDonationDropdownOpened ? 'bg-gray-900' : 'bg-gray-800'"><div class="donation-button">Donate <span class="absolute text-xl mt-[-5px]">🧋</span></div></button>
+<!--            <div>-->
+<!--              <button (click)="toggleDonateDropdown()" class="hover:bg-gray-700 text-white px-3 py-2 pr-7 rounded-md text-sm font-medium"-->
+<!--                      [ngClass]="config.isDonationDropdownOpened ? 'bg-gray-900' : 'bg-gray-800'"><div class="donation-button">Donate <span class="absolute text-xl mt-[-5px]">🧋</span></div></button>-->
 
-              <div id="donate-dropdown" class="popup absolute overflow-hidden left-[9.5rem] z-10 mt-2 origin-top-left rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu">
-                <div *ngFor="let donation of donations; let i = index" class="hover:bg-gray-100 flex gap-4 items-center px-4 py-2 text-sm text-gray-700">
-                  <i class="{{donation.icon}} text-[1.5rem]"></i>
+<!--              <div id="donate-dropdown" class="popup absolute overflow-hidden left-[9.5rem] z-10 mt-2 origin-top-left rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu">-->
+<!--                <div *ngFor="let donation of donations; let i = index" class="hover:bg-gray-100 flex gap-4 items-center px-4 py-2 text-sm text-gray-700">-->
+<!--                  <i class="{{donation.icon}} text-[1.5rem]"></i>-->
 
-                  <div class="flex flex-col gap-0">
-                    <div class="font-medium">{{donation.name}}</div>
-                    <div class="font-medium text-[0.75rem]">{{donation.info}}</div>
-                  </div>
+<!--                  <div class="flex flex-col gap-0">-->
+<!--                    <div class="font-medium">{{donation.name}}</div>-->
+<!--                    <div class="font-medium text-[0.75rem]">{{donation.info}}</div>-->
+<!--                  </div>-->
 
-                  <div class="grow"></div>
+<!--                  <div class="grow"></div>-->
 
-                  <button [ngClass]="currentDonationCopy === i ? 'fa-solid fa-clipboard-check' : 'fa-solid fa-clipboard'" class="text-[1.5rem]" (click)="onCopyToClipboard(donation.info, i)"></button>
-                </div>
-              </div>
-            </div>
+<!--                  <button [ngClass]="currentDonationCopy === i ? 'fa-solid fa-clipboard-check' : 'fa-solid fa-clipboard'" class="text-[1.5rem]" (click)="onCopyToClipboard(donation.info, i)"></button>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
 
             <!-- Contact -->
             <div>
@@ -67,7 +67,7 @@
               <div id="contact-dropdown" class="popup absolute overflow-hidden left-[15rem] w-[24rem] z-10 mt-2 origin-top-left rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu">
                 <div class="font-medium text-sm p-4 text-justify">
                   For contact and feedback you can send a message to one of the social platforms listed on the profile dropdown (the round icon with my picture)
-                  or by email at <b>stamatevalentin125@gmail.com</b> .
+                  or by email at <b>fiimaterials02&#64;gmail.com</b> .
                 </div>
               </div>
             </div>
@@ -77,7 +77,7 @@
       </div>
       <div class="absolute inset-y-0 right-0 flex gap-4 items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
 
-        <a href="https://github.com/valstam/FIIMaterials" target="_blank">
+        <a href="https://github.com/valentin-stamate/fiimaterials" target="_blank">
           <i class="fa-brands fa-github text-gray-300 text-[1.5rem]"></i>
         </a>
 
