@@ -7,10 +7,13 @@
       <div *ngFor="let materials of moreMaterials" class="flex flex-col gap-4 border p-4 rounded-md">
 
         <div class="flex flex-row gap-4 justify-between align-center">
-          <div class="font-bold">{{materials.contributor}}</div>
+          <div>
+            <div class="font-bold">{{materials.contributor}}</div>
+            <div *ngIf="materials.smallText !== ''" class="text-xs">{{materials.smallText}}</div>
+          </div>
 
           <a href="{{materials.link}}" target="_blank">
-            <button class="bg-gray-800 text-white px-3 py-2 rounded-md text-sm font-medium" type="button"
+            <button class="bg-gray-800 text-white px-3 py-2 rounded-md text-xs font-medium" type="button"
               [disabled]="materials.link === ''" [ngClass]="materials.link === '' ? 'bg-gray-500 text-gray-300' : 'hover:bg-gray-900'">
               Open
             </button>

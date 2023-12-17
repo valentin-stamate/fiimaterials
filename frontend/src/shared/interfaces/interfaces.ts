@@ -27,6 +27,7 @@ export interface AdditionalMaterials {
   contributor: string;
   link: string;
   about: string;
+  smallText: string;
 }
 
 export interface Contributor {

@@ -80,7 +80,7 @@ export const CONTRIBUTORS: Contributor[] = [
       'and I learned a lot from it.',
     roles: [Roles.FOUNDER, Roles.DEVELOPER, Roles.MATERIAL_KEEPER],
     link: '',
-    contributionDates: ['2020-02-06T00:00:00.000Z', '2023-12-06T00:00:00.000Z'],
+    contributionDates: ['2020-02-06T00:00:00.000Z', '2023-12-17T00:00:00.000Z'],
   },
   {
     name: 'logalex96',
@@ -134,13 +134,21 @@ export const CONTRIBUTORS: Contributor[] = [
 
 export const MORE_MATERIALS: AdditionalMaterials[] = [
   {
+    contributor: 'Amalia',
+    link: 'https://mega.nz/folder/gOlgVbJI#rW9cUCdjVKOMQTfX-vPefg',
+    about: 'A personal archive with new materials',
+    smallText: '2022-2025'
+  },
+  {
     contributor: 'logalex96',
     link: 'https://bit.ly/2S8h9cO',
     about: 'A complete archive with many materials',
+    smallText: '2016-2019',
   },
   {
     contributor: 'Info3bNecenzurat',
     link: 'https://info3bnecenzurat.wordpress.com/',
     about: 'Legacy archive',
+    smallText: '2009',
   },
 ];
