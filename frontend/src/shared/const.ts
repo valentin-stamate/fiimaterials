@@ -80,7 +80,7 @@ export const CONTRIBUTORS: Contributor[] = [
       'and I learned a lot from it.',
     roles: [Roles.FOUNDER, Roles.DEVELOPER, Roles.MATERIAL_KEEPER],
     link: '',
-    contributionDates: ['2020-02-06T00:00:00.000Z', '2023-12-17T00:00:00.000Z'],
+    contributionDates: ['2020-02-06T00:00:00.000Z', '2023-12-21T00:00:00.000Z'],
   },
   {
     name: 'logalex96',
