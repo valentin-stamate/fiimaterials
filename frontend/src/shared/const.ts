@@ -74,13 +74,13 @@ export enum Roles {
 
 export const CONTRIBUTORS: Contributor[] = [
   {
-    name: 'Stamate Valentin',
+    name: 'Valentin Stamate',
     image: 'https://i.postimg.cc/jq4kpLvj/profile-old.jpg',
     about: 'It was a random personal project that I never thought it would became something. I made it with passion ' +
       'and I learned a lot from it.',
     roles: [Roles.FOUNDER, Roles.DEVELOPER, Roles.MATERIAL_KEEPER],
     link: '',
-    contributionDates: ['2020-02-06T00:00:00.000Z', '2024-01-23T00:00:00.000Z'],
+    contributionDates: ['2020-02-06T00:00:00.000Z', '2024-02-08T00:00:00.000Z'],
   },
   {
     name: 'logalex96',
