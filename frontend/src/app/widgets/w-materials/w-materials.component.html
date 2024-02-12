@@ -12,9 +12,10 @@
       <div class="sm:basis-2/3 basis-full flex gap-4">
         <button class="basis-1/2 text-white px-3 py-2 rounded-md text-sm font-medium" (click)="onCycleChange(cycleType.BACHELORS)"
                 [ngClass]="selectedCycle === cycleType.BACHELORS ? 'bg-gray-200 text-black hover:bg-gray-300' : 'bg-gray-800 hover:bg-gray-900'">Bachelor. Year: {{selectedYear}}</button>
-        <a class="sm:basis-1/3" href="https://drive.google.com/drive/folders/1aRdLkrZmiv9x0CewuFKiJHZJZZgzw2ye?usp=sharing" target="_blank">
-          <button class="w-full bg-gray-800 text-white px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-900">
-            <span class="sm:inline">Master</span></button>
+        <a class="sm:basis-1/3" href="https://drive.google.com/drive/folders/13c_adbgaJ1UVBcHMN-l74IHiyY96N06-?usp=sharing" target="_blank">
+          <button type="button" class="w-full text-white px-3 py-2 text-sm bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 font-medium rounded-md text-center">
+            <span class="sm:inline">Master</span>
+          </button>
         </a>
       </div>
       <div class="sm:basis-1/2 basis-full flex gap-4">
@@ -27,7 +28,8 @@
         <a href="{{additionalResources.GRADUATION}}" target="_blank" class="basis-1/2">
           <button class="w-full bg-gray-800 hover:bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium">
             <i class="fa-solid fa-graduation-cap"></i>
-            Graduation</button>
+            Graduation
+          </button>
         </a>
       </div>
     </div>

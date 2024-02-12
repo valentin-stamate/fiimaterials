@@ -61,8 +61,8 @@ export const DONATIONS: Donation[] = [
 ];
 
 export enum AdditionalResources {
-  GRADUATION = 'https://drive.google.com/drive/folders/1jN3UOMbLdk0mTJiERwbcQz5_OX-xyL_c?usp=sharing',
-  DOCS = 'https://drive.google.com/drive/folders/1wXnauHlZn43EbzEK3S1gjRP4hbQ_VruA?usp=sharing',
+  GRADUATION = 'https://drive.google.com/drive/folders/1wIIU42R3VfLzBcNZvBb4vYNyakQlsrau?usp=sharing',
+  DOCS = 'https://drive.google.com/drive/folders/1QobuPJxI0MxOmwLEg47wTOGUBolForIJ?usp=sharing',
 }
 
 export enum Roles {
@@ -80,7 +80,7 @@ export const CONTRIBUTORS: Contributor[] = [
       'and I learned a lot from it.',
     roles: [Roles.FOUNDER, Roles.DEVELOPER, Roles.MATERIAL_KEEPER],
     link: '',
-    contributionDates: ['2020-02-06T00:00:00.000Z', '2024-02-08T00:00:00.000Z'],
+    contributionDates: ['2020-02-06T00:00:00.000Z', '2024-02-12T00:00:00.000Z'],
   },
   {
     name: 'logalex96',
