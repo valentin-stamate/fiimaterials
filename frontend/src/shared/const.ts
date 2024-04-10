@@ -134,12 +134,6 @@ export const CONTRIBUTORS: Contributor[] = [
 
 export const MORE_MATERIALS: AdditionalMaterials[] = [
   {
-    contributor: 'Amalia',
-    link: 'https://mega.nz/folder/gOlgVbJI#rW9cUCdjVKOMQTfX-vPefg',
-    about: 'A personal archive with new materials',
-    smallText: '2022-2025'
-  },
-  {
     contributor: 'logalex96',
     link: 'https://bit.ly/2S8h9cO',
     about: 'A complete archive with many materials',
