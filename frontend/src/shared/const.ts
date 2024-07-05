@@ -134,6 +134,12 @@ export const CONTRIBUTORS: Contributor[] = [
 
 export const MORE_MATERIALS: AdditionalMaterials[] = [
   {
+    contributor: 'kaboodleCat',
+    link: 'https://bit.ly/3VTabIF',
+    about: 'A new fresh smaller archive. Also included into fiimaterials drive.',
+    smallText: '2023-',
+  },
+  {
     contributor: 'logalex96',
     link: 'https://bit.ly/2S8h9cO',
     about: 'A complete archive with many materials',
