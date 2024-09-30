@@ -64,6 +64,18 @@ export const FIRST_SEMESTER_CLASSES: Class[] = [
   },
   {
     "count": 6,
+    "name": "Rust Programming",
+    "nameRo": "Programare in Rust",
+    "short": "PR",
+    "credits": 4,
+    "materials": "",
+    "photo": "https://i.ibb.co/yF8NHpx/rust-logo-2.png",
+    "site": "https://gdt050579.github.io/rust_course_fii/",
+    "password": "",
+    "type": ClassType.OPTIONAL_1,
+  },
+  {
+    "count": 7,
     "name": "Computability, Decidability and Complexity",
     "nameRo": "Calculabilitate, Decidabilitate si Complexitate",
     "short": "CDC",
@@ -75,7 +87,7 @@ export const FIRST_SEMESTER_CLASSES: Class[] = [
     "type": ClassType.OPTIONAL_1,
   },
   {
-    "count": 7,
+    "count": 8,
     "name": "Principles of Programming Languages",
     "nameRo": "Principii ale Limbajelor de Programare",
     "short": "PLP",
@@ -87,7 +99,7 @@ export const FIRST_SEMESTER_CLASSES: Class[] = [
     "type": ClassType.OPTIONAL_1,
   },
   {
-    "count": 8,
+    "count": 9,
     "name": "Genetic Algorithms",
     "nameRo": "Algoritmi Genetici",
     "short": "AG",
@@ -99,7 +111,7 @@ export const FIRST_SEMESTER_CLASSES: Class[] = [
     "type": ClassType.OPTIONAL_1,
   },
   {
-    "count": 9,
+    "count": 10,
     "name": "Quantum Computing",
     "nameRo": "Quantum Computing",
     "short": "QC",
@@ -111,7 +123,7 @@ export const FIRST_SEMESTER_CLASSES: Class[] = [
     "type": ClassType.OPTIONAL_1,
   },
   {
-    "count": 10,
+    "count": 11,
     "name": "Competitive Programming",
     "nameRo": "Programare Competitiva",
     "short": "PC",
@@ -123,7 +135,7 @@ export const FIRST_SEMESTER_CLASSES: Class[] = [
     "type": ClassType.FACULTY,
   },
   {
-    "count": 11,
+    "count": 12,
     "name": "Physical Education",
     "nameRo": "Educatie Fizica",
     "short": "Sport",
@@ -135,7 +147,7 @@ export const FIRST_SEMESTER_CLASSES: Class[] = [
     "type": ClassType.FACULTY,
   },
   {
-    "count": 12,
+    "count": 13,
     "name": "Industry Training I",
     "nameRo": "Practica in Industrie",
     "short": "Practica",
