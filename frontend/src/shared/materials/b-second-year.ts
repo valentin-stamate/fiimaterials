@@ -193,7 +193,7 @@ const SECOND_SEMESTER_CLASSES: Class[] = [
     "credits": 6,
     "materials": "https://drive.google.com/drive/folders/1ZVzgJkEA9t6It4iVK1I9iEEKDWXXl5tU?usp=sharing",
     "photo": "https://i.postimg.cc/HxbTvcKK/ip.jpg",
-    "site": "https://edu.info.uaic.ro/ingineria-programarii/Scoala/2024/SE/index.html",
+    "site": "https://edu.info.uaic.ro/ingineria-programarii/Scoala/2025/SE/index.html",
     "password": "",
     "type": ClassType.NORMAL,
   },
