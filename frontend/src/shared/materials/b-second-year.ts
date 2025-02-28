@@ -205,7 +205,7 @@ const SECOND_SEMESTER_CLASSES: Class[] = [
     "credits": 4,
     "materials": "https://drive.google.com/drive/folders/1I9tYqRR2LVjfTRtbR98oFbi1IAtJv001?usp=sharing",
     "photo": "https://i.postimg.cc/x1dTjdJJ/dbms.jpg",
-    "site": "",
+    "site": "https://edu.info.uaic.ro/practica-sisteme-gestiune-baze-de-date/ro/index.html",
     "password": "",
     "type": ClassType.NORMAL,
   },
